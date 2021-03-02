@@ -5,6 +5,7 @@ const Cart = db.define('cart', {
   quantity: {
     type: Sequelize.INTEGER,
     allowNull: false,
+    defaultValue: 1,
     validate: {
       min: 0
     }
@@ -13,6 +14,7 @@ const Cart = db.define('cart', {
 
 Cart.prototype.updateQuantity = function(amount) {
   this.quantity += amount
+  return this
 }
 
 module.exports = Cart
