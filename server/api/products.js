@@ -46,7 +46,7 @@ router.post('/', async (req, res, next) => {
   }
 })
 
-// PUT edit product route
+// PUT edit product route '/api/product/:productId'
 router.put('/:productId', async (req, res, next) => {
   try {
     const data = req.body
