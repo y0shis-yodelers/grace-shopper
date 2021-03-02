@@ -15,9 +15,10 @@ class AllProducts extends React.Component {
       <div>
         <div className="container">
           {products.map((product) => (
-            <Link to={`products/${product.id}`}>
-              <ProductCard key={product.id} productId={product.id} />
-            </Link>
+            <div key={product.id}>
+              <ProductCard productId={product.id} />
+              <Link to={`/products/${product.id}`}>Go to {product.name}</Link>
+            </div>
           ))}
         </div>
       </div>
