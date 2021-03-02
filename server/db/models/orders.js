@@ -7,7 +7,7 @@ const Orders = db.define('order', {
     defaultValue: false
   },
   pricePaid: {
-    type: Sequelize.FLOAT,
+    type: Sequelize.DECIMAL(10, 2),
     validate: {
       min: 0
     }
