@@ -41,15 +41,6 @@ const User = db.define('user', {
   phoneNumber: {
     type: Sequelize.STRING,
     allowNull: false,
-    validation: {
-      isPhoneNumber() {
-        return (
-          this.phoneNumber.match(
-            /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
-          ) !== null
-        )
-      },
-    },
   },
   payOption: {
     type: Sequelize.ENUM({
