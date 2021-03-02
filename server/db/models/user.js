@@ -27,10 +27,17 @@ const User = db.define('user', {
   googleId: {
     type: Sequelize.STRING,
   },
-  name: Sequelize.STRING,
-  address: Sequelize.STRING,
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  address: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
   phoneNumber: {
     type: Sequelize.STRING,
+    allowNull: false,
     validation: {
       isPhoneNumber() {
         return (
@@ -48,6 +55,7 @@ const User = db.define('user', {
   },
   userType: {
     type: Sequelize.ENUM('user', 'admin'),
+    defaultValue: 'user',
   },
 })
 
