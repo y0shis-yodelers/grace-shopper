@@ -3,6 +3,7 @@ const {Product} = require('../db/models')
 const {Op} = require('sequelize')
 module.exports = router
 
+// get all products route '/api/product'
 router.get('/', async (req, res, next) => {
   try {
     const products = await Product.findAll({
