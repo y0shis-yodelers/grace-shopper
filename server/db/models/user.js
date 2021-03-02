@@ -51,9 +51,9 @@ const User = db.define('user', {
       values: ['stripe', 'paypal', 'venmo'],
     }),
   },
-  userType: {
-    type: Sequelize.ENUM('user', 'admin'),
-    defaultValue: 'user',
+  isAdmin: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: true,
   },
 })
 
