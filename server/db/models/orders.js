@@ -7,10 +7,17 @@ const Orders = db.define('order', {
   },
   pricePaid: {
     type: Sequelize.FLOAT,
+    validate: {
+      min: 0,
+    },
   },
   quantity: {
     type: Sequelize.INTEGER,
+    validate: {
+      min: 0,
+    },
   },
+  git,
 })
 
 module.exports = Orders
