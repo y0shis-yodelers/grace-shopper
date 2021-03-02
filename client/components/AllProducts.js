@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import {fetchAllProducts} from '../store/products'
 import ProductCard from './ProductCard'
 
@@ -14,7 +15,9 @@ class AllProducts extends React.Component {
       <div>
         <div className="container">
           {products.map((product) => (
-            <ProductCard key={product.id} productId={product.id} />
+            <Link to={`products/${product.id}`}>
+              <ProductCard key={product.id} productId={product.id} />
+            </Link>
           ))}
         </div>
       </div>
