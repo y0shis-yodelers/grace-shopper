@@ -3,16 +3,23 @@ import {connect} from 'react-redux'
 import {fetchAllProducts} from '../store/products'
 import ProductCard from './ProductCard'
 
-const AllProducts = ({products}) => {
-  return (
-    <div>
-      <div className="container">
-        {products.map((product) => (
-          <ProductCard key={product.id} />
-        ))}
+class AllProducts extends React.Component {
+  componentDidMount() {
+    this.props.getProducts()
+  }
+
+  render() {
+    const {products} = this.props || []
+    return (
+      <div>
+        <div className="container">
+          {products.map((product) => (
+            <ProductCard key={product.id} />
+          ))}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 const mapState = (state) => ({
@@ -23,4 +30,4 @@ const mapDispatch = (dispatch) => ({
   getProducts: () => dispatch(fetchAllProducts()),
 })
 
-export default connect(null, mapDispatch)(AllProducts)
+export default connect(mapState, mapDispatch)(AllProducts)
