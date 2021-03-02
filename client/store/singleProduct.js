@@ -7,7 +7,7 @@ const getSingleProduct = (singleProduct) => ({
   singleProduct,
 })
 
-const fetchSingleProduct = (productId) => {
+export const fetchSingleProduct = (productId) => {
   return async (dispatch) => {
     try {
       const {data} = await axios.get(`/products/${productId}`)
