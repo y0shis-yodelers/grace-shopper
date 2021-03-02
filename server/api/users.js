@@ -19,7 +19,9 @@ router.get('/', async (req, res, next) => {
 // GET single user
 router.get('/:userId', async (req, res, next) => {
   try {
-    const user = await User.findByPk(req.params.userId)
+    const user = await User.findByPk(req.params.userId, {
+      include: Address,
+    })
     res.json(user)
   } catch (err) {
     next(err)
@@ -42,25 +44,17 @@ router.put('/:userId', async (req, res, next) => {
     const user = await User.findByPk(req.params.userId, {
       include: Address,
     })
-    // where local state in user update form contains:
-    // address: {
-    //   number, houseOrApt, streetName, city, state, zip
-    // }
-    const updateAddressInfo = req.body.address
+
     const updateUserInfo = {
       name: req.body.name,
-      // how to handle the address
-      // as a separate table in this REST route?
-
       phoneNumber: req.body.phoneNumber,
       email: req.body.email,
     }
-    // update address without returning
-    await Address.update(updateAddressInfo)
-    // THEN update and return user with modified address
+
     const updatedUser = await User.update(updateUserInfo, {
       returning: true,
     })
+
     res.status(204).send(updatedUser)
   } catch (err) {
     next(err)
