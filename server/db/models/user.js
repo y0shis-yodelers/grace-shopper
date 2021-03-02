@@ -47,8 +47,10 @@ const User = db.define('user', {
   },
   payOption: {
     type: Sequelize.ENUM({
-      values: ['stripe', 'paypal', 'venmo'],
+      values: ['credit-card', 'stripe', 'paypal', 'venmo'],
     }),
+    allowNull: false,
+    defaultValue: 'credit-card',
   },
   isAdmin: {
     type: Sequelize.BOOLEAN,
