@@ -2,14 +2,20 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchSingleProduct} from '../store/singleProduct'
 
-const ProductCard = ({singleProduct}) => {
-  return (
-    <div>
-      <div className="productContainer">
-        {/* stuff here pertaining to item view */}
+class ProductCard extends React.Component {
+  componentDidMount() {
+    this.props.getSingleProduct(this.props.productId)
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="productContainer">
+          {/* stuff here pertaining to item view */}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 const mapState = (state) => ({

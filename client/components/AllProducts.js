@@ -14,7 +14,7 @@ class AllProducts extends React.Component {
       <div>
         <div className="container">
           {products.map((product) => (
-            <ProductCard key={product.id} />
+            <ProductCard key={product.id} productId={product.id} />
           ))}
         </div>
       </div>
