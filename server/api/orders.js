@@ -11,7 +11,7 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-// Gets single orders
+// Gets single order
 router.get('/:orderId', async (req, res, next) => {
   try {
     const order = await Orders.findByPK(req.params.orderId, {
