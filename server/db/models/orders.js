@@ -17,7 +17,6 @@ const Orders = db.define('order', {
       min: 0,
     },
   },
-  git,
 })
 
 module.exports = Orders
