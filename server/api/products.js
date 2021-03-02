@@ -3,7 +3,7 @@ const {Product} = require('../db/models')
 const {Op} = require('sequelize')
 module.exports = router
 
-// GET all products route '/api/product'
+// GET all products route '/api/products'
 router.get('/', async (req, res, next) => {
   try {
     const products = await Product.findAll({
@@ -19,7 +19,7 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-// GET single product route '/api/product/:productId'
+// GET single product route '/api/products/:productId'
 router.get('/:productId', async (req, res, next) => {
   try {
     const {productId} = req.params
@@ -34,7 +34,7 @@ router.get('/:productId', async (req, res, next) => {
   }
 })
 
-// POST create new product route '/api/product/'
+// POST create new product route '/api/products/'
 router.post('/', async (req, res, next) => {
   try {
     const data = req.body
@@ -46,7 +46,7 @@ router.post('/', async (req, res, next) => {
   }
 })
 
-// PUT edit product route '/api/product/:productId'
+// PUT edit product route '/api/products/:productId'
 router.put('/:productId', async (req, res, next) => {
   try {
     const data = req.body
@@ -55,6 +55,19 @@ router.put('/:productId', async (req, res, next) => {
     await Product.update({...data}, {where: {id: productId}})
 
     res.json(data)
+  } catch (error) {
+    next(error)
+  }
+})
+
+// DELETE product route '/api/products/:productId'
+router.delete('/:productId', async (req, res, next) => {
+  try {
+    const {productId} = req.params
+
+    await Product.destroy({where: {id: productId}})
+
+    res.status(204).end()
   } catch (error) {
     next(error)
   }
