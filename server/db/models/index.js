@@ -21,4 +21,5 @@ module.exports = {
   Cart,
   Product,
   Orders,
+  Address,
 }
