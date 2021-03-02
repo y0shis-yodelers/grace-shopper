@@ -41,9 +41,7 @@ router.post('/', async (req, res, next) => {
 // UPDATE single user
 router.put('/:userId', async (req, res, next) => {
   try {
-    const user = await User.findByPk(req.params.userId, {
-      include: Address,
-    })
+    const user = await User.findByPk(req.params.userId)
 
     const updateUserInfo = {
       name: req.body.name,
