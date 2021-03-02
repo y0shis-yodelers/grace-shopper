@@ -52,6 +52,9 @@ const User = db.define('user', {
     allowNull: false,
     defaultValue: 'credit-card',
   },
+  userType: {
+    type: Sequelize.ENUM('guest', 'registered'),
+  },
   isAdmin: {
     type: Sequelize.BOOLEAN,
     defaultValue: false,
