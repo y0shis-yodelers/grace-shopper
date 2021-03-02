@@ -11,4 +11,8 @@ const Cart = db.define('cart', {
   }
 })
 
+Cart.prototype.updateQuantity = function(amount) {
+  this.quantity += amount
+}
+
 module.exports = Cart
