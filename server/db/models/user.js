@@ -41,6 +41,10 @@ const User = db.define('user', {
   phoneNumber: {
     type: Sequelize.STRING,
     allowNull: false,
+    validate: {
+      min: 10,
+      max: 10,
+    },
   },
   payOption: {
     type: Sequelize.ENUM({
