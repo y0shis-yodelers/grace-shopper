@@ -62,7 +62,7 @@ router.put('/:userId', async (req, res, next) => {
 // DELETE single user
 router.delete('/:userId', async (req, res, next) => {
   try {
-    const user = await User.findByPk(+req.params.userId)
+    const user = await User.findByPk(req.params.userId)
     await user.destroy()
     res.sendStatus(204)
   } catch (err) {
