@@ -42,8 +42,7 @@ const User = db.define('user', {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      min: 10,
-      max: 10,
+      [len]: [10, 10],
     },
   },
   payOption: {
@@ -53,7 +52,7 @@ const User = db.define('user', {
   },
   isAdmin: {
     type: Sequelize.BOOLEAN,
-    defaultValue: true,
+    defaultValue: false,
   },
 })
 
