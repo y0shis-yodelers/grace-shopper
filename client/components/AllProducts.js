@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchAllProducts} from '../store/products'
+import ProductCard from './ProductCard'
 
 const AllProducts = ({products}) => {
   return (
@@ -13,6 +14,10 @@ const AllProducts = ({products}) => {
     </div>
   )
 }
+
+const mapState = (state) => ({
+  products: state.products,
+})
 
 const mapDispatch = (dispatch) => ({
   getProducts: () => dispatch(fetchAllProducts()),
