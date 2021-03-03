@@ -10,50 +10,46 @@ class SingleProduct extends React.Component {
   }
 
   render() {
-    // restore this when db functional
-    // const {singleProduct} = this.props || {}
-
-    const singleProduct = {
-      name: 'pygmalion',
-      price: '7.00',
-      inventory: '6',
-      imageUrl: 'https://imgur.com/YkxLjEt.jpg',
-      description:
-        'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
-    }
-
-    console.log(singleProduct)
+    const {singleProduct} = this.props || {}
 
     return (
       <div>
-        <Link to="/home">
-          <div className="backToAllProducts">Back to all products</div>
-        </Link>
-        <div className="sp-view-container">
-          <div className="singleProductContainer">
-            <div className="buyupContainer">buyups go here</div>
-            <div className="imgAndDescription">
-              <img src={singleProduct.imageUrl} />
-              <div className="descriptionSidePanel">
-                <div className="productName">{singleProduct.name}</div>
-                <p className="singleProductDescription">
-                  {singleProduct.description}
-                </p>
-                <div className="productInventory">
-                  Available: {singleProduct.inventory}
-                </div>
-                <div className="productPrice">Price: {singleProduct.price}</div>
-                <div className="quantityContainer">
-                  <span>Quantity</span>
-                  <button type="button" name="addItem">
-                    Add
-                  </button>
+        {singleProduct && !singleProduct.id ? (
+          <div>Loading ...</div>
+        ) : (
+          <div>
+            <Link to="/home">
+              <div className="backToAllProducts">Back to all products</div>
+            </Link>
+            <div className="sp-view-container">
+              <div className="singleProductContainer">
+                <div className="buyupContainer">buyups go here</div>
+                <div className="imgAndDescription">
+                  <img src={singleProduct.imageUrl} />
+                  <div className="descriptionSidePanel">
+                    <div className="productName">{singleProduct.name}</div>
+                    <p className="singleProductDescription">
+                      {singleProduct.description}
+                    </p>
+                    <div className="productInventory">
+                      Available: {singleProduct.inventory}
+                    </div>
+                    <div className="productPrice">
+                      Price: {singleProduct.price}
+                    </div>
+                    <div className="quantityContainer">
+                      <span>Quantity</span>
+                      <button type="button" name="addItem">
+                        Add
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div className="cartContainer">cart goes here</div>
             </div>
           </div>
-          <div className="cartContainer">cart goes here</div>
-        </div>
+        )}
       </div>
     )
   }
