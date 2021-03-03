@@ -8,8 +8,8 @@ const User = db.define('user', {
     unique: true,
     allowNull: false,
     validate: {
-      isEmail: true,
-    },
+      isEmail: true
+    }
   },
   password: {
     type: Sequelize.STRING,
@@ -17,7 +17,7 @@ const User = db.define('user', {
     // This is a hack to get around Sequelize's lack of a "private" option.
     get() {
       return () => this.getDataValue('password')
-    },
+    }
   },
   salt: {
     type: Sequelize.STRING,
@@ -25,40 +25,36 @@ const User = db.define('user', {
     // This is a hack to get around Sequelize's lack of a "private" option.
     get() {
       return () => this.getDataValue('salt')
-    },
+    }
   },
   googleId: {
-    type: Sequelize.STRING,
+    type: Sequelize.STRING
   },
   name: {
     type: Sequelize.STRING,
-    allowNull: false,
-  },
-  address: {
-    type: Sequelize.STRING,
-    allowNull: false,
+    allowNull: false
   },
   phoneNumber: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      len: [10, 10],
-    },
+      len: [10, 10]
+    }
   },
   payOption: {
     type: Sequelize.ENUM({
-      values: ['credit-card', 'stripe', 'paypal', 'venmo'],
+      values: ['credit-card', 'stripe', 'paypal', 'venmo']
     }),
     allowNull: false,
-    defaultValue: 'credit-card',
+    defaultValue: 'credit-card'
   },
   userType: {
-    type: Sequelize.ENUM('guest', 'registered'),
+    type: Sequelize.ENUM('guest', 'registered')
   },
   isAdmin: {
     type: Sequelize.BOOLEAN,
-    defaultValue: false,
-  },
+    defaultValue: false
+  }
 })
 
 module.exports = User
@@ -66,18 +62,18 @@ module.exports = User
 /**
  * instanceMethods
  */
-User.prototype.correctPassword = function (candidatePwd) {
+User.prototype.correctPassword = function(candidatePwd) {
   return User.encryptPassword(candidatePwd, this.salt()) === this.password()
 }
 
 /**
  * classMethods
  */
-User.generateSalt = function () {
+User.generateSalt = function() {
   return crypto.randomBytes(16).toString('base64')
 }
 
-User.encryptPassword = function (plainText, salt) {
+User.encryptPassword = function(plainText, salt) {
   return crypto
     .createHash('RSA-SHA256')
     .update(plainText)
@@ -88,7 +84,7 @@ User.encryptPassword = function (plainText, salt) {
 /**
  * hooks
  */
-const setSaltAndPassword = (user) => {
+const setSaltAndPassword = user => {
   if (user.changed('password')) {
     user.salt = User.generateSalt()
     user.password = User.encryptPassword(user.password(), user.salt())
@@ -97,6 +93,6 @@ const setSaltAndPassword = (user) => {
 
 User.beforeCreate(setSaltAndPassword)
 User.beforeUpdate(setSaltAndPassword)
-User.beforeBulkCreate((users) => {
+User.beforeBulkCreate(users => {
   users.forEach(setSaltAndPassword)
 })
