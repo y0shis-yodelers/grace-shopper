@@ -19,3 +19,95 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+img {
+  max-width: 100%;
+}
+
+/* ---- AllProducts ---- */
+
+.allProductContainer {
+  display: flex;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.allProductContainer * {
+  margin: 0.5em;
+}
+
+.productLink {
+  align-self: center;
+}
+
+/* ---- ProductCard ---- */
+
+.productContainer {
+  height: auto;
+  min-height: 400px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 0.5em;
+}
+
+.productContainer * {
+  margin: 0.3em 0;
+}
+
+.productContainer img {
+  height: 200px;
+  width: 100%;
+}
+
+.productName {
+  font-weight: bold;
+}
+
+/* ---- SingleProduct ---- */
+
+/* TEMP RULE for layout assistance -- REMOVE LATER */
+.buyupContainer,
+.imgAndDescription,
+.cartContainer,
+.descriptionSidePanel {
+  border: 1px solid black;
+}
+
+.sp-view-container {
+  display: flex;
+  min-width: 900px;
+}
+
+.singleProductContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+}
+
+.buyupContainer {
+  min-height: 3em;
+}
+
+.imgAndDescription {
+  display: flex;
+}
+
+.imgAndDescription img {
+  height: auto;
+  width: 100%;
+  min-width: 400px;
+}
+
+.descriptionSidePanel {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.cartContainer {
+  min-width: 300px;
+}
