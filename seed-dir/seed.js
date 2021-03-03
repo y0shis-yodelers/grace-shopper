@@ -1,9 +1,9 @@
 const {green, red} = require('chalk')
 const {db} = require('../server/db')
 const {User, Address, Product} = require('../server/db')
-const users = require('./users-seed.js')
-const addresses = require('./addresses-seed.js')
-const products = require('./products-seed.js')
+const users = require('./users-seed')
+const addresses = require('./addresses-seed')
+const products = require('./products-seed')
 
 const seed = async () => {
   try {
