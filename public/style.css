@@ -32,6 +32,7 @@ img {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-around;
+  min-width: 600px;
 }
 
 .allProductContainer * {
@@ -40,6 +41,10 @@ img {
 
 .productLink {
   align-self: center;
+}
+
+.cartContainer {
+  min-width: 300px;
 }
 
 /* ---- ProductCard ---- */

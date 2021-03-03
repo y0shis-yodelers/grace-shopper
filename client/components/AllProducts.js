@@ -31,6 +31,7 @@ class AllProducts extends React.Component {
             </div>
           ))}
         </div>
+        <div className=".cartContainer">{/* <Cart /> */}</div>
       </div>
     )
   }
