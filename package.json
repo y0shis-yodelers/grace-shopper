@@ -1,7 +1,7 @@
 {
-  "name": "boilermaker",
+  "name": "bass-shopper",
   "version": "2.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "e-commerce site for guitars",
   "engines": {
     "node": "~12.11.1"
   },
