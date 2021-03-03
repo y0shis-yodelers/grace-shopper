@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const {User, Address} = require('../db/models')
+const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
 
 router.get('/', async (req, res, next) => {
@@ -8,7 +9,7 @@ router.get('/', async (req, res, next) => {
       // explicitly select only the id and email fields - even though
       // users' passwords are encrypted, it won't help if we just
       // send everything to anyone who asks!
-      attributes: ['id', 'email'],
+      attributes: ['id', 'email']
     })
     res.json(users)
   } catch (err) {
@@ -17,10 +18,10 @@ router.get('/', async (req, res, next) => {
 })
 
 // GET single user
-router.get('/:userId', async (req, res, next) => {
+router.get('/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId, {
-      include: Address,
+      include: Address
     })
     res.json(user)
   } catch (err) {
@@ -29,7 +30,7 @@ router.get('/:userId', async (req, res, next) => {
 })
 
 // POST single user
-router.post('/', async (req, res, next) => {
+router.post('/', isAdminOrUser, async (req, res, next) => {
   try {
     const user = await User.Create(req.body)
     res.json(user)
@@ -39,21 +40,20 @@ router.post('/', async (req, res, next) => {
 })
 
 // UPDATE single user
-router.put('/:userId', async (req, res, next) => {
+router.put('/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId, {
-      include: Address,
+      include: Address
     })
-
 
     const updateUserInfo = {
       name: req.body.name,
       phoneNumber: req.body.phoneNumber,
-      email: req.body.email,
+      email: req.body.email
     }
 
     const updatedUser = await User.update(updateUserInfo, {
-      returning: true,
+      returning: true
     })
 
     res.status(204).send(updatedUser)
@@ -63,7 +63,7 @@ router.put('/:userId', async (req, res, next) => {
 })
 
 // DELETE single user
-router.delete('/:userId', async (req, res, next) => {
+router.delete('/:userId', isAdmin, async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId)
     await user.destroy()
