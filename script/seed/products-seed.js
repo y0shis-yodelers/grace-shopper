@@ -75,7 +75,11 @@ const imageUrls = [
 
 const inventoryValues = [1, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10, 0]
 
-const getPrice = () => Math.floor(Math.random() * 10).toFixed(2)
+const getPrice = () => {
+  const min = Math.ceil(1)
+  const max = Math.floor(1000)
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
 
 const buildProduct = () => {
   const product = {
