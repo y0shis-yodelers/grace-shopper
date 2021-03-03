@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const {Product} = require('../db/models')
+const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 const {Op} = require('sequelize')
 module.exports = router
 
@@ -35,7 +36,7 @@ router.get('/:productId', async (req, res, next) => {
 })
 
 // POST create new product route '/api/products/'
-router.post('/', async (req, res, next) => {
+router.post('/', isAdmin, async (req, res, next) => {
   try {
     const data = req.body
     const {dataValues} = await Product.create(data)
@@ -47,7 +48,7 @@ router.post('/', async (req, res, next) => {
 })
 
 // PUT edit product route '/api/products/:productId'
-router.put('/:productId', async (req, res, next) => {
+router.put('/:productId', isAdmin, async (req, res, next) => {
   try {
     const data = req.body
     const {productId} = req.params
@@ -61,7 +62,7 @@ router.put('/:productId', async (req, res, next) => {
 })
 
 // DELETE product route '/api/products/:productId'
-router.delete('/:productId', async (req, res, next) => {
+router.delete('/:productId', isAdmin, async (req, res, next) => {
   try {
     const {productId} = req.params
 

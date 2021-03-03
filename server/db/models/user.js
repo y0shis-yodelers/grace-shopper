@@ -6,7 +6,7 @@ const User = db.define('user', {
   email: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false,
+    // allowNull: false,
     validate: {
       isEmail: true
     }
@@ -32,11 +32,11 @@ const User = db.define('user', {
   },
   name: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: true
   },
   phoneNumber: {
     type: Sequelize.STRING,
-    allowNull: false,
+    // allowNull: false,
     validate: {
       len: [10, 10]
     }
@@ -45,7 +45,7 @@ const User = db.define('user', {
     type: Sequelize.ENUM({
       values: ['credit-card', 'stripe', 'paypal', 'venmo']
     }),
-    allowNull: false,
+    // allowNull: false,
     defaultValue: 'credit-card'
   },
   userType: {
