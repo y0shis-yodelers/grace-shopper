@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchSingleProduct} from '../store/singleProduct'
+import {fetchSingleProduct} from '../store/cart'
 
 // temp db here
 let prodIdCounter = 1
@@ -38,11 +38,11 @@ class CartProductCard extends React.Component {
 }
 
 const mapState = state => ({
-  singleProduct: state.singleProduct
+  cart: state.cart
 })
 
 const mapDispatch = dispatch => ({
-  getSingleProduct: productId => dispatch(fetchSingleProduct(productId))
+  addToCart: productId => dispatch(fetchSingleProduct(productId))
 })
 
 export default connect(mapState, mapDispatch)(CartProductCard)
