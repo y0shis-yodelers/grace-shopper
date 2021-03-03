@@ -23,7 +23,7 @@ const initState = []
 export default (state = initState, action) => {
   switch (action.type) {
     case GET_ALL_PRODUCTS:
-      return [...state]
+      return [...action.products]
     default:
       return state
   }
