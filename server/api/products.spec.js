@@ -13,8 +13,8 @@ describe('Product routes', () => {
 
   describe('/api/products/', () => {
     const product = {
-      name: 'Test pick',
-      inventory: 1,
+      name: 'Very Generic Pick',
+      inventory: 34,
       price: 100
     }
 
@@ -34,29 +34,28 @@ describe('Product routes', () => {
     })
   })
 
-  //   describe('api/users/:userId', () => {
-  //     const Alice = {
-  //       name: 'Alice',
-  //       email: 'alice@alice.com',
-  //       address: '101 alice way chicago il 60660',
-  //       phoneNumber: '15551234567',
-  //       userType: 'registered',
-  //       isAdmin: false
-  //     }
+  describe('/api/products/:productId', () => {
+    const POD = {
+      name: 'Pick of Destiny',
+      inventory: 1,
+      price: 100000
+    }
 
-  //     beforeEach(() => {
-  //       return User.create(Alice)
-  //     })
+    beforeEach(() => {
+      return Product.create(POD)
+    })
 
-  //     it('GET singleUser, /api/users/:userId', async () => {
-  //       const res = await request(app)
-  //         .get('/api/users/2')
-  //         .expect(200)
+    it('GET /api/products/:productId returns single product', async () => {
+      const res = await request(app)
+        .get('/api/products/1')
+        .expect(200)
 
-  //       expect(res.body).to.be.an('object')
-  //       expect(res.body).to.deep.equal(Alice)
-  //     })
-  //   })
+      expect(res.body).to.be.an('object')
+      expect(res.body.name).to.be.equal(POD.name)
+      expect(res.body.inventory).to.be.equal(POD.inventory)
+      expect(+res.body.price).to.be.equal(POD.price)
+    })
+  })
 
   //   describe('POST api/users/:userId', () => {
   //     const Alice = {
