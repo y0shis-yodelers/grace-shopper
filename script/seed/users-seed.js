@@ -4,42 +4,54 @@ module.exports = [
     email: 'htulloch0@cloudflare.com',
     phoneNumber: '4018752916',
     addressId: 1,
-    cartId: 1
+    cartId: 1,
+    isAdmin: true,
+    password: '1234'
   },
   {
     name: 'Delores Renfield',
     email: 'drenfield1@wikia.com',
     phoneNumber: '9878788081',
     addressId: 2,
-    cartId: 2
+    cartId: 2,
+    isAdmin: false,
+    password: '1234'
   },
   {
     name: 'Nicky Giannasi',
     email: 'ngiannasi2@buzzfeed.com',
     phoneNumber: '4854383336',
     addressId: 3,
-    cartId: 3
+    cartId: 3,
+    isAdmin: false,
+    password: '1234'
   },
   {
     name: 'Winny Ondrich',
     email: 'wondrich3@twitter.com',
     phoneNumber: '1413358086',
     addressId: 4,
-    cartId: 4
+    cartId: 4,
+    isAdmin: false,
+    password: '1234'
   },
   {
     name: 'Adina Meneur',
     email: 'ameneur4@diigo.com',
     phoneNumber: '5055170007',
     addressId: 5,
-    cartId: 5
+    cartId: 5,
+    isAdmin: false,
+    password: '1234'
   },
   {
     name: 'Genia Critchlow',
     email: 'gcritchlow5@livejournal.com',
     phoneNumber: '9567991155',
     addressId: 6,
-    cartId: 6
+    cartId: 6,
+    isAdmin: false,
+    password: '1234'
   },
   {
     name: 'Jackqueline Maria',

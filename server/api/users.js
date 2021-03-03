@@ -3,7 +3,7 @@ const {User, Address} = require('../db/models')
 const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
 
-router.get('/', async (req, res, next) => {
+router.get('/', isAdmin, async (req, res, next) => {
   try {
     const users = await User.findAll({
       // explicitly select only the id and email fields - even though
@@ -30,7 +30,7 @@ router.get('/:userId', isAdminOrUser, async (req, res, next) => {
 })
 
 // POST single user
-router.post('/', isAdminOrUser, async (req, res, next) => {
+router.post('/', async (req, res, next) => {
   try {
     const user = await User.Create(req.body)
     res.json(user)
