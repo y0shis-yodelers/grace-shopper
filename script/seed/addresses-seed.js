@@ -42,7 +42,7 @@ const zipCodes = ['30263', '22156', '93485', '06605', '82375', '55243']
 const buildAddress = () => {
   return {
     number: numbers[Math.floor(Math.random() * numbers.length)],
-    houseOrApt: houseOrApt(),
+    houseOrApt: houseOrApt(Math.random()),
     streetName: streetNames[Math.floor(Math.random() * streetNames.length)],
     city: cities[Math.floor(Math.random() * cities.length)],
     state: states[Math.floor(Math.random() * states.length)],
