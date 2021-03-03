@@ -37,6 +37,8 @@ async function seed() {
   )
 
   console.log(`seeded ${users.length} users`)
+  console.log(`seeded ${addresses.length} addresses`)
+  console.log(`seeded ${products.length} products`)
   console.log(`seeded successfully`)
 }
 
