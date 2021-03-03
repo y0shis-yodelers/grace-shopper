@@ -1,8 +1,9 @@
 const router = require('express').Router()
 const {Orders, Product, Address} = require('../db/models')
+const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 
 // Gets all orders
-router.get('/', async (req, res, next) => {
+router.get('/', isAdmin, async (req, res, next) => {
   try {
     const orders = await Orders.findAll()
     res.json(orders)
@@ -12,7 +13,7 @@ router.get('/', async (req, res, next) => {
 })
 
 // Gets single order
-router.get('/:orderId', async (req, res, next) => {
+router.get('/:orderId', isAdminOrUser, async (req, res, next) => {
   try {
     const order = await Orders.findByPK(req.params.orderId, {
       include: [{model: Product}, {model: Address}]
@@ -24,7 +25,7 @@ router.get('/:orderId', async (req, res, next) => {
 })
 
 // Creates an order
-router.post('/', async (req, res, next) => {
+router.post('/', isAdminOrUser, async (req, res, next) => {
   try {
     res.send(await Orders.create(req.body))
   } catch (error) {
@@ -33,7 +34,7 @@ router.post('/', async (req, res, next) => {
 })
 
 // Deletes an order
-router.delete('/:orderId', async (req, res, next) => {
+router.delete('/:orderId', isAdmin, async (req, res, next) => {
   try {
     const order = await Orders.findByPK(req.params.orderId)
     await order.destroy()
