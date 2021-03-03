@@ -5,7 +5,7 @@ const {Op} = require('sequelize')
 module.exports = router
 
 // GET all products route '/api/products'
-router.get('/', isAdmin, async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const products = await Product.findAll({
       where: {
