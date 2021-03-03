@@ -2,13 +2,26 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchSingleProduct} from '../store/singleProduct'
 
+// temp db here
+let prodIdCounter = 1
+let products = require('../../script/seed/products-seed')
+products.forEach(product => (product.id = ++prodIdCounter))
+console.log(products)
+
 class ProductCard extends React.Component {
   componentDidMount() {
     this.props.getSingleProduct(this.props.productId)
   }
 
   render() {
-    const {product} = this.props.singleProduct
+    // restore this when db functional
+    // const {product} = this.props.singleProduct
+
+    // temp db
+    const product = products.find(
+      product => product.id === this.props.productId
+    )
+
     return (
       <div>
         <div className="productContainer">
@@ -25,12 +38,12 @@ class ProductCard extends React.Component {
   }
 }
 
-const mapState = (state) => ({
-  singleProduct: state.singleProduct,
+const mapState = state => ({
+  singleProduct: state.singleProduct
 })
 
-const mapDispatch = (dispatch) => ({
-  getSingleProduct: (productId) => dispatch(fetchSingleProduct(productId)),
+const mapDispatch = dispatch => ({
+  getSingleProduct: productId => dispatch(fetchSingleProduct(productId))
 })
 
 export default connect(mapState, mapDispatch)(ProductCard)
