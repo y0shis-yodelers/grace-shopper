@@ -82,6 +82,10 @@ img {
   min-width: 900px;
 }
 
+.backToAllProducts {
+  margin-bottom: 0.5em;
+}
+
 .singleProductContainer {
   display: flex;
   flex-direction: column;
@@ -106,6 +110,15 @@ img {
   display: flex;
   flex-direction: column;
   min-width: 200px;
+  padding: 0.5em;
+}
+
+.descriptionSidePanel * {
+  margin: 0.5em 0;
+}
+
+.productName {
+  font-weight: bold;
 }
 
 .cartContainer {

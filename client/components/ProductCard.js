@@ -8,7 +8,6 @@ let products = require('../../script/seed/products-seed')
 products.forEach(product => (product.id = ++prodIdCounter))
 console.log(products)
 
-import './ProductCard.css'
 class ProductCard extends React.Component {
   componentDidMount() {
     this.props.getSingleProduct(this.props.productId)

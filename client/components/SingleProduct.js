@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 import {fetchSingleProduct} from '../store/singleProduct'
 
 class SingleProduct extends React.Component {
@@ -25,20 +25,35 @@ class SingleProduct extends React.Component {
     console.log(singleProduct)
 
     return (
-      <div className="sp-view-container">
-        <div className="singleProductContainer">
-          <div className="buyupContainer">buyups go here</div>
-          <div className="imgAndDescription">
-            <img src={singleProduct.imageUrl} />
-            <div className="descriptionSidePanel">
-              <div className="name">{singleProduct.name}</div>
-              <p className="singleProductDescription">
-                {singleProduct.description}
-              </p>
+      <div>
+        <Link to="/home">
+          <div className="backToAllProducts">Back to all products</div>
+        </Link>
+        <div className="sp-view-container">
+          <div className="singleProductContainer">
+            <div className="buyupContainer">buyups go here</div>
+            <div className="imgAndDescription">
+              <img src={singleProduct.imageUrl} />
+              <div className="descriptionSidePanel">
+                <div className="productName">{singleProduct.name}</div>
+                <p className="singleProductDescription">
+                  {singleProduct.description}
+                </p>
+                <div className="productInventory">
+                  Available: {singleProduct.inventory}
+                </div>
+                <div className="productPrice">Price: {singleProduct.price}</div>
+                <div className="quantityContainer">
+                  <span>Quantity</span>
+                  <button type="button" name="addItem">
+                    Add
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
+          <div className="cartContainer">cart goes here</div>
         </div>
-        <div className="cartContainer">cart goes here</div>
       </div>
     )
   }
