@@ -8,6 +8,9 @@ let config
 if (process.env.DATABASE_URL) {
   config = {
     logging: false,
+    operatorsAliases: false,
+    dialect: 'postgres',
+    protocol: 'postgres',
     ssl: true,
     dialectOptions: {
       ssl: {
@@ -18,7 +21,8 @@ if (process.env.DATABASE_URL) {
   }
 } else {
   config = {
-    logging: false
+    logging: false,
+    operatorsAliases: false
   }
 }
 
