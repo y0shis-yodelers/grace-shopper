@@ -13,6 +13,12 @@ describe('Product routes', () => {
     price: 1212
   }
 
+  const noStock = {
+    name: "I'm out of stock",
+    inventory: 0,
+    price: 1
+  }
+
   beforeEach(async () => {
     await db.sync({force: true})
 
@@ -67,6 +73,24 @@ describe('Product routes', () => {
           expect(res.body.name).to.be.equal('Alice')
           expect(res.body.inventory).to.be.equal(5)
           expect(res.body.price).to.be.equal(1212)
+        })
+    })
+  })
+
+  describe('`/products/admin` URI', () => {
+    it('GET responds with all products (admin level)', async () => {
+      await request
+        .agent(app)
+        .post('/api/products')
+        .send(noStock)
+        .expect(200)
+
+      await request(app)
+        .get('/api/products/admin')
+        .expect(200)
+        .then(res => {
+          expect(res.body).to.be.an('array')
+          expect(res.body).to.have.lengthOf(11)
         })
     })
   })
