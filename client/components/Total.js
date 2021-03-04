@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Total = products => {
+const Total = ({products}) => {
   let subtotal = products.reduce((acc, curr) => {
     return curr.price + acc
   }, 0)
