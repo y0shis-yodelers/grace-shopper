@@ -26,7 +26,7 @@ export const loadCart = () => {
   return {type: LOAD_CART}
 }
 
-export const fetchSingleProduct = productId => {
+export const fetchProductToAdd = productId => {
   return async dispatch => {
     try {
       const {data} = await axios.get(`/api/products/${productId}`)
