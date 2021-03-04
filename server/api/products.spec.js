@@ -33,7 +33,7 @@ describe('Product routes', () => {
 
   describe('`/products` URI', () => {
     it('GET responds with all products', async () => {
-      await request(app)
+      const allProducts = await request(app)
         .get('/api/products')
         .expect(200)
         .then(res => {
@@ -43,7 +43,7 @@ describe('Product routes', () => {
     })
 
     it('POST responds with created product', async () => {
-      await request
+      const createProduct = await request
         .agent(app)
         .post('/api/products')
         .send(alice)
@@ -59,13 +59,13 @@ describe('Product routes', () => {
 
   describe('`/products/:productId` URI', () => {
     it('GET responds with single product', async () => {
-      await request
+      const createProduct = await request
         .agent(app)
         .post('/api/products')
         .send(alice)
         .expect(200)
 
-      await request(app)
+      const singleProduct = await request(app)
         .get('/api/products/11')
         .expect(200)
         .then(res => {
@@ -79,13 +79,13 @@ describe('Product routes', () => {
 
   describe('`/products/admin` URI', () => {
     it('GET responds with all products (admin level)', async () => {
-      await request
+      const createProduct = await request
         .agent(app)
         .post('/api/products')
         .send(noStock)
         .expect(200)
 
-      await request(app)
+      const allProducts = await request(app)
         .get('/api/products/admin')
         .expect(200)
         .then(res => {
