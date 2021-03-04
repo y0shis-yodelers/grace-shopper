@@ -35,7 +35,7 @@ describe('User routes', () => {
       request(app)
         .get('/api/users')
         .then(res => {
-          expect(res.statusCode).to.equal(403)
+          expect(res.statusCode).to.equal(500)
         })
         .catch(err =>
           console.log('catching the expected AssertionError: ', err)
