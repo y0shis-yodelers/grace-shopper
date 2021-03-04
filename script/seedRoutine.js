@@ -14,7 +14,7 @@ const orders = require('./seed/orders-seed')
 const products = require('./seed/products-seed')
 const productOrders = require('./seed/productorders-seed')
 
-const newSeed = async () => {
+const seedRoutine = async () => {
   try {
     await db.sync({force: true})
 
@@ -55,4 +55,4 @@ const newSeed = async () => {
   }
 }
 
-module.exports = newSeed
+module.exports = seedRoutine

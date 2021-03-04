@@ -1,68 +1,16 @@
 'use strict'
 
 const db = require('../server/db')
-const {User, Address, Product, Orders} = require('../server/db/models')
 
-/* // seed data
-const users = require('./seed/users-seed')
-const addresses = require('./seed/addresses-seed')
-const products = require('./seed/products-seed')
-const orders = require('./seed/orders-seed')
-const productOrders = require('./seed/productorders-seed') */
-
-const newSeed = require('./newSeed')
+// seedRoutine seeds each model and the associations models for ProductOrders
+// important! still need to seed UserAddress
+const seedRoutine = require('./seedRoutine')
 
 async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
-  /* // const users = await Promise.all([
-  //   User.create({email: 'cody@email.com', password: '123'}),
-  //   User.create({email: 'murphy@email.com', password: '123'})
-  // ])
-
-  // seed users
-  await Promise.all(
-    users.map((user) => {
-      return User.create(user)
-    })
-  )
-
-  // seed addresses
-  await Promise.all(
-    addresses.map((address) => {
-      return Address.create(address)
-    })
-  )
-
-  // seed products
-  await Promise.all(
-    products.map((product) => {
-      return Product.create(product)
-    })
-  )
-
-  // seed orders
-  await Promise.all(
-    orders.map((order) => {
-      return Orders.create(order)
-    })
-  )
-
-  // seed ProductOrders
-  await Promise.all(
-    productOrders.map((productOrder) => {
-      return Orders.create(productOrder)
-    })
-  )
-
-  console.log(`seeded ${users.length} users`)
-  console.log(`seeded ${addresses.length} addresses`)
-  console.log(`seeded ${products.length} products`)
-  console.log(`seeded ${orders.length} orders`)
-  console.log(`seeded successfully`) */
-
-  await newSeed()
+  await seedRoutine()
 }
 
 // We've separated the `seed` function from the `runSeed` function.
