@@ -1,7 +1,17 @@
 const router = require('express').Router()
 const {Address} = require('../db/models')
-const {isAdminOrUser} = require('./gatekeepingMiddleware')
+const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
+
+// Get all address
+router.get('/', isAdmin, async (req, res, next) => {
+  try {
+    const addresses = await Address.findAll()
+    res.json(addresses)
+  } catch (err) {
+    console.error(err)
+  }
+})
 
 // UPDATE address
 router.put('/:addressId', isAdminOrUser, async (req, res, next) => {
