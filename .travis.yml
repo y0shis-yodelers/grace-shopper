@@ -13,7 +13,7 @@ notifications:
 install:
   - npm ci
 before_script:
-  - psql -c 'create database "grace-shopper-test";' -U postgres
+  - psql -c 'create database "grace-shopper-yy-test";' -U postgres
 script:
   - npm test
   - npm run build-client
