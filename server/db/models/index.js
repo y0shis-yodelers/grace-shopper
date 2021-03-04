@@ -31,5 +31,6 @@ module.exports = {
   User,
   Product,
   Orders,
-  Address
+  Address,
+  ProductOrders
 }
