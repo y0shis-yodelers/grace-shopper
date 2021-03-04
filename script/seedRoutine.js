@@ -28,7 +28,7 @@ const seedRoutine = async () => {
     const returnedAddressesAfterSeed = await Address.bulkCreate(addresses, {
       returning: true
     })
-    console.log(green(`Seeded ${returnedAddressesAfterSeed.length}addresses`))
+    console.log(green(`Seeded ${returnedAddressesAfterSeed.length} addresses`))
 
     // products
     const returnedProductsAfterSeed = await Product.bulkCreate(products, {
@@ -47,7 +47,9 @@ const seedRoutine = async () => {
       productOrders,
       {returning: true}
     )
-    console.log(green('Seeded product_orders'))
+    console.log(
+      green(`Seeded ${returnedProductOrdersAfterSeed} product_orders`)
+    )
 
     console.log(green('Database sucessfully seeded'))
   } catch (error) {
