@@ -5,7 +5,7 @@ const {Op} = require('sequelize')
 module.exports = router
 
 // GET all products route '/api/products' (client sees only products in stock)
-router.get('/', isAdminOrUser, async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const products = await Product.findAll({
       where: {
@@ -31,7 +31,7 @@ router.get('/admin', isAdmin, async (req, res, next) => {
 })
 
 // GET single product route '/api/products/:productId'
-router.get('/:productId', isAdminOrUser, async (req, res, next) => {
+router.get('/:productId', async (req, res, next) => {
   try {
     const {productId} = req.params
 
