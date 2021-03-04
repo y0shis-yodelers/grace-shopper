@@ -4,6 +4,16 @@ const {isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
 
 // UPDATE address
+router.get('/', isAdminOrUser, async (req, res, next) => {
+  try {
+    const addresses = await Address.findAll()
+    res.json(addresses)
+  } catch (err) {
+    console.error(err)
+  }
+})
+
+// UPDATE address
 router.put('/:addressId', isAdminOrUser, async (req, res, next) => {
   try {
     // req.body.address:
