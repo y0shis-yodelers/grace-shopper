@@ -10,15 +10,7 @@ class UserProfile extends React.Component {
 
   render() {
     // restore this when db functional
-    // const {singleUser} = this.props || {}
-
-    const singleUser = {
-      name: 'albert schweitzer',
-      address: '101 alschweitz lane chicago il 60660',
-      isAdmin: false,
-      email: 'alschweitz@hotmail.com',
-      phoneNumber: '5551234567'
-    }
+    const {singleUser} = this.props || {}
 
     return (
       <div className="su-ads-container">
@@ -28,7 +20,17 @@ class UserProfile extends React.Component {
           to be created ... */}
 
           {/* <OrderHistory /> */}
-          <div className="userProfileContainer">user profile here</div>
+          <div className="userProfileContainer">
+            {Object.keys(singleUser).length ? (
+              <div>
+                <div>Name: {singleUser.name}</div>
+                <div>Email: {singleUser.email}</div>
+                <div>Phone: {singleUser.phoneNumber}</div>
+              </div>
+            ) : (
+              <div>Guest profile</div>
+            )}
+          </div>
           {/* <PaymentOptions /> */}
         </div>
         <div className="advertisementSidePanel">ads side panel</div>
