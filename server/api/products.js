@@ -4,8 +4,8 @@ const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 const {Op} = require('sequelize')
 module.exports = router
 
-// GET all products route '/api/products'
-router.get('/', async (req, res, next) => {
+// GET all products route '/api/products' (client sees only products in stock)
+router.get('/', isAdminOrUser, async (req, res, next) => {
   try {
     const products = await Product.findAll({
       where: {
@@ -20,8 +20,18 @@ router.get('/', async (req, res, next) => {
   }
 })
 
+// GET all products route '/api/products' (admin sees all products)
+router.get('/admin', isAdmin, async (req, res, next) => {
+  try {
+    const products = await Product.findAll()
+    res.json(products)
+  } catch (err) {
+    next(err)
+  }
+})
+
 // GET single product route '/api/products/:productId'
-router.get('/:productId', async (req, res, next) => {
+router.get('/:productId', isAdminOrUser, async (req, res, next) => {
   try {
     const {productId} = req.params
 
