@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const {Address} = require('../db/models')
-const {isAdmin} = require('./gatekeepingMiddleware')
+const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
 
 // Get all address
