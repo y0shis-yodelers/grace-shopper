@@ -23,6 +23,26 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      // use the style-loader/css-loader combos for anything matching the .css extension
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        loader: require.resolve('url-loader'),
+        options: {
+          limit: 10000,
+          name: 'static/media/[name].[hash:8].[ext]'
+        }
+      },
+      {
+        test: [/\.eot$/, /\.ttf$/, /\.svg$/, /\.woff$/, /\.woff2$/],
+        loader: require.resolve('file-loader'),
+        options: {
+          name: '../static/[name].[hash:8].[ext]'
+        }
       }
     ]
   }
