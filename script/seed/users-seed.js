@@ -58,27 +58,35 @@ module.exports = [
     email: 'jmaria6@feedburner.com',
     phoneNumber: '8948035493',
     addressId: 7,
-    cartId: 7
+    cartId: 7,
+    isAdmin: false,
+    password: '1234'
   },
   {
     name: 'Robbin Rapa',
     email: 'rrapa7@engadget.com',
     phoneNumber: '1487381105',
     addressId: 8,
-    cartId: 8
+    cartId: 8,
+    isAdmin: false,
+    password: '1234'
   },
   {
     name: 'Ivett Brislane',
     email: 'ibrislane8@slate.com',
     phoneNumber: '1208271452',
     addressId: 9,
-    cartId: 9
+    cartId: 9,
+    isAdmin: false,
+    password: '1234'
   },
   {
     name: 'Erek Mooney',
     email: 'emooney9@behance.net',
     phoneNumber: '4046876292',
     addressId: 10,
-    cartId: 10
+    cartId: 10,
+    isAdmin: false,
+    password: '1234'
   }
 ]
