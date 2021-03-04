@@ -2,10 +2,10 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Orders = db.define('order', {
-  // isPaid: {
-  //   type: Sequelize.BOOLEAN,
-  //   defaultValue: false
-  // },
+  isPaid: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
+  },
   pricePaid: {
     type: Sequelize.INTEGER,
     validate: {
