@@ -9,7 +9,6 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    // restore this when db functional
     const {singleUser} = this.props || {}
 
     return (
