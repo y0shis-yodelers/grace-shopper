@@ -2,7 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
 import Total from './Total'
-import Submit from './Submit'
 
 class Cart extends React.Component {
   render() {
@@ -14,8 +13,10 @@ class Cart extends React.Component {
             <CartProductCard product={product} />
           </div>
         ))}
-        <Total />
-        <Submit />
+        <Total cart={products} />
+        <button type="button" name="submit">
+          Checkout
+        </button>
       </div>
     )
   }

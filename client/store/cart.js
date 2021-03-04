@@ -44,7 +44,9 @@ export default (state = [], action) => {
     case REMOVE_FROM_CART:
       return {
         ...state,
-        cart: state.cart.filter(item => item.productId !== action.itemId)
+        cart: state.cart.filter(
+          item => item.productId !== action.item.productId
+        )
       }
     case CLEAR_CART:
       return {...state, cart: []}
@@ -52,7 +54,7 @@ export default (state = [], action) => {
       window.localStorage.setItem('cart', JSON.stringify(state))
       return state
     case LOAD_CART:
-      return JSON.parse(window.localStorage.getItem('cart'))
+      return {...state, cart: JSON.parse(window.localStorage.getItem('cart'))}
     default:
       return state
   }
