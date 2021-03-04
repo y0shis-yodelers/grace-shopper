@@ -1,27 +1,25 @@
 language: node_js
 node_js:
-  - 14 # uses version 14
+  - 14
 services:
-  - postgresql # starts up postgres
+  - postgresql
 addons:
-  postgresql: '10' # recent postgres version on Travis
-dist: xenial # uses xenial environment
+  postgresql: '10'
+dist: xenial
 notifications:
   email:
-    on_success: change # default: change (only when going from broken to fixed)
-    on_failure: always # default: always (which is annoying, as it should be)
+    on_success: change
+    on_failure: always
 install:
-  - npm ci # faster, goes only from package-lock
+  - npm ci
 before_script:
-  - psql -c 'create database "boilermaker-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
+  - psql -c 'create database "grace-shopper-test";' -U postgres
 script:
-  - npm test # test the code
-  - npm run build-client # make the bundle
-# before_deploy:
-#   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: YOUR-HEROKU-APP-NAME-HERE # see README
-#   api_key:
-#     secure: YOUR-***ENCRYPTED***-API-KEY-HERE # see README
+  - npm test
+  - npm run build-client
+deploy:
+  skip_cleanup: true # prevents travis from deleting the build
+  provider: heroku
+  app: grace-shopper-yy # see README
+  api_key:
+    secure: CLI21qGEQ/4WQT1EcNlAV+9UR2J488xBVZF+drdAQ3CUhsOCQlqtkH6nCyKSIFX9RDgaJ6rg2aVQOX5eLRyHvruJfde//tTScOnF7A5b/tdmKKwdEx+U6U7eN45C6/IQCGT2wEtkFLDWipfaMF38LxTB39VKd12rSg0NTthFreMI9oeB27bQsfRrfpeg+LN/eRP/X/JmaJLbW1nRbaXRJItg96qRCHzCeC35n0Fs5m9FnqawTrasfebOzRrPwHt7fnueDlBIvQ3vKJLjH21lddbxo3WzzPo9Ft0iXPfzhLIZ1b0H6+0QEr/eXJ87SZaKl8t/YDynY9+Iri2ZXKBuejDZ5S+R1rJSibFN+XMb8NrIESogkm+5OIBNmdt0ZLIj2jk2ffnh1K/kEdVtOUC9XEuxDCUBy6U7gBwMQIGQXcjMlK198a2etavS51++etJA57ltDam2z26LqMsETnKV05qxrLAJ8iu598DqlVHArC8CJSHX8LDsTimM/1ABOJOZlRnCgA3kPxrdh2Bs54CKcFAEfDsZDDGS71dUKzIkTCVop5x7ltfI/5kyRbkryZUHcQOxaar0yM6jNSLrn4zbNibD+fjAiatpp0RofDsUU5fSP/QA7jSTLhtBhr5BhFb/0pGq27aNNiYC4QBQr2PYmjT6ieOQ58QB/Wqfe67uOrU=
