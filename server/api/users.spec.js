@@ -30,5 +30,16 @@ describe('User routes', () => {
         })
         .catch(err => console.log('this err happened: ', err))
     })
+
+    it('does NOT allow non-admin users to GET all users', () => {
+      request(app)
+        .get('/api/users')
+        .then(res => {
+          expect(res.statusCode).to.equal(403)
+        })
+        .catch(err =>
+          console.log('catching the expected AssertionError: ', err)
+        )
+    })
   })
 })
