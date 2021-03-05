@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 label {
@@ -30,27 +35,21 @@ img {
 .productsAndCart {
   display: flex;
   justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .allProductContainer {
   display: flex;
-  flex-basis: 50%;
   flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-around;
-  min-width: 600px;
-}
-
-.allProductContainer * {
-  margin: 0.5em;
-}
-
-.productLink {
-  align-self: center;
+  justify-content: center;
+  max-width: 760px;
 }
 
 .cartContainer {
   min-width: 300px;
+  margin: 0.3em;
 }
 
 /* ---- ProductCard ---- */
@@ -62,6 +61,7 @@ img {
   flex-direction: column;
   border: 1px solid black;
   padding: 0.5em;
+  margin: 0.3em;
 }
 
 .productContainer * {
@@ -166,7 +166,7 @@ img {
 .cartContainer {
   position: sticky;
   top: 2em;
-  min-width: 300px;
+  min-width: 320px;
   max-height: 80vh;
 }
 
