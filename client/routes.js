@@ -10,12 +10,14 @@ import {
   UserProfile
 } from './components'
 import {me} from './store'
+import {fetchSetCartOnLoadFromLocalStorage} from './store/cart'
 
 /**
  * COMPONENT
  */
 class Routes extends Component {
   componentDidMount() {
+    this.props.loadCart()
     this.props.loadInitialData()
   }
 
@@ -50,6 +52,14 @@ const mapDispatch = dispatch => {
   return {
     loadInitialData() {
       dispatch(me())
+    },
+    loadCart() {
+      /* here, we load a potential cart from localStorage
+      so that guest users and users alike can persist an unfulfilled order -- if cart does not exist on localStorage the call returns null, so we check its truthiness and set it equal to an empty object if there is no cart! */
+
+      let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'))
+      if (!cartFromLocalStorage) cartFromLocalStorage = {}
+      dispatch(fetchSetCartOnLoadFromLocalStorage(cartFromLocalStorage))
     }
   }
 }

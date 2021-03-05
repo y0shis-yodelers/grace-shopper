@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {fetchAllProducts} from '../store/products'
 import ProductCard from './ProductCard'
+import Cart from './Cart'
 
 class AllProducts extends React.Component {
   componentDidMount() {
@@ -17,18 +18,19 @@ class AllProducts extends React.Component {
         {!products[0] ? (
           <div>Loading ...</div>
         ) : (
-          <div>
+          <div className="productsAndCart">
             <div className="allProductContainer">
               {products.map(product => (
-                <div key={product.id}>
+                <Link
+                  key={product.id}
+                  className="productLink"
+                  to={`/products/${product.id}`}
+                >
                   <ProductCard product={product} />
-                  <Link className="productLink" to={`/products/${product.id}`}>
-                    Go to {product.name}
-                  </Link>
-                </div>
+                </Link>
               ))}
             </div>
-            <div className=".cartContainer">{/* <Cart /> */}</div>
+            <Cart />
           </div>
         )}
       </div>

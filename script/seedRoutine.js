@@ -13,6 +13,7 @@ const addresses = require('./seed/addresses-seed')
 const orders = require('./seed/orders-seed')
 const products = require('./seed/products-seed')
 const productOrders = require('./seed/productorders-seed')
+const userAddresses = require('./seed/useraddress-seed')
 
 const seedRoutine = async () => {
   try {
@@ -48,8 +49,24 @@ const seedRoutine = async () => {
       {returning: true}
     )
     console.log(
-      green(`Seeded ${returnedProductOrdersAfterSeed} product_orders`)
+      green(`Seeded ${returnedProductOrdersAfterSeed.length} product_orders`)
     )
+
+    // UserAddress
+    const fakeEntryUserAddress = userAddresses.map(entry => {
+      entry.createdAt = new Date()
+      entry.updatedAt = new Date()
+      return entry
+    })
+
+    // queryInterface allows us to force seed the association
+    // as a complete through table
+    const queryInterface = db.getQueryInterface()
+
+    // reference 'UserAddress' as defined in our associations
+    await queryInterface.bulkInsert('UserAddress', fakeEntryUserAddress)
+
+    console.log('UserAddress table successfully created and associated!')
 
     console.log(green('Database sucessfully seeded'))
   } catch (error) {
