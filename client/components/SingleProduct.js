@@ -7,10 +7,10 @@ import {fetchAllProducts} from '../store/products'
 import {fetchSingleProduct} from '../store/singleProduct'
 import Cart from './Cart'
 
+// helper sets local state quantity field
+// by checking localStorage for current value of cart
 function getQuantityFromCart(productId) {
-  console.log('hi i fired')
   const cart = JSON.parse(localStorage.getItem('cart'))
-  console.log(cart)
   return cart[productId] || 0
 }
 
