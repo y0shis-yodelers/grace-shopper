@@ -39,7 +39,7 @@ class SingleProduct extends React.Component {
   }
 
   handleUpdateCart() {
-    const productId = this.props.product.id
+    const productId = this.props.singleProduct.id
     this.props.updateCart(productId, this.state.quantity)
   }
 
