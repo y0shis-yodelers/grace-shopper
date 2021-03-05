@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
 import {formatPrice} from './helperFunctions'
 import {fetchUpdateCart} from '../store/cart'
+import {fetchAllProducts} from '../store/products'
 import {fetchSingleProduct} from '../store/singleProduct'
 import Cart from './Cart'
 
@@ -17,6 +18,7 @@ class SingleProduct extends React.Component {
   }
 
   componentDidMount() {
+    this.props.getProducts()
     const productId = this.props.match.params.productId
     this.props.getSingleProduct(productId)
   }
@@ -105,6 +107,7 @@ const mapState = state => ({
 })
 
 const mapDispatch = dispatch => ({
+  getProducts: () => dispatch(fetchAllProducts()),
   getSingleProduct: productId => dispatch(fetchSingleProduct(productId)),
   updateCart: (productId, quantity) =>
     dispatch(fetchUpdateCart(productId, quantity))

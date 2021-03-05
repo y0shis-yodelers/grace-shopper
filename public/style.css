@@ -89,6 +89,7 @@ img {
 
 .sp-view-container {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
 }
 
@@ -120,6 +121,7 @@ img {
 .descriptionSidePanel {
   display: flex;
   flex-direction: column;
+  max-width: 400px;
   padding: 0.5em;
 }
 
@@ -159,15 +161,20 @@ img {
   position: sticky;
   top: 2em;
   min-width: 320px;
-  max-height: 80vh;
+  height: 70vh;
   border: 1px solid black;
 }
 
 /* ---- Cart ---- */
 
 .cartBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   height: 100%;
   width: 100%;
+  padding: 0.3em;
 }
 
 /* ---- CartProductCard ---- */
@@ -176,15 +183,20 @@ img {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 4em;
-  width: 100%;
+  width: 300px;
   margin: 0.5em;
   padding: 0.5em;
   border: 1px solid black;
 }
 
-.cartProductContainer img {
+.imgAndPurchaseDetails {
+  display: flex;
+  height: 3em;
+}
+
+.imgAndPurchaseDetails img {
   height: 100%;
   width: auto;
   max-width: 80px;
@@ -196,6 +208,7 @@ img {
   flex-direction: column;
   justify-content: center;
   height: min-content;
+  margin: 0 0.5em;
 }
 
 .nameAndPrice .productPrice {
@@ -208,5 +221,7 @@ img {
 
 .cartProductContainer .quantityAndBtns {
   display: flex;
-  max-width: 6em;
+  width: 100px;
+  align-items: center;
+  justify-content: space-around;
 }

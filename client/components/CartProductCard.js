@@ -4,11 +4,13 @@ import {formatPrice} from './helperFunctions'
 const CartProductCard = ({product, quantity, handleQuantityChange}) => {
   return (
     <div className="cartProductContainer">
-      <img src={product.imageUrl} />
-      <div className="nameAndPrice">
-        <div className="productName">{product.name}</div>
-        <div className="productPrice">
-          {formatPrice(product.price.toString())}
+      <div className="imgAndPurchaseDetails">
+        <img src={product.imageUrl} />
+        <div className="nameAndPrice">
+          <div className="productName">{product.name}</div>
+          <div className="productPrice">
+            {formatPrice(product.price.toString())}
+          </div>
         </div>
       </div>
       <div className="quantityAndBtns">
