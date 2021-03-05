@@ -5,14 +5,14 @@ const db = require('../index')
 const queryInterface = db.getQueryInterface()
 const User = require('./user')
 const Product = require('./product')
-const Orders = require('./orders')
-const ProductOrders = db.model('ProductOrders')
+const Order = require('./order')
+const ProductOrder = db.model('ProductOrder')
 
 const users = require('../../../script/seed/users-seed')
 const products = require('../../../script/seed/products-seed')
 const orders = require('../../../script/seed/orders-seed')
 
-describe('ProductOrders Model', () => {
+describe('ProductOrder Model', () => {
   before(() => db.sync({force: true}))
   afterEach(() => db.sync({force: true}))
 
@@ -42,8 +42,8 @@ describe('ProductOrders Model', () => {
     // queryInterface allows us to bulkInsert already-associated orders
     await queryInterface.bulkInsert('orders', fakeEntryOrders)
 
-    // pull in the through table ProductOrders
-    const newProductOrders = await ProductOrders.findAll()
+    // pull in the through table ProductOrder
+    const newProductOrders = await ProductOrder.findAll()
 
     expect(newProductOrders).to.be.an('array')
   })
