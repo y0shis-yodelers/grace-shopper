@@ -19,7 +19,7 @@ class Cart extends React.Component {
     const {handleQuantityChange} = this
 
     return (
-      <div>
+      <div className="cartBox">
         {products.map(product => {
           // if the cart doesn't hold this item
           // jump out of map fn, so that we don't

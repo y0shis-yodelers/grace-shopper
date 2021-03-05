@@ -26,6 +26,11 @@ img {
 
 /* ---- AllProducts ---- */
 
+.productsAndCart {
+  display: flex;
+  justify-content: center;
+}
+
 .allProductContainer {
   display: flex;
   flex-basis: 50%;
@@ -128,4 +133,12 @@ img {
 
 .cartContainer {
   min-width: 300px;
+}
+
+/* ---- Cart ---- */
+
+.cartBox {
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
 }

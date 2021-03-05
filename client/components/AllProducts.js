@@ -18,7 +18,7 @@ class AllProducts extends React.Component {
         {!products[0] ? (
           <div>Loading ...</div>
         ) : (
-          <div>
+          <div className="productsAndCart">
             <div className="allProductContainer">
               {products.map(product => (
                 <div key={product.id}>
@@ -29,7 +29,7 @@ class AllProducts extends React.Component {
                 </div>
               ))}
             </div>
-            <div className=".cartContainer">
+            <div className="cartContainer">
               <Cart />
             </div>
           </div>
