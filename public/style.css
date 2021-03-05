@@ -132,7 +132,10 @@ img {
 }
 
 .cartContainer {
+  position: sticky;
+  top: 2em;
   min-width: 300px;
+  max-height: 80vh;
 }
 
 /* ---- Cart ---- */
