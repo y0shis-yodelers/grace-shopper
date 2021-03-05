@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {fetchAllProducts} from '../store/products'
 import ProductCard from './ProductCard'
+import Cart from './Cart'
 
 class AllProducts extends React.Component {
   componentDidMount() {
@@ -28,7 +29,9 @@ class AllProducts extends React.Component {
                 </div>
               ))}
             </div>
-            <div className=".cartContainer">{/* <Cart /> */}</div>
+            <div className=".cartContainer">
+              <Cart />
+            </div>
           </div>
         )}
       </div>
