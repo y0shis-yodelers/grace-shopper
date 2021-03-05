@@ -10,12 +10,16 @@ const ProductCard = ({product}) => {
         <div>
           <div className="productContainer">
             <img src={product.imageUrl} />
-            <div className="productName">{product.name}</div>
-            <div className="productPrice">
-              {formatPrice(product.price.toString())}
+            <div className="nameAndPrice">
+              <div className="productName">{product.name}</div>
+              <div className="productPrice">
+                {formatPrice(product.price.toString())}
+              </div>
             </div>
             <div className="productInventory">
-              Only {product.inventory} left in stock!
+              {product.inventory > 0
+                ? `In-stock: ${product.inventory} items remaining`
+                : 'Sold out'}
             </div>
           </div>
         </div>
