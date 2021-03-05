@@ -23,8 +23,8 @@ describe('Address routes', () => {
         .agent(app)
         .get('/api/addresses/')
         .then(res => {
-          expect(res.body).to.be.an('object')
-          //expect(res.body).to.have.lengthOf(10)
+          expect(res.body).to.be.an('array')
+          expect(res.body).to.have.lengthOf(10)
         })
         .catch(err => console.log('this err happened: ', err))
     })

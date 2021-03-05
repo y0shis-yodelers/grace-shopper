@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {Order, Product, Address} = require('../db/models')
+const {Order, Product} = require('../db/models')
 const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 
 // Gets all orders
