@@ -15,8 +15,8 @@ router.get('/', isAdmin, async (req, res, next) => {
 // Gets single order
 router.get('/:orderId', isAdminOrUser, async (req, res, next) => {
   try {
-    const order = await Orders.findByPK(req.params.orderId, {
-      include: [{model: Product}, {model: Address}]
+    const order = await Orders.findByPk(req.params.orderId, {
+      include: [{model: Product}]
     })
     res.json(order)
   } catch (error) {

@@ -8,10 +8,9 @@ const OrderCard = ({order}) => {
       ) : (
         <div className="orderContainer">
           <img src={order.imageUrl} />
-          <div>{order.name}</div>
+          <div className="orderName">{order.name}</div>
           <div>{order.pricePaid}</div>
           <div>{order.quantity}</div>
-          <p>{order.description}</p>
         </div>
       )}
     </div>

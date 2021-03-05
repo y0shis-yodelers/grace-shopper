@@ -21,6 +21,33 @@ class UserProfile extends React.Component {
         quantity: 1,
         description:
           'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
+      },
+      {
+        id: 2,
+        imageUrl: 'https://imgur.com/qHp9pGM.jpg',
+        name: 'alice',
+        pricePaid: 200,
+        quantity: 1,
+        description:
+          'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
+      },
+      {
+        id: 3,
+        imageUrl: 'https://imgur.com/qHp9pGM.jpg',
+        name: 'alice',
+        pricePaid: 200,
+        quantity: 1,
+        description:
+          'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
+      },
+      {
+        id: 4,
+        imageUrl: 'https://imgur.com/qHp9pGM.jpg',
+        name: 'alice',
+        pricePaid: 200,
+        quantity: 1,
+        description:
+          'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
       }
     ]
 
@@ -33,6 +60,7 @@ class UserProfile extends React.Component {
         <div className="singleUserContainer">
           {/* OrderHistory and PaymentOptions components
           to be created ... */}
+          <div>Order History</div>
           <div className="userOrdersContainer">
             {orders.length ? (
               orders.map(order => (
