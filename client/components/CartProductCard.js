@@ -1,8 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const CartProductCard = ({product, handleQuantityChange}) => {
-  const [quantity, setQuantity] = useState(0)
-
+const CartProductCard = ({product, quantity, handleQuantityChange}) => {
   return (
     <div>
       <div className="cartProductContainer">
@@ -13,8 +11,8 @@ const CartProductCard = ({product, handleQuantityChange}) => {
           onClick={async () => {
             // if quantity is 0, disallow further quantity decreases
             if (quantity === 0) return
-            setQuantity(quantity - 1)
-            await handleQuantityChange(product.id, quantity)
+            const newQuantity = --quantity
+            await handleQuantityChange(product.id, newQuantity)
           }}
         >
           -
@@ -26,8 +24,8 @@ const CartProductCard = ({product, handleQuantityChange}) => {
             // if quantity requested exceeds inventory
             // disallow further quantity increases
             if (quantity > product.inventory) return
-            setQuantity(quantity + 1)
-            await handleQuantityChange(product.id, quantity)
+            const newQuantity = ++quantity
+            await handleQuantityChange(product.id, newQuantity)
           }}
         >
           +

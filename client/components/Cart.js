@@ -26,10 +26,16 @@ class Cart extends React.Component {
           // generate CartProductCards for items
           // that aren't in our cart
           if (!cart[product.id]) return
+
+          // if cart does hold this item
+          // extract its quantity and pass to CartProductCard
+          const quantity = cart[product.id]
+
           return (
             <div key={product.id}>
               <CartProductCard
                 product={product}
+                quantity={quantity}
                 handleQuantityChange={handleQuantityChange}
               />
             </div>
