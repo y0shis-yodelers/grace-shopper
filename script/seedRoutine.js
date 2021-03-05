@@ -2,7 +2,7 @@ const {green, red} = require('chalk')
 const db = require('../server/db/db')
 const {
   Address,
-  Orders,
+  Order,
   Product,
   ProductOrders,
   User
@@ -38,7 +38,7 @@ const seedRoutine = async () => {
     console.log(green(`Seeded ${returnedProductsAfterSeed.length} products`))
 
     // orders
-    const returnedOrdersAfterSeed = await Orders.bulkCreate(orders, {
+    const returnedOrdersAfterSeed = await Order.bulkCreate(orders, {
       returning: true
     })
     console.log(green(`Seeded ${returnedOrdersAfterSeed.length} orders`))

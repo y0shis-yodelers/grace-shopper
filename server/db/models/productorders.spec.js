@@ -5,7 +5,7 @@ const db = require('../index')
 const queryInterface = db.getQueryInterface()
 const User = require('./user')
 const Product = require('./product')
-const Orders = require('./orders')
+const Order = require('./order')
 const ProductOrders = db.model('ProductOrders')
 
 const users = require('../../../script/seed/users-seed')

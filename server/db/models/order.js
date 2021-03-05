@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const Orders = db.define('order', {
+const Order = db.define('order', {
   isPaid: {
     type: Sequelize.BOOLEAN,
     defaultValue: false
@@ -20,4 +20,4 @@ const Orders = db.define('order', {
   }
 })
 
-module.exports = Orders
+module.exports = Order
