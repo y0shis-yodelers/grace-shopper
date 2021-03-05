@@ -7,11 +7,18 @@ import {fetchAllProducts} from '../store/products'
 import {fetchSingleProduct} from '../store/singleProduct'
 import Cart from './Cart'
 
+function getQuantityFromCart(productId) {
+  console.log('hi i fired')
+  const cart = JSON.parse(localStorage.getItem('cart'))
+  console.log(cart)
+  return cart[productId] || 0
+}
+
 class SingleProduct extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      quantity: 0
+      quantity: getQuantityFromCart(this.props.match.params.productId)
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleUpdateCart = this.handleUpdateCart.bind(this)
