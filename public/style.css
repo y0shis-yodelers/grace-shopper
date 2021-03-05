@@ -165,6 +165,10 @@ img {
   border: 1px solid black;
 }
 
+.cartTitle {
+  margin: 0.3em;
+}
+
 .cartContainer .checkoutBtn {
   position: absolute;
   bottom: -2em;

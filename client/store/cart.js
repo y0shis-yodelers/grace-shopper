@@ -33,11 +33,13 @@ export default (state = initState, action) => {
       if (action.quantity === 0) {
         let newCart = {...state}
         delete newCart[action.productId]
+        localStorage.setItem('cart', JSON.stringify(newCart))
         return newCart
       }
       // otherwise, find or create the product and update its quantity
       let newCart = {...state}
       newCart[action.productId] = action.quantity
+      localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
     }
     default:
