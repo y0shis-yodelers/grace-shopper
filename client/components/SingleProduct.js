@@ -27,16 +27,19 @@ class SingleProduct extends React.Component {
     // linter complains but this will work fine
     let newQuantity = this.state.quantity
 
-    // here we restrict changes to values
-    // between 0 and available inventory
+    // add btn disabled if newQuantity exceeds available inventory
     if (addOrSubtract === 'add') {
       if (newQuantity === inventory) return
       ++newQuantity
-    } else {
+    }
+
+    // add btn disabled if newQuantity dips below 0
+    if (addOrSubtract === 'subtract') {
       if (newQuantity === 0) return
       --newQuantity
     }
 
+    // update local state
     this.setState({
       quantity: newQuantity
     })
