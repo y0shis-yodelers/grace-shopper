@@ -12,11 +12,14 @@ class UserProfile extends React.Component {
     const {singleUser} = this.props || {}
 
     return (
-      <div className="su-ads-container">
-        hello world! {/* test purposes only */}
+      <div>
+        <div className="su-ads-container">
+          hello world! {/* test purposes only */}
+        </div>
         <div className="singleUserContainer">
           {/* OrderHistory and PaymentOptions components
           to be created ... */}
+          <div className="userOrdersContainer" />
 
           {/* <OrderHistory /> */}
           <div className="userProfileContainer">
