@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
+import {formatPrice} from './helperFunctions'
 import {fetchUpdateCart} from '../store/cart'
 import {fetchSingleProduct} from '../store/singleProduct'
 import Cart from './Cart'
@@ -70,7 +71,7 @@ class SingleProduct extends React.Component {
                       Available: {singleProduct.inventory}
                     </div>
                     <div className="productPrice">
-                      Price: {singleProduct.price}
+                      Price: {formatPrice(singleProduct.price.toString())}
                     </div>
                     <div className="quantityContainer">
                       <div className="quantityValueAndBtns">

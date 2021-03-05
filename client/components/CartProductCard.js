@@ -1,11 +1,12 @@
 import React from 'react'
+import {formatPrice} from './helperFunctions'
 
 const CartProductCard = ({product, quantity, handleQuantityChange}) => {
   return (
-    <div>
-      <div className="cartProductContainer">
-        <img src={product.imageUrl} />
-        <div className="productName">{product.name}</div>
+    <div className="cartProductContainer">
+      <img src={product.imageUrl} />
+      <div className="productName">{product.name}</div>
+      <div className="quantityAndBtns">
         <button
           type="button"
           onClick={async () => {
@@ -30,7 +31,9 @@ const CartProductCard = ({product, quantity, handleQuantityChange}) => {
         >
           +
         </button>
-        <div className="productPrice">{product.price}</div>
+      </div>
+      <div className="productPrice">
+        {formatPrice(product.price.toString())}
       </div>
     </div>
   )

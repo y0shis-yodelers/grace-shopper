@@ -56,7 +56,6 @@ img {
 
 .productContainer {
   height: auto;
-  min-height: 400px;
   width: 240px;
   display: flex;
   flex-direction: column;
@@ -174,7 +173,6 @@ img {
 
 .cartProductContainer {
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
   height: 4em;
   width: 100%;
