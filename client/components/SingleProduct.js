@@ -11,8 +11,6 @@ class SingleProduct extends React.Component {
     this.state = {
       quantity: 0
     }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount() {
@@ -20,24 +18,32 @@ class SingleProduct extends React.Component {
     this.props.getSingleProduct(productId)
   }
 
-  handleChange() {
+  handleChange(addOrSubtract) {
     // linter complains but this will work fine
     let newQuantity = this.state.quantity
 
-    newQuantity++
+    // check if state.quantity is 0
+    // if not 'add', jump out without setState call
+    if (addOrSubtract === 'add') {
+      ++newQuantity
+    } else {
+      if (newQuantity === 0) return
+      --newQuantity
+    }
+
     this.setState({
       quantity: newQuantity
     })
   }
 
-  handleClick() {
+  handleUpdateCart() {
     const productId = this.props.product.id
     this.props.updateCart(productId, this.state.quantity)
   }
 
   render() {
     const {singleProduct} = this.props || {}
-    const {handleChange, handleClick} = this
+    const {handleChange, handleUpdateCart} = this
 
     return (
       <div>
@@ -66,16 +72,19 @@ class SingleProduct extends React.Component {
                     </div>
                     <div className="quantityContainer">
                       <div className="quantityValueAndBtns">
-                        <span onClick={handleChange}> + </span>
+                        <span onClick={() => handleChange('subtract')}>
+                          {' '}
+                          -{' '}
+                        </span>
                         <div className="currentQuantity">
                           {this.state.quantity}
                         </div>
-                        <span onClick={handleChange}> - </span>
+                        <span onClick={() => handleChange('add')}> + </span>
                       </div>
                       <button
                         type="submit"
                         name="addItem"
-                        onClick={handleClick}
+                        onClick={handleUpdateCart}
                       >
                         Add To Cart
                       </button>
