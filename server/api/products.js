@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const {Product} = require('../db/models')
-const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
+const {isAdmin} = require('./gatekeepingMiddleware')
 const {Op} = require('sequelize')
 module.exports = router
 
