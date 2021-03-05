@@ -146,17 +146,6 @@ img {
   justify-content: space-around;
 }
 
-.quantityValueAndBtns span {
-  padding: 0.5em;
-  width: 1em;
-  height: 1em;
-  background-color: #efefef;
-}
-
-.quantityValueAndBtns span:hover {
-  cursor: pointer;
-}
-
 .cartContainer {
   position: sticky;
   top: 2em;

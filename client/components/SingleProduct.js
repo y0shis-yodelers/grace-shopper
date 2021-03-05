@@ -23,13 +23,14 @@ class SingleProduct extends React.Component {
     this.props.getSingleProduct(productId)
   }
 
-  handleChange(addOrSubtract) {
+  handleChange(addOrSubtract, inventory) {
     // linter complains but this will work fine
     let newQuantity = this.state.quantity
 
-    // check if state.quantity is 0
-    // if not 'add', jump out without setState call
+    // here we restrict changes to values
+    // between 0 and available inventory
     if (addOrSubtract === 'add') {
+      if (newQuantity === inventory) return
       ++newQuantity
     } else {
       if (newQuantity === 0) return
@@ -75,11 +76,25 @@ class SingleProduct extends React.Component {
                   </div>
                   <div className="quantityContainer">
                     <div className="quantityValueAndBtns">
-                      <span onClick={() => handleChange('subtract')}> - </span>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          handleChange('subtract', singleProduct.inventory)
+                        }
+                      >
+                        -
+                      </button>
                       <div className="currentQuantity">
                         {this.state.quantity}
                       </div>
-                      <span onClick={() => handleChange('add')}> + </span>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          handleChange('add', singleProduct.inventory)
+                        }
+                      >
+                        +
+                      </button>
                     </div>
                     <button
                       type="submit"
