@@ -1,5 +1,7 @@
 // action types
 const UPDATE_CART = 'UPDATE_CART'
+const SET_CART_ON_LOAD_FROM_LOCAL_STORAGE =
+  'SET_CART_ON_LOAD_FROM_LOCAL_STORAGE'
 
 // action creators
 const updateCart = (productId, quantity) => {
@@ -9,12 +11,27 @@ const updateCart = (productId, quantity) => {
     quantity
   }
 }
+const setCartOnLoadFromLocalStorage = cart => {
+  return {
+    type: SET_CART_ON_LOAD_FROM_LOCAL_STORAGE,
+    cart
+  }
+}
 
 // thunks
 export const fetchUpdateCart = (productId, quantity) => {
   return async dispatch => {
     try {
       dispatch(updateCart(productId, quantity))
+    } catch (err) {
+      console.error(err)
+    }
+  }
+}
+export const fetchSetCartOnLoadFromLocalStorage = cart => {
+  return async dispatch => {
+    try {
+      dispatch(setCartOnLoadFromLocalStorage(cart))
     } catch (err) {
       console.error(err)
     }
@@ -41,6 +58,9 @@ export default (state = initState, action) => {
       newCart[action.productId] = action.quantity
       localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
+    }
+    case SET_CART_ON_LOAD_FROM_LOCAL_STORAGE: {
+      return {...state, ...action.cart}
     }
     default:
       return state
