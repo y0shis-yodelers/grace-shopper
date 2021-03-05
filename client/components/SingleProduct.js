@@ -11,6 +11,8 @@ class SingleProduct extends React.Component {
     this.state = {
       quantity: 0
     }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleUpdateCart = this.handleUpdateCart.bind(this)
   }
 
   componentDidMount() {
