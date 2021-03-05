@@ -1,18 +1,18 @@
 import React from 'react'
 
-const CartProductCard = ({product}) => {
+const CartProductCard = ({product, handleQuantityChange}) => {
   return (
     <div>
       <div className="cartProductContainer">
         <img src={product.imageUrl} />
         <div className="productName">{product.name}</div>
-        <button type="button" name="addQnty">
+        <button type="button" name="addQnty" onClick={handleQuantityChange}>
           +
         </button>
-        <button type="button" name="removeQnty">
+        <div className="productQnty">{product.quantity}</div>
+        <button type="button" name="removeQnty" onClick={handleQuantityChange}>
           -
         </button>
-        <div className="productQnty">{product.quantity}</div>
         <div className="productPrice">{product.price}</div>
       </div>
     </div>
