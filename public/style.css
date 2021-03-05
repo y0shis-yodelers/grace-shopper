@@ -131,6 +131,30 @@ img {
   font-weight: bold;
 }
 
+.quantityContainer {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.quantityValueAndBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.quantityValueAndBtns span {
+  padding: 0.5em;
+  width: 1em;
+  height: 1em;
+  background-color: #efefef;
+}
+
+.quantityValueAndBtns span:hover {
+  cursor: pointer;
+}
+
 .cartContainer {
   position: sticky;
   top: 2em;
