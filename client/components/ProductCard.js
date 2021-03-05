@@ -1,4 +1,5 @@
 import React from 'react'
+import {formatPrice} from './helperFunctions'
 
 const ProductCard = ({product}) => {
   return (
@@ -9,12 +10,17 @@ const ProductCard = ({product}) => {
         <div>
           <div className="productContainer">
             <img src={product.imageUrl} />
-            <div className="productName">{product.name}</div>
-            <div className="productPrice">{product.price}</div>
-            <div className="productInventory">
-              Only {product.inventory} left in stock!
+            <div className="nameAndPrice">
+              <div className="productName">{product.name}</div>
+              <div className="productPrice">
+                {formatPrice(product.price.toString())}
+              </div>
             </div>
-            <p className="productDescription">{product.description}</p>
+            <div className="productInventory">
+              {product.inventory > 0
+                ? `In-stock: ${product.inventory} items remaining`
+                : 'Sold out'}
+            </div>
           </div>
         </div>
       )}

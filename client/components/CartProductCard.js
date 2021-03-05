@@ -1,19 +1,43 @@
 import React from 'react'
+import {formatPrice} from './helperFunctions'
 
-const CartProductCard = ({product}) => {
+const CartProductCard = ({product, quantity, handleQuantityChange}) => {
   return (
-    <div>
-      <div className="cartProductContainer">
+    <div className="cartProductContainer">
+      <div className="imgAndPurchaseDetails">
         <img src={product.imageUrl} />
-        <div className="productName">{product.name}</div>
-        <button type="button" name="addQnty">
-          +
-        </button>
-        <button type="button" name="removeQnty">
+        <div className="nameAndPrice">
+          <div className="productName">{product.name}</div>
+          <div className="productPrice">
+            {formatPrice(product.price.toString())}
+          </div>
+        </div>
+      </div>
+      <div className="quantityAndBtns">
+        <button
+          type="button"
+          onClick={async () => {
+            // if quantity is 0, disallow further quantity decreases
+            if (quantity === 0) return
+            const newQuantity = --quantity
+            await handleQuantityChange(product.id, newQuantity)
+          }}
+        >
           -
         </button>
-        <div className="productQnty">{product.quantity}</div>
-        <div className="productPrice">{product.price}</div>
+        <div className="productQuantity">{quantity}</div>
+        <button
+          type="button"
+          onClick={async () => {
+            // if quantity requested exceeds inventory
+            // disallow further quantity increases
+            if (quantity > product.inventory) return
+            const newQuantity = ++quantity
+            await handleQuantityChange(product.id, newQuantity)
+          }}
+        >
+          +
+        </button>
       </div>
     </div>
   )
