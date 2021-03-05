@@ -42,7 +42,7 @@ const imageUrls = [
   'https://imgur.com/vMp.jpg567e'
 ]
 
-const inventoryValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
+const inventoryValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const getPrice = () => {
   const min = Math.ceil(1)
