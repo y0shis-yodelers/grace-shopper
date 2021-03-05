@@ -14,7 +14,7 @@ const updateCart = (productId, quantity) => {
 export const fetchUpdateCart = (productId, quantity) => {
   return async dispatch => {
     try {
-      dispatch(addToCart(productId, quantity))
+      dispatch(updateCart(productId, quantity))
     } catch (err) {
       console.error(err)
     }
