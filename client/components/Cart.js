@@ -14,22 +14,35 @@ class Cart extends React.Component {
   }
 
   render() {
-    const products = this.props.cart || {}
+    const cart = this.props.cart || {}
+    const products = this.props.products || []
+    const {handleQuantityChange} = this
 
     return (
       <div>
-        {products.map(product => (
-          <div key={product.id}>
-            <CartProductCard product={product} />
-          </div>
-        ))}
+        {products.map(product => {
+          // if the cart doesn't hold this item
+          // jump out of map fn, so that we don't
+          // generate CartProductCards for items
+          // that aren't in our cart
+          if (!cart[product.id]) return
+          return (
+            <div key={product.id}>
+              <CartProductCard
+                product={product}
+                handleQuantityChange={handleQuantityChange}
+              />
+            </div>
+          )
+        })}
       </div>
     )
   }
 }
 
 const mapState = state => ({
-  cart: state.cart
+  cart: state.cart,
+  products: state.products
 })
 
 const mapDispatch = dispatch => ({
