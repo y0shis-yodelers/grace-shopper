@@ -1,7 +1,11 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const ProductOrders = db.define('ProductOrders', {
+const Order = db.define('order', {
+  isPaid: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
+  },
   pricePaid: {
     type: Sequelize.INTEGER,
     validate: {
@@ -16,4 +20,4 @@ const ProductOrders = db.define('ProductOrders', {
   }
 })
 
-module.exports = ProductOrders
+module.exports = Order
