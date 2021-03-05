@@ -22,6 +22,7 @@ class Cart extends React.Component {
 
     return (
       <div className="cartBox">
+        <div className="cartTitle">My Cart:</div>
         {products.map(product => {
           // if the cart doesn't hold this item
           // jump out of map fn, so that we don't

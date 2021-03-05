@@ -5,7 +5,12 @@ const CartProductCard = ({product, quantity, handleQuantityChange}) => {
   return (
     <div className="cartProductContainer">
       <img src={product.imageUrl} />
-      <div className="productName">{product.name}</div>
+      <div className="nameAndPrice">
+        <div className="productName">{product.name}</div>
+        <div className="productPrice">
+          {formatPrice(product.price.toString())}
+        </div>
+      </div>
       <div className="quantityAndBtns">
         <button
           type="button"
@@ -18,7 +23,7 @@ const CartProductCard = ({product, quantity, handleQuantityChange}) => {
         >
           -
         </button>
-        <div className="productQnty">{quantity}</div>
+        <div className="productQuantity">{quantity}</div>
         <button
           type="button"
           onClick={async () => {
@@ -31,9 +36,6 @@ const CartProductCard = ({product, quantity, handleQuantityChange}) => {
         >
           +
         </button>
-      </div>
-      <div className="productPrice">
-        {formatPrice(product.price.toString())}
       </div>
     </div>
   )

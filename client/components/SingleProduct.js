@@ -53,51 +53,45 @@ class SingleProduct extends React.Component {
         {singleProduct && !singleProduct.id ? (
           <div>Loading ...</div>
         ) : (
-          <div>
-            <Link to="/home">
-              <div className="backToAllProducts">Back to all products</div>
-            </Link>
-            <div className="sp-view-container">
-              <div className="singleProductContainer">
-                <div className="buyupContainer">buyups go here</div>
-                <div className="imgAndDescription">
-                  <img src={singleProduct.imageUrl} />
-                  <div className="descriptionSidePanel">
-                    <div className="productName">{singleProduct.name}</div>
-                    <p className="singleProductDescription">
-                      {singleProduct.description}
-                    </p>
-                    <div className="productInventory">
-                      Available: {singleProduct.inventory}
-                    </div>
-                    <div className="productPrice">
-                      Price: {formatPrice(singleProduct.price.toString())}
-                    </div>
-                    <div className="quantityContainer">
-                      <div className="quantityValueAndBtns">
-                        <span onClick={() => handleChange('subtract')}>
-                          {' '}
-                          -{' '}
-                        </span>
-                        <div className="currentQuantity">
-                          {this.state.quantity}
-                        </div>
-                        <span onClick={() => handleChange('add')}> + </span>
+          <div className="sp-view-container">
+            <div className="singleProductContainer">
+              <Link to="/home">
+                <div className="backToAllProducts">Back to all products</div>
+              </Link>
+              <div className="imgAndDescription">
+                <img src={singleProduct.imageUrl} />
+                <div className="descriptionSidePanel">
+                  <div className="productName">{singleProduct.name}</div>
+                  <p className="singleProductDescription">
+                    {singleProduct.description}
+                  </p>
+                  <div className="productInventory">
+                    Available: {singleProduct.inventory}
+                  </div>
+                  <div className="productPrice">
+                    Price: {formatPrice(singleProduct.price.toString())}
+                  </div>
+                  <div className="quantityContainer">
+                    <div className="quantityValueAndBtns">
+                      <span onClick={() => handleChange('subtract')}> - </span>
+                      <div className="currentQuantity">
+                        {this.state.quantity}
                       </div>
-                      <button
-                        type="submit"
-                        name="addItem"
-                        onClick={handleUpdateCart}
-                      >
-                        Add To Cart
-                      </button>
+                      <span onClick={() => handleChange('add')}> + </span>
                     </div>
+                    <button
+                      type="submit"
+                      name="addItem"
+                      onClick={handleUpdateCart}
+                    >
+                      Add To Cart
+                    </button>
                   </div>
                 </div>
               </div>
-              <div className="cartContainer">
-                <Cart />
-              </div>
+            </div>
+            <div className="cartContainer">
+              <Cart />
             </div>
           </div>
         )}

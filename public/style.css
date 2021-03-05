@@ -87,17 +87,9 @@ img {
 
 /* ---- SingleProduct ---- */
 
-/* TEMP RULE for layout assistance -- REMOVE LATER */
-.buyupContainer,
-.imgAndDescription,
-.cartContainer,
-.descriptionSidePanel {
-  border: 1px solid black;
-}
-
 .sp-view-container {
   display: flex;
-  min-width: 900px;
+  margin: 0 auto;
 }
 
 .backToAllProducts {
@@ -119,15 +111,15 @@ img {
 }
 
 .imgAndDescription img {
-  height: auto;
-  width: 100%;
-  min-width: 400px;
+  height: 100%;
+  width: auto;
+  max-height: 240px;
+  align-self: center;
 }
 
 .descriptionSidePanel {
   display: flex;
   flex-direction: column;
-  min-width: 200px;
   padding: 0.5em;
 }
 
@@ -168,6 +160,7 @@ img {
   top: 2em;
   min-width: 320px;
   max-height: 80vh;
+  border: 1px solid black;
 }
 
 /* ---- Cart ---- */
@@ -175,7 +168,6 @@ img {
 .cartBox {
   height: 100%;
   width: 100%;
-  background-color: lightgrey;
 }
 
 /* ---- CartProductCard ---- */
@@ -183,9 +175,38 @@ img {
 .cartProductContainer {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
   height: 4em;
   width: 100%;
   margin: 0.5em;
   padding: 0.5em;
   border: 1px solid black;
+}
+
+.cartProductContainer img {
+  height: 100%;
+  width: auto;
+  max-width: 80px;
+  margin-right: 0.5em;
+}
+
+.nameAndPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: min-content;
+}
+
+.nameAndPrice .productPrice {
+  margin-top: 0.3em;
+}
+
+.productName {
+  font-weight: normal;
+}
+
+.cartProductContainer .quantityAndBtns {
+  display: flex;
+  max-width: 6em;
 }
