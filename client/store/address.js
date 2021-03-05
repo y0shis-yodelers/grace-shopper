@@ -26,12 +26,12 @@ export default (state = initState, action) => {
     case GET_SINGLE_ADDRESS:
       return {
         name: action.name,
-        number: action.number,
-        houseOrApt: action.houseOrApt,
-        streetName: action.streetName,
-        city: action.city,
-        state: action.state,
-        zip: action.zip
+        number: action.address.number,
+        houseOrApt: action.address.houseOrApt,
+        streetName: action.address.streetName,
+        city: action.address.city,
+        state: action.address.state,
+        zip: action.address.zip
       }
     default:
       return state
