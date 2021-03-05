@@ -18,6 +18,8 @@ class Cart extends React.Component {
     const products = this.props.products || []
     const {handleQuantityChange} = this
 
+    console.log(products)
+
     return (
       <div className="cartBox">
         {products.map(product => {

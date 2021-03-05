@@ -1,16 +1,43 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
+import {fetchUpdateCart} from '../store/cart'
 import {fetchSingleProduct} from '../store/singleProduct'
+import Cart from './Cart'
 
 class SingleProduct extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      quantity: 0
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+  }
+
   componentDidMount() {
     const productId = this.props.match.params.productId
     this.props.getSingleProduct(productId)
   }
 
+  handleChange() {
+    // linter complains but this will work fine
+    let newQuantity = this.state.quantity
+
+    newQuantity++
+    this.setState({
+      quantity: newQuantity
+    })
+  }
+
+  handleClick() {
+    const productId = this.props.product.id
+    this.props.updateCart(productId, this.state.quantity)
+  }
+
   render() {
     const {singleProduct} = this.props || {}
+    const {handleChange, handleClick} = this
 
     return (
       <div>
@@ -38,15 +65,27 @@ class SingleProduct extends React.Component {
                       Price: {singleProduct.price}
                     </div>
                     <div className="quantityContainer">
-                      <span>Quantity</span>
-                      <button type="button" name="addItem">
-                        Add
+                      <div className="quantityValueAndBtns">
+                        <span onClick={handleChange}> + </span>
+                        <div className="currentQuantity">
+                          {this.state.quantity}
+                        </div>
+                        <span onClick={handleChange}> - </span>
+                      </div>
+                      <button
+                        type="submit"
+                        name="addItem"
+                        onClick={handleClick}
+                      >
+                        Add To Cart
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="cartContainer">cart goes here</div>
+              <div className="cartContainer">
+                <Cart />
+              </div>
             </div>
           </div>
         )}
@@ -60,7 +99,9 @@ const mapState = state => ({
 })
 
 const mapDispatch = dispatch => ({
-  getSingleProduct: productId => dispatch(fetchSingleProduct(productId))
+  getSingleProduct: productId => dispatch(fetchSingleProduct(productId)),
+  updateCart: (productId, quantity) =>
+    dispatch(fetchUpdateCart(productId, quantity))
 })
 
 export default withRouter(connect(mapState, mapDispatch)(SingleProduct))

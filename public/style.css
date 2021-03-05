@@ -143,5 +143,18 @@ img {
 .cartBox {
   height: 100%;
   width: 100%;
-  background-color: yellow;
+  background-color: lightgrey;
+}
+
+/* ---- CartProductCard ---- */
+
+.cartProductContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 4em;
+  width: 100%;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: 1px solid black;
 }
