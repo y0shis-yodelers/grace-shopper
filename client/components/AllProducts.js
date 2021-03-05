@@ -30,9 +30,7 @@ class AllProducts extends React.Component {
                 </Link>
               ))}
             </div>
-            <div className="cartContainer">
-              <Cart />
-            </div>
+            <Cart />
           </div>
         )}
       </div>

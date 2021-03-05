@@ -92,9 +92,7 @@ class SingleProduct extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="cartContainer">
-              <Cart />
-            </div>
+            <Cart />
           </div>
         )}
       </div>
