@@ -165,6 +165,12 @@ img {
   border: 1px solid black;
 }
 
+.cartContainer .checkoutBtn {
+  position: absolute;
+  bottom: -2em;
+  left: 38%;
+}
+
 /* ---- Cart ---- */
 
 .cartBox {
@@ -176,12 +182,6 @@ img {
   width: 100%;
   padding: 0.3em;
   overflow-y: auto;
-}
-
-.cartBox .checkoutBtn {
-  position: absolute;
-  bottom: 1em;
-  left: 38%;
 }
 
 /* ---- CartProductCard ---- */
