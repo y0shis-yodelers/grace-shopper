@@ -11,7 +11,9 @@ import Cart from './Cart'
 // by checking localStorage for current value of cart
 function getQuantityFromCart(productId) {
   const cart = JSON.parse(localStorage.getItem('cart'))
-  return cart[productId] || 0
+  if (!cart) return 0
+  if (cart && !cart[productId]) return 0
+  return cart[productId]
 }
 
 class SingleProduct extends React.Component {
