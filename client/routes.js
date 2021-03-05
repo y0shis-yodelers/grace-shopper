@@ -55,7 +55,7 @@ const mapDispatch = dispatch => {
     },
     loadCart() {
       /* here, we load a potential cart from localStorage
-      so that guest users and users alike can persist an unfulfilled order -- if cart does not exist on localStorage the call returns null, so we check its truthiness and set it equal to an empty object if there is not cart */
+      so that guest users and users alike can persist an unfulfilled order -- if cart does not exist on localStorage the call returns null, so we check its truthiness and set it equal to an empty object if there is no cart! */
 
       let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'))
       if (!cartFromLocalStorage) cartFromLocalStorage = {}
