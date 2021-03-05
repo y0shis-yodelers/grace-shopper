@@ -66,6 +66,8 @@ const seedRoutine = async () => {
     // reference 'UserAddress' as defined in our associations
     await queryInterface.bulkInsert('UserAddress', fakeEntryUserAddress)
 
+    console.log('UserAddress table successfully created and associated!')
+
     console.log(green('Database sucessfully seeded'))
   } catch (error) {
     console.log(red(error))
