@@ -2,7 +2,7 @@
 
 const db = require('../server/db')
 
-// seedRoutine seeds each model and the associations models for ProductOrders
+// seedRoutine seeds each model and the associations models for ProductOrder
 // important! still need to seed UserAddress
 const seedRoutine = require('./seedRoutine')
 

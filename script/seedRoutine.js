@@ -4,7 +4,7 @@ const {
   Address,
   Order,
   Product,
-  ProductOrders,
+  ProductOrder,
   User
 } = require('../server/db/models')
 
@@ -43,8 +43,8 @@ const seedRoutine = async () => {
     })
     console.log(green(`Seeded ${returnedOrdersAfterSeed.length} orders`))
 
-    // ProductOrders
-    const returnedProductOrdersAfterSeed = await ProductOrders.bulkCreate(
+    // ProductOrder
+    const returnedProductOrdersAfterSeed = await ProductOrder.bulkCreate(
       productOrders,
       {returning: true}
     )
