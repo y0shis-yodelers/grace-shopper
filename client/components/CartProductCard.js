@@ -1,17 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const CartProductCard = ({product, handleQuantityChange}) => {
+  const [quantity, setQuantity] = useState(0)
+
   return (
     <div>
       <div className="cartProductContainer">
         <img src={product.imageUrl} />
         <div className="productName">{product.name}</div>
-        <button type="button" name="addQnty" onClick={handleQuantityChange}>
-          +
-        </button>
-        <div className="productQnty">{product.quantity}</div>
-        <button type="button" name="removeQnty" onClick={handleQuantityChange}>
+        <button
+          type="button"
+          onClick={() => {
+            setQuantity(quantity + 1)
+            handleQuantityChange(product.id, quantity)
+          }}
+        >
           -
+        </button>
+        <div className="productQnty">{quantity}</div>
+        <button
+          type="button"
+          onClick={() => {
+            setQuantity(quantity + 1)
+            handleQuantityChange(product.id, quantity)
+          }}
+        >
+          +
         </button>
         <div className="productPrice">{product.price}</div>
       </div>
