@@ -30,7 +30,7 @@ router.get('/users/:userId', isAdminOrUser, async (req, res, next) => {
     const {userId} = req.params
     const userOrders = await Orders.findAll({
       where: {userId: userId, isPaid: true},
-      include: [{model: Product}]
+      include: {model: Product}
     })
 
     res.json(userOrders)
