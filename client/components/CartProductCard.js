@@ -10,9 +10,11 @@ const CartProductCard = ({product, handleQuantityChange}) => {
         <div className="productName">{product.name}</div>
         <button
           type="button"
-          onClick={() => {
-            setQuantity(quantity + 1)
-            handleQuantityChange(product.id, quantity)
+          onClick={async () => {
+            // if quantity is 0, disallow further quantity decreases
+            if (quantity === 0) return
+            setQuantity(quantity - 1)
+            await handleQuantityChange(product.id, quantity)
           }}
         >
           -
@@ -20,9 +22,12 @@ const CartProductCard = ({product, handleQuantityChange}) => {
         <div className="productQnty">{quantity}</div>
         <button
           type="button"
-          onClick={() => {
+          onClick={async () => {
+            // if quantity requested exceeds inventory
+            // disallow further quantity increases
+            if (quantity > product.inventory) return
             setQuantity(quantity + 1)
-            handleQuantityChange(product.id, quantity)
+            await handleQuantityChange(product.id, quantity)
           }}
         >
           +
