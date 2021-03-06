@@ -6,7 +6,7 @@ const SET_ORDERS = 'SET_ORDERS'
 
 // ---- ACTION CREATORS ----
 
-const getOrders = orders => {
+const setOrders = orders => {
   return {
     type: SET_ORDERS,
     orders
@@ -20,7 +20,7 @@ export const fetchOrders = userId => {
     try {
       const {data} = await Axios.get(`/api/orders/users/${userId}`)
 
-      dispatch(getOrders(data))
+      dispatch(setOrders(data))
     } catch (error) {
       console.log(error)
     }
