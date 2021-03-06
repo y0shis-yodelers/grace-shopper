@@ -232,6 +232,7 @@ img {
   display: flex;
   overflow-x: auto;
   align-items: baseline;
+  min-height: 300px;
   min-width: 600px;
   border: 1px solid black;
 }

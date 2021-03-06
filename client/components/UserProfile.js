@@ -11,8 +11,9 @@ class UserProfile extends React.Component {
 
   render() {
     const {singleUser} = this.props || {}
-    //const orders = this.props.orders || []
-    const orders = [
+    const orders = this.props.orders || []
+
+    /* const orders = [
       {
         id: 1,
         imageUrl: 'https://imgur.com/qHp9pGM.jpg',
@@ -49,7 +50,7 @@ class UserProfile extends React.Component {
         description:
           'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
       }
-    ]
+    ] */
 
     return (
       <div>
@@ -57,35 +58,35 @@ class UserProfile extends React.Component {
           header ads here {/* test purposes only */}
         </div>
 
-        <div className="singleUserContainer">
-          {/* OrderHistory and PaymentOptions components
+        {Object.keys(singleUser).length ? (
+          <div>
+            <div className="singleUserContainer">
+              {/* OrderHistory and PaymentOptions components
           to be created ... */}
-          <div>Order History</div>
-          <div className="userOrdersContainer">
-            {orders.length ? (
-              orders.map(order => (
-                <div key={order.id}>
-                  <OrderCard order={order} />
-                </div>
-              ))
-            ) : (
-              <div>Loading...</div>
-            )}
-          </div>
+              <div>Order History</div>
+              <div className="userOrdersContainer">
+                {orders.length ? (
+                  orders.map(order => (
+                    <div key={order.id}>
+                      <OrderCard order={order} />
+                    </div>
+                  ))
+                ) : (
+                  <div>No orders!</div>
+                )}
+              </div>
 
-          {/* <OrderHistory /> */}
-          <div className="userProfileContainer">
-            {Object.keys(singleUser).length ? (
-              <div>
+              {/* <OrderHistory /> */}
+              <div className="userProfileContainer">
                 <div>Name: {singleUser.name}</div>
                 <div>Email: {singleUser.email}</div>
                 <div>Phone: {singleUser.phoneNumber}</div>
               </div>
-            ) : (
-              <div>Guest profile</div>
-            )}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div>Guest profile</div>
+        )}
         {/* <PaymentOptions /> */}
 
         <div className="advertisementSidePanel">ads side panel</div>
