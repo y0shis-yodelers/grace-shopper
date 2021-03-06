@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {User, Address} = require('../db/models')
+const {User, Address, Order} = require('../db/models')
 const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
 
@@ -21,7 +21,7 @@ router.get('/', isAdmin, async (req, res, next) => {
 router.get('/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId, {
-      include: Address
+      include: [{model: Address}, {model: Order}]
     })
     res.json(user)
   } catch (err) {
