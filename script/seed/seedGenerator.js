@@ -350,7 +350,7 @@ const imageUrls = [
   'https://imgur.com/bSldLGC.jpg',
   'https://imgur.com/qcN9X8V.jpg',
   'https://imgur.com/kywOQ1s.jpg',
-  'https://imgur.com/vMp.jpg567e'
+  'https://imgur.com/vMp567e.jpg'
 ]
 
 const getDescription = () =>
