@@ -22,33 +22,34 @@ class FullPageCart extends React.Component {
 
     return (
       <div className="cartContainer">
-        <div className="cartTitle">My Cart:</div>
-        <div className="cartBox">
-          {products.map(product => {
-            // if the cart doesn't hold this item
-            // jump out of map fn, so that we don't
-            // generate CartProductCards for items
-            // that aren't in our cart
-            if (!cart[product.id]) return
+        <div className="productsAndCk">
+          <div className="cartTitle">My Cart:</div>
+          <div className="cartBox">
+            {products.map(product => {
+              // if the cart doesn't hold this item
+              // jump out of map fn, so that we don't
+              // generate CartProductCards for items
+              // that aren't in our cart
+              if (!cart[product.id]) return
 
-            // if cart does hold this item
-            // extract its quantity and pass to CartProductCard
-            const quantity = cart[product.id]
+              // if cart does hold this item
+              // extract its quantity and pass to CartProductCard
+              const quantity = cart[product.id]
 
-            return (
-              <div key={product.id}>
-                <CartProductCard
-                  product={product}
-                  quantity={quantity}
-                  handleQuantityChange={handleQuantityChange}
-                />
-              </div>
-            )
-          })}
-          <Total products={products} cart={cart} />
+              return (
+                <div key={product.id}>
+                  <CartProductCard
+                    product={product}
+                    quantity={quantity}
+                    handleQuantityChange={handleQuantityChange}
+                  />
+                </div>
+              )
+            })}
+            <Total products={products} cart={cart} />
+          </div>
+          <Checkout />
         </div>
-        <Checkout />
-        <ShippingData />
       </div>
     )
   }
