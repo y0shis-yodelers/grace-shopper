@@ -1,8 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
+import {fetchUpdateCart} from '../store/cart'
 
-class FullCart extends React.Component {
+class FullPageCart extends React.Component {
   constructor(props) {
     super(props)
     this.handleQuantityChange = this.handleQuantityChange.bind(this)
@@ -59,4 +60,4 @@ const mapDispatch = dispatch => ({
     dispatch(fetchUpdateCart(productId, quantity))
 })
 
-export default connect(mapState, mapDispatch)(FullCart)
+export default connect(mapState, mapDispatch)(FullPageCart)
