@@ -94,7 +94,7 @@
 3.  How are products and orders associated and how are users associated with particular orders?
 
 * Products and orders are m:n associations, and orders contain a foreign key to a particular user
-* important! each user is created with TWO ORDERS: one that is FULFILLED and has a DATE field value, and one that is UNFUFILLED and has a DATE field value of NULL
+* important! each user is associated with TWO ORDERS: one that is FULFILLED and has a DATE field value, and one that is UNFUFILLED and has a DATE field value of NULL
 
 ### API
 
