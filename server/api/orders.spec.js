@@ -59,7 +59,7 @@ describe('Orders routes', () => {
     })
   })
 
-  describe.only('POST /orders', () => {
+  describe('POST /orders', () => {
     it('creates a new order and sends back the new order', async () => {
       const res = await request
         .agent(app)
@@ -74,7 +74,13 @@ describe('Orders routes', () => {
       expect(res.body.isPaid).to.equal(false)
       expect(res.body.pricePaid).to.equal(352)
       expect(res.body.quantity).to.equal(4)
-      // console.log(res)
+    })
+  })
+
+  describe.only('DELETE /orders', () => {
+    it('deletes an order', async () => {
+      const deletedOrder = await request.agent(app).delete(`/api/orders/1`)
+      expect(deletedOrder.body.id).to.equal(1)
     })
   })
 })
