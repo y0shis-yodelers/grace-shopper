@@ -27,6 +27,13 @@ class AllProducts extends React.Component {
     this.props.getProducts()
   }
 
+  // user is not available in componentDidMount
+  // so we load the user's pastCart, which is an unfulfilledOrder
+  // here in componentDidMount
+  // and merge it in the redux store with this.props.loadCart
+  // which dispatches the merge pastCart and guestCart
+  // where guestCart is localStorage.getItem('cart') || {}
+
   componentDidUpdate(prevProps) {
     if (!prevProps.user.id && this.props.user.id) {
       const unfulfilledOrder = this.props.user.orders.filter(
@@ -73,8 +80,11 @@ const mapState = state => ({
 const mapDispatch = dispatch => ({
   getProducts: () => dispatch(fetchAllProducts()),
   loadCart: pastCart => {
-    /* here, we load a potential cart from localStorage
-      so that guest users and users alike can persist an unfulfilled order -- if cart does not exist on localStorage the call returns null, so we check its truthiness and set it equal to an empty object if there is no cart! */
+    // here, we load a potential cart from localStorage
+    // so that guest users and users alike can persist an unfulfilled order
+    // -- if cart does not exist on localStorage the call returns null,
+    // so we check its truthiness and set it equal to an empty object
+    // if there is no cart!
 
     let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || {}
     dispatch(fetchMergePastAndGuestCarts(pastCart, cartFromLocalStorage))
