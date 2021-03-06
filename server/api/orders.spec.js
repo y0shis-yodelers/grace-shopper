@@ -7,7 +7,7 @@ const app = require('../index')
 const Order = db.model('order')
 const User = db.model('user')
 
-describe('Orders routes', () => {
+describe.only('Orders routes', () => {
   beforeEach(async () => {
     await db.sync({force: true})
 
@@ -31,7 +31,7 @@ describe('Orders routes', () => {
     it('allows an admin user to GET all order', async () => {
       const orders = await request.agent(app).get('/api/orders')
       expect(orders.body).to.be.an('array')
-      expect(orders.body.length).to.equal(10)
+      expect(orders.body.length).to.equal(20)
     })
   })
 
@@ -40,8 +40,6 @@ describe('Orders routes', () => {
       const order = await request.agent(app).get(`/api/orders/1`)
       expect(order.body).to.be.an('object')
       expect(order.body.isPaid).to.be.an('boolean')
-      expect(order.body.pricePaid).to.be.an('number')
-      expect(order.body.quantity).to.be.an('number')
     })
   })
 
@@ -66,18 +64,16 @@ describe('Orders routes', () => {
         .post('/api/orders')
         .send({
           isPaid: false,
-          pricePaid: 352,
-          quantity: 4
+          // userId: 11,
+          date: Date.now()
         })
         .expect(201)
       expect(res.body).to.be.an('object')
       expect(res.body.isPaid).to.equal(false)
-      expect(res.body.pricePaid).to.equal(352)
-      expect(res.body.quantity).to.equal(4)
     })
   })
 
-  describe.only('DELETE /orders', () => {
+  describe('DELETE /orders', () => {
     it('deletes an order', async () => {
       const deletedOrder = await request.agent(app).delete(`/api/orders/1`)
       expect(deletedOrder.body.id).to.equal(1)
