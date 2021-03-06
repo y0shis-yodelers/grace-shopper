@@ -3,8 +3,8 @@ import {connect} from 'react-redux'
 import {fetchSingleAddress} from '../store/address'
 
 class ShippingData extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       number: '',
       houseOrApt: '',
@@ -13,11 +13,13 @@ class ShippingData extends React.Component {
       state: '',
       zip: ''
     }
+    this.handleChange = this.handleChange.bind(this)
+    this.componentDidMount = this.componentDidMount.bind(this)
   }
 
-  componentDidMount() {
-    this.setState(this.props.getAddress())
-    console.log(this.props)
+  async componentDidMount() {
+    await this.props.getAddress(5)
+    this.setState(this.props.address)
   }
 
   handleChange(event) {
@@ -77,7 +79,9 @@ class ShippingData extends React.Component {
 }
 
 const mapState = state => ({
-  cart: state.cart
+  cart: state.cart,
+  address: state.address.address,
+  name: state.address.name
 })
 
 const mapDispatch = dispatch => ({

@@ -18,7 +18,8 @@ router.get('/', isAdmin, async (req, res, next) => {
 })
 
 // GET single user
-router.get('/:userId', isAdminOrUser, async (req, res, next) => {
+//ADD BACK login
+router.get('/:userId', async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId, {
       include: Address
