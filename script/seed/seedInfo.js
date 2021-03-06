@@ -808,3 +808,21 @@ const allProductOrders = new Array(200)
   .map((empty, idx) => buildProductOrder(++idx))
 
 // writeToTextFile('allProductOrdersSeed', JSON.stringify(allProductOrders))
+
+/* USERADDRESS THROUGH TABLE */
+
+// one helper that generates ids
+const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const getId = () => {
+  return ids[Math.floor(Math.random() * ids.length)]
+}
+
+const buildUserAddress = () => {
+  return {
+    userId: getId(),
+    addressId: getId()
+  }
+}
+
+// console.log(new Array(10).fill(null).map(() => buildUserAddress()))

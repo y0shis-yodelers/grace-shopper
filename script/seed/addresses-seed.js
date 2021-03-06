@@ -1,6 +1,6 @@
 module.exports = [
   {
-    number: 9236,
+    number: '9236',
     houseOrApt: 'apartment',
     streetName: 'Park Avenue',
     city: 'Milwaukee',
@@ -8,7 +8,7 @@ module.exports = [
     zip: '19464'
   },
   {
-    number: 5388,
+    number: '5388',
     houseOrApt: 'apartment',
     streetName: 'Glenwood Drive',
     city: 'Omaha',
@@ -16,7 +16,7 @@ module.exports = [
     zip: '46375'
   },
   {
-    number: 3309,
+    number: '3309',
     houseOrApt: 'apartment',
     streetName: 'Parker Street',
     city: 'Cincinnati',
@@ -24,7 +24,7 @@ module.exports = [
     zip: '01915'
   },
   {
-    number: 5760,
+    number: '5760',
     houseOrApt: 'house',
     streetName: 'Heritage Drive',
     city: 'Seattle',
@@ -32,7 +32,7 @@ module.exports = [
     zip: '11566'
   },
   {
-    number: 4445,
+    number: '4445',
     houseOrApt: 'house',
     streetName: '4th Street North',
     city: 'Colorado Springs',
@@ -40,7 +40,7 @@ module.exports = [
     zip: '18042'
   },
   {
-    number: 9359,
+    number: '9359',
     houseOrApt: 'apartment',
     streetName: 'Jackson Street',
     city: 'Oakland',
@@ -48,7 +48,7 @@ module.exports = [
     zip: '48103'
   },
   {
-    number: 4953,
+    number: '4953',
     houseOrApt: 'apartment',
     streetName: 'Country Lane',
     city: 'Newark',
@@ -56,7 +56,7 @@ module.exports = [
     zip: '12401'
   },
   {
-    number: 3690,
+    number: '3690',
     houseOrApt: 'apartment',
     streetName: 'Cottage Street',
     city: 'Santa Ana',
@@ -64,7 +64,7 @@ module.exports = [
     zip: '33952'
   },
   {
-    number: 6713,
+    number: '6713',
     houseOrApt: 'apartment',
     streetName: 'Forest Avenue',
     city: 'Atlanta',
@@ -72,7 +72,7 @@ module.exports = [
     zip: '85718'
   },
   {
-    number: 9886,
+    number: '9886',
     houseOrApt: 'house',
     streetName: 'Prospect Street',
     city: 'Reno',
@@ -80,7 +80,7 @@ module.exports = [
     zip: '85718'
   },
   {
-    number: 3751,
+    number: '3751',
     houseOrApt: 'house',
     streetName: 'Colonial Drive',
     city: 'Fresno',
@@ -88,7 +88,7 @@ module.exports = [
     zip: '21228'
   },
   {
-    number: 2536,
+    number: '2536',
     houseOrApt: 'apartment',
     streetName: 'Beech Street',
     city: 'Charlotte',
@@ -96,7 +96,7 @@ module.exports = [
     zip: '10801'
   },
   {
-    number: 8261,
+    number: '8261',
     houseOrApt: 'apartment',
     streetName: 'Cherry Lane',
     city: 'Portland',
@@ -104,7 +104,7 @@ module.exports = [
     zip: '46375'
   },
   {
-    number: 8638,
+    number: '8638',
     houseOrApt: 'apartment',
     streetName: 'Victoria Court',
     city: 'Boise',
@@ -112,7 +112,7 @@ module.exports = [
     zip: '33771'
   },
   {
-    number: 9741,
+    number: '9741',
     houseOrApt: 'house',
     streetName: 'Overlook Circle',
     city: 'Buffalo',
@@ -120,7 +120,7 @@ module.exports = [
     zip: '06516'
   },
   {
-    number: 1069,
+    number: '1069',
     houseOrApt: 'apartment',
     streetName: '14th Street',
     city: 'Austin',
@@ -128,7 +128,7 @@ module.exports = [
     zip: '48504'
   },
   {
-    number: 6436,
+    number: '6436',
     houseOrApt: 'apartment',
     streetName: 'Howard Street',
     city: 'Nashville-Davidson',
@@ -136,7 +136,7 @@ module.exports = [
     zip: '02135'
   },
   {
-    number: 6246,
+    number: '6246',
     houseOrApt: 'apartment',
     streetName: 'Willow Drive',
     city: 'Chandler',
@@ -144,7 +144,7 @@ module.exports = [
     zip: '06082'
   },
   {
-    number: 2079,
+    number: '2079',
     houseOrApt: 'house',
     streetName: 'Route 202',
     city: 'Boston',
@@ -152,7 +152,7 @@ module.exports = [
     zip: '23185'
   },
   {
-    number: 9486,
+    number: '9486',
     houseOrApt: 'apartment',
     streetName: 'Oak Street',
     city: 'Madison',
@@ -160,7 +160,7 @@ module.exports = [
     zip: '48035'
   },
   {
-    number: 6854,
+    number: '6854',
     houseOrApt: 'apartment',
     streetName: 'Railroad Street',
     city: 'Hialeah',
@@ -168,7 +168,7 @@ module.exports = [
     zip: '33952'
   },
   {
-    number: 6662,
+    number: '6662',
     houseOrApt: 'house',
     streetName: 'Crescent Street',
     city: 'Stockton',
@@ -176,7 +176,7 @@ module.exports = [
     zip: '11566'
   },
   {
-    number: 5328,
+    number: '5328',
     houseOrApt: 'house',
     streetName: 'Grove Street',
     city: 'Fort Worth',
@@ -184,7 +184,7 @@ module.exports = [
     zip: '46375'
   },
   {
-    number: 6750,
+    number: '6750',
     houseOrApt: 'apartment',
     streetName: 'Hamilton Road',
     city: 'Anchorage',
@@ -192,7 +192,7 @@ module.exports = [
     zip: '60142'
   },
   {
-    number: 277,
+    number: '277',
     houseOrApt: 'house',
     streetName: '8th Street West',
     city: 'Pittsburgh',
@@ -200,7 +200,7 @@ module.exports = [
     zip: '44122'
   },
   {
-    number: 7545,
+    number: '7545',
     houseOrApt: 'house',
     streetName: '6th Street',
     city: 'Miami',
@@ -208,7 +208,7 @@ module.exports = [
     zip: '34203'
   },
   {
-    number: 7252,
+    number: '7252',
     houseOrApt: 'house',
     streetName: 'Broadway',
     city: 'Sacramento',
@@ -216,7 +216,7 @@ module.exports = [
     zip: '39120'
   },
   {
-    number: 6522,
+    number: '6522',
     houseOrApt: 'apartment',
     streetName: 'Surrey Lane',
     city: 'Indianapolis',
@@ -224,7 +224,7 @@ module.exports = [
     zip: '32746'
   },
   {
-    number: 1530,
+    number: '1530',
     houseOrApt: 'apartment',
     streetName: '3rd Street North',
     city: 'Bakersfield',
@@ -232,7 +232,7 @@ module.exports = [
     zip: '97402'
   },
   {
-    number: 5443,
+    number: '5443',
     houseOrApt: 'house',
     streetName: '2nd Avenue',
     city: 'Los Angeles',
@@ -240,7 +240,7 @@ module.exports = [
     zip: '60409'
   },
   {
-    number: 4308,
+    number: '4308',
     houseOrApt: 'house',
     streetName: '5th Street North',
     city: 'Greensboro',
@@ -248,7 +248,7 @@ module.exports = [
     zip: '30281'
   },
   {
-    number: 8922,
+    number: '8922',
     houseOrApt: 'house',
     streetName: 'Evergreen Lane',
     city: 'Durham',
@@ -256,7 +256,7 @@ module.exports = [
     zip: '10801'
   },
   {
-    number: 1462,
+    number: '1462',
     houseOrApt: 'apartment',
     streetName: 'Lantern Lane',
     city: 'North Hempstead',
@@ -264,7 +264,7 @@ module.exports = [
     zip: '44663'
   },
   {
-    number: 9611,
+    number: '9611',
     houseOrApt: 'house',
     streetName: 'Madison Street',
     city: 'Columbus',
@@ -272,7 +272,7 @@ module.exports = [
     zip: '98607'
   },
   {
-    number: 7370,
+    number: '7370',
     houseOrApt: 'apartment',
     streetName: 'Lake Avenue',
     city: 'Riverside',
@@ -280,7 +280,7 @@ module.exports = [
     zip: '43015'
   },
   {
-    number: 3065,
+    number: '3065',
     houseOrApt: 'apartment',
     streetName: 'Oxford Court',
     city: 'Wichita',
@@ -288,7 +288,7 @@ module.exports = [
     zip: '02135'
   },
   {
-    number: 4327,
+    number: '4327',
     houseOrApt: 'apartment',
     streetName: 'Creekside Drive',
     city: 'Minneapolis',
@@ -296,7 +296,7 @@ module.exports = [
     zip: '20886'
   },
   {
-    number: 9008,
+    number: '9008',
     houseOrApt: 'apartment',
     streetName: 'Myrtle Avenue',
     city: 'Garland',
@@ -304,7 +304,7 @@ module.exports = [
     zip: '48504'
   },
   {
-    number: 4931,
+    number: '4931',
     houseOrApt: 'house',
     streetName: 'Marshall Street',
     city: 'Kansas City',
@@ -312,7 +312,7 @@ module.exports = [
     zip: '29349'
   },
   {
-    number: 8239,
+    number: '8239',
     houseOrApt: 'apartment',
     streetName: 'Devonshire Drive',
     city: 'Las Vegas',
@@ -320,7 +320,7 @@ module.exports = [
     zip: '34997'
   },
   {
-    number: 7265,
+    number: '7265',
     houseOrApt: 'apartment',
     streetName: 'Grove Avenue',
     city: 'San Bernardino',
@@ -328,7 +328,7 @@ module.exports = [
     zip: '29349'
   },
   {
-    number: 3265,
+    number: '3265',
     houseOrApt: 'apartment',
     streetName: 'Lawrence Street',
     city: 'Laredo',
@@ -336,7 +336,7 @@ module.exports = [
     zip: '35640'
   },
   {
-    number: 405,
+    number: '405',
     houseOrApt: 'house',
     streetName: 'Euclid Avenue',
     city: 'Jacksonville',
@@ -344,7 +344,7 @@ module.exports = [
     zip: '94806'
   },
   {
-    number: 98,
+    number: '98',
     houseOrApt: 'apartment',
     streetName: 'Harrison Street',
     city: 'Lubbock',
@@ -352,7 +352,7 @@ module.exports = [
     zip: '39120'
   },
   {
-    number: 1196,
+    number: '1196',
     houseOrApt: 'house',
     streetName: 'Franklin Court',
     city: 'Memphis',
@@ -360,7 +360,7 @@ module.exports = [
     zip: '11361'
   },
   {
-    number: 3731,
+    number: '3731',
     houseOrApt: 'apartment',
     streetName: 'Pleasant Street',
     city: 'Tulsa',
@@ -368,7 +368,7 @@ module.exports = [
     zip: '19464'
   },
   {
-    number: 5074,
+    number: '5074',
     houseOrApt: 'house',
     streetName: 'Route 44',
     city: 'Chicago',
@@ -376,7 +376,7 @@ module.exports = [
     zip: '48185'
   },
   {
-    number: 5739,
+    number: '5739',
     houseOrApt: 'apartment',
     streetName: 'Briarwood Court',
     city: 'Arlington',
@@ -384,7 +384,7 @@ module.exports = [
     zip: '33952'
   },
   {
-    number: 7020,
+    number: '7020',
     houseOrApt: 'apartment',
     streetName: '6th Street West',
     city: 'Chula Vista',
@@ -392,7 +392,7 @@ module.exports = [
     zip: '34203'
   },
   {
-    number: 8047,
+    number: '8047',
     houseOrApt: 'house',
     streetName: '7th Street',
     city: 'Mesa',
@@ -400,7 +400,7 @@ module.exports = [
     zip: '35758'
   },
   {
-    number: 8373,
+    number: '8373',
     houseOrApt: 'house',
     streetName: 'Elm Avenue',
     city: 'St. Louis',
@@ -408,7 +408,7 @@ module.exports = [
     zip: '98607'
   },
   {
-    number: 7439,
+    number: '7439',
     houseOrApt: 'house',
     streetName: '2nd Street West',
     city: 'Albuquerque',
@@ -416,7 +416,7 @@ module.exports = [
     zip: '17050'
   },
   {
-    number: 4953,
+    number: '4953',
     houseOrApt: 'apartment',
     streetName: 'State Street',
     city: 'St. Petersburg',
@@ -424,7 +424,7 @@ module.exports = [
     zip: '11361'
   },
   {
-    number: 9420,
+    number: '9420',
     houseOrApt: 'house',
     streetName: 'Orchard Street',
     city: 'Oklahoma City',
@@ -432,7 +432,7 @@ module.exports = [
     zip: '19460'
   },
   {
-    number: 9502,
+    number: '9502',
     houseOrApt: 'house',
     streetName: 'Hawthorne Lane',
     city: 'Philadelphia',
@@ -440,7 +440,7 @@ module.exports = [
     zip: '08648'
   },
   {
-    number: 1933,
+    number: '1933',
     houseOrApt: 'house',
     streetName: 'Oak Lane',
     city: 'Arlington',
@@ -448,7 +448,7 @@ module.exports = [
     zip: '01420'
   },
   {
-    number: 7902,
+    number: '7902',
     houseOrApt: 'apartment',
     streetName: 'Church Road',
     city: 'Scottsdale',
@@ -456,7 +456,7 @@ module.exports = [
     zip: '46375'
   },
   {
-    number: 2580,
+    number: '2580',
     houseOrApt: 'house',
     streetName: 'Route 11',
     city: 'Houston',
@@ -464,7 +464,7 @@ module.exports = [
     zip: '48192'
   },
   {
-    number: 2496,
+    number: '2496',
     houseOrApt: 'apartment',
     streetName: '3rd Street West',
     city: 'Long Beach',
@@ -472,7 +472,7 @@ module.exports = [
     zip: '48185'
   },
   {
-    number: 1865,
+    number: '1865',
     houseOrApt: 'apartment',
     streetName: 'Lexington Drive',
     city: 'Aurora',
@@ -480,7 +480,7 @@ module.exports = [
     zip: '33952'
   },
   {
-    number: 4284,
+    number: '4284',
     houseOrApt: 'house',
     streetName: 'Ridge Road',
     city: 'Virginia Beach',
@@ -488,7 +488,7 @@ module.exports = [
     zip: '94806'
   },
   {
-    number: 1832,
+    number: '1832',
     houseOrApt: 'house',
     streetName: 'Lake Street',
     city: 'Rochester',
@@ -496,7 +496,7 @@ module.exports = [
     zip: '38053'
   },
   {
-    number: 8193,
+    number: '8193',
     houseOrApt: 'house',
     streetName: '12th Street East',
     city: 'Corpus Christi',
@@ -504,7 +504,7 @@ module.exports = [
     zip: '30701'
   },
   {
-    number: 6236,
+    number: '6236',
     houseOrApt: 'house',
     streetName: 'Chapel Street',
     city: 'Akron',
@@ -512,7 +512,7 @@ module.exports = [
     zip: '44122'
   },
   {
-    number: 7629,
+    number: '7629',
     houseOrApt: 'house',
     streetName: 'Laurel Street',
     city: 'New York',
@@ -520,7 +520,7 @@ module.exports = [
     zip: '33060'
   },
   {
-    number: 5510,
+    number: '5510',
     houseOrApt: 'apartment',
     streetName: 'Fairview Road',
     city: 'San Diego',
@@ -528,7 +528,7 @@ module.exports = [
     zip: '11572'
   },
   {
-    number: 8964,
+    number: '8964',
     houseOrApt: 'house',
     streetName: 'Locust Street',
     city: 'Jersey City',
@@ -536,7 +536,7 @@ module.exports = [
     zip: '60169'
   },
   {
-    number: 1549,
+    number: '1549',
     houseOrApt: 'house',
     streetName: 'Cobblestone Court',
     city: 'Plano',
@@ -544,7 +544,7 @@ module.exports = [
     zip: '97402'
   },
   {
-    number: 1161,
+    number: '1161',
     houseOrApt: 'apartment',
     streetName: 'Division Street',
     city: 'New Orleans',
@@ -552,7 +552,7 @@ module.exports = [
     zip: '60409'
   },
   {
-    number: 1987,
+    number: '1987',
     houseOrApt: 'apartment',
     streetName: 'Summit Street',
     city: 'Denver',
@@ -560,7 +560,7 @@ module.exports = [
     zip: '37803'
   },
   {
-    number: 2878,
+    number: '2878',
     houseOrApt: 'apartment',
     streetName: 'Amherst Street',
     city: 'Raleigh',
@@ -568,7 +568,7 @@ module.exports = [
     zip: '18042'
   },
   {
-    number: 5441,
+    number: '5441',
     houseOrApt: 'house',
     streetName: 'Fairway Drive',
     city: 'San Jose',
@@ -576,7 +576,7 @@ module.exports = [
     zip: '12401'
   },
   {
-    number: 7374,
+    number: '7374',
     houseOrApt: 'apartment',
     streetName: 'Front Street',
     city: 'Birmingham',
@@ -584,7 +584,7 @@ module.exports = [
     zip: '24540'
   },
   {
-    number: 9972,
+    number: '9972',
     houseOrApt: 'apartment',
     streetName: 'Walnut Street',
     city: 'Phoenix',
@@ -592,7 +592,7 @@ module.exports = [
     zip: '02062'
   },
   {
-    number: 8506,
+    number: '8506',
     houseOrApt: 'apartment',
     streetName: 'Warren Avenue',
     city: 'Lexington-Fayette',
@@ -600,7 +600,7 @@ module.exports = [
     zip: '48103'
   },
   {
-    number: 9886,
+    number: '9886',
     houseOrApt: 'apartment',
     streetName: 'Pin Oak Drive',
     city: 'Modesto',
@@ -608,7 +608,7 @@ module.exports = [
     zip: '11361'
   },
   {
-    number: 9978,
+    number: '9978',
     houseOrApt: 'apartment',
     streetName: 'Cambridge Road',
     city: 'Baton Rouge',
@@ -616,7 +616,7 @@ module.exports = [
     zip: '45342'
   },
   {
-    number: 1785,
+    number: '1785',
     houseOrApt: 'house',
     streetName: 'Edgewood Drive',
     city: 'Baltimore',
@@ -624,7 +624,7 @@ module.exports = [
     zip: '12401'
   },
   {
-    number: 440,
+    number: '440',
     houseOrApt: 'apartment',
     streetName: 'Madison Avenue',
     city: 'San Antonio',
@@ -632,7 +632,7 @@ module.exports = [
     zip: '11050'
   },
   {
-    number: 5652,
+    number: '5652',
     houseOrApt: 'house',
     streetName: 'Mill Road',
     city: 'Cleveland',
@@ -640,7 +640,7 @@ module.exports = [
     zip: '21236'
   },
   {
-    number: 625,
+    number: '625',
     houseOrApt: 'apartment',
     streetName: 'Elm Street',
     city: 'St. Paul',
@@ -648,7 +648,7 @@ module.exports = [
     zip: '23185'
   },
   {
-    number: 3433,
+    number: '3433',
     houseOrApt: 'apartment',
     streetName: 'Madison Court',
     city: 'Detroit',
@@ -656,7 +656,7 @@ module.exports = [
     zip: '43119'
   },
   {
-    number: 3757,
+    number: '3757',
     houseOrApt: 'house',
     streetName: 'Queen Street',
     city: 'Glendale',
@@ -664,7 +664,7 @@ module.exports = [
     zip: '17050'
   },
   {
-    number: 2439,
+    number: '2439',
     houseOrApt: 'apartment',
     streetName: 'Eagle Street',
     city: 'Norfolk',
@@ -672,7 +672,7 @@ module.exports = [
     zip: '60462'
   },
   {
-    number: 5310,
+    number: '5310',
     houseOrApt: 'house',
     streetName: 'Mill Street',
     city: 'Tucson',
@@ -680,7 +680,7 @@ module.exports = [
     zip: '21042'
   },
   {
-    number: 4876,
+    number: '4876',
     houseOrApt: 'apartment',
     streetName: 'Rosewood Drive',
     city: 'Huntington',
@@ -688,7 +688,7 @@ module.exports = [
     zip: '11566'
   },
   {
-    number: 153,
+    number: '153',
     houseOrApt: 'apartment',
     streetName: 'Route 9',
     city: 'Chesapeake',
@@ -696,7 +696,7 @@ module.exports = [
     zip: '45342'
   },
   {
-    number: 2445,
+    number: '2445',
     houseOrApt: 'apartment',
     streetName: 'Valley Road',
     city: 'Fort Wayne',
@@ -704,7 +704,7 @@ module.exports = [
     zip: '06082'
   },
   {
-    number: 1815,
+    number: '1815',
     houseOrApt: 'apartment',
     streetName: 'Main Street North',
     city: 'Lincoln',
@@ -712,7 +712,7 @@ module.exports = [
     zip: '97402'
   },
   {
-    number: 9756,
+    number: '9756',
     houseOrApt: 'house',
     streetName: 'Front Street North',
     city: 'Toledo',
@@ -720,7 +720,7 @@ module.exports = [
     zip: '95050'
   },
   {
-    number: 6298,
+    number: '6298',
     houseOrApt: 'apartment',
     streetName: 'Laurel Lane',
     city: 'Orlando',
@@ -728,7 +728,7 @@ module.exports = [
     zip: '18042'
   },
   {
-    number: 7283,
+    number: '7283',
     houseOrApt: 'house',
     streetName: 'Country Club Drive',
     city: 'Anaheim',
@@ -736,7 +736,7 @@ module.exports = [
     zip: '12401'
   },
   {
-    number: 6539,
+    number: '6539',
     houseOrApt: 'apartment',
     streetName: 'Jefferson Court',
     city: 'El Paso',
@@ -744,7 +744,7 @@ module.exports = [
     zip: '44663'
   },
   {
-    number: 5188,
+    number: '5188',
     houseOrApt: 'house',
     streetName: 'Maiden Lane',
     city: 'Henderson',
@@ -752,7 +752,7 @@ module.exports = [
     zip: '71730'
   },
   {
-    number: 4832,
+    number: '4832',
     houseOrApt: 'apartment',
     streetName: 'Green Street',
     city: 'Honolulu',
@@ -760,7 +760,7 @@ module.exports = [
     zip: '95050'
   },
   {
-    number: 2767,
+    number: '2767',
     houseOrApt: 'apartment',
     streetName: 'Homestead Drive',
     city: 'San Francisco',
@@ -768,7 +768,7 @@ module.exports = [
     zip: '23228'
   },
   {
-    number: 8537,
+    number: '8537',
     houseOrApt: 'apartment',
     streetName: '3rd Street East',
     city: 'Tampa',
@@ -776,7 +776,7 @@ module.exports = [
     zip: '08723'
   },
   {
-    number: 3309,
+    number: '3309',
     houseOrApt: 'apartment',
     streetName: 'Fairview Avenue',
     city: 'Washington',
@@ -784,7 +784,7 @@ module.exports = [
     zip: '11590'
   },
   {
-    number: 7127,
+    number: '7127',
     houseOrApt: 'house',
     streetName: 'Hickory Lane',
     city: 'Montgomery',
@@ -792,7 +792,7 @@ module.exports = [
     zip: '48103'
   },
   {
-    number: 8893,
+    number: '8893',
     houseOrApt: 'house',
     streetName: 'East Street',
     city: 'Dallas',
