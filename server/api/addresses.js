@@ -3,13 +3,23 @@ const {Address} = require('../db/models')
 const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
 
-// Get all address
+// GET /api/addresses
 router.get('/', isAdmin, async (req, res, next) => {
   try {
     const addresses = await Address.findAll()
     res.json(addresses)
   } catch (err) {
-    console.error(err)
+    next(err)
+  }
+})
+
+// GET /api/addresses/:addressId
+router.get('/:addressId', async (req, res, next) => {
+  try {
+    const address = await Address.findByPk(req.params.addressId)
+    res.json(address)
+  } catch (err) {
+    next(err)
   }
 })
 
@@ -22,12 +32,14 @@ router.put('/:addressId', isAdminOrUser, async (req, res, next) => {
     // }
     // from local state of user form
 
-    const updateAddressInfo = req.body.address
+    const address = await Address.findByPk(req.params.addressId)
 
-    const update = await Address.update(updateAddressInfo, {
-      where: {id: addressId}
-    })
+    const updateInfo = req.body.address
+
+    const updatedAddress = await address.update(updateInfo, {returning: true})
+
+    res.status(204).json(updatedAddress)
   } catch (err) {
-    console.error(err)
+    next(err)
   }
 })
