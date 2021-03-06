@@ -38,7 +38,7 @@ describe('Product routes', () => {
         .expect(200)
         .then(res => {
           expect(res.body).to.be.an('array')
-          expect(res.body).to.have.lengthOf(10)
+          expect(res.body).to.have.lengthOf(295)
         })
     })
 
@@ -66,7 +66,7 @@ describe('Product routes', () => {
         .expect(200)
 
       await request(app)
-        .get('/api/products/11')
+        .get('/api/products/301')
         .expect(200)
         .then(res => {
           expect(res.body).to.be.an('object')
@@ -90,7 +90,7 @@ describe('Product routes', () => {
         .expect(200)
         .then(res => {
           expect(res.body).to.be.an('array')
-          expect(res.body).to.have.lengthOf(11)
+          expect(res.body).to.have.lengthOf(301)
         })
     })
   })

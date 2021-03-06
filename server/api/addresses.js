@@ -14,7 +14,7 @@ router.get('/', isAdmin, async (req, res, next) => {
 })
 
 // GET /api/addresses/:addressId
-router.get('/:addressId', async (req, res, next) => {
+router.get('/:addressId', isAdminOrUser, async (req, res, next) => {
   try {
     const address = await Address.findByPk(req.params.addressId)
     res.json(address)

@@ -6,17 +6,9 @@ const Order = db.define('order', {
     type: Sequelize.BOOLEAN,
     defaultValue: false
   },
-  pricePaid: {
-    type: Sequelize.INTEGER,
-    validate: {
-      min: 0
-    }
-  },
-  quantity: {
-    type: Sequelize.INTEGER,
-    validate: {
-      min: 0
-    }
+  date: {
+    type: Sequelize.STRING,
+    allowNull: true
   }
 })
 
