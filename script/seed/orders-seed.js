@@ -1,33 +1,22 @@
-const getIsPaid = () => {
-  const value = Math.random()
-  return value > 0.5
-}
-
-const getPricePaid = () => {
-  return Math.ceil(Math.random() * 10000)
-}
-
-const getQuantity = () => {
-  return Math.ceil(Math.random() * 100)
-}
-
-const getUserPK = () => {
-  return Math.ceil(Math.random() * 10)
-}
-
-const getProductOrdersPK = () => {
-  const value = Math.random()
-  return value > 0.5 ? 1 : 2
-}
-
-const buildOrder = () => {
-  return {
-    isPaid: getIsPaid(),
-    pricePaid: getPricePaid(),
-    quantity: getQuantity(),
-    userId: getUserPK()
-    // productordersId: getProductOrdersPK(),
-  }
-}
-
-module.exports = new Array(10).fill(null).map(() => buildOrder())
+module.exports = [
+  {isPaid: true, userId: 1, date: Date.now()},
+  {isPaid: true, userId: 2, date: Date.now()},
+  {isPaid: true, userId: 3, date: Date.now()},
+  {isPaid: true, userId: 4, date: Date.now()},
+  {isPaid: true, userId: 5, date: Date.now()},
+  {isPaid: true, userId: 6, date: Date.now()},
+  {isPaid: true, userId: 7, date: Date.now()},
+  {isPaid: true, userId: 8, date: Date.now()},
+  {isPaid: true, userId: 9, date: Date.now()},
+  {isPaid: true, userId: 10, date: Date.now()},
+  {isPaid: false, userId: 1, date: null},
+  {isPaid: false, userId: 2, date: null},
+  {isPaid: false, userId: 3, date: null},
+  {isPaid: false, userId: 4, date: null},
+  {isPaid: false, userId: 5, date: null},
+  {isPaid: false, userId: 6, date: null},
+  {isPaid: false, userId: 7, date: null},
+  {isPaid: false, userId: 8, date: null},
+  {isPaid: false, userId: 9, date: null},
+  {isPaid: false, userId: 10, date: null}
+]
