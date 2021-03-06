@@ -23,8 +23,21 @@ const reduceOrdersToGetPastCart = order => {
 }
 
 class AllProducts extends React.Component {
+  getUserCart() {
+    const unfulfilledOrder = this.props.user.orders.filter(
+      order => !order.date
+    )[0]
+    const pastCart = reduceOrdersToGetPastCart(unfulfilledOrder)
+    this.props.loadCart(pastCart)
+  }
+
   componentDidMount() {
     this.props.getProducts()
+
+    // if we're coming directly from logging in
+    // we WILL have access to user.id in componentDidMount
+    // so we need to make the same call to getUserCart()
+    if (this.props.user.id) this.getUserCart()
 
     // here we call loadCart with no pastCart
     // so that if user is NOT logged in
@@ -40,13 +53,7 @@ class AllProducts extends React.Component {
   // where guestCart is localStorage.getItem('cart') || {}
 
   componentDidUpdate(prevProps) {
-    if (!prevProps.user.id && this.props.user.id) {
-      const unfulfilledOrder = this.props.user.orders.filter(
-        order => !order.date
-      )[0]
-      const pastCart = reduceOrdersToGetPastCart(unfulfilledOrder)
-      this.props.loadCart(pastCart)
-    }
+    if (!prevProps.user.id && this.props.user.id) this.getUserCart()
   }
 
   render() {
