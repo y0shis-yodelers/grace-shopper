@@ -25,6 +25,11 @@ const reduceOrdersToGetPastCart = order => {
 class AllProducts extends React.Component {
   componentDidMount() {
     this.props.getProducts()
+
+    // here we call loadCart with no pastCart
+    // so that if user is NOT logged in
+    // they still get their guest cart from localStorage
+    this.props.loadCart({})
   }
 
   // user is not available in componentDidMount
