@@ -2,17 +2,15 @@ import axios from 'axios'
 
 const GET_SINGLE_ADDRESS = 'GET_SINGLE_ADDRESS'
 
-const getSingleAddress = (name, address) => ({
-  type: GET_SINGLE_ADDRESS,
-  name,
-  address
-})
+const getSingleAddress = (name, address) => {
+  return {type: GET_SINGLE_ADDRESS, name, address}
+}
 
 export const fetchSingleAddress = userId => {
   return async dispatch => {
     try {
       const {data} = await axios.get(`/api/users/${userId}`)
-      dispatch(getSingleAddress(data.name, data.address))
+      dispatch(getSingleAddress(data.name, data.addresses))
     } catch (err) {
       console.error(err)
     }
@@ -22,6 +20,7 @@ export const fetchSingleAddress = userId => {
 const initState = {}
 
 export default (state = initState, action) => {
+  console.log(action)
   switch (action.type) {
     case GET_SINGLE_ADDRESS:
       return {

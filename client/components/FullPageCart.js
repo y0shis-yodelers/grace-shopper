@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
 import {fetchUpdateCart} from '../store/cart'
-import Total from './Total'
+import {Total, Checkout, ShippingData} from '../components'
 
 class FullPageCart extends React.Component {
   constructor(props) {
@@ -47,6 +47,8 @@ class FullPageCart extends React.Component {
           })}
           <Total products={products} cart={cart} />
         </div>
+        <Checkout />
+        <ShippingData />
       </div>
     )
   }

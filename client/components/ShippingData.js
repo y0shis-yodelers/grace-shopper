@@ -1,8 +1,10 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {fetchSingleAddress} from '../store/address'
 
 class ShippingData extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       number: '',
       houseOrApt: '',
@@ -15,6 +17,7 @@ class ShippingData extends React.Component {
 
   componentDidMount() {
     this.setState(this.props.getAddress())
+    console.log(this.props)
   }
 
   handleChange(event) {
@@ -74,13 +77,11 @@ class ShippingData extends React.Component {
 }
 
 const mapState = state => ({
-  cart: state.cart,
-  products: state.products
+  cart: state.cart
 })
 
 const mapDispatch = dispatch => ({
-  updateCart: (productId, quantity) =>
-    dispatch(fetchUpdateCart(productId, quantity))
+  getAddress: () => dispatch(fetchSingleAddress(5))
 })
 
 export default connect(mapState, mapDispatch)(ShippingData)
