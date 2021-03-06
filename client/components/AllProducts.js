@@ -6,23 +6,35 @@ import ProductCard from './ProductCard'
 import Cart from './Cart'
 import {fetchMergePastAndGuestCarts} from '../store/cart'
 
+// imperative reduceCart
+// takes in an orders array
+// and outputs a cart: { productId : quantity ... }
+const reduceOrdersToGetPastCart = order => {
+  let res = {}
+  const {products} = order
+  console.log(products)
+  products.forEach(product => {
+    const cartItem = {
+      [product.ProductOrder.productId]: product.ProductOrder.quantity
+    }
+    res = {...res, ...cartItem}
+  })
+  return res
+}
+
 class AllProducts extends React.Component {
   componentDidMount() {
-    // // reduce user's unfulfilled order to a pastCart object
-    // const pastCart = this.user.orders
-    //   .filter((order) => !order.date)[0]
-    //   .reduce((acc, curr) => {
-    //     const cartItem = {
-    //       [curr.ProductOrder.productId]: curr.ProductOrder.quantity,
-    //     }
-    //     return {...acc, ...cartItem}
-    //   }, {})
-
-    // console.log(pastCart)
-
-    // this.props.loadCart(pastCart)
-
     this.props.getProducts()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.user.id && this.props.user.id) {
+      const unfulfilledOrder = this.props.user.orders.filter(
+        order => !order.date
+      )[0]
+      const pastCart = reduceOrdersToGetPastCart(unfulfilledOrder)
+      this.props.loadCart(pastCart)
+    }
   }
 
   render() {
@@ -54,6 +66,7 @@ class AllProducts extends React.Component {
 }
 
 const mapState = state => ({
+  user: state.user,
   products: state.products
 })
 
