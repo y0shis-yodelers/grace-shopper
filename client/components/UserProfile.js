@@ -72,7 +72,7 @@ class UserProfile extends React.Component {
                     </div>
                   ))
                 ) : (
-                  <div>Loading...</div>
+                  <div>No orders!</div>
                 )}
               </div>
 
