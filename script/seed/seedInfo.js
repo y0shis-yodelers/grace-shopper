@@ -777,4 +777,34 @@ const getAllAddresses = () => {
 
 const allAddresses = getAllAddresses()
 
-writeToTextFile('allAddressesSeed', JSON.stringify(allAddresses))
+// writeToTextFile('allAddressesSeed', JSON.stringify(allAddresses))
+
+/* PRODUCT-ORDERS THROUGH TABLE ENTRIES */
+
+const getPricePaid = () => {
+  // +500 ensures every order is at least $5.00
+  return Math.ceil(Math.random() * 100000 + 500)
+}
+
+const getQuantity = () => {
+  return Math.ceil(Math.random() * 100)
+}
+
+const getOrderId = () => {
+  return Math.ceil(Math.random() * 10)
+}
+
+const buildProductOrder = productId => {
+  return {
+    pricePaid: getPricePaid(),
+    quantity: getQuantity(),
+    orderId: getOrderId(),
+    productId
+  }
+}
+
+const allProductOrders = new Array(200)
+  .fill(null)
+  .map(() => buildProductOrder())
+
+writeToTextFile('allProductOrdersSeed', JSON.stringify(allProductOrders))
