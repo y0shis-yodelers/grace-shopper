@@ -10,15 +10,17 @@ import {
   UserProfile
 } from './components'
 import {me} from './store'
-import {fetchSetCartOnLoadFromLocalStorage} from './store/cart'
+import {fetchSetUserOrGuestCart} from './store/cart'
 
 /**
  * COMPONENT
  */
 class Routes extends Component {
   componentDidMount() {
-    this.props.loadCart()
     this.props.loadInitialData()
+
+    // load cart after userId available
+    this.props.loadCart(this.props.user.id)
   }
 
   render() {
@@ -44,6 +46,7 @@ const mapState = state => {
   return {
     // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
     // Otherwise, state.user will be an empty object, and state.user.id will be falsey
+    user: state.user,
     isLoggedIn: !!state.user.id
   }
 }
@@ -53,13 +56,8 @@ const mapDispatch = dispatch => {
     loadInitialData() {
       dispatch(me())
     },
-    loadCart() {
-      /* here, we load a potential cart from localStorage
-      so that guest users and users alike can persist an unfulfilled order -- if cart does not exist on localStorage the call returns null, so we check its truthiness and set it equal to an empty object if there is no cart! */
-
-      let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'))
-      if (!cartFromLocalStorage) cartFromLocalStorage = {}
-      dispatch(fetchSetCartOnLoadFromLocalStorage(cartFromLocalStorage))
+    loadCart(userId) {
+      dispatch(fetchSetUserOrGuestCart(userId))
     }
   }
 }
