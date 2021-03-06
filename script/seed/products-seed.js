@@ -51,7 +51,7 @@ module.exports = [
     name: 'Akai',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 88,
     price: 62
   },
@@ -99,7 +99,7 @@ module.exports = [
     name: 'Alvarez',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 68,
     price: 791
   },
@@ -131,7 +131,7 @@ module.exports = [
     name: 'Art & Lutherie',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 90,
     price: 869
   },
@@ -251,7 +251,7 @@ module.exports = [
     name: 'Behringer',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 24,
     price: 37
   },
@@ -411,7 +411,7 @@ module.exports = [
     name: 'CNB',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 15,
     price: 832
   },
@@ -539,7 +539,7 @@ module.exports = [
     name: 'Dod',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 58,
     price: 51
   },
@@ -979,7 +979,7 @@ module.exports = [
     name: 'ISP',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 82,
     price: 44
   },
@@ -987,7 +987,7 @@ module.exports = [
     name: 'J.Rockett Audio',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 70,
     price: 54
   },
@@ -1115,7 +1115,7 @@ module.exports = [
     name: 'Kramer',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 86,
     price: 135
   },
@@ -1171,7 +1171,7 @@ module.exports = [
     name: 'Leathergraft',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 93,
     price: 173
   },
@@ -1251,7 +1251,7 @@ module.exports = [
     name: 'Mapex',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 31,
     price: 379
   },
@@ -1259,7 +1259,7 @@ module.exports = [
     name: 'Marantz',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 57,
     price: 228
   },
@@ -1275,7 +1275,7 @@ module.exports = [
     name: 'Marshall',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 32,
     price: 483
   },
@@ -1475,7 +1475,7 @@ module.exports = [
     name: 'Nord',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 48,
     price: 769
   },
@@ -1499,7 +1499,7 @@ module.exports = [
     name: 'NUX',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 79,
     price: 342
   },
@@ -1843,7 +1843,7 @@ module.exports = [
     name: 'Schecter',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 18,
     price: 74
   },
@@ -1939,7 +1939,7 @@ module.exports = [
     name: 'Source Audio',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 20,
     price: 583
   },
@@ -1987,7 +1987,7 @@ module.exports = [
     name: 'Steinberger',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 28,
     price: 269
   },
@@ -2283,7 +2283,7 @@ module.exports = [
     name: 'Xotic',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/vMp.jpg567e',
+    imageUrl: 'https://imgur.com/vMp567e.jpg',
     inventory: 72,
     price: 903
   },
