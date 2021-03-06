@@ -783,7 +783,7 @@ const allAddresses = getAllAddresses()
 
 const getPricePaid = () => {
   // +500 ensures every order is at least $5.00
-  return Math.ceil(Math.random() * 100000 + 500)
+  return Math.ceil(Math.random() * 500 + 100)
 }
 
 const getQuantity = () => {
@@ -805,6 +805,6 @@ const buildProductOrder = productId => {
 
 const allProductOrders = new Array(200)
   .fill(null)
-  .map(() => buildProductOrder())
+  .map((empty, idx) => buildProductOrder(++idx))
 
-writeToTextFile('allProductOrdersSeed', JSON.stringify(allProductOrders))
+// writeToTextFile('allProductOrdersSeed', JSON.stringify(allProductOrders))
