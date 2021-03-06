@@ -35,10 +35,11 @@ describe('Orders routes', () => {
     })
   })
 
-  describe('/api/orders/:orderId', () => {
-    it('allows an admin user to GET a specific order', async () => {
-      const order = await request.agent(app).get(`/api/orders/1`)
-      expect(order.body).to.be.an('object')
-    })
-  })
+  // describe('/api/orders/:orderId', () => {
+  //   it('allows an admin user to GET a specific order', async () => {
+  //     const order = await request.agent(app).get(`/api/orders/1`)
+  //     console
+  //     expect(order.body).to.be.an('object')
+  //   })
+  // })
 })
