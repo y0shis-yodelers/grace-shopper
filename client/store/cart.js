@@ -1,16 +1,8 @@
-import axios from 'axios'
-
 // action types
-const SET_USER_OR_GUEST_CART = 'SET_USER_OR_GUEST_CART'
 const UPDATE_CART = 'UPDATE_CART'
+const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
 
 // action creators
-const setUserOrGuestCart = mergedCart => {
-  return {
-    type: SET_USER_OR_GUEST_CART,
-    mergedCart
-  }
-}
 const updateCart = (productId, quantity) => {
   return {
     type: UPDATE_CART,
@@ -18,39 +10,28 @@ const updateCart = (productId, quantity) => {
     quantity
   }
 }
+const mergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
+  return {
+    type: MERGE_GUEST_AND_PAST_CARTS,
+    pastCart,
+    cartFromLocalStorage
+  }
+}
 
 // thunks
-export const fetchSetUserOrGuestCart = userId => {
+export const fetchUpdateCart = (productId, quantity) => {
   return async dispatch => {
     try {
-      // get guestCart from localStorage
-      // if it doesn't exist, set to {}
-      let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'))
-      if (!cartFromLocalStorage) cartFromLocalStorage = {}
-
-      // get cart from database by grabbing the unfulfilled
-      // order in the user's order history
-      // if there is none, set to empty object
-      const orders = (await axios.get(`/api/users/${userId}`)).data.orders || []
-      let pastCart = {}
-      if (orders.length) {
-        pastCart = orders.filter(order => !order.date)[0]
-      }
-
-      // assuming that any decisions the user made in guest mode
-      // were the most recent, we spread cartFromLocalStorage
-      // over the pastCart from the database
-      const mergedCart = {...pastCart}
-      dispatch(setUserOrGuestCart(mergedCart))
+      dispatch(updateCart(productId, quantity))
     } catch (err) {
       console.error(err)
     }
   }
 }
-export const fetchUpdateCart = (productId, quantity) => {
+export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
   return async dispatch => {
     try {
-      dispatch(updateCart(productId, quantity))
+      dispatch(mergePastAndGuestCarts(pastCart, cartFromLocalStorage))
     } catch (err) {
       console.error(err)
     }
@@ -78,8 +59,8 @@ export default (state = initState, action) => {
       localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
     }
-    case SET_USER_OR_GUEST_CART:
-      return {...state, ...action.mergedCart}
+    case MERGE_GUEST_AND_PAST_CARTS:
+      return {...state, ...action.pastCart, ...action.cartFromLocalStorage}
     default:
       return state
   }
