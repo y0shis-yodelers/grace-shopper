@@ -2,22 +2,40 @@ import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
 import {fetchUpdateCart} from '../store/cart'
-import {Total, Checkout, ShippingData} from '../components'
+import {Total} from '../components'
+import {loadStripe} from '@stripe/stripe-js'
+import axios from 'axios'
+console.log(process.env.STRIPE_PUBLIC_KEY)
+const stripePromise = loadStripe(
+  'pk_test_51IRAGrKvkOozTd9WXjudcSnBXHoLITwEcGCrPGGRo4J7T2eYAnoREEYKFDNhMyC1HkrUAcXtMC37AMKUOl678a5A00sAd1ES3S'
+)
 
 class FullPageCart extends React.Component {
   constructor(props) {
     super(props)
     this.handleQuantityChange = this.handleQuantityChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   async handleQuantityChange(productId, quantity) {
     await this.props.updateCart(productId, quantity)
   }
 
+  async handleClick(event) {
+    const stripe = await stripePromise
+    const response = await axios.post('/create-checkout-session')
+    const session = await response.json()
+
+    // When the customer clicks on the button, redirect them to Checkout.
+    const result = await stripe.redirectToCheckout({
+      sessionId: session.id
+    })
+  }
+
   render() {
     const cart = this.props.cart || {}
     const products = this.props.products || []
-    const {handleQuantityChange} = this
+    const {handleQuantityChange, handleClick} = this
     //let cartWithProduct = products.filter((product) => cart[product.id])
     console.log('all products', products)
     return (
@@ -48,8 +66,10 @@ class FullPageCart extends React.Component {
             })}
             <Total products={products} cart={cart} />
           </div>
-          <Checkout />
         </div>
+        <button type="button" className="checkoutBtn" onClick={handleClick}>
+          Checkout
+        </button>
       </div>
     )
   }
