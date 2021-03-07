@@ -27,27 +27,42 @@ describe.only('Orders routes', () => {
     )
   })
 
-  describe('/api/orders', async () => {
-    it('allows an admin user to GET all order', async () => {
-      const orders = await request.agent(app).get('/api/orders')
-      expect(orders.body).to.be.an('array')
-      expect(orders.body.length).to.equal(20)
-    })
+  describe('/api/orders', () => {
+    try {
+      it('allows an admin user to GET all order', async () => {
+        const orders = await request.agent(app).get('/api/orders')
+        expect(orders.body).to.be.an('array')
+        expect(orders.body.length).to.equal(20)
+      })
+    } catch (error) {
+      console.log(error)
+      throw error
+    }
   })
 
   describe('/api/orders/:orderId', () => {
-    it('allows an admin user to GET a specific order', async () => {
-      const order = await request.agent(app).get(`/api/orders/1`)
-      expect(order.body).to.be.an('object')
-      expect(order.body.isPaid).to.be.an('boolean')
-    })
+    try {
+      it('allows an admin user to GET a specific order', async () => {
+        const order = await request.agent(app).get(`/api/orders/1`)
+        expect(order.body).to.be.an('object')
+        expect(order.body.isPaid).to.be.an('boolean')
+      })
+    } catch (error) {
+      console.log(error)
+      throw error
+    }
   })
 
   describe('/api/orders/:orderId', () => {
-    it('has a user associated with every order', async () => {
-      const order = await request.agent(app).get('/api/orders/1')
-      expect(order.body.userId).to.not.be.an('undefined')
-    })
+    try {
+      it('has a user associated with every order', async () => {
+        const order = await request.agent(app).get('/api/orders/1')
+        expect(order.body.userId).to.not.be.an('undefined')
+      })
+    } catch (error) {
+      console.log(error)
+      throw error
+    }
   })
 
   describe('api/orders/:orderId', () => {
@@ -58,25 +73,35 @@ describe.only('Orders routes', () => {
   })
 
   describe('POST /orders', () => {
-    it('creates a new order and sends back the new order', async () => {
-      const res = await request
-        .agent(app)
-        .post('/api/orders')
-        .send({
-          isPaid: false,
-          // userId: 11,
-          date: Date.now()
-        })
-        .expect(201)
-      expect(res.body).to.be.an('object')
-      expect(res.body.isPaid).to.equal(false)
-    })
+    try {
+      it('creates a new order and sends back the new order', async () => {
+        const res = await request
+          .agent(app)
+          .post('/api/orders')
+          .send({
+            isPaid: false,
+            // userId: 11,
+            date: Date.now()
+          })
+          .expect(201)
+        expect(res.body).to.be.an('object')
+        expect(res.body.isPaid).to.equal(false)
+      })
+    } catch (error) {
+      console.log(error)
+      throw error
+    }
   })
 
   describe('DELETE /orders', () => {
-    it('deletes an order', async () => {
-      const deletedOrder = await request.agent(app).delete(`/api/orders/1`)
-      expect(deletedOrder.body.id).to.equal(1)
-    })
+    try {
+      it('deletes an order', async () => {
+        const deletedOrder = await request.agent(app).delete(`/api/orders/1`)
+        expect(deletedOrder.body.id).to.equal(1)
+      })
+    } catch (error) {
+      console.log(error)
+      throw error
+    }
   })
 })
