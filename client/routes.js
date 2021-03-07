@@ -12,6 +12,7 @@ import {
 import {me} from './store'
 import {reduceOrdersToGetPastCart} from './components/helperFunctions'
 import {fetchMergePastAndGuestCarts} from './store/cart'
+import {fetchSaveCart} from './store/cart'
 
 /**
  * COMPONENT
@@ -44,6 +45,10 @@ class Routes extends Component {
     if (!prevProps.user.id && this.props.user.id) this.getUserCart()
   }
 
+  componentWillUnmount(cart, userId) {
+    this.props.saveCart(cart, userId)
+  }
+
   render() {
     return (
       <Switch>
@@ -63,14 +68,12 @@ class Routes extends Component {
 /**
  * CONTAINER
  */
-const mapState = state => {
-  return {
-    // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
-    // Otherwise, state.user will be an empty object, and state.user.id will be falsey
-    user: state.user,
-    isLoggedIn: !!state.user.id
-  }
-}
+const mapState = state => ({
+  // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
+  // Otherwise, state.user will be an empty object, and state.user.id will be falsey
+  user: state.user,
+  isLoggedIn: !!state.user.id
+})
 
 const mapDispatch = dispatch => ({
   loadInitialData: () => dispatch(me()),
@@ -80,12 +83,14 @@ const mapDispatch = dispatch => ({
   loadCart: pastCart => {
     let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || {}
     dispatch(fetchMergePastAndGuestCarts(pastCart, cartFromLocalStorage))
-  }
+  },
+
+  saveCart: (cart, userId) => dispatch(fetchSaveCart(cart, userId))
 })
 
 // The `withRouter` wrapper makes sure that updates are not blocked
 // when the url changes
-export default withRouter(connect(mapState, mapDispatch)(Routes))
+export default withRouter(connect(null, mapDispatch)(Routes))
 
 /**
  * PROP TYPES
