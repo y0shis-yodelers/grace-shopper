@@ -25,9 +25,20 @@ export const clearCart = () => ({
 })
 
 // thunks
-export const fetchUpdateCart = (productId, quantity) => {
+export const fetchUpdateCart = (userId, productId, quantity) => {
   return async dispatch => {
     try {
+      // here we check the truthiness of userId
+      // if userId is 0, we skip the backend PUT action
+      // since there's no user to update!
+
+      console.log('userId, productId, quantity', userId, productId, quantity)
+
+      if (userId)
+        await axios.put(`/api/carts/${userId}`, {
+          productId: productId,
+          quantity: quantity
+        })
       dispatch(updateCart(productId, quantity))
     } catch (err) {
       console.error(err)
@@ -46,7 +57,9 @@ export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
 export const fetchClearCart = userId => {
   return async dispatch => {
     try {
-      await axios.delete(`/api/carts/${userId}`)
+      // check if user is logged in
+      // if userId is undefined, don't make the backend call
+      if (userId) await axios.delete(`/api/carts/${userId}`)
       dispatch(clearCart())
     } catch (err) {
       console.error(err)

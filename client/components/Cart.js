@@ -11,7 +11,8 @@ class Cart extends React.Component {
   }
 
   async handleQuantityChange(productId, quantity) {
-    await this.props.updateCart(productId, quantity)
+    const userId = this.props.user.id || 0
+    await this.props.updateCart(userId, productId, quantity)
   }
 
   render() {
@@ -28,9 +29,6 @@ class Cart extends React.Component {
             type="button"
             onClick={() => {
               localStorage.setItem('cart', JSON.stringify({}))
-              const order = this.props.user.orders.filter(
-                order => !order.date
-              )[0]
               this.props.emptyCart(this.props.user.id)
             }}
           >
@@ -77,8 +75,8 @@ const mapState = state => ({
 })
 
 const mapDispatch = dispatch => ({
-  updateCart: (productId, quantity) =>
-    dispatch(fetchUpdateCart(productId, quantity)),
+  updateCart: (userId, productId, quantity) =>
+    dispatch(fetchUpdateCart(userId, productId, quantity)),
   emptyCart: userId => dispatch(fetchClearCart(userId))
 })
 
