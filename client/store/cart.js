@@ -25,9 +25,17 @@ export const clearCart = () => ({
 })
 
 // thunks
-export const fetchUpdateCart = (productId, quantity) => {
+export const fetchUpdateCart = (userId, productId, quantity) => {
   return async dispatch => {
     try {
+      // here we check the truthiness of userId
+      // if userId is 0, we skip the backend PUT action
+      // since there's no user to update!
+      if (userId)
+        await axios.put(`/api/carts/${userId}`, {
+          productId: productId,
+          quantity: quantity
+        })
       dispatch(updateCart(productId, quantity))
     } catch (err) {
       console.error(err)
@@ -43,16 +51,12 @@ export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
     }
   }
 }
-export const fetchClearCart = order => {
+export const fetchClearCart = userId => {
   return async dispatch => {
     try {
-      // to clear cart, pass an empty products array to the order
-      // if we were to try to destroy the order we would erase
-      // our "cart" from the user's order history!
-      const clearedOrder = {...order, products: []}
-
-      await axios.put(`/api/orders/${order.id}`, clearedOrder)
-
+      // check if user is logged in
+      // if userId is undefined, don't make the backend call
+      if (userId) await axios.delete(`/api/carts/${userId}`)
       dispatch(clearCart())
     } catch (err) {
       console.error(err)
@@ -81,8 +85,15 @@ export default (state = initState, action) => {
       localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
     }
-    case MERGE_GUEST_AND_PAST_CARTS:
-      return {...state, ...action.pastCart, ...action.cartFromLocalStorage}
+    case MERGE_GUEST_AND_PAST_CARTS: {
+      const newCart = {
+        ...state,
+        ...action.pastCart,
+        ...action.cartFromLocalStorage
+      }
+      localStorage.setItem('cart', JSON.stringify(newCart))
+      return newCart
+    }
     case CLEAR_CART: {
       localStorage.setItem('cart', JSON.stringify({}))
       return {}

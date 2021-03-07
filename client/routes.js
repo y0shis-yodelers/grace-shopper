@@ -10,7 +10,7 @@ import {
   UserProfile
 } from './components'
 import {me} from './store'
-import {reduceOrdersToGetPastCart} from './components/helperFunctions'
+import {reduceOrderToGetPastCart} from './components/helperFunctions'
 import {fetchMergePastAndGuestCarts} from './store/cart'
 
 /**
@@ -21,7 +21,7 @@ class Routes extends Component {
     const unfulfilledOrder = this.props.user.orders.filter(
       order => !order.date
     )[0]
-    const pastCart = reduceOrdersToGetPastCart(unfulfilledOrder)
+    const pastCart = reduceOrderToGetPastCart(unfulfilledOrder)
     this.props.loadCart(pastCart)
   }
 
@@ -31,7 +31,6 @@ class Routes extends Component {
     // we WILL have access to user.id in componentDidMount
     // so we need to make the same call to getUserCart()
     if (this.props.user.id) this.getUserCart()
-
     // here we call loadCart with no pastCart
     // so that if user is NOT logged in
     // they still get their guest cart from localStorage
@@ -39,6 +38,7 @@ class Routes extends Component {
   }
 
   // user is not immediately available in componentDidMount
+  // if we're NOT coming directly from logging in
   // so we load the user's pastCart in componentDidUpdate
   componentDidUpdate(prevProps) {
     if (!prevProps.user.id && this.props.user.id) this.getUserCart()
@@ -63,14 +63,12 @@ class Routes extends Component {
 /**
  * CONTAINER
  */
-const mapState = state => {
-  return {
-    // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
-    // Otherwise, state.user will be an empty object, and state.user.id will be falsey
-    user: state.user,
-    isLoggedIn: !!state.user.id
-  }
-}
+const mapState = state => ({
+  // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
+  // Otherwise, state.user will be an empty object, and state.user.id will be falsey
+  user: state.user,
+  isLoggedIn: !!state.user.id
+})
 
 const mapDispatch = dispatch => ({
   loadInitialData: () => dispatch(me()),
