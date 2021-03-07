@@ -19,26 +19,20 @@ class UserProfile extends React.Component {
             header ads here {/* test purposes only */}
           </div>
 
-          {Object.keys(singleUser).length ? (
-            <div className="singleUserContainer">
-              {/* OrderHistory and PaymentOptions components
+          <div className="singleUserContainer">
+            {/* OrderHistory and PaymentOptions components
           to be created ... */}
-              <div>Order History</div>
-              <AllOrders user={singleUser} />
+            <div>Order History</div>
+            <AllOrders user={singleUser} />
 
-              <div className="userProfileContainer">
-                <div className="userProfileName">Name: {singleUser.name}</div>
-                <div className="userProfileEmail">
-                  Email: {singleUser.email}
-                </div>
-                <div className="userProfilePhone">
-                  Phone: {singleUser.phoneNumber}
-                </div>
+            <div className="userProfileContainer">
+              <div className="userProfileName">Name: {singleUser.name}</div>
+              <div className="userProfileEmail">Email: {singleUser.email}</div>
+              <div className="userProfilePhone">
+                Phone: {singleUser.phoneNumber}
               </div>
             </div>
-          ) : (
-            <div>Guest profile</div>
-          )}
+          </div>
         </div>
         {/* <PaymentOptions /> */}
 
