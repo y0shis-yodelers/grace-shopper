@@ -242,13 +242,13 @@ img {
 .userOrdersContainer {
   display: flex;
   overflow-x: auto;
-  align-items: baseline;
-  min-height: 300px;
+  align-items: end;
+  min-height: 325px;
   min-width: 600px;
   border: 1px solid black;
 }
 
-/* ---- OrderCard ---- */
+/* ---- Order Card ---- */
 
 .orderContainer {
   height: auto;
@@ -258,6 +258,40 @@ img {
   flex-direction: column;
   border: 1px solid black;
   padding: 0.5em;
+  position: relative;
+  background-color: #fff;
+}
+
+.orderContainer,
+.orderContainer::before,
+.orderContainer::after {
+  /* Add shadow to distinguish sheets from one another */
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.orderContainer::before,
+.orderContainer::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+
+/* Second sheet of paper */
+.orderContainer::before {
+  left: 7px;
+  top: -5px;
+  z-index: -1;
+  border: 1px solid black;
+}
+
+/* Third sheet of paper */
+.orderContainer::after {
+  left: 12px;
+  top: -10px;
+  z-index: -2;
+  border: 1px solid black;
 }
 
 .orderContainer * {
