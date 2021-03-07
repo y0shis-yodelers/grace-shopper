@@ -6,7 +6,17 @@
 
 1.  JSX
 
--
+* a Switch component that places AllProducts view at /home, with paths to login, signup, singleProduct, and singleUser views
+
+2.  Containers
+
+* mapState: places user and an isLoggedIn flag on this.props
+* mapDispatch: places loadInitialData() on this.props, which loads the user instance onto state if user isLoggedIn; also places loadCart() on this.props, which calls a thunk that merges the user's persisted cart from the db with the localStorage guest cart that user may or may not have created. guestCart state is spread OVER the persisted state, since user's most recent actions are those made in guest-mode
+
+3.  Class methods
+
+* getUserCart(): this method filters the user's order history to grab the unfulfilledOrder (ie., !order.date && !order.isPaid) and convert it to a Cart object with the reduceOrderToGetPastCart() helper fn, then sends the pastCart as a param to this.props.loadCart, which merges past/present carts and places them on state
+* a note about componentDidUpdate(): this method loads the cart on state if the user is NOT being redirected from /api/login, ie. any page refresh or navigation other than direct user login
 
 ### AllProducts
 
@@ -105,11 +115,17 @@
 3.  How are products and orders associated and how are users associated with particular orders?
 
 * Products and orders are m:n associations, and orders contain a foreign key to a particular user
-* important! each user is associated with TWO ORDERS: one that is FULFILLED and has a DATE field value, and one that is UNFUFILLED and has a DATE field value of NULL
+* important! each user is associated with TWO ORDERS: one that is FULFILLED and has a DATE field value, and one that is UNFUFILLED and has a DATE field value of NULL. the UNFULFILLED order is the user's cart and should not always be persisted -- to clear the cart, rather than deleting a user's unfulfilledOrder from their order history, use the /api/carts/:userId router's DELETE method to disassociate all ProductOrders with this order instance
 
 ### API
 
 ### Routes
+
+1.  /api/carts
+
+* GET /api/carts/:userId: returns the unfulfilledOrder that holds a user's "cart", or list of associated products with this orderId, through model.ProductOrder
+* PUT /api/carts/:userId: grabs the User instance and uses it to grab the user's orderId representing the cart, then updates the cartItem passed in req.body as { productId : quantity } by either a) finding or creating the instance, and b) deleting or updating the foundInstance
+* DELETE /api/carts/:userId: destroys each ProductOrder that associates products in user's unfulfilledOrder.products array
 
 ### Oauth-local
 
@@ -118,7 +134,5 @@
 ## Deployment
 
 ### Heroku
-
-### Deployment
 
 ### Oauth-deployed
