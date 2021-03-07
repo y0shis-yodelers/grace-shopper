@@ -265,7 +265,7 @@ img {
 .orderContainer,
 .orderContainer::before,
 .orderContainer::after {
-  /* Add shadow to distinguish sheets from one another */
+  /* Add shadow to distinguish sheets */
   box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -278,7 +278,7 @@ img {
   background-color: #eee;
 }
 
-/* Second sheet of paper */
+/* Second sheet */
 .orderContainer::before {
   left: 7px;
   top: -5px;
@@ -286,7 +286,7 @@ img {
   border: 1px solid black;
 }
 
-/* Third sheet of paper */
+/* Third sheet */
 .orderContainer::after {
   left: 12px;
   top: -10px;
