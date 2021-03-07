@@ -4,7 +4,9 @@ import {fetchAllOrders} from '../store/orders'
 
 class AllOrders extends React.Component {
   componentDidMount() {
-    this.props.getOrders()
+    const {id} = this.props.user
+
+    this.props.getOrders(id)
   }
 
   render() {
@@ -13,7 +15,22 @@ class AllOrders extends React.Component {
     return (
       <div className="userOrdersContainer">
         {orders.length ? (
-          orders.map(order => <div key={order.id} />)
+          orders.map(order => (
+            <div key={order.id}>
+              <div>
+                {orders.length ? (
+                  <div className="orderContainer">
+                    <img src={order.products[0].imageUrl} />
+                    <div className="orderName">{order.products[0].name}</div>
+                    <div>{order.products[0].pricePaid}</div>
+                    <div>{order.products[0].quantity}</div>
+                  </div>
+                ) : (
+                  <div>Loading...</div>
+                )}
+              </div>
+            </div>
+          ))
         ) : (
           <div>No orders!</div>
         )}
@@ -30,7 +47,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getOrders: () => dispatch(fetchAllOrders())
+    getOrders: userId => dispatch(fetchAllOrders(userId))
   }
 }
 
