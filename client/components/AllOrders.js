@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchAllOrders} from '../store/orders'
+import {formatPrice} from './helperFunctions'
 
 class AllOrders extends React.Component {
   componentDidMount() {
@@ -22,8 +23,13 @@ class AllOrders extends React.Component {
                   <div className="orderContainer">
                     <img src={order.products[0].imageUrl} />
                     <div className="orderName">{order.products[0].name}</div>
-                    <div>{order.products[0].pricePaid}</div>
-                    <div>{order.products[0].quantity}</div>
+                    <div>
+                      Quantity: {order.products[0].ProductOrder.quantity}
+                    </div>
+                    <div>
+                      Price:{' '}
+                      {formatPrice(order.products[0].ProductOrder.pricePaid)}
+                    </div>
                   </div>
                 ) : (
                   <div>Loading...</div>
