@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
-import {fetchUpdateCart} from '../store/cart'
+import {fetchUpdateCart, clearCart} from '../store/cart'
 import Total from './Total'
 
 class Cart extends React.Component {
@@ -23,7 +23,18 @@ class Cart extends React.Component {
 
     return (
       <div className="cartContainer">
-        <div className="cartTitle">My Cart:</div>
+        <div className="myCartAndClearCartBtn">
+          <div className="cartTitle">My Cart:</div>
+          <button
+            className="clearCart"
+            type="button"
+            onClick={() => {
+              this.props.clearCart()
+            }}
+          >
+            Clear Cart
+          </button>
+        </div>
         <div className="cartBox">
           {products.map(product => {
             // if the cart doesn't hold this item
@@ -64,7 +75,8 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => ({
   updateCart: (productId, quantity) =>
-    dispatch(fetchUpdateCart(productId, quantity))
+    dispatch(fetchUpdateCart(productId, quantity)),
+  clearCart: () => dispatch(clearCart())
 })
 
 export default connect(mapState, mapDispatch)(Cart)

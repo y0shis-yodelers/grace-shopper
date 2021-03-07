@@ -1,6 +1,7 @@
 // action types
 const UPDATE_CART = 'UPDATE_CART'
 const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
+const CLEAR_CART = 'CLEAR_CART'
 
 // action creators
 const updateCart = (productId, quantity) => {
@@ -17,6 +18,9 @@ const mergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
     cartFromLocalStorage
   }
 }
+export const clearCart = () => ({
+  type: CLEAR_CART
+})
 
 // thunks
 export const fetchUpdateCart = (productId, quantity) => {
@@ -61,6 +65,10 @@ export default (state = initState, action) => {
     }
     case MERGE_GUEST_AND_PAST_CARTS:
       return {...state, ...action.pastCart, ...action.cartFromLocalStorage}
+    case CLEAR_CART: {
+      localStorage.setItem('cart', JSON.stringify({}))
+      return {}
+    }
     default:
       return state
   }

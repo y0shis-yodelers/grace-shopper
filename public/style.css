@@ -177,6 +177,12 @@ img {
   overflow-y: auto;
 }
 
+.myCartAndClearCartBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* ---- CartProductCard ---- */
 
 .cartProductContainer {
