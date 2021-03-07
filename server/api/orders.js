@@ -38,7 +38,15 @@ router.put('/:orderId', isAdminOrUser, async (req, res, next) => {
   try {
     const order = await Order.findByPk(req.params.orderId, {include: Product})
 
-    const {date, isPaid, products, userId} = order
+    const {date, isPaid, products, userId} = req.body
+
+    console.log(
+      'date, isPaid, products, userId is, ',
+      date,
+      isPaid,
+      products,
+      userId
+    )
 
     const updateOrderInfo = {
       date,
@@ -46,6 +54,8 @@ router.put('/:orderId', isAdminOrUser, async (req, res, next) => {
       products,
       userId
     }
+
+    console.log('updateOrderInfo is, ', updateOrderInfo)
 
     const updatedOrder = await order.update(updateOrderInfo, {
       returning: true

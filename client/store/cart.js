@@ -43,10 +43,16 @@ export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
     }
   }
 }
-export const fetchClearCart = orderId => {
+export const fetchClearCart = order => {
   return async dispatch => {
     try {
-      await axios.delete(`/api/orders/${orderId}`)
+      // to clear cart, pass an empty products array to the order
+      // if we were to try to destroy the order we would erase
+      // our "cart" from the user's order history!
+      const clearedOrder = {...order, products: []}
+
+      await axios.put(`/api/orders/${order.id}`, clearedOrder)
+
       dispatch(clearCart())
     } catch (err) {
       console.error(err)
