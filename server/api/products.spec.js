@@ -43,6 +43,7 @@ describe('Product routes', () => {
           })
       } catch (error) {
         console.log(error)
+        throw error
       }
     })
 
@@ -61,6 +62,7 @@ describe('Product routes', () => {
           })
       } catch (error) {
         console.log(error)
+        throw error
       }
     })
   })
@@ -85,6 +87,7 @@ describe('Product routes', () => {
           })
       } catch (error) {
         console.log(error)
+        throw error
       }
     })
   })
@@ -107,6 +110,7 @@ describe('Product routes', () => {
           })
       } catch (error) {
         console.log(error)
+        throw error
       }
     })
   })
