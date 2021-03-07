@@ -31,9 +31,6 @@ export const fetchUpdateCart = (userId, productId, quantity) => {
       // here we check the truthiness of userId
       // if userId is 0, we skip the backend PUT action
       // since there's no user to update!
-
-      console.log('userId, productId, quantity', userId, productId, quantity)
-
       if (userId)
         await axios.put(`/api/carts/${userId}`, {
           productId: productId,
@@ -88,8 +85,15 @@ export default (state = initState, action) => {
       localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
     }
-    case MERGE_GUEST_AND_PAST_CARTS:
-      return {...state, ...action.pastCart, ...action.cartFromLocalStorage}
+    case MERGE_GUEST_AND_PAST_CARTS: {
+      const newCart = {
+        ...state,
+        ...action.pastCart,
+        ...action.cartFromLocalStorage
+      }
+      localStorage.setItem('cart', JSON.stringify(newCart))
+      return newCart
+    }
     case CLEAR_CART: {
       localStorage.setItem('cart', JSON.stringify({}))
       return {}
