@@ -9,3 +9,22 @@ export function formatPrice(price) {
   const formattedPrice = priceArray.join('')
   return `$${formattedPrice}`
 }
+
+// imperative reduceCart
+// takes in an orders array
+// and outputs a cart: { productId : quantity ... }
+export const reduceOrdersToGetPastCart = (order = {products: []}) => {
+  let res = {}
+  const {products} = order
+
+  // if no products, return empty object ( {} )
+  if (!products.length) return {}
+
+  products.forEach(product => {
+    const cartItem = {
+      [product.ProductOrder.productId]: product.ProductOrder.quantity
+    }
+    res = {...res, ...cartItem}
+  })
+  return res
+}
