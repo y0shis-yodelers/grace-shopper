@@ -55,8 +55,9 @@ class SingleProduct extends React.Component {
   }
 
   handleUpdateCart() {
+    const userId = this.props.user.id || 0
     const productId = this.props.singleProduct.id
-    this.props.updateCart(productId, this.state.quantity)
+    this.props.updateCart(userId, productId, this.state.quantity)
   }
 
   render() {
@@ -128,14 +129,15 @@ class SingleProduct extends React.Component {
 }
 
 const mapState = state => ({
+  user: state.user,
   singleProduct: state.singleProduct
 })
 
 const mapDispatch = dispatch => ({
   getProducts: () => dispatch(fetchAllProducts()),
   getSingleProduct: productId => dispatch(fetchSingleProduct(productId)),
-  updateCart: (productId, quantity) =>
-    dispatch(fetchUpdateCart(productId, quantity))
+  updateCart: (userId, productId, quantity) =>
+    dispatch(fetchUpdateCart(userId, productId, quantity))
 })
 
 export default withRouter(connect(mapState, mapDispatch)(SingleProduct))
