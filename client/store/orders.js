@@ -15,7 +15,7 @@ const setOrders = orders => {
 
 // ---- THUNKS ----
 
-export const fetchOrders = userId => {
+export const fetchAllOrders = userId => {
   return async dispatch => {
     try {
       const {data} = await Axios.get(`/api/orders/users/${userId}`)
