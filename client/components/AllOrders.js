@@ -18,23 +18,19 @@ class AllOrders extends React.Component {
         {orders.length ? (
           orders.map(order => (
             <div key={order.id}>
-              <div>
-                {orders.length ? (
-                  <div className="orderContainer">
-                    <img src={order.products[0].imageUrl} />
-                    <div className="orderName">{order.products[0].name}</div>
-                    <div>
-                      Quantity: {order.products[0].ProductOrder.quantity}
-                    </div>
-                    <div>
-                      Price:{' '}
-                      {formatPrice(order.products[0].ProductOrder.pricePaid)}
-                    </div>
+              {orders.length ? (
+                <div className="orderContainer">
+                  <img src={order.products[0].imageUrl} />
+                  <div className="orderName">{order.products[0].name}</div>
+                  <div>Quantity: {order.products[0].ProductOrder.quantity}</div>
+                  <div>
+                    Price:{' '}
+                    {formatPrice(order.products[0].ProductOrder.pricePaid)}
                   </div>
-                ) : (
-                  <div>Loading...</div>
-                )}
-              </div>
+                </div>
+              ) : (
+                <div>Loading...</div>
+              )}
             </div>
           ))
         ) : (
