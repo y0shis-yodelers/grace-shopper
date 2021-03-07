@@ -19,8 +19,11 @@ router.get('/:userId', isAdminOrUser, async (req, res, next) => {
   }
 })
 
-// PUT user cart
-router.put('/:userId', isAdminOrUser, async (req, res, next) => {
+// DELETE clears a user's cart
+// it does NOT delete the order the cart is derived from
+// rather it destroys each ProductOrder on each products
+// in the user's unfulfilledOrder.products array
+router.delete('/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     // get user
     const user = await User.findByPk(req.params.userId, {
