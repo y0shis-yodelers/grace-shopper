@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
-import {fetchUpdateCart, clearCart} from '../store/cart'
+import {fetchUpdateCart, fetchClearCart} from '../store/cart'
 import Total from './Total'
 
 class Cart extends React.Component {
@@ -11,7 +11,8 @@ class Cart extends React.Component {
   }
 
   async handleQuantityChange(productId, quantity) {
-    await this.props.updateCart(productId, quantity)
+    const userId = this.props.user.id || 0
+    await this.props.updateCart(userId, productId, quantity)
   }
 
   render() {
@@ -28,7 +29,7 @@ class Cart extends React.Component {
             type="button"
             onClick={() => {
               localStorage.setItem('cart', JSON.stringify({}))
-              this.props.emptyCart()
+              this.props.emptyCart(this.props.user.id)
             }}
           >
             Clear Cart
@@ -68,14 +69,15 @@ class Cart extends React.Component {
 }
 
 const mapState = state => ({
+  user: state.user,
   cart: state.cart,
   products: state.products
 })
 
 const mapDispatch = dispatch => ({
-  updateCart: (productId, quantity) =>
-    dispatch(fetchUpdateCart(productId, quantity)),
-  emptyCart: () => dispatch(clearCart())
+  updateCart: (userId, productId, quantity) =>
+    dispatch(fetchUpdateCart(userId, productId, quantity)),
+  emptyCart: userId => dispatch(fetchClearCart(userId))
 })
 
 export default connect(mapState, mapDispatch)(Cart)

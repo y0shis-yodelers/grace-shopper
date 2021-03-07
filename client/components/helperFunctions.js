@@ -10,10 +10,9 @@ export function formatPrice(price) {
   return `$${formattedPrice}`
 }
 
-// imperative reduceCart
-// takes in an orders array
-// and outputs a cart: { productId : quantity ... }
-export const reduceOrdersToGetPastCart = (order = {products: []}) => {
+// takes in an order and defaults to an object with an empty products array
+// outputs a cart: { productId : quantity ... }
+export const reduceOrderToGetPastCart = (order = {products: []}) => {
   let res = {}
   const {products} = order
 
