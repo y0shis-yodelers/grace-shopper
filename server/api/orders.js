@@ -39,6 +39,25 @@ router.get('/users/:userId', isAdminOrUser, async (req, res, next) => {
   }
 })
 
+// GET single paid order by userId + orderId
+router.get(
+  '/users/:userId/order/:orderId',
+  isAdminOrUser,
+  async (req, res, next) => {
+    try {
+      const {userId, orderId} = req.params
+      const userOrder = await Order.findAll({
+        where: {userId: userId, id: orderId, isPaid: true},
+        include: {model: Product}
+      })
+
+      res.json(userOrder)
+    } catch (error) {
+      next(error)
+    }
+  }
+)
+
 // Creates an order
 router.post('/', isAdminOrUser, async (req, res, next) => {
   try {
