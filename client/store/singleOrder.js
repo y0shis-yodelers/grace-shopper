@@ -19,7 +19,7 @@ export const fetchOrder = (userId, orderId) => {
   return async dispatch => {
     try {
       const {data} = await Axios.get(
-        `/api/orders/users/${userId}/order/${orderId}`
+        `/api/orders/users/${userId}/orders/${orderId}`
       )
 
       dispatch(setOrder(data))
