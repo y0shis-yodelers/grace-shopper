@@ -65,8 +65,7 @@ router.put('/:orderId', isAdminOrUser, async (req, res, next) => {
     })
 
     console.log('updatedOrder in PUT route is, ', updatedOrder)
-
-    res.status(204).json(updatedOrder)
+    res.json(updatedOrder)
   } catch (error) {
     next(error)
   }

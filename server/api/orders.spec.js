@@ -7,7 +7,7 @@ const app = require('../index')
 const Order = db.model('order')
 const User = db.model('user')
 
-describe.only('Orders routes', () => {
+describe('Orders routes', () => {
   beforeEach(async () => {
     await db.sync({force: true})
 
@@ -46,6 +46,7 @@ describe.only('Orders routes', () => {
         const order = await request.agent(app).get(`/api/orders/1`)
         expect(order.body).to.be.an('object')
         expect(order.body.isPaid).to.be.an('boolean')
+        console.log(order.body)
       })
     } catch (error) {
       console.log(error)
@@ -86,6 +87,27 @@ describe.only('Orders routes', () => {
           .expect(201)
         expect(res.body).to.be.an('object')
         expect(res.body.isPaid).to.equal(false)
+      })
+    } catch (error) {
+      console.log(error)
+      throw error
+    }
+  })
+
+  describe.only('PUT /orders/:orderId', () => {
+    try {
+      it('updates an existing order', async () => {
+        const editedOrder = await request
+          .agent(app)
+          .put('/api/orders/1')
+          .send({
+            isPaid: false,
+            userId: 2
+          })
+        // console.log(editedOrder)
+        expect(editedOrder.body).to.be.an('object')
+        expect(editedOrder.body.isPaid).to.equal(false)
+        expect(editedOrder.body.userId).to.equal(2)
       })
     } catch (error) {
       console.log(error)
