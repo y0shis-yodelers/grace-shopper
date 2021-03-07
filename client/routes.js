@@ -10,9 +10,8 @@ import {
   UserProfile
 } from './components'
 import {me} from './store'
-import {reduceOrdersToGetPastCart} from './components/helperFunctions'
+import {reduceOrderToGetPastCart} from './components/helperFunctions'
 import {fetchMergePastAndGuestCarts} from './store/cart'
-import {fetchSaveCart} from './store/cart'
 
 /**
  * COMPONENT
@@ -22,7 +21,7 @@ class Routes extends Component {
     const unfulfilledOrder = this.props.user.orders.filter(
       order => !order.date
     )[0]
-    const pastCart = reduceOrdersToGetPastCart(unfulfilledOrder)
+    const pastCart = reduceOrderToGetPastCart(unfulfilledOrder)
     this.props.loadCart(pastCart)
   }
 
@@ -32,7 +31,6 @@ class Routes extends Component {
     // we WILL have access to user.id in componentDidMount
     // so we need to make the same call to getUserCart()
     if (this.props.user.id) this.getUserCart()
-
     // here we call loadCart with no pastCart
     // so that if user is NOT logged in
     // they still get their guest cart from localStorage
@@ -40,13 +38,10 @@ class Routes extends Component {
   }
 
   // user is not immediately available in componentDidMount
+  // if we're NOT coming directly from logging in
   // so we load the user's pastCart in componentDidUpdate
   componentDidUpdate(prevProps) {
     if (!prevProps.user.id && this.props.user.id) this.getUserCart()
-  }
-
-  componentWillUnmount(cart, userId) {
-    this.props.saveCart(cart, userId)
   }
 
   render() {
@@ -83,9 +78,7 @@ const mapDispatch = dispatch => ({
   loadCart: pastCart => {
     let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || {}
     dispatch(fetchMergePastAndGuestCarts(pastCart, cartFromLocalStorage))
-  },
-
-  saveCart: (cart, userId) => dispatch(fetchSaveCart(cart, userId))
+  }
 })
 
 // The `withRouter` wrapper makes sure that updates are not blocked
