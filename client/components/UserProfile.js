@@ -27,9 +27,13 @@ class UserProfile extends React.Component {
               <AllOrders user={singleUser} />
 
               <div className="userProfileContainer">
-                <div>Name: {singleUser.name}</div>
-                <div>Email: {singleUser.email}</div>
-                <div>Phone: {singleUser.phoneNumber}</div>
+                <div className="userProfileName">Name: {singleUser.name}</div>
+                <div className="userProfileEmail">
+                  Email: {singleUser.email}
+                </div>
+                <div className="userProfilePhone">
+                  Phone: {singleUser.phoneNumber}
+                </div>
               </div>
             </div>
           </div>
