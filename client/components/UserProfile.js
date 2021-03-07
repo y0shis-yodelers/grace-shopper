@@ -14,7 +14,7 @@ class UserProfile extends React.Component {
 
     return (
       <div>
-        <div className="su-ads-container">
+        <div className="headerAdsContainer">
           header ads here {/* test purposes only */}
         </div>
 
