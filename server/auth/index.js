@@ -42,10 +42,14 @@ router.post('/logout', (req, res) => {
 })
 
 router.get('/me', async (req, res) => {
+  if (!req.user) return res.json({})
+
   const userId = req.user.id
+
   const user = await User.findByPk(userId, {
     include: [{model: Order, include: {model: Product}}, {model: Address}]
   })
+
   res.json(user)
 })
 
