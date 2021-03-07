@@ -19,7 +19,7 @@ class FullPageCart extends React.Component {
     const products = this.props.products || []
     const {handleQuantityChange} = this
     //let cartWithProduct = products.filter((product) => cart[product.id])
-
+    console.log('all products', products)
     return (
       <div className="cartContainer">
         <div className="productsAndCk">

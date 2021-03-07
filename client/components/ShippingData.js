@@ -18,7 +18,7 @@ class ShippingData extends React.Component {
   }
 
   async componentDidMount() {
-    await this.props.getAddress(5)
+    await this.props.getAddress(6)
     this.setState(this.props.address)
   }
 
@@ -85,7 +85,7 @@ const mapState = state => ({
 })
 
 const mapDispatch = dispatch => ({
-  getAddress: () => dispatch(fetchSingleAddress(5))
+  getAddress: () => dispatch(fetchSingleAddress(6))
 })
 
 export default connect(mapState, mapDispatch)(ShippingData)
