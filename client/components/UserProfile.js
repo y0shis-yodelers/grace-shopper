@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
-import OrderCard from './OrderCard'
+import AllOrders from './AllOrders'
 
 class UserProfile extends React.Component {
   componentDidMount() {
@@ -11,46 +11,6 @@ class UserProfile extends React.Component {
 
   render() {
     const {singleUser} = this.props || {}
-    const orders = this.props.orders || []
-
-    /* const orders = [
-      {
-        id: 1,
-        imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-        name: 'alice',
-        pricePaid: 200,
-        quantity: 1,
-        description:
-          'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
-      },
-      {
-        id: 2,
-        imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-        name: 'alice',
-        pricePaid: 200,
-        quantity: 1,
-        description:
-          'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
-      },
-      {
-        id: 3,
-        imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-        name: 'alice',
-        pricePaid: 200,
-        quantity: 1,
-        description:
-          'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
-      },
-      {
-        id: 4,
-        imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-        name: 'alice',
-        pricePaid: 200,
-        quantity: 1,
-        description:
-          'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting, bring a hint of luxury to your gig and draw attention with every flick of your wrist.'
-      }
-    ] */
 
     return (
       <div>
@@ -64,19 +24,8 @@ class UserProfile extends React.Component {
               {/* OrderHistory and PaymentOptions components
           to be created ... */}
               <div>Order History</div>
-              <div className="userOrdersContainer">
-                {orders.length ? (
-                  orders.map(order => (
-                    <div key={order.id}>
-                      <OrderCard order={order} />
-                    </div>
-                  ))
-                ) : (
-                  <div>No orders!</div>
-                )}
-              </div>
+              <AllOrders />
 
-              {/* <OrderHistory /> */}
               <div className="userProfileContainer">
                 <div>Name: {singleUser.name}</div>
                 <div>Email: {singleUser.email}</div>
