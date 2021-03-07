@@ -67,6 +67,42 @@ router.post('/', isAdminOrUser, async (req, res, next) => {
   }
 })
 
+// Updates an order
+router.put('/:orderId', isAdminOrUser, async (req, res, next) => {
+  try {
+    const order = await Order.findByPk(req.params.orderId, {include: Product})
+
+    const {date, isPaid, products, userId} = req.body
+
+    console.log(
+      'date, isPaid, products, userId is, ',
+      date,
+      isPaid,
+      products,
+      userId
+    )
+
+    const updateOrderInfo = {
+      date,
+      isPaid,
+      products,
+      userId
+    }
+
+    console.log('updateOrderInfo is, ', updateOrderInfo)
+
+    const updatedOrder = await order.update(updateOrderInfo, {
+      returning: true
+    })
+
+    console.log('updatedOrder in PUT route is, ', updatedOrder)
+
+    res.status(204).json(updatedOrder)
+  } catch (error) {
+    next(error)
+  }
+})
+
 // Deletes an order
 router.delete('/:orderId', isAdmin, async (req, res, next) => {
   try {
