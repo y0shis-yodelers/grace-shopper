@@ -7,7 +7,8 @@ import {
   Signup,
   AllProducts,
   SingleProduct,
-  UserProfile
+  UserProfile,
+  SingleOrder
 } from './components'
 import {me} from './store'
 import {reduceOrderToGetPastCart} from './components/helperFunctions'
@@ -53,6 +54,7 @@ class Routes extends Component {
 
         <Route path="/products/:productId" component={SingleProduct} />
         <Route path="/users/:userId" component={UserProfile} />
+        <Route path="/users/:userId/orders/:orderId" component={SingleOrder} />
 
         <Route component={AllProducts} />
       </Switch>
