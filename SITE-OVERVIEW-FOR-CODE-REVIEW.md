@@ -115,7 +115,7 @@
 3.  How are products and orders associated and how are users associated with particular orders?
 
 * Products and orders are m:n associations, and orders contain a foreign key to a particular user
-* important! each user is associated with TWO ORDERS: one that is FULFILLED and has a DATE field value, and one that is UNFUFILLED and has a DATE field value of NULL. the UNFULFILLED order is the user's cart and should not always be persisted -- to clear the cart, rather than deleting a user's unfulfilledOrder from their order history, use the /api/carts/:userId router's DELETE method to disassociate all ProductOrders with this order instance
+* important! each user is associated with TWO ORDERS: one that is FULFILLED and has a DATE field value, and one that is UNFUFILLED and has a DATE field value of NULL. the UNFULFILLED order is the user's cart and should always be persisted -- to clear the cart, rather than deleting a user's unfulfilledOrder from their order history, we can use the /api/carts/:userId router's DELETE method to disassociate all ProductOrders with the unfulfilledOrder instance
 
 ### API
 
