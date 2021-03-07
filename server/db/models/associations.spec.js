@@ -6,7 +6,6 @@ const Address = db.model('address')
 const Order = db.model('order')
 const Product = db.model('product')
 const User = db.model('user')
-const ProductOrder = db.model('ProductOrder')
 
 describe('Model Associations', () => {
   beforeEach(() => db.sync({force: true}))
