@@ -2,6 +2,12 @@
 
 ## Frontend
 
+### Routes (Higher-Order-Component)
+
+1.  JSX
+
+-
+
 ### AllProducts
 
 1.  JSX
@@ -60,6 +66,11 @@
 3.  Class Methods
 
 * handleQuantityChange(): this method is bound to the Cart constructor and passed down to CartProductCards so that Cart can be updated in the redux store when buttons on the CartProductCard are used to adjust quantity
+
+4.  Redux Store
+
+* fetchUpdateCart(): this method makes a call to /api/carts/:cartId so that users can be authenticated and make modifications to ONLY their cart. It calls ProductOrder instances associated with each product in the user's cart and handles them according to the quantity passed in the fn's params
+* fetchClearCart(): this method destroys all ProductOrders associated with a user's cart, ie. unfulfilledOrder
 
 ### CartProductCard
 
