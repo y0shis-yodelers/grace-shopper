@@ -34,6 +34,7 @@ class Cart extends React.Component {
             Clear Cart
           </button>
         </div>
+        <Total products={products} cart={cart} />
         <div className="cartBox">
           {products.map(product => {
             // if the cart doesn't hold this item
@@ -56,7 +57,6 @@ class Cart extends React.Component {
               </div>
             )
           })}
-          <Total products={products} cart={cart} />
         </div>
 
         <button type="button" className="checkoutBtn">

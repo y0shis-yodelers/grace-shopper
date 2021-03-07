@@ -171,7 +171,7 @@ img {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 90%;
+  height: 78%;
   width: 100%;
   padding: 0.3em;
   overflow-y: auto;
@@ -181,6 +181,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.totalContainer {
+  margin: 1em;
+  margin-bottom: 0;
 }
 
 /* ---- CartProductCard ---- */
