@@ -237,6 +237,25 @@ img {
   justify-content: space-around;
 }
 
+/* ---- Profile ---- */
+
+.profileContainer {
+  flex-grow: 100;
+}
+
+.singleUserContainer {
+  margin-top: 1em;
+}
+
+.userProfileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+  border: 1px solid black;
+  margin-top: 1em;
+}
+
 /* --- All Orders --- */
 
 .userOrdersContainer {
@@ -244,7 +263,7 @@ img {
   overflow-x: auto;
   align-items: end;
   min-height: 325px;
-  min-width: 600px;
+  /* min-width: 600px; */
   border: 1px solid black;
 }
 
@@ -305,4 +324,20 @@ img {
 
 .orderName {
   font-weight: bold;
+}
+
+/* ---- Ads ---- */
+
+.userAndAds {
+  display: flex;
+}
+
+.headerAdsContainer {
+  min-height: 30px;
+  border: 1px solid black;
+}
+
+.advertisementSidePanel {
+  width: 200px;
+  border: 1px solid black;
 }
