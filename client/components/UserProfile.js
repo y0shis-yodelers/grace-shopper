@@ -13,13 +13,13 @@ class UserProfile extends React.Component {
     const {singleUser} = this.props || {}
 
     return (
-      <div>
-        <div className="headerAdsContainer">
-          header ads here {/* test purposes only */}
-        </div>
+      <div className="userAndAds">
+        <div className="profileContainer">
+          <div className="headerAdsContainer">
+            header ads here {/* test purposes only */}
+          </div>
 
-        {Object.keys(singleUser).length ? (
-          <div>
+          {Object.keys(singleUser).length ? (
             <div className="singleUserContainer">
               {/* OrderHistory and PaymentOptions components
           to be created ... */}
@@ -36,10 +36,10 @@ class UserProfile extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-        ) : (
-          <div>Guest profile</div>
-        )}
+          ) : (
+            <div>Guest profile</div>
+          )}
+        </div>
         {/* <PaymentOptions /> */}
 
         <div className="advertisementSidePanel">ads side panel</div>
