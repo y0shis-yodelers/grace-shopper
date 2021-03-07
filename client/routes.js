@@ -7,7 +7,8 @@ import {
   Signup,
   AllProducts,
   SingleProduct,
-  UserProfile
+  UserProfile,
+  AllUsers
 } from './components'
 import {me} from './store'
 import {fetchSetCartOnLoadFromLocalStorage} from './store/cart'
@@ -29,7 +30,8 @@ class Routes extends Component {
         <Route path="/signup" component={Signup} />
 
         <Route path="/products/:productId" component={SingleProduct} />
-        <Route path="/users/:userId" component={UserProfile} />
+        <Route exact path="/users/:userId" component={UserProfile} />
+        <Route exact path="/users" component={AllUsers} />
 
         <Route component={AllProducts} />
       </Switch>

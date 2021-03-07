@@ -3,9 +3,8 @@ import {useTable} from 'react-table'
 import MOCK_DATA from './MOCK_DATA.json'
 import {COLUMNS} from './columns'
 import {fetchAllUsers} from '../store/users'
-import './table.css'
 
-export const BasicTable = () => {
+export const AllUsers = () => {
   // Returns imported columns. Recommended practice by useTable hook
   // since this ensures that the data is not pulled on every render
   // and would reperform logic which would affect performance
@@ -27,6 +26,8 @@ export const BasicTable = () => {
     prepareRow
   } = tableInstance
 
+  console.log('Yup')
+
   return (
     <table {...getTableProps()}>
       <thead>
@@ -47,7 +48,7 @@ export const BasicTable = () => {
             <tr {...row.getRowProps()} key={row.id}>
               {row.cells.map(cell => {
                 return (
-                  <td {...cell.getCellProps()} key={column.id}>
+                  <td {...cell.getCellProps()} key={cell.id}>
                     {cell.render('Cell')}
                   </td>
                 )
