@@ -41,7 +41,7 @@ router.get('/users/:userId', isAdminOrUser, async (req, res, next) => {
 
 // GET single paid order by userId + orderId
 router.get(
-  '/users/:userId/order/:orderId',
+  '/users/:userId/orders/:orderId',
   isAdminOrUser,
   async (req, res, next) => {
     try {
