@@ -23,9 +23,10 @@ class UserProfile extends React.Component {
             <div className="singleUserContainer">
               {/* OrderHistory and PaymentOptions components
           to be created ... */}
-              <div>Order History</div>
+              <div className="ordersLabel">Order History</div>
               <AllOrders user={singleUser} />
 
+              <div className="profileLabel">Profile Info</div>
               <div className="userProfileContainer">
                 <div className="userProfileName">Name: {singleUser.name}</div>
                 <div className="userProfileEmail">
