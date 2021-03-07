@@ -1,23 +1,40 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
-import {fetchUpdateCart, clearCart} from '../store/cart'
+import {fetchUpdateCart, fetchClearCart} from '../store/cart'
 import Total from './Total'
 
 class Cart extends React.Component {
   constructor(props) {
     super(props)
     this.handleQuantityChange = this.handleQuantityChange.bind(this)
+    this.handleClearCart = this.handleClearCart.bind(this)
   }
 
   async handleQuantityChange(productId, quantity) {
     await this.props.updateCart(productId, quantity)
   }
 
+  async handleClearCart() {
+    // clearCart only clears cart for local session
+    // if user does not log out, we assume user
+    // didn't necessarily want to have a fully-cleared cart
+    // persisted in the database!
+    // so cart will be cleared and persisted as cleared
+    // only if user logs out WITH a cleared cart
+    const orders = this.props.user.orders || []
+    let orderId
+    if (orders.length) {
+      const unfulfilledOrder = orders.filter(order => !order.date)[0]
+      orderId = unfulfilledOrder.id
+    }
+    if (orderId) await this.props.clearCart(orderId)
+  }
+
   render() {
     const cart = this.props.cart || {}
     const products = this.props.products || []
-    const {handleQuantityChange} = this
+    const {handleQuantityChange, handleClearCart} = this
 
     console.log(products)
 
@@ -25,13 +42,7 @@ class Cart extends React.Component {
       <div className="cartContainer">
         <div className="myCartAndClearCartBtn">
           <div className="cartTitle">My Cart:</div>
-          <button
-            className="clearCart"
-            type="button"
-            onClick={() => {
-              this.props.clearCart()
-            }}
-          >
+          <button className="clearCart" type="button" onClick={handleClearCart}>
             Clear Cart
           </button>
         </div>
@@ -69,6 +80,7 @@ class Cart extends React.Component {
 }
 
 const mapState = state => ({
+  user: state.user,
   cart: state.cart,
   products: state.products
 })
@@ -76,7 +88,7 @@ const mapState = state => ({
 const mapDispatch = dispatch => ({
   updateCart: (productId, quantity) =>
     dispatch(fetchUpdateCart(productId, quantity)),
-  clearCart: () => dispatch(clearCart())
+  clearCart: orderId => dispatch(fetchClearCart(orderId))
 })
 
 export default connect(mapState, mapDispatch)(Cart)

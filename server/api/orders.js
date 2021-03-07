@@ -33,6 +33,20 @@ router.post('/', isAdminOrUser, async (req, res, next) => {
   }
 })
 
+// Updates an order
+router.put('/:orderId', isAdminOrUser, async (req, res, next) => {
+  try {
+    const data = req.body
+    const {orderId} = req.params
+
+    await Order.update({...data}, {where: {id: orderId}})
+
+    res.sendStatus(204)
+  } catch (err) {
+    console.error(err)
+  }
+})
+
 // Deletes an order
 router.delete('/:orderId', isAdmin, async (req, res, next) => {
   try {

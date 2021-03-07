@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 // action types
 const UPDATE_CART = 'UPDATE_CART'
 const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
@@ -36,6 +38,20 @@ export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
   return async dispatch => {
     try {
       dispatch(mergePastAndGuestCarts(pastCart, cartFromLocalStorage))
+    } catch (err) {
+      console.error(err)
+    }
+  }
+}
+export const fetchClearCart = orderId => {
+  return async dispatch => {
+    try {
+      const updatedUnfulfilledOrder = {}
+      const clearedCart = await axios.put(
+        `/api/orders/${orderId}`,
+        updatedUnfulfilledOrder
+      )
+      dispatch(clearCart(clearedCart))
     } catch (err) {
       console.error(err)
     }
