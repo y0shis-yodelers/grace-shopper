@@ -791,7 +791,7 @@ const getQuantity = () => {
 }
 
 const getOrderId = () => {
-  return Math.ceil(Math.random() * 10)
+  return Math.ceil(Math.random() * 20)
 }
 
 const buildProductOrder = productId => {
@@ -807,7 +807,7 @@ const allProductOrders = new Array(200)
   .fill(null)
   .map((empty, idx) => buildProductOrder(++idx))
 
-// writeToTextFile('allProductOrdersSeed', JSON.stringify(allProductOrders))
+writeToTextFile('allProductOrdersSeed', JSON.stringify(allProductOrders))
 
 /* USERADDRESS THROUGH TABLE */
 
