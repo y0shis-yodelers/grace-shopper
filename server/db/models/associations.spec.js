@@ -62,4 +62,22 @@ describe('Model Associations', () => {
     const foundUser = await User.findByPk(1, {include: Address})
     expect(foundUser.addresses[0]).to.include(address)
   })
+
+  it('Each Order has many Products, each Product belongs to many Orders', async () => {
+    const newUser = await User.create(user)
+    const newOrder = await Order.create(order)
+    const newProduct = await Product.create(product)
+    await newOrder.setProducts([newProduct.id])
+    await newOrder.save()
+    await newUser.setOrders([newOrder.id])
+    await newUser.save()
+    const foundUser = await User.findByPk(1, {
+      include: {model: Order, include: {model: Product}}
+    })
+
+    expect(foundUser.dataValues).to.have.nested.property(
+      'orders[0].products[0].description',
+      "It's the Pick of Destiny, child!"
+    )
+  })
 })
