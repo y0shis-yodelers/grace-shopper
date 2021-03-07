@@ -19,8 +19,6 @@ class Cart extends React.Component {
     const products = this.props.products || []
     const {handleQuantityChange} = this
 
-    console.log(products)
-
     return (
       <div className="cartContainer">
         <div className="cartTitle">My Cart:</div>
