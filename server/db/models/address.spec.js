@@ -5,7 +5,7 @@ const db = require('../index')
 const Address = db.model('address')
 
 describe('Address Model', () => {
-  before(() => db.sync({force: true}))
+  beforeEach(() => db.sync({force: true}))
   afterEach(() => db.sync({force: true}))
 
   it('has fields number, houseOrApt, streetName, city, state, zip', async () => {
