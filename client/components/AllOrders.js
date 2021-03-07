@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import {fetchAllOrders} from '../store/orders'
 import {formatPrice} from './helperFunctions'
 
@@ -11,6 +12,7 @@ class AllOrders extends React.Component {
   }
 
   render() {
+    const {id} = this.props.user
     const {orders} = this.props
 
     return (
@@ -19,15 +21,22 @@ class AllOrders extends React.Component {
           orders.map(order => (
             <div key={order.id}>
               {orders.length ? (
-                <div className="orderContainer">
-                  <img src={order.products[0].imageUrl} />
-                  <div className="orderName">{order.products[0].name}</div>
-                  <div>Quantity: {order.products[0].ProductOrder.quantity}</div>
-                  <div>
-                    Price:{' '}
-                    {formatPrice(order.products[0].ProductOrder.pricePaid)}
+                <Link
+                  className="orderLink"
+                  to={`/users/${id}/orders/${order.id}`}
+                >
+                  <div className="orderContainer">
+                    <img src={order.products[0].imageUrl} />
+                    <div className="orderName">{order.products[0].name}</div>
+                    <div>
+                      Quantity: {order.products[0].ProductOrder.quantity}
+                    </div>
+                    <div>
+                      Price:{' '}
+                      {formatPrice(order.products[0].ProductOrder.pricePaid)}
+                    </div>
                   </div>
-                </div>
+                </Link>
               ) : (
                 <div>Loading...</div>
               )}
