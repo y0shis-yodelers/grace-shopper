@@ -1,18 +1,13 @@
 import React from 'react'
+import {formatPrice} from './helperFunctions'
 
 const OrderCard = ({order}) => {
   return (
-    <div>
-      {order && !order.id ? (
-        <div>Loading...</div>
-      ) : (
-        <div className="orderContainer">
-          <img src={order.imageUrl} />
-          <div className="orderName">{order.name}</div>
-          <div>{order.pricePaid}</div>
-          <div>{order.quantity}</div>
-        </div>
-      )}
+    <div className="orderContainer">
+      <img src={order.products[0].imageUrl} />
+      <div className="orderName">{order.products[0].name}</div>
+      <div>Quantity: {order.products[0].ProductOrder.quantity}</div>
+      <div>Price: {formatPrice(order.products[0].ProductOrder.pricePaid)}</div>
     </div>
   )
 }
