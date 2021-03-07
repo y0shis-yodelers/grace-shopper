@@ -31,9 +31,9 @@ export const fetchOrder = (userId, orderId) => {
 
 // ---- REDUCER ----
 
-const initialOrders = []
+const initialOrder = []
 
-export default (state = initialOrders, action) => {
+export default (state = initialOrder, action) => {
   switch (action.type) {
     case SET_ORDER:
       return action.order
