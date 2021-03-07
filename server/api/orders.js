@@ -36,14 +36,26 @@ router.post('/', isAdminOrUser, async (req, res, next) => {
 // Updates an order
 router.put('/:orderId', isAdminOrUser, async (req, res, next) => {
   try {
-    const data = req.body
-    const {orderId} = req.params
+    const order = await Order.findByPk(req.params.orderId, {include: Product})
 
-    await Order.update({...data}, {where: {id: orderId}})
+    const {date, isPaid, products, userId} = order
 
-    res.sendStatus(204)
-  } catch (err) {
-    console.error(err)
+    const updateOrderInfo = {
+      date,
+      isPaid,
+      products,
+      userId
+    }
+
+    const updatedOrder = await order.update(updateOrderInfo, {
+      returning: true
+    })
+
+    console.log('updatedOrder in PUT route is, ', updatedOrder)
+
+    res.status(204).json(updatedOrder)
+  } catch (error) {
+    next(error)
   }
 })
 

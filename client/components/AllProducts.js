@@ -9,10 +9,13 @@ import {fetchMergePastAndGuestCarts} from '../store/cart'
 // imperative reduceCart
 // takes in an orders array
 // and outputs a cart: { productId : quantity ... }
-const reduceOrdersToGetPastCart = order => {
+const reduceOrdersToGetPastCart = (order = {products: []}) => {
   let res = {}
   const {products} = order
-  console.log(products)
+
+  // if no products, return empty object ( {} )
+  if (!products.length) return {}
+
   products.forEach(product => {
     const cartItem = {
       [product.ProductOrder.productId]: product.ProductOrder.quantity

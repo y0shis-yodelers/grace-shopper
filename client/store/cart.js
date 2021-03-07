@@ -46,12 +46,8 @@ export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
 export const fetchClearCart = orderId => {
   return async dispatch => {
     try {
-      const updatedUnfulfilledOrder = {}
-      const clearedCart = await axios.put(
-        `/api/orders/${orderId}`,
-        updatedUnfulfilledOrder
-      )
-      dispatch(clearCart(clearedCart))
+      await axios.delete(`/api/orders/${orderId}`)
+      dispatch(clearCart())
     } catch (err) {
       console.error(err)
     }
