@@ -1,7 +1,7 @@
 const passport = require('passport')
 const router = require('express').Router()
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
-const {User} = require('../db/models')
+const {User, Address, Order, Product} = require('../db/models')
 module.exports = router
 
 /**
@@ -39,7 +39,8 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
 
       User.findOrCreate({
         where: {googleId},
-        defaults: {email, imgUrl, firstName, lastName, fullName}
+        defaults: {email, imgUrl, firstName, lastName, fullName},
+        include: [{model: Order, include: {model: Product}}, {model: Address}]
       })
         .then(([user]) => done(null, user))
         .catch(done)
