@@ -17,6 +17,7 @@ const Navbar = ({isLoggedIn, cart, logoutAndSetLocalStorageCart}) => (
           </a>
           <Link to="/cart">Cart</Link>
           <Link to="/users/:userId">Profile</Link>
+          <Link to="/users">Users</Link>
         </div>
       ) : (
         <div>

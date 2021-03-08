@@ -8,7 +8,8 @@ import {
   AllProducts,
   SingleProduct,
   UserProfile,
-  FullPageCart
+  AllUsers,
+  FullPageCart,
 } from './components'
 import {me} from './store'
 import {reduceOrderToGetPastCart} from './components/helperFunctions'
@@ -55,6 +56,7 @@ class Routes extends Component {
 
         <Route path="/products/:productId" component={SingleProduct} />
         <Route path="/users/:userId" component={UserProfile} />
+        <Route exact path="/users" component={AllUsers} />
 
         <Route component={AllProducts} />
       </Switch>
