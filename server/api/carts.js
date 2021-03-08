@@ -34,7 +34,7 @@ router.put('/:userId', isAdminOrUser, async (req, res, next) => {
 
     // update the ProductOrder instance
     const [
-      productToBeUpdatedInCart,
+      productOrderToBeUpdated,
       wasCreated
     ] = await ProductOrder.findOrCreate({
       where: {
@@ -44,15 +44,15 @@ router.put('/:userId', isAdminOrUser, async (req, res, next) => {
     })
 
     // if quantity === 0 then destroy the ProductOrder instance
-    if (quantity === 0) await productToBeUpdatedInCart.destroy()
+    if (quantity === 0) await productOrderToBeUpdated.destroy()
 
     // if product wasCreated return status 201
-    if (wasCreated) res.sendStatus(201)
+    if (wasCreated) return res.sendStatus(201)
 
-    // otherwise, product already existed
-    // so update the quantity and save the instance
-    productToBeUpdatedInCart.quantity = quantity
-    await productToBeUpdatedInCart.save()
+    // otherwise, we need to update the quantity of productOrderToBeUpdated
+    productOrderToBeUpdated.quantity = quantity
+    await productOrderToBeUpdated.save()
+
     res.sendStatus(201)
   } catch (err) {
     next(err)
