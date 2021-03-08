@@ -1,7 +1,7 @@
 import React from 'react'
 import {formatPrice} from './helperFunctions'
 
-const totals = ({products}) => {
+const totals = products => {
   let totalQuantity = 0,
     totalPrice = 0
 
@@ -13,7 +13,7 @@ const totals = ({products}) => {
   return {totalQuantity, totalPrice}
 }
 
-const OrderInfo = products => {
+const OrderInfo = ({products}) => {
   const {totalQuantity, totalPrice} = totals(products)
 
   return (
