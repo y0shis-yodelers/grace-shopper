@@ -1,5 +1,5 @@
 import React, {useMemo, useEffect} from 'react'
-import {connect, useDispatch, useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {useTable} from 'react-table'
 import {COLUMNS} from './columns'
 import {fetchAllUsers} from '../store/users'
@@ -72,4 +72,4 @@ export const AllUsers = () => {
   )
 }
 
-export default connect()(AllUsers)
+export default AllUsers
