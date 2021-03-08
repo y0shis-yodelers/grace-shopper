@@ -237,6 +237,7 @@ img {
   justify-content: space-around;
 }
 
+
 /* ---- All Users ---- */
 
 table {
@@ -265,4 +266,21 @@ table th {
   text-align: center;
   background-color: #4caf50;
   color: white;
+
+/* Checkout */
+
+.checkoutContainer {
+  position: sticky;
+  top: 2em;
+  min-width: 320px;
+  height: 70vh;
+  border: 1px solid black;
+}
+
+.productsAndCk {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+
 }

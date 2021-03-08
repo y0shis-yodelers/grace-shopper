@@ -11,3 +11,8 @@ export {default as ProductCard} from './ProductCard'
 export {default as SingleProduct} from './SingleProduct'
 export {default as UserProfile} from './UserProfile'
 export {AllUsers} from './AllUsers'
+export {default as Checkout} from './Checkout'
+export {default as FullPageCart} from './FullPageCart'
+export {default as Total} from './Total'
+export {default as ShippingData} from './ShippingData'
+
