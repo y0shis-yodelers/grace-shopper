@@ -39,6 +39,7 @@ class AllProducts extends React.Component {
 }
 
 const mapState = state => ({
+  user: state.user,
   products: state.products
 })
 

@@ -9,3 +9,21 @@ export function formatPrice(price) {
   const formattedPrice = priceArray.join('')
   return `$${formattedPrice}`
 }
+
+// takes in an order and defaults to an object with an empty products array
+// outputs a cart: { productId : quantity ... }
+export const reduceOrderToGetPastCart = (order = {products: []}) => {
+  let res = {}
+  const {products} = order
+
+  // if no products, return empty object ( {} )
+  if (!products.length) return {}
+
+  products.forEach(product => {
+    const cartItem = {
+      [product.ProductOrder.productId]: product.ProductOrder.quantity
+    }
+    res = {...res, ...cartItem}
+  })
+  return res
+}
