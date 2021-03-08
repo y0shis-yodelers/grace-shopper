@@ -7,11 +7,11 @@ const Total = ({products, cart}) => {
     return curr.price * cart[curr.id] + acc
   }, 0)
   let tax = subtotal * 0.1
-  let grandTotal = subtotal + tax
+  let grandTotal = subtotal //+ tax
   return (
     <div className="totalContainer">
       <div>Subtotal: {formatPrice(subtotal)}</div>
-      <div>Tax: {formatPrice(tax)}</div>
+      {/* <div>Tax: {formatPrice(tax)}</div> */}
       <div>Shipping: Free for members!</div>
       <div>Grand Total: {formatPrice(grandTotal)}</div>
     </div>
