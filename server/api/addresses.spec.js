@@ -17,16 +17,38 @@ describe('Address routes', () => {
     )
   })
 
-  describe('/api/address/', async () => {
-    it('allows admin users to GET all address', () => {
-      const addresses = request
-        .agent(app)
-        .get('/api/address/')
-        .then(res => {
-          expect(res.body).to.be.an('object')
-          //expect(res.body).to.have.lengthOf(10)
-        })
-        .catch(err => console.log('this err happened: ', err))
+  describe('/api/addresses/', () => {
+    it('allows admin users to GET all address', async () => {
+      try {
+        const res = await request.agent(app).get('/api/addresses/')
+        expect(res.body).to.be.an('array')
+        expect(res.body).to.have.lengthOf(10)
+      } catch (err) {
+        console.error(err)
+      }
+    })
+  })
+
+  describe('/api/addresses/:addressId', () => {
+    it('allows admin users to PUT / update an address', async () => {
+      try {
+        const updateInfo = {
+          address: {
+            streetName: 'new name'
+          }
+        }
+
+        await request
+          .agent(app)
+          .put('/api/addresses/1')
+          .send(updateInfo)
+
+        const res = await request.agent(app).get('/api/addresses/1')
+
+        expect(res.body.streetName).to.equal('new name')
+      } catch (err) {
+        console.error(err)
+      }
     })
   })
 })

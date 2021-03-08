@@ -1,7 +1,9 @@
+import axios from 'axios'
+
 // action types
 const UPDATE_CART = 'UPDATE_CART'
-const SET_CART_ON_LOAD_FROM_LOCAL_STORAGE =
-  'SET_CART_ON_LOAD_FROM_LOCAL_STORAGE'
+const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
+const CLEAR_CART = 'CLEAR_CART'
 
 // action creators
 const updateCart = (productId, quantity) => {
@@ -11,27 +13,51 @@ const updateCart = (productId, quantity) => {
     quantity
   }
 }
-const setCartOnLoadFromLocalStorage = cart => {
+const mergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
   return {
-    type: SET_CART_ON_LOAD_FROM_LOCAL_STORAGE,
-    cart
+    type: MERGE_GUEST_AND_PAST_CARTS,
+    pastCart,
+    cartFromLocalStorage
   }
 }
+export const clearCart = () => ({
+  type: CLEAR_CART
+})
 
 // thunks
-export const fetchUpdateCart = (productId, quantity) => {
+export const fetchUpdateCart = (userId, productId, quantity) => {
   return async dispatch => {
     try {
+      // here we check the truthiness of userId
+      // if userId is 0, we skip the backend PUT action
+      // since there's no user to update!
+      if (userId)
+        await axios.put(`/api/carts/${userId}`, {
+          productId: productId,
+          quantity: quantity
+        })
       dispatch(updateCart(productId, quantity))
     } catch (err) {
       console.error(err)
     }
   }
 }
-export const fetchSetCartOnLoadFromLocalStorage = cart => {
+export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
   return async dispatch => {
     try {
-      dispatch(setCartOnLoadFromLocalStorage(cart))
+      dispatch(mergePastAndGuestCarts(pastCart, cartFromLocalStorage))
+    } catch (err) {
+      console.error(err)
+    }
+  }
+}
+export const fetchClearCart = userId => {
+  return async dispatch => {
+    try {
+      // check if user is logged in
+      // if userId is undefined, don't make the backend call
+      if (userId) await axios.delete(`/api/carts/${userId}`)
+      dispatch(clearCart())
     } catch (err) {
       console.error(err)
     }
@@ -59,8 +85,18 @@ export default (state = initState, action) => {
       localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
     }
-    case SET_CART_ON_LOAD_FROM_LOCAL_STORAGE: {
-      return {...state, ...action.cart}
+    case MERGE_GUEST_AND_PAST_CARTS: {
+      const newCart = {
+        ...state,
+        ...action.pastCart,
+        ...action.cartFromLocalStorage
+      }
+      localStorage.setItem('cart', JSON.stringify(newCart))
+      return newCart
+    }
+    case CLEAR_CART: {
+      localStorage.setItem('cart', JSON.stringify({}))
+      return {}
     }
     default:
       return state

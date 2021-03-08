@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {User, Address} = require('../db/models')
+const {User, Address, Order, Product} = require('../db/models')
 const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
 
@@ -9,7 +9,8 @@ router.get('/', isAdmin, async (req, res, next) => {
       // explicitly select only the id and email fields - even though
       // users' passwords are encrypted, it won't help if we just
       // send everything to anyone who asks!
-      attributes: ['id', 'email']
+      attributes: ['id', 'email'],
+      include: [{model: Address}, {model: Order, include: {model: Product}}]
     })
     res.json(users)
   } catch (err) {
@@ -22,7 +23,7 @@ router.get('/', isAdmin, async (req, res, next) => {
 router.get('/:userId', async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId, {
-      include: Address
+      include: [{model: Address}, {model: Order, include: {model: Product}}]
     })
     res.json(user)
   } catch (err) {
@@ -44,7 +45,7 @@ router.post('/', async (req, res, next) => {
 router.put('/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId, {
-      include: Address
+      include: [{model: Address}, {model: Order}]
     })
 
     const updateUserInfo = {

@@ -31,7 +31,7 @@ const CartProductCard = ({product, quantity, handleQuantityChange}) => {
           onClick={async () => {
             // if quantity requested exceeds inventory
             // disallow further quantity increases
-            if (quantity > product.inventory) return
+            if (quantity === product.inventory) return
             const newQuantity = ++quantity
             await handleQuantityChange(product.id, newQuantity)
           }}
