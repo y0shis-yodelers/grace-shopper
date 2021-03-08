@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
-import {fetchUpdateCart, fetchClearCart} from '../store/cart'
+import {fetchLoadCart, fetchUpdateCart, fetchClearCart} from '../store/cart'
 import Total from './Total'
 
 class Cart extends React.Component {
@@ -10,14 +10,15 @@ class Cart extends React.Component {
     this.handleQuantityChange = this.handleQuantityChange.bind(this)
   }
 
-  async handleQuantityChange(productId, quantity) {
-    const userId = this.props.user.id || 0
-    await this.props.updateCart(userId, productId, quantity)
+  handleQuantityChange(productId, quantity) {
+    const userId = this.props.user.id
+    this.props.updateCart(userId, productId, quantity)
   }
 
   render() {
-    const cart = this.props.cart || {}
-    const products = this.props.products || []
+    const user = this.props.user || {}
+    const cart = this.props.cart || []
+    const {emptyCart} = this.props
     const {handleQuantityChange} = this
 
     return (
@@ -27,37 +28,22 @@ class Cart extends React.Component {
           <button
             className="clearCart"
             type="button"
-            onClick={() => {
-              localStorage.setItem('cart', JSON.stringify({}))
-              this.props.emptyCart(this.props.user.id)
-            }}
+            onClick={() => emptyCart(user.id)}
           >
             Clear Cart
           </button>
         </div>
-        <Total products={products} cart={cart} />
+        <Total cart={cart} />
         <div className="cartBox">
-          {products.map(product => {
-            // if the cart doesn't hold this item
-            // jump out of map fn, so that we don't
-            // generate CartProductCards for items
-            // that aren't in our cart
-            if (!cart[product.id]) return
-
-            // if cart does hold this item
-            // extract its quantity and pass to CartProductCard
-            const quantity = cart[product.id]
-
-            return (
-              <div key={product.id}>
-                <CartProductCard
-                  product={product}
-                  quantity={quantity}
-                  handleQuantityChange={handleQuantityChange}
-                />
-              </div>
-            )
-          })}
+          {cart.map(product => (
+            <div key={product.id}>
+              <CartProductCard
+                product={product}
+                quantity={product.ProductOrder.quantity}
+                handleQuantityChange={handleQuantityChange}
+              />
+            </div>
+          ))}
         </div>
 
         <button type="button" className="checkoutBtn">
@@ -70,13 +56,15 @@ class Cart extends React.Component {
 
 const mapState = state => ({
   user: state.user,
-  cart: state.cart,
-  products: state.products
+  cart: state.cart
 })
 
 const mapDispatch = dispatch => ({
+  getCart: userId => dispatch(fetchLoadCart(userId)),
+
   updateCart: (userId, productId, quantity) =>
     dispatch(fetchUpdateCart(userId, productId, quantity)),
+
   emptyCart: userId => dispatch(fetchClearCart(userId))
 })
 

@@ -10,41 +10,17 @@ import {
   UserProfile,
   SingleOrder,
   FullPageCart,
-  AllUsers,
+  AllUsers
 } from './components'
 import {me} from './store'
-import {reduceOrderToGetPastCart} from './components/helperFunctions'
-import {fetchMergePastAndGuestCarts} from './store/cart'
+import {fetchLoadCart} from './store/cart'
 
 /**
  * COMPONENT
  */
 class Routes extends Component {
-  getUserCart() {
-    const unfulfilledOrder = this.props.user.orders.filter(
-      order => !order.date
-    )[0]
-    const pastCart = reduceOrderToGetPastCart(unfulfilledOrder)
-    this.props.loadCart(pastCart)
-  }
-
   componentDidMount() {
     this.props.loadInitialData()
-    // if we're coming directly from logging in
-    // we WILL have access to user.id in componentDidMount
-    // so we need to make the same call to getUserCart()
-    if (this.props.user.id) this.getUserCart()
-    // here we call loadCart with no pastCart
-    // so that if user is NOT logged in
-    // they still get their guest cart from localStorage
-    this.props.loadCart({})
-  }
-
-  // user is not immediately available in componentDidMount
-  // if we're NOT coming directly from logging in
-  // so we load the user's pastCart in componentDidUpdate
-  componentDidUpdate(prevProps) {
-    if (!prevProps.user.id && this.props.user.id) this.getUserCart()
   }
 
   render() {
@@ -53,13 +29,11 @@ class Routes extends Component {
         <Route path="/home" component={AllProducts} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route path="/cart" component={FullPageCart} />
-
+        <Route path="/checkout" component={Checkout} />
         <Route path="/products/:productId" component={SingleProduct} />
         <Route path="/users/:userId/orders/:orderId" component={SingleOrder} />
         <Route path="/users/:userId" component={UserProfile} />
         <Route exact path="/users" component={AllUsers} />
-
         <Route component={AllProducts} />
       </Switch>
     )
@@ -81,7 +55,7 @@ const mapDispatch = dispatch => ({
 
   // load guestCart from localStorage and pass along with pastCart
   // to merge the two in the redux store
-  loadCart: pastCart => {
+  getCart: pastCart => {
     let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || {}
     dispatch(fetchMergePastAndGuestCarts(pastCart, cartFromLocalStorage))
   }

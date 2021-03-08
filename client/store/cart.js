@@ -1,51 +1,47 @@
 import axios from 'axios'
 
 // action types
+const LOAD_CART = 'LOAD_CART'
 const UPDATE_CART = 'UPDATE_CART'
-const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
 const CLEAR_CART = 'CLEAR_CART'
 
-// action creators
-const updateCart = (productId, quantity) => {
-  return {
-    type: UPDATE_CART,
-    productId,
-    quantity
-  }
-}
-const mergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
-  return {
-    type: MERGE_GUEST_AND_PAST_CARTS,
-    pastCart,
-    cartFromLocalStorage
-  }
-}
-export const clearCart = () => ({
+// action dispatchers
+const loadCart = cart => ({
+  type: LOAD_CART,
+  cart
+})
+const updateCart = (product, quantity) => ({
+  type: UPDATE_CART,
+  product,
+  quantity
+})
+const clearCart = () => ({
   type: CLEAR_CART
 })
 
 // thunks
-export const fetchUpdateCart = (userId, productId, quantity) => {
+export const fetchLoadCart = userId => {
   return async dispatch => {
     try {
-      // here we check the truthiness of userId
-      // if userId is 0, we skip the backend PUT action
-      // since there's no user to update!
-      if (userId)
-        await axios.put(`/api/carts/${userId}`, {
-          productId: productId,
-          quantity: quantity
-        })
-      dispatch(updateCart(productId, quantity))
+      const {data} = await axios.get(`/api/carts/users/${userId}`)
+      dispatch(loadCart(data))
     } catch (err) {
       console.error(err)
     }
   }
 }
-export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
+export const fetchUpdateCart = (userId, productId, quantity) => {
   return async dispatch => {
     try {
-      dispatch(mergePastAndGuestCarts(pastCart, cartFromLocalStorage))
+      const updateInfo = {
+        productId,
+        quantity
+      }
+      const updatedProduct = await axios.put(
+        `/api/carts/users/${userId}`,
+        updateInfo
+      )
+      dispatch(updateCart(updatedProduct, quantity))
     } catch (err) {
       console.error(err)
     }
@@ -54,9 +50,7 @@ export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
 export const fetchClearCart = userId => {
   return async dispatch => {
     try {
-      // check if user is logged in
-      // if userId is undefined, don't make the backend call
-      if (userId) await axios.delete(`/api/carts/${userId}`)
+      await axios.delete(`/api/carts/users/${userId}`)
       dispatch(clearCart())
     } catch (err) {
       console.error(err)
@@ -64,48 +58,29 @@ export const fetchClearCart = userId => {
   }
 }
 
-// initial state of subreducer
-const initState = {}
+// initial state: cart is an array of products
+const initState = []
 
 // subreducer
 export default (state = initState, action) => {
   switch (action.type) {
-    case UPDATE_CART: {
-      // if quantity === 0, it's a delete method
-      // delete the key and return the newCart
-      if (action.quantity === 0) {
-        let newCart = {...state}
-        delete newCart[action.productId]
-        localStorage.setItem('cart', JSON.stringify(newCart))
-        return newCart
-      }
-      // otherwise, find or create the product and update its quantity
-      let newCart = {...state}
-      newCart[action.productId] = action.quantity
-      localStorage.setItem('cart', JSON.stringify(newCart))
-      return newCart
+    case LOAD_CART: {
+      return [...action.cart]
     }
-    case MERGE_GUEST_AND_PAST_CARTS: {
-      // TODO
-      // here, we need to know whether user
-      // has logged in from a previous guestState
-      // where a guest cart has been created
-      // so we can reverse the order of the spreads
-      // and spread present cartFromLocalStorage
-      // OVER pastCart
-      // for now, this defaults to pastCart over localState
-      // so that db changes persist across browsers and devices
-      const newCart = {
-        ...state,
-        ...action.cartFromLocalStorage,
-        ...action.pastCart
-      }
-      localStorage.setItem('cart', JSON.stringify(newCart))
-      return newCart
+    case UPDATE_CART: {
+      // if quantity === 0, return state without the corresponding product
+      if (action.quantity === 0)
+        return state.filter(product => product.id !== action.product.id)
+
+      // otherwise, replace the product on state
+      return [
+        ...state.filter(product => product.id !== action.product.id),
+        action.product
+      ]
     }
     case CLEAR_CART: {
-      localStorage.setItem('cart', JSON.stringify({}))
-      return {}
+      localStorage.setItem('cart', JSON.stringify([]))
+      return []
     }
     default:
       return state
