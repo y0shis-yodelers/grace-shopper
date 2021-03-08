@@ -25,11 +25,6 @@ export const AllUsers = () => {
   // and would reperform logic which would affect performance
   const columns = useMemo(() => COLUMNS, [])
 
-  // const tableInstance = useTable({
-  //   columns,
-  //   data: users
-  // })
-
   // Destructure functions/arrays from table instance
   const {
     getTableProps,
