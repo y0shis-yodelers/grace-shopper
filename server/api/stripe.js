@@ -33,4 +33,8 @@ router.post('/create-checkout-session', async (req, res, next) => {
   res.json({id: session.id})
 })
 
+router.get('/sucess', async (req, res, next) => {
+  //remove from inventory
+})
+
 module.exports = router
