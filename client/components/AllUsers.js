@@ -5,17 +5,24 @@ import {COLUMNS} from './columns'
 import {fetchAllUsers} from '../store/users'
 
 export const AllUsers = () => {
+  // useDispatch gives us access to dispatch
   const dispatch = useDispatch()
+
+  // useSelector is the equivalent of mapStateToProps
   const users = useSelector(state => state.users)
+
+  // useEffect asks us to define a side-effect fn
+  // and invoke it immediately in the first arg, which
+  // is a callback; the second arg is the dataType, which
+  // in this case is an array
   useEffect(() => {
-    const getUsers = async () => dispatch(fetchAllUsers())
+    const getUsers = () => dispatch(fetchAllUsers())
     getUsers()
   }, [])
 
   // Returns imported columns. Recommended practice by useTable hook
   // since this ensures that the data is not pulled on every render
   // and would reperform logic which would affect performance
-
   const columns = useMemo(() => COLUMNS, [])
 
   const tableInstance = useTable({
