@@ -15,6 +15,7 @@ const Navbar = ({isLoggedIn, cart, logoutAndSetLocalStorageCart}) => (
           <a href="#" onClick={() => logoutAndSetLocalStorageCart(cart)}>
             Logout
           </a>
+          <Link to="/cart">Cart</Link>
           <Link to="/users/:userId">Profile</Link>
         </div>
       ) : (

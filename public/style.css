@@ -346,3 +346,20 @@ img {
   width: 200px;
   border: 1px solid black;
 }
+
+/* Checkout */
+
+.checkoutContainer {
+  position: sticky;
+  top: 2em;
+  min-width: 320px;
+  height: 70vh;
+  border: 1px solid black;
+}
+
+.productsAndCk {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+}
