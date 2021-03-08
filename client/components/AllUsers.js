@@ -26,13 +26,11 @@ export const AllUsers = () => {
     prepareRow
   } = tableInstance
 
-  console.log('Yup')
-
   return (
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
-          <tr {...headerGroup.getHeaderGroupProps()} key={headerGroups.id}>
+          <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
             {headerGroup.headers.map(column => (
               <th {...column.getHeaderProps()} key={column.id}>
                 {column.render('Header')}
