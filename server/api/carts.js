@@ -4,14 +4,14 @@ const {isAdminOrUser} = require('./gatekeepingMiddleware')
 module.exports = router
 
 // GET order that represents user cart
-router.get('/:userId', isAdminOrUser, async (req, res, next) => {
+router.get('/users/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     const userCart = await Order.findOne({
       where: {
         userId: req.params.userId,
-        isPaid: false
+        isPaid: false,
       },
-      include: {model: Product}
+      include: {model: Product},
     })
     res.json(userCart)
   } catch (err) {
@@ -19,15 +19,15 @@ router.get('/:userId', isAdminOrUser, async (req, res, next) => {
   }
 })
 
-router.put('/:userId', isAdminOrUser, async (req, res, next) => {
+router.put('/users/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     // get user
     const user = await User.findByPk(req.params.userId, {
-      include: {model: Order, include: {model: Product}}
+      include: {model: Order, include: {model: Product}},
     })
 
     // get user's cartId, which is the unfulfilledOrder.id
-    const orderId = user.orders.filter(order => !order.date)[0].id
+    const orderId = user.orders.filter((order) => !order.date)[0].id
 
     // get productId, quantity
     const {productId, quantity} = req.body
@@ -35,12 +35,12 @@ router.put('/:userId', isAdminOrUser, async (req, res, next) => {
     // update the ProductOrder instance
     const [
       productOrderToBeUpdated,
-      wasCreated
+      wasCreated,
     ] = await ProductOrder.findOrCreate({
       where: {
         productId: productId,
-        orderId: orderId
-      }
+        orderId: orderId,
+      },
     })
 
     // if quantity === 0 then destroy the ProductOrder instance
@@ -63,21 +63,21 @@ router.put('/:userId', isAdminOrUser, async (req, res, next) => {
 // it does NOT delete the order the cart is derived from
 // rather it destroys each ProductOrder on each products
 // in the user's unfulfilledOrder.products array
-router.delete('/:userId', isAdminOrUser, async (req, res, next) => {
+router.delete('/users/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     // get user
     const user = await User.findByPk(req.params.userId, {
-      include: {model: Order, include: {model: Product}}
+      include: {model: Order, include: {model: Product}},
     })
 
     // extract cartContents from user's order history
-    const cartContents = user.orders.filter(order => !order.date)[0].products
+    const cartContents = user.orders.filter((order) => !order.date)[0].products
 
     // destroy each ProductOrder instance
     // this disassociates products from the user's unfulfilled order
     // causing them to be "removed" from the user's cart
     await Promise.all(
-      cartContents.map(async item => {
+      cartContents.map(async (item) => {
         const productToBeRemovedFromCart = item.ProductOrder
         await productToBeRemovedFromCart.destroy()
       })
