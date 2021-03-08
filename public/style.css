@@ -237,7 +237,6 @@ img {
   justify-content: space-around;
 }
 
-
 /* ---- Profile ---- */
 
 .profileContainer {
@@ -348,7 +347,6 @@ img {
   border: 1px solid black;
 }
 
-
 /* ---- All Users ---- */
 
 table {
@@ -377,16 +375,15 @@ table th {
   text-align: center;
   background-color: #4caf50;
   color: white;
-
+}
 
 /* Checkout */
 
-.checkoutContainer {
-  position: sticky;
-  top: 2em;
-  min-width: 320px;
-  height: 70vh;
-  border: 1px solid black;
+.checkout-view-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .productsAndCk {
@@ -394,5 +391,35 @@ table th {
   justify-content: center;
   width: 1200px;
   margin: 0 auto;
+}
 
+/* ---- ShippingData ---- */
+
+.shippingData {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 600px;
+}
+
+.shippingData * {
+  margin-top: 0;
+}
+
+.shippingData textarea {
+  width: 300px;
+  height: 100px;
+  resize: vertical;
+  padding: 0.5em;
+  border: 2px solid black;
+}
+
+.formField * {
+  width: 300px;
+}
+
+.formField input[type='text'] {
+  height: 2em;
+  font-size: 18px;
+  padding: 0 1em;
 }

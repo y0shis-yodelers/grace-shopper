@@ -14,13 +14,9 @@ class ShippingData extends React.Component {
       zip: ''
     }
     this.handleChange = this.handleChange.bind(this)
-    this.componentDidMount = this.componentDidMount.bind(this)
   }
 
-  async componentDidMount() {
-    await this.props.getAddress(6)
-    this.setState(this.props.address)
-  }
+  componentDidMount() {}
 
   handleChange(event) {
     this.setState({
@@ -33,45 +29,67 @@ class ShippingData extends React.Component {
     const {handleChange} = this
 
     return (
-      <form id="shippingData">
+      <form className="shippingData">
         <div className="formHeader">Please enter shipping data</div>
 
         <div className="formField">
           <label htmlFor="number">House Number:</label>
-          <textarea name="number" onChange={handleChange} value={number} />
+          <input
+            type="text"
+            name="number"
+            onChange={handleChange}
+            value={number || ''}
+          />
         </div>
 
         <div className="formField">
           <label htmlFor="streetName">Street:</label>
-          <textarea
+          <input
+            type="text"
             name="streetName"
             onChange={handleChange}
-            value={streetName}
+            value={streetName || ''}
           />
         </div>
 
         <div className="formField">
           <label htmlFor="houseOrApt">Apt/Suite:</label>
-          <textarea
+          <input
+            type="text"
             name="houseOrApt"
             onChange={handleChange}
-            value={houseOrApt}
+            value={houseOrApt || ''}
           />
         </div>
 
         <div className="formField">
           <label htmlFor="city">City:</label>
-          <textarea name="city" onChange={handleChange} value={city} />
+          <input
+            type="text"
+            name="city"
+            onChange={handleChange}
+            value={city || ''}
+          />
         </div>
 
         <div className="formField">
-          <label htmlFor="state">Street:</label>
-          <textarea name="state" onChange={handleChange} value={state} />
+          <label htmlFor="state">State:</label>
+          <input
+            type="text"
+            name="state"
+            onChange={handleChange}
+            value={state || ''}
+          />
         </div>
 
         <div className="formField">
-          <label htmlFor="zip">Street:</label>
-          <textarea name="zip" onChange={handleChange} value={zip} />
+          <label htmlFor="zip">Zip:</label>
+          <input
+            type="text"
+            name="zip"
+            onChange={handleChange}
+            value={zip || ''}
+          />
         </div>
       </form>
     )
