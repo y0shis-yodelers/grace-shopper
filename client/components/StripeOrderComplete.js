@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OrderSuccess = () => {
+export const OrderSuccess = () => {
   return (
     <div>
       <h4>Thank you for ordering at the Bass Shopper</h4>
@@ -11,4 +11,11 @@ const OrderSuccess = () => {
   )
 }
 
-export default OrderSuccess
+export const OrderFailure = () => {
+  return (
+    <div>
+      <h4>Your Order did not go through</h4>
+      <h6>Please try again and/or contact customer service</h6>
+    </div>
+  )
+}
