@@ -4,7 +4,6 @@ import axios from 'axios'
 const UPDATE_CART = 'UPDATE_CART'
 const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
 const CLEAR_CART = 'CLEAR_CART'
-const CHECKOUT_CART = 'CHECKOUT_CART'
 
 // action creators
 const updateCart = (productId, quantity) => {
@@ -23,10 +22,6 @@ const mergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
 }
 export const clearCart = () => ({
   type: CLEAR_CART
-})
-export const checkoutCart = cart => ({
-  type: CHECKOUT_CART,
-  cart
 })
 
 // thunks
@@ -63,14 +58,6 @@ export const fetchClearCart = userId => {
       // if userId is undefined, don't make the backend call
       if (userId) await axios.delete(`/api/carts/${userId}`)
       dispatch(clearCart())
-    } catch (err) {
-      console.error(err)
-    }
-  }
-}
-export const fetchCheckoutCart = cart => {
-  return async dispatch => {
-    try {
     } catch (err) {
       console.error(err)
     }

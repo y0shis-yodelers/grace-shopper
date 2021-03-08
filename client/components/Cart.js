@@ -1,41 +1,24 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import CartProductCard from './CartProductCard'
-import Total from './Total'
 import {fetchUpdateCart, fetchClearCart} from '../store/cart'
-import stripePromise from '../store/checkoutOptions/stripe'
-import axios from 'axios'
+import Total from './Total'
 
 class Cart extends React.Component {
   constructor(props) {
     super(props)
     this.handleQuantityChange = this.handleQuantityChange.bind(this)
-    this.handleCheckout = this.handleCheckout.bind(this)
   }
 
-  handleQuantityChange(productId, quantity) {
+  async handleQuantityChange(productId, quantity) {
     const userId = this.props.user.id || 0
-    this.props.updateCart(userId, productId, quantity)
-  }
-
-  async handleCheckout() {
-    const stripe = await stripePromise
-    const response = await axios.post('api/stripe/create-checkout-session', {
-      cart: this.props.cart,
-      products: this.props.products
-    })
-    const session = response.data
-    const result = await stripe.redirectToCheckout({
-      sessionId: session.id
-    })
-
-    if (result.error) console.log(result.error)
+    await this.props.updateCart(userId, productId, quantity)
   }
 
   render() {
     const cart = this.props.cart || {}
     const products = this.props.products || []
-    const {handleQuantityChange, handleCheckout} = this
+    const {handleQuantityChange} = this
 
     return (
       <div className="cartContainer">
@@ -77,7 +60,7 @@ class Cart extends React.Component {
           })}
         </div>
 
-        <button type="button" className="checkoutBtn" onClick={handleCheckout}>
+        <button type="button" className="checkoutBtn">
           Checkout
         </button>
       </div>
