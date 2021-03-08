@@ -243,7 +243,14 @@ img {
   flex-grow: 100;
 }
 
+.ordersLabel {
+  margin-top: 1em;
+}
+
 .singleUserContainer {
+}
+
+.profileLabel {
   margin-top: 1em;
 }
 
@@ -253,7 +260,6 @@ img {
   justify-content: center;
   min-height: 100px;
   border: 1px solid black;
-  margin-top: 1em;
 }
 
 /* --- All Orders --- */
@@ -263,7 +269,6 @@ img {
   overflow-x: auto;
   align-items: end;
   min-height: 325px;
-  /* min-width: 600px; */
   border: 1px solid black;
 }
 
