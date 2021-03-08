@@ -3,8 +3,8 @@ const router = require('express').Router()
 
 //generate stripe format for cart
 const generateStripeCart = (cart, products) => {
-  let cartWithProduct = products.filter(product => cart[product.id])
-  return cartWithProduct.map(product => {
+  //let cartWithProduct = products.filter(product => cart[product.id])
+  return products.map(product => {
     return {
       price_data: {
         currency: 'usd',
@@ -14,7 +14,7 @@ const generateStripeCart = (cart, products) => {
         },
         unit_amount: product.price
       },
-      quantity: cart[product.id]
+      quantity: product.id
     }
   })
 }
