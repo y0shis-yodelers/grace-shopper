@@ -10,8 +10,8 @@ class Checkout extends React.Component {
   }
 
   handleSubmit(event) {
-    // console.log('Submitted')
-    // console.log(event.target.value)
+    console.log('Submitted')
+    console.log(event.target.value)
   }
 
   render() {
@@ -36,8 +36,8 @@ class Checkout extends React.Component {
   }
 }
 
-const mapState = state => ({
-  user: state.user
+const mapState = (state) => ({
+  user: state.user,
 })
 
 export default connect(mapState)(Checkout)
