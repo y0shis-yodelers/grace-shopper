@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import {fetchOrder} from '../store/singleOrder'
+import {formatPrice} from './helperFunctions'
 
 class SingleOrder extends React.Component {
   componentDidMount() {
@@ -10,7 +12,37 @@ class SingleOrder extends React.Component {
   }
 
   render() {
-    return <div>This is a test</div>
+    const order = this.props.order[0] || {}
+    const products = order.products || []
+
+    console.log(this.props.order)
+
+    return (
+      <div>
+        {products.length ? (
+          products.map(product => (
+            <Link
+              key={product.id}
+              className="productLink"
+              to={`/products/${product.id}`}
+            >
+              <div className="productContainer">
+                <img src={product.imageUrl} />
+                <div className="nameAndPrice">
+                  <div className="productName">{product.name}</div>
+                  <div>Quantity: {product.ProductOrder.quantity}</div>
+                  <div className="productPrice">
+                    Cost: {formatPrice(product.ProductOrder.pricePaid)}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))
+        ) : (
+          <div>Loading ...</div>
+        )}
+      </div>
+    )
   }
 }
 
