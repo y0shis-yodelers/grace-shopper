@@ -131,6 +131,15 @@
 
 ### GatekeepingMiddleware
 
+* This middleware protects the routes and ensures that only users with the proper rights are able to view certain information.
+* We defined two levels of permission:
+  * Admins only
+  * Registered users and admins (registered users can only view their respective information)
+* Using the above two permissions, access is restricted for all routes that are not available to guests. Some examples of this are as follows:
+  * The route to view all users is only availabe to admins
+  * Products can be viewed by guests, registered users, and admins (the middleware was not used in this case)
+  * Registered users can view their own information such as shopping cart, profile, etc.
+
 ## Deployment
 
 ### Heroku
