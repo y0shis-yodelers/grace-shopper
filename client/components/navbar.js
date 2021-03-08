@@ -15,7 +15,7 @@ const Navbar = ({isLoggedIn, cart, logoutAndSetLocalStorageCart}) => (
           <a href="#" onClick={() => logoutAndSetLocalStorageCart(cart)}>
             Logout
           </a>
-          <Link to="/cart">Cart</Link>
+          <Link to="/checkout">Checkout</Link>
           <Link to="/users/:userId">Profile</Link>
           <Link to="/users">Users</Link>
         </div>
@@ -24,7 +24,7 @@ const Navbar = ({isLoggedIn, cart, logoutAndSetLocalStorageCart}) => (
           {/* The navbar will show these links before you log in */}
           <Link to="/home">Home</Link>
           <Link to="/login">Login</Link>
-          <Link to="/cart">Cart</Link>
+          <Link to="/checkout">Checkout</Link>
           <Link to="/signup">Sign Up</Link>
         </div>
       )}
