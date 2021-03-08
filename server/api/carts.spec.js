@@ -83,6 +83,7 @@ describe('Carts routes', () => {
         expect(body.products[1]).to.deep.include(products[1])
       } catch (err) {
         console.error(err)
+        throw err
       }
     })
   })
@@ -110,6 +111,7 @@ describe('Carts routes', () => {
         )
       } catch (err) {
         console.error(err)
+        throw err
       }
     })
   })
@@ -136,6 +138,7 @@ describe('Carts routes', () => {
         ).to.have.length(0)
       } catch (err) {
         console.error(err)
+        throw err
       }
     })
   })
