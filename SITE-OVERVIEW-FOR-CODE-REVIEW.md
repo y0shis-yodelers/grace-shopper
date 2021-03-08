@@ -151,6 +151,7 @@
   * The route to view all users is only availabe to admins
   * Products can be viewed by guests, registered users, and admins (the middleware was not used in this case)
   * Registered users can view their own information such as shopping cart, profile, etc.
+  * For testing purposes, this middleware checks if "superagenet" is included in the header of the request. If so, the test is given access to the route as well
 
 ## Deployment
 
