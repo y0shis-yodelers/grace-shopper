@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const GET_ALL_USERS = 'GET_ALL_USERS'
+export const GET_ALL_USERS = 'GET_ALL_USERS'
 
 const getAllUsers = users => ({
   type: GET_ALL_USERS,
@@ -10,6 +10,7 @@ const getAllUsers = users => ({
 export const fetchAllUsers = () => {
   return async dispatch => {
     try {
+      console.log('hi im inside fetchAllUsers')
       const {data} = await axios.get('/api/users')
       dispatch(getAllUsers(data))
     } catch (err) {

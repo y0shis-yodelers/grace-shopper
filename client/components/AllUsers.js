@@ -1,20 +1,23 @@
-import React, {useMemo} from 'react'
+import React, {useMemo, useEffect} from 'react'
+import {connect, useDispatch, useSelector} from 'react-redux'
 import {useTable} from 'react-table'
-import MOCK_DATA from './MOCK_DATA.json'
 import {COLUMNS} from './columns'
 import {fetchAllUsers} from '../store/users'
 
 export const AllUsers = () => {
+  const dispatch = useDispatch()
+  const users = useSelector(state => state.users)
+  useEffect(() => dispatch(fetchAllUsers()), [])
+
   // Returns imported columns. Recommended practice by useTable hook
   // since this ensures that the data is not pulled on every render
   // and would reperform logic which would affect performance
 
   const columns = useMemo(() => COLUMNS, [])
-  const data = useMemo(() => MOCK_DATA, [])
 
   const tableInstance = useTable({
     columns,
-    data
+    data: users
   })
 
   // Destructure functions/arrays from table instance
@@ -58,3 +61,5 @@ export const AllUsers = () => {
     </table>
   )
 }
+
+export default connect()(AllUsers)
