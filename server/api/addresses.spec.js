@@ -22,7 +22,7 @@ describe('Address routes', () => {
       try {
         const res = await request.agent(app).get('/api/addresses/')
         expect(res.body).to.be.an('array')
-        expect(res.body).to.have.lengthOf(10)
+        expect(res.body).to.have.lengthOf(100)
       } catch (err) {
         console.error(err)
       }
