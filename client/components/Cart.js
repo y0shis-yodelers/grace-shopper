@@ -22,7 +22,9 @@ class Cart extends React.Component {
     const stripe = await stripePromise
     const response = await axios.post('api/stripe/create-checkout-session', {
       cart: this.props.cart,
-      products: this.props.products
+      products: this.props.products.filter(
+        product => this.props.cart[product.id]
+      )
     })
     const session = response.data
     const result = await stripe.redirectToCheckout({
@@ -33,9 +35,11 @@ class Cart extends React.Component {
   }
 
   render() {
-    const cart = this.props.cart || {}
+    const {cart} = this || {}
     const products = this.props.products || []
     const {handleQuantityChange, handleCheckout} = this
+
+    console.log('this is cart in Cart, ', cart)
 
     return (
       <div className="cartContainer">
@@ -54,15 +58,7 @@ class Cart extends React.Component {
         </div>
         <Total products={products} cart={cart} />
         <div className="cartBox">
-          {products.map(product => {
-            // if the cart doesn't hold this item
-            // jump out of map fn, so that we don't
-            // generate CartProductCards for items
-            // that aren't in our cart
-            if (!cart[product.id]) return
-
-            // if cart does hold this item
-            // extract its quantity and pass to CartProductCard
+          {Object.values(cart).map(product => {
             const quantity = cart[product.id]
 
             return (
@@ -87,11 +83,11 @@ class Cart extends React.Component {
 
 const mapState = state => ({
   user: state.user,
-  cart: state.cart,
-  products: state.products
+  cart: state.cart
 })
 
 const mapDispatch = dispatch => ({
+  loadCart: userId => dispatch(fetchLoadCart(userId)),
   updateCart: (userId, productId, quantity) =>
     dispatch(fetchUpdateCart(userId, productId, quantity)),
   emptyCart: userId => dispatch(fetchClearCart(userId))

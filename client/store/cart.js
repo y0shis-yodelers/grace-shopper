@@ -5,6 +5,7 @@ const UPDATE_CART = 'UPDATE_CART'
 const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
 const CLEAR_CART = 'CLEAR_CART'
 const CHECKOUT_CART = 'CHECKOUT_CART'
+const LOAD_CART = 'LOAD_CART'
 
 // action creators
 const updateCart = (productId, quantity) => {
@@ -26,6 +27,10 @@ export const clearCart = () => ({
 })
 export const checkoutCart = cart => ({
   type: CHECKOUT_CART,
+  cart
+})
+export const loadCart = cart => ({
+  type: LOAD_CART,
   cart
 })
 
@@ -77,6 +82,23 @@ export const fetchCheckoutCart = cart => {
     }
   }
 }
+export const fetchLoadCart = userId => {
+  return async dispatch => {
+    try {
+      if (!userId) return
+      console.log('hi im fetchloadcart')
+      const {data} = await axios.get(`/api/carts/users/${userId}`)
+      console.log(data)
+      let cart = {}
+      data.forEach(product => {
+        cart[product.id] = product
+      })
+      dispatch(loadCart(cart))
+    } catch (err) {
+      console.error(err)
+    }
+  }
+}
 
 // initial state of subreducer
 const initState = {}
@@ -95,7 +117,7 @@ export default (state = initState, action) => {
       }
       // otherwise, find or create the product and update its quantity
       let newCart = {...state}
-      newCart[action.productId] = action.quantity
+      newCart[action.productId].quantity = action.quantity
       localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
     }

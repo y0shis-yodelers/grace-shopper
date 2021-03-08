@@ -13,38 +13,31 @@ import {
   AllUsers
 } from './components'
 import {me} from './store'
-import {reduceOrderToGetPastCart} from './components/helperFunctions'
-import {fetchMergePastAndGuestCarts} from './store/cart'
+import {fetchMergePastAndGuestCarts, fetchLoadCart} from './store/cart'
 
 /**
  * COMPONENT
  */
 class Routes extends Component {
-  getUserCart() {
-    const unfulfilledOrder = this.props.user.orders.filter(
-      order => !order.date
-    )[0]
-    const pastCart = reduceOrderToGetPastCart(unfulfilledOrder)
-    this.props.loadCart(pastCart)
-  }
-
   componentDidMount() {
     this.props.loadInitialData()
     // if we're coming directly from logging in
     // we WILL have access to user.id in componentDidMount
     // so we need to make the same call to getUserCart()
-    if (this.props.user.id) this.getUserCart()
+    if (this.props.user.id) this.props.getUserCart(this.props.user.id)
     // here we call loadCart with no pastCart
     // so that if user is NOT logged in
     // they still get their guest cart from localStorage
-    this.props.loadCart({})
+
+    // this.props.mergeCart({})
   }
 
   // user is not immediately available in componentDidMount
   // if we're NOT coming directly from logging in
   // so we load the user's pastCart in componentDidUpdate
   componentDidUpdate(prevProps) {
-    if (!prevProps.user.id && this.props.user.id) this.getUserCart()
+    if (prevProps.user && !prevProps.user.id && this.props.user.id)
+      this.props.getUserCart(this.props.user.id)
   }
 
   render() {
@@ -78,10 +71,10 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => ({
   loadInitialData: () => dispatch(me()),
-
+  getUserCart: userId => dispatch(fetchLoadCart(userId)),
   // load guestCart from localStorage and pass along with pastCart
   // to merge the two in the redux store
-  loadCart: pastCart => {
+  mergeCart: pastCart => {
     let cartFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || {}
     dispatch(fetchMergePastAndGuestCarts(pastCart, cartFromLocalStorage))
   }
