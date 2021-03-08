@@ -17,12 +17,14 @@ const Navbar = ({isLoggedIn, cart, logoutAndSetLocalStorageCart}) => (
           </a>
           <Link to="/cart">Cart</Link>
           <Link to="/users/:userId">Profile</Link>
+          <Link to="/users">Users</Link>
         </div>
       ) : (
         <div>
           {/* The navbar will show these links before you log in */}
           <Link to="/home">Home</Link>
           <Link to="/login">Login</Link>
+          <Link to="/cart">Cart</Link>
           <Link to="/signup">Sign Up</Link>
         </div>
       )}

@@ -96,6 +96,12 @@
 
 ### Schema
 
+* The following relationships were defined for this app:
+  * One-to-many relationship between users and orders
+  * Many-to-many relationship between users and addresses
+    * The logic behind this is that a user's billing and shipping address may be different. Additionally, a user may have multiple shipping addresses
+  * Many-to-many relationship between products and orders
+
 ### Models
 
 ### Seed
@@ -127,9 +133,31 @@
 * PUT /api/carts/:userId: grabs the User instance and uses it to grab the user's orderId representing the cart, then updates the cartItem passed in req.body as { productId : quantity } by either a) finding or creating the instance, and b) deleting or updating the foundInstance
 * DELETE /api/carts/:userId: destroys each ProductOrder that associates products in user's unfulfilledOrder.products array
 
+2.  /api/orders
+
+* GET /api/orders returns a list of all orders. This route is only available to admins.
+* GET /api/orders/:orderId returns a specific order along with all of it's associated products
+* POST /api/orders creates an order
+* PUT /api/orders/:orderId takes in one more of the following items and updates those items in an existing order:
+  * date
+  * isPaid
+  * products
+  * userId
+* DELETE /api/orders/:orderId deletes the order specified in the request
+
 ### Oauth-local
 
 ### GatekeepingMiddleware
+
+* This middleware protects the routes and ensures that only users with the proper rights are able to view certain information.
+* We defined two levels of permission:
+  * Admins only
+  * Registered users and admins (registered users can only view their respective information)
+* Using the above two permissions, access is restricted for all routes that are not available to guests. Some examples of this are as follows:
+  * The route to view all users is only availabe to admins
+  * Products can be viewed by guests, registered users, and admins (the middleware was not used in this case)
+  * Registered users can view their own information such as shopping cart, profile, etc.
+  * For testing purposes, this middleware checks if "superagenet" is included in the header of the request. If so, the test is given access to the respective route as well
 
 ## Deployment
 
