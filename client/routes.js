@@ -53,8 +53,8 @@ class Routes extends Component {
         <Route path="/signup" component={Signup} />
 
         <Route path="/products/:productId" component={SingleProduct} />
-        <Route path="/users/:userId" component={UserProfile} />
         <Route path="/users/:userId/orders/:orderId" component={SingleOrder} />
+        <Route path="/users/:userId" component={UserProfile} />
 
         <Route component={AllProducts} />
       </Switch>
