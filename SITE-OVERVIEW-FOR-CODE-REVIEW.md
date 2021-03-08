@@ -96,6 +96,12 @@
 
 ### Schema
 
+* The following relationships were defined for this app:
+  * One-to-many relationship between users and orders
+  * Many-to-many relationship between users and addresses
+    * The logic behind this is that a user's billing and shipping address may be different. Additionally, a user may have multiple shipping addresses
+  * Many-to-many relationship between products and orders
+
 ### Models
 
 ### Seed
@@ -151,7 +157,7 @@
   * The route to view all users is only availabe to admins
   * Products can be viewed by guests, registered users, and admins (the middleware was not used in this case)
   * Registered users can view their own information such as shopping cart, profile, etc.
-  * For testing purposes, this middleware checks if "superagenet" is included in the header of the request. If so, the test is given access to the route as well
+  * For testing purposes, this middleware checks if "superagenet" is included in the header of the request. If so, the test is given access to the respective route as well
 
 ## Deployment
 
