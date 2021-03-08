@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import Loader from 'react-loader-spinner'
 import {fetchAllOrders} from '../store/orders'
 import OrderCard from './OrderCard'
 
@@ -28,7 +29,13 @@ class AllOrders extends React.Component {
                   <OrderCard order={order} />
                 </Link>
               ) : (
-                <div>Loading...</div>
+                <Loader
+                  type="TailSpin"
+                  color="#00BFFF"
+                  height={100}
+                  width={100}
+                  timeout={3000} //3 secs
+                />
               )}
             </div>
           ))
