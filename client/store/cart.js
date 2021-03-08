@@ -11,27 +11,27 @@ const updateCart = (productId, quantity) => {
   return {
     type: UPDATE_CART,
     productId,
-    quantity,
+    quantity
   }
 }
 const mergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
   return {
     type: MERGE_GUEST_AND_PAST_CARTS,
     pastCart,
-    cartFromLocalStorage,
+    cartFromLocalStorage
   }
 }
 export const clearCart = () => ({
-  type: CLEAR_CART,
+  type: CLEAR_CART
 })
-export const checkoutCart = (cart) => ({
+export const checkoutCart = cart => ({
   type: CHECKOUT_CART,
-  cart,
+  cart
 })
 
 // thunks
 export const fetchUpdateCart = (userId, productId, quantity) => {
-  return async (dispatch) => {
+  return async dispatch => {
     try {
       // here we check the truthiness of userId
       // if userId is 0, we skip the backend PUT action
@@ -39,7 +39,7 @@ export const fetchUpdateCart = (userId, productId, quantity) => {
       if (userId)
         await axios.put(`/api/carts/users/${userId}`, {
           productId: productId,
-          quantity: quantity,
+          quantity: quantity
         })
       dispatch(updateCart(productId, quantity))
     } catch (err) {
@@ -48,7 +48,7 @@ export const fetchUpdateCart = (userId, productId, quantity) => {
   }
 }
 export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
-  return async (dispatch) => {
+  return async dispatch => {
     try {
       dispatch(mergePastAndGuestCarts(pastCart, cartFromLocalStorage))
     } catch (err) {
@@ -56,8 +56,8 @@ export const fetchMergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
     }
   }
 }
-export const fetchClearCart = (userId) => {
-  return async (dispatch) => {
+export const fetchClearCart = userId => {
+  return async dispatch => {
     try {
       // check if user is logged in
       // if userId is undefined, don't make the backend call
@@ -68,9 +68,10 @@ export const fetchClearCart = (userId) => {
     }
   }
 }
-export const fetchCheckoutCart = (cart) => {
-  return async (dispatch) => {
+export const fetchCheckoutCart = cart => {
+  return async dispatch => {
     try {
+      // do something
     } catch (err) {
       console.error(err)
     }
@@ -102,7 +103,7 @@ export default (state = initState, action) => {
       const newCart = {
         ...state,
         ...action.cartFromLocalStorage,
-        ...action.pastCart,
+        ...action.pastCart
       }
       localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
