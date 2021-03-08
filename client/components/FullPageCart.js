@@ -22,10 +22,12 @@ class FullPageCart extends React.Component {
     await this.props.updateCart(productId, quantity)
   }
 
-  async handleClick(event) {
-    console.log('checkout clicked')
+  async handleClick() {
     const stripe = await stripePromise
-    const response = await axios.post('api/stripe/create-checkout-session')
+    const response = await axios.post('api/stripe/create-checkout-session', {
+      cart: this.props.cart,
+      products: this.props.products
+    })
     const session = response.data
     // When the customer clicks on the button, redirect them to Checkout.
     const result = await stripe.redirectToCheckout({
