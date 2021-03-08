@@ -27,7 +27,7 @@ class SingleOrder extends React.Component {
 
 const mapState = state => {
   return {
-    order: state.SingleOrder
+    order: state.singleOrder
   }
 }
 
