@@ -37,6 +37,7 @@ router.post('/create-checkout-session', async (req, res, next) => {
 
 router.get('/success', async (req, res, next) => {
   //remove from inventory
+  // update inventory
   //5 seconds on confirmation page
   //send email via nodemailer
   //send sms via twilio

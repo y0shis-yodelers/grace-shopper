@@ -24,7 +24,8 @@ class Cart extends React.Component {
       cart: this.props.cart,
       products: this.props.products.filter(
         product => this.props.cart[product.id]
-      )
+      ),
+      user: this.props.user
     })
     const session = response.data
     const result = await stripe.redirectToCheckout({
