@@ -68,14 +68,6 @@ export const fetchClearCart = userId => {
     }
   }
 }
-export const fetchCheckoutCart = cart => {
-  return async dispatch => {
-    try {
-    } catch (err) {
-      console.error(err)
-    }
-  }
-}
 
 // initial state of subreducer
 const initState = {}
