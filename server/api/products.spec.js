@@ -33,65 +33,85 @@ describe('Product routes', () => {
 
   describe('`/products` URI', () => {
     it('GET responds with all products', async () => {
-      await request(app)
-        .get('/api/products')
-        .expect(200)
-        .then(res => {
-          expect(res.body).to.be.an('array')
-          expect(res.body).to.have.lengthOf(295)
-        })
+      try {
+        await request(app)
+          .get('/api/products')
+          .expect(200)
+          .then(res => {
+            expect(res.body).to.be.an('array')
+            expect(res.body).to.have.lengthOf(295)
+          })
+      } catch (error) {
+        console.log(error)
+        throw error
+      }
     })
 
     it('POST responds with created product', async () => {
-      await request
-        .agent(app)
-        .post('/api/products')
-        .send(alice)
-        .expect(200)
-        .then(res => {
-          expect(res.body).to.be.an('object')
-          expect(res.body.name).to.be.equal('Alice')
-          expect(res.body.inventory).to.be.equal(5)
-          expect(res.body.price).to.be.equal(1212)
-        })
+      try {
+        await request
+          .agent(app)
+          .post('/api/products')
+          .send(alice)
+          .expect(200)
+          .then(res => {
+            expect(res.body).to.be.an('object')
+            expect(res.body.name).to.be.equal('Alice')
+            expect(res.body.inventory).to.be.equal(5)
+            expect(res.body.price).to.be.equal(1212)
+          })
+      } catch (error) {
+        console.log(error)
+        throw error
+      }
     })
   })
 
   describe('`/products/:productId` URI', () => {
     it('GET responds with single product', async () => {
-      await request
-        .agent(app)
-        .post('/api/products')
-        .send(alice)
-        .expect(200)
+      try {
+        await request
+          .agent(app)
+          .post('/api/products')
+          .send(alice)
+          .expect(200)
 
-      await request(app)
-        .get('/api/products/301')
-        .expect(200)
-        .then(res => {
-          expect(res.body).to.be.an('object')
-          expect(res.body.name).to.be.equal('Alice')
-          expect(res.body.inventory).to.be.equal(5)
-          expect(res.body.price).to.be.equal(1212)
-        })
+        await request(app)
+          .get('/api/products/301')
+          .expect(200)
+          .then(res => {
+            expect(res.body).to.be.an('object')
+            expect(res.body.name).to.be.equal('Alice')
+            expect(res.body.inventory).to.be.equal(5)
+            expect(res.body.price).to.be.equal(1212)
+          })
+      } catch (error) {
+        console.log(error)
+        throw error
+      }
     })
   })
 
   describe('`/products/admin` URI', () => {
     it('GET responds with all products (admin level)', async () => {
-      await request
-        .agent(app)
-        .post('/api/products')
-        .send(noStock)
-        .expect(200)
+      try {
+        await request
+          .agent(app)
+          .post('/api/products')
+          .send(noStock)
+          .expect(200)
 
-      await request(app)
-        .get('/api/products/admin')
-        .expect(200)
-        .then(res => {
-          expect(res.body).to.be.an('array')
-          expect(res.body).to.have.lengthOf(301)
-        })
+        await request(app)
+          .get('/api/products/admin')
+          .expect(200)
+          .then(res => {
+            expect(res.body).to.be.an('array')
+            expect(res.body).to.have.lengthOf(301)
+          })
+      } catch (error) {
+        console.log(error)
+        throw error
+      }
     })
   })
 })

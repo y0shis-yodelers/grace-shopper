@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
+import AllOrders from './AllOrders'
 
 class UserProfile extends React.Component {
   componentDidMount() {
@@ -9,28 +10,39 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    // restore this when db functional
-    // const {singleUser} = this.props || {}
-
-    const singleUser = {
-      name: 'albert schweitzer',
-      address: '101 alschweitz lane chicago il 60660',
-      isAdmin: false,
-      email: 'alschweitz@hotmail.com',
-      phoneNumber: '5551234567'
-    }
+    const {singleUser} = this.props || {}
 
     return (
-      <div className="su-ads-container">
-        hello world! {/* test purposes only */}
-        <div className="singleUserContainer">
-          {/* OrderHistory and PaymentOptions components
-          to be created ... */}
+      <div className="userAndAds">
+        <div className="profileContainer">
+          <div className="headerAdsContainer">
+            header ads here {/* test purposes only */}
+          </div>
 
-          {/* <OrderHistory /> */}
-          <div className="userProfileContainer">user profile here</div>
-          {/* <PaymentOptions /> */}
+          {Object.keys(singleUser).length ? (
+            <div className="singleUserContainer">
+              {/* OrderHistory and PaymentOptions components
+          to be created ... */}
+              <div className="ordersLabel">Order History</div>
+              <AllOrders user={singleUser} />
+
+              <div className="profileLabel">Profile Info</div>
+              <div className="userProfileContainer">
+                <div className="userProfileName">Name: {singleUser.name}</div>
+                <div className="userProfileEmail">
+                  Email: {singleUser.email}
+                </div>
+                <div className="userProfilePhone">
+                  Phone: {singleUser.phoneNumber}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div>Loading...</div>
+          )}
         </div>
+        {/* <PaymentOptions /> */}
+
         <div className="advertisementSidePanel">ads side panel</div>
       </div>
     )
