@@ -2,26 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchOrder} from '../store/singleOrder'
 
-// const SingleOrder = ({order}) => {
-//   return (
-//     <div>
-//       {order && !order.id ? (
-//         <div>Loading...</div>
-//       ) : (
-//         <div className="orderContainer">
-//           <img src={order.imageUrl} />
-//           <div className="orderName">{order.name}</div>
-//           <div>{order.pricePaid}</div>
-//           <div>{order.quantity}</div>
-//         </div>
-//       )}
-//     </div>
-//   )
-// }
-
 class SingleOrder extends React.Component {
   render() {
-    return <div />
+    return <div>This is a test</div>
   }
 }
 
