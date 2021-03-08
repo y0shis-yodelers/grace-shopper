@@ -12,6 +12,7 @@ class UserProfile extends React.Component {
 
   render() {
     const {singleUser} = this.props || {}
+    const {history} = this.props
 
     return (
       <div className="userAndAds">
@@ -38,7 +39,12 @@ class UserProfile extends React.Component {
                     Phone: {singleUser.phoneNumber}
                   </div>
 
-                  <button type="button">Edit</button>
+                  <button
+                    type="button"
+                    onClick={() => history.push(`/users/${singleUser.id}/edit`)}
+                  >
+                    Edit
+                  </button>
                 </div>
               </div>
             </div>
