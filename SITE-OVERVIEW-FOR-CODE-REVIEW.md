@@ -127,6 +127,18 @@
 * PUT /api/carts/:userId: grabs the User instance and uses it to grab the user's orderId representing the cart, then updates the cartItem passed in req.body as { productId : quantity } by either a) finding or creating the instance, and b) deleting or updating the foundInstance
 * DELETE /api/carts/:userId: destroys each ProductOrder that associates products in user's unfulfilledOrder.products array
 
+2.  /api/orders
+
+* GET /api/orders returns a list of all orders. This route is only available to admins.
+* GET /api/orders/:orderId returns a specific order along with all of it's associated products
+* POST /api/orders creates an order
+* PUT /api/orders/:orderId takes in one more of the following items and updates those items in an existing order:
+  * date
+  * isPaid
+  * products
+  * userId
+* DELETE /api/orders/:orderId deletes the order specified in the request
+
 ### Oauth-local
 
 ### GatekeepingMiddleware
