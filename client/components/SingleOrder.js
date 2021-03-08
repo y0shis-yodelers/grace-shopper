@@ -20,21 +20,25 @@ class SingleOrder extends React.Component {
     return (
       <div>
         {products.length ? (
-          <div className="allProductContainer">
-            {products.map(product => (
-              <Link
-                key={product.id}
-                className="productLink"
-                to={`/products/${product.id}`}
-              >
-                <div className="productContainer">
-                  <img src={product.imageUrl} />
-                  <div className="orderName">{product.name}</div>
-                  <div>Quantity: {product.ProductOrder.quantity}</div>
-                  <div>Cost: {formatPrice(product.ProductOrder.pricePaid)}</div>
-                </div>
-              </Link>
-            ))}
+          <div className="productsAndCart">
+            <div className="allProductContainer">
+              {products.map(product => (
+                <Link
+                  key={product.id}
+                  className="productLink"
+                  to={`/products/${product.id}`}
+                >
+                  <div className="productContainer">
+                    <img src={product.imageUrl} />
+                    <div className="orderName">{product.name}</div>
+                    <div>Quantity: {product.ProductOrder.quantity}</div>
+                    <div>
+                      Cost: {formatPrice(product.ProductOrder.pricePaid)}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         ) : (
           <div>Loading ...</div>
