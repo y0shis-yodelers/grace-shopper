@@ -237,7 +237,6 @@ img {
   justify-content: space-around;
 }
 
-
 /* ---- Profile ---- */
 
 .profileContainer {
@@ -348,7 +347,6 @@ img {
   border: 1px solid black;
 }
 
-
 /* ---- All Users ---- */
 
 table {
@@ -377,7 +375,7 @@ table th {
   text-align: center;
   background-color: #4caf50;
   color: white;
-
+}
 
 /* Checkout */
 
@@ -394,5 +392,4 @@ table th {
   justify-content: center;
   width: 1200px;
   margin: 0 auto;
-
 }
