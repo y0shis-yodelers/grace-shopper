@@ -27,7 +27,10 @@ router.get('/:orderId', isAdminOrUser, async (req, res, next) => {
 // Creates an order
 router.post('/', isAdminOrUser, async (req, res, next) => {
   try {
-    res.send(await Order.create(req.body))
+    const data = req.body
+    const {dataValues} = await Order.create(data)
+    res.status(201).json(dataValues)
+    // res.send(await Order.create(req.body))
   } catch (error) {
     next(error)
   }
@@ -62,8 +65,7 @@ router.put('/:orderId', isAdminOrUser, async (req, res, next) => {
     })
 
     console.log('updatedOrder in PUT route is, ', updatedOrder)
-
-    res.status(204).json(updatedOrder)
+    res.json(updatedOrder)
   } catch (error) {
     next(error)
   }
