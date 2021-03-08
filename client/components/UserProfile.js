@@ -29,12 +29,16 @@ class UserProfile extends React.Component {
 
               <div className="profileLabel">Profile Info</div>
               <div className="userProfileContainer">
-                <div className="userProfileName">Name: {singleUser.name}</div>
-                <div className="userProfileEmail">
-                  Email: {singleUser.email}
-                </div>
-                <div className="userProfilePhone">
-                  Phone: {singleUser.phoneNumber}
+                <div>
+                  <div className="userProfileName">Name: {singleUser.name}</div>
+                  <div className="userProfileEmail">
+                    Email: {singleUser.email}
+                  </div>
+                  <div className="userProfilePhone">
+                    Phone: {singleUser.phoneNumber}
+                  </div>
+
+                  <button type="button">Edit</button>
                 </div>
               </div>
             </div>
