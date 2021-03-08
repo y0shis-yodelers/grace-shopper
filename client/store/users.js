@@ -10,7 +10,6 @@ const getAllUsers = users => ({
 export const fetchAllUsers = () => {
   return async dispatch => {
     try {
-      console.log('hi im inside fetchAllUsers')
       const {data} = await axios.get('/api/users')
       dispatch(getAllUsers(data))
     } catch (err) {

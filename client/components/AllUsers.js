@@ -7,7 +7,10 @@ import {fetchAllUsers} from '../store/users'
 export const AllUsers = () => {
   const dispatch = useDispatch()
   const users = useSelector(state => state.users)
-  useEffect(() => dispatch(fetchAllUsers()), [])
+  useEffect(() => {
+    const getUsers = async () => dispatch(fetchAllUsers())
+    getUsers()
+  }, [])
 
   // Returns imported columns. Recommended practice by useTable hook
   // since this ensures that the data is not pulled on every render
@@ -32,8 +35,8 @@ export const AllUsers = () => {
   return (
     <table {...getTableProps()}>
       <thead>
-        {headerGroups.map(headerGroup => (
-          <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
+        {headerGroups.map((headerGroup, headerIdx) => (
+          <tr {...headerGroup.getHeaderGroupProps()} key={headerIdx}>
             {headerGroup.headers.map(column => (
               <th {...column.getHeaderProps()} key={column.id}>
                 {column.render('Header')}
@@ -47,9 +50,9 @@ export const AllUsers = () => {
           prepareRow(row)
           return (
             <tr {...row.getRowProps()} key={row.id}>
-              {row.cells.map(cell => {
+              {row.cells.map((cell, cellIdx) => {
                 return (
-                  <td {...cell.getCellProps()} key={cell.id}>
+                  <td {...cell.getCellProps()} key={cellIdx}>
                     {cell.render('Cell')}
                   </td>
                 )
