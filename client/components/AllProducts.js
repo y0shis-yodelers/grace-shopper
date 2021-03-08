@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import Loader from 'react-loader-spinner'
 import {fetchAllProducts} from '../store/products'
 import ProductCard from './ProductCard'
 import Cart from './Cart'
@@ -16,7 +17,13 @@ class AllProducts extends React.Component {
     return (
       <div>
         {!products[0] ? (
-          <div>Loading ...</div>
+          <Loader
+            type="TailSpin"
+            color="#00BFFF"
+            height={100}
+            width={100}
+            timeout={3000} //3 secs
+          />
         ) : (
           <div className="productsAndCart">
             <div className="allProductContainer">
