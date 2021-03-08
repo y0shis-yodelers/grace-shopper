@@ -20,7 +20,7 @@ router.get('/', isAdmin, async (req, res, next) => {
 
 // GET single user
 //ADD BACK login
-router.get('/:userId', async (req, res, next) => {
+router.get('/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId, {
       include: [{model: Address}, {model: Order, include: {model: Product}}]
