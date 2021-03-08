@@ -3,6 +3,12 @@ import {connect} from 'react-redux'
 import {fetchOrder} from '../store/singleOrder'
 
 class SingleOrder extends React.Component {
+  componentDidMount() {
+    const {userId, orderId} = this.props.match.params
+
+    this.props.getOrder(userId, orderId)
+  }
+
   render() {
     return <div>This is a test</div>
   }
