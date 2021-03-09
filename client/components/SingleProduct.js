@@ -2,20 +2,11 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
-import {formatPrice} from './helperFunctions'
+import {formatPrice, getQuantityFromCart} from './helperFunctions'
 import {fetchUpdateCart} from '../store/cart'
 import {fetchAllProducts} from '../store/products'
 import {fetchSingleProduct} from '../store/singleProduct'
 import Cart from './Cart'
-
-// helper sets local state quantity field
-// by checking localStorage for current value of cart
-function getQuantityFromCart(productId) {
-  const cart = JSON.parse(localStorage.getItem('cart'))
-  if (!cart) return 0
-  if (cart && !cart[productId]) return 0
-  return cart[productId]
-}
 
 class SingleProduct extends React.Component {
   constructor(props) {

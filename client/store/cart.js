@@ -30,10 +30,6 @@ const mergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
 export const clearCart = () => ({
   type: CLEAR_CART
 })
-export const checkoutCart = cart => ({
-  type: CHECKOUT_CART,
-  cart
-})
 
 // thunks
 export const fetchUpdateCart = (userId, productId, quantity) => {
@@ -115,15 +111,6 @@ export default (state = initState, action) => {
       return newCart
     }
     case MERGE_GUEST_AND_PAST_CARTS: {
-      // TODO
-      // here, we need to know whether user
-      // has logged in from a previous guestState
-      // where a guest cart has been created
-      // so we can reverse the order of the spreads
-      // and spread present cartFromLocalStorage
-      // OVER pastCart
-      // for now, this defaults to pastCart over localState
-      // so that db changes persist across browsers and devices
       const newCart = {
         ...state,
         ...action.cartFromLocalStorage,

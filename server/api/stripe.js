@@ -7,7 +7,6 @@ const sendEmail = require('./email')
 
 //generate stripe format for cart
 const generateStripeCart = (cart, products) => {
-  //let cartWithProduct = products.filter((product) => cart[product.id])
   return products.map(product => {
     return {
       price_data: {
