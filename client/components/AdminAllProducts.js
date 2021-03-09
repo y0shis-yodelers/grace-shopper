@@ -34,6 +34,10 @@ export const AdminAllProducts = () => {
     page,
     nextPage,
     previousPage,
+    canNextPage,
+    canPreviousPage,
+    pageOptions,
+    state,
     prepareRow
   } = useTable(
     {
@@ -43,6 +47,8 @@ export const AdminAllProducts = () => {
     useSortBy,
     usePagination
   )
+
+  const {pageIndex} = state
 
   return (
     <div>
@@ -85,18 +91,23 @@ export const AdminAllProducts = () => {
               })}
             </tbody>
           </table>
-          <div
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}
-          >
-            <button onClick={() => previousPage()}>Previous</button>
-            <button onClick={() => nextPage()}>Next</button>
+          <div>
+            <span>
+              Page{' '}
+              <strong>
+                {pageIndex + 1} of {pageOptions.length}
+              </strong>{' '}
+            </span>
+            <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+              Previous
+            </button>
+            <button onClick={() => nextPage()} disabled={!canNextPage}>
+              Next
+            </button>
           </div>
         </>
       ) : (
-        <div>
+        <div className="container403">
           <div className="gandalf">
             <div className="fireball" />
             <div className="skirt" />
