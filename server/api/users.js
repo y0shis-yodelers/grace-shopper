@@ -44,21 +44,14 @@ router.post('/', async (req, res, next) => {
 // UPDATE single user
 router.put('/:userId', isAdminOrUser, async (req, res, next) => {
   try {
-    const user = await User.findByPk(req.params.userId, {
-      include: [{model: Address}, {model: Order}]
-    })
+    const {id, name, email, phoneNumber} = req.body
+    const {userId} = req.params
 
-    const updateUserInfo = {
-      name: req.body.name,
-      phoneNumber: req.body.phoneNumber,
-      email: req.body.email
-    }
+    //if (id !== userId) res.status(304).end()
 
-    const updatedUser = await User.update(updateUserInfo, {
-      returning: true
-    })
+    await User.update({name, email, phoneNumber}, {where: {id: userId}})
 
-    res.status(204).send(updatedUser)
+    res.status(204).end()
   } catch (err) {
     next(err)
   }

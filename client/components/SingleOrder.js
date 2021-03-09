@@ -25,7 +25,7 @@ class SingleOrder extends React.Component {
               {products.map(product => (
                 <Link
                   key={product.id}
-                  className="productLink"
+                  className="productCardOutline"
                   to={`/products/${product.id}`}
                 >
                   <div className="productContainer">

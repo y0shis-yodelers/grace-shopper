@@ -9,11 +9,20 @@ const Total = ({products, cart}) => {
   let tax = subtotal * 0.1
   let grandTotal = subtotal //+ tax
   return (
-    <div className="totalContainer">
-      <div>Subtotal: {formatPrice(subtotal)}</div>
+    <div className="totalsContainer">
+      <div className="totalsLineItem">
+        <span>Subtotal: </span>
+        <span>{formatPrice(subtotal)}</span>
+      </div>
       {/* <div>Tax: {formatPrice(tax)}</div> */}
-      <div>Shipping: Free for members!</div>
-      <div>Grand Total: {formatPrice(grandTotal)}</div>
+      <div className="totalsLineItem">
+        <span>Shipping:</span>
+        <span>Free for members!</span>
+      </div>
+      <div className="totalsLineItem">
+        <span>Grand Total:</span>
+        <span>{formatPrice(grandTotal)}</span>
+      </div>
     </div>
   )
 }

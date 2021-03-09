@@ -2,16 +2,17 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+import {format} from 'phone-fns'
 import AllOrders from './AllOrders'
 
 class UserProfile extends React.Component {
   componentDidMount() {
-    // load user's order history here
     // load advertisements/items if we so choose
   }
 
   render() {
     const {singleUser} = this.props || {}
+    const {history} = this.props
 
     return (
       <div className="userAndAds">
@@ -29,12 +30,21 @@ class UserProfile extends React.Component {
 
               <div className="profileLabel">Profile Info</div>
               <div className="userProfileContainer">
-                <div className="userProfileName">Name: {singleUser.name}</div>
-                <div className="userProfileEmail">
-                  Email: {singleUser.email}
-                </div>
-                <div className="userProfilePhone">
-                  Phone: {singleUser.phoneNumber}
+                <div>
+                  <div className="userProfileName">Name: {singleUser.name}</div>
+                  <div className="userProfileEmail">
+                    Email: {singleUser.email}
+                  </div>
+                  <div className="userProfilePhone">
+                    Phone: {format('(NNN) NNN-NNNN', singleUser.phoneNumber)}
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => history.push(`/users/${singleUser.id}/edit`)}
+                  >
+                    Edit
+                  </button>
                 </div>
               </div>
             </div>

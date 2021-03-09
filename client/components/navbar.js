@@ -12,6 +12,7 @@ const Navbar = ({isLoggedIn, cart}) => {
     <div>
       <Link to="/home">
         <img className="logo" src="https://i.imgur.com/wj50jx5.png" />
+        <span className="tagline">Shred Like You Mean It</span>
       </Link>
       <nav>
         {isLoggedIn ? (
@@ -45,6 +46,7 @@ const Navbar = ({isLoggedIn, cart}) => {
             {/* The navbar will show these links before you log in */}
             <Link to="/home">Home</Link>
             <Link to="/login">Login</Link>
+            <Link to="/about">About Us</Link>
             <Link to="/signup">Sign Up</Link>
             <a className="cartAndBadge" href="">
               <span

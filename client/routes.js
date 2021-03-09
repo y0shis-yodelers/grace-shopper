@@ -11,9 +11,11 @@ import {
   SingleOrder,
   Checkout,
   AllUsers,
+  EditProfile,
   OrderSuccess,
   OrderFailure,
-  AdminAllProducts
+  AdminAllProducts,
+  About
 } from './components'
 import {me} from './store'
 import {reduceOrderToGetPastCart} from './components/helperFunctions'
@@ -59,9 +61,11 @@ class Routes extends Component {
         <Route path="/checkout" component={Checkout} />
         <Route path="/success" component={OrderSuccess} />
         <Route path="/failure" component={OrderFailure} />
+        <Route path="/about" component={About} />
 
         <Route path="/products/:productId" component={SingleProduct} />
         <Route path="/users/:userId/orders/:orderId" component={SingleOrder} />
+        <Route path="/users/:userId/edit" component={EditProfile} />
         <Route path="/users/:userId" component={UserProfile} />
         <Route exact path="/admin/users" component={AllUsers} />
         <Route exact path="/admin/products" component={AdminAllProducts} />
