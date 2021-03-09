@@ -30,7 +30,7 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
   * React-Table & Phone-FNS: Great data formatting
 * Deployment
   * Heroku: Live website with public URL
-  * Mocha/Chai: Unit testing of 90% of modules for fast developement
+  * Mocha/Chai: Unit testing of 90% of modules for faster developement
   * Travis: Continuous Integration and Continuous Deployment
 
 ## Future Roadmap
