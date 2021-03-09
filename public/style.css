@@ -206,12 +206,6 @@ img {
   margin: 0.3em;
 }
 
-.cartContainer .checkoutBtn {
-  position: absolute;
-  bottom: -2em;
-  left: 38%;
-}
-
 /* ---- Cart ---- */
 
 .cartBox {
@@ -225,10 +219,21 @@ img {
   overflow-y: auto;
 }
 
-.myCartAndClearCartBtn {
+.cartBtns {
   display: flex;
+  position: absolute;
+  bottom: -3em;
+  width: 100%;
   align-items: center;
   justify-content: space-around;
+}
+
+.cartBtns button {
+  background-color: lightgrey;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
 }
 
 .totalContainer {

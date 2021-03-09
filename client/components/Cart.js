@@ -41,19 +41,6 @@ class Cart extends React.Component {
 
     return (
       <div className="cartContainer">
-        <div className="myCartAndClearCartBtn">
-          <div className="cartTitle">My Cart:</div>
-          <button
-            className="clearCart"
-            type="button"
-            onClick={() => {
-              localStorage.setItem('cart', JSON.stringify({}))
-              this.props.emptyCart(this.props.user.id)
-            }}
-          >
-            Clear Cart
-          </button>
-        </div>
         <Total products={products} cart={cart} />
         <div className="cartBox">
           {products.map(product => {
@@ -79,9 +66,25 @@ class Cart extends React.Component {
           })}
         </div>
 
-        <button type="button" className="checkoutBtn" onClick={handleCheckout}>
-          Checkout
-        </button>
+        <div className="cartBtns">
+          <button
+            type="button"
+            className="checkoutBtn"
+            onClick={handleCheckout}
+          >
+            Checkout
+          </button>
+          <button
+            className="clearCart"
+            type="button"
+            onClick={() => {
+              localStorage.setItem('cart', JSON.stringify({}))
+              this.props.emptyCart(this.props.user.id)
+            }}
+          >
+            Clear Cart
+          </button>
+        </div>
       </div>
     )
   }
