@@ -24,7 +24,7 @@ class EditProfile extends React.Component {
     const {name, email, password, phone} = this.state
     const {handleChange} = this
 
-    return (
+    return this.props.user.id && this.props.user.id === +userId ? (
       <form className="shippingData">
         <div className="formField">
           <label htmlFor="name">Name:</label>
@@ -63,6 +63,8 @@ class EditProfile extends React.Component {
 
         <input type="submit" value="Submit" />
       </form>
+    ) : (
+      <div>User auth failure!</div>
     )
   }
 }
