@@ -43,7 +43,7 @@ const Navbar = ({isLoggedIn, cart}) => {
             {/* The navbar will show these links before you log in */}
             <Link to="/home">Home</Link>
             <Link to="/login">Login</Link>
-            <Link to="/abouut">About Us</Link>
+            <Link to="/about">About Us</Link>
             <Link to="/signup">Sign Up</Link>
             <a className="cartAndBadge" href="">
               <span
