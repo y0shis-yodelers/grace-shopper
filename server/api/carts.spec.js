@@ -68,7 +68,7 @@ describe('Carts routes', () => {
     await Promise.all(productOrders.map(po => ProductOrder.create(po)))
   })
 
-  describe('GET /api/carts/:userId', () => {
+  describe('GET /api/users/carts/:userId', () => {
     it('allows admin users or current user to GET a single cart', async () => {
       try {
         const foundUser = await User.findByPk(1, {
@@ -77,7 +77,7 @@ describe('Carts routes', () => {
 
         const {body} = await request
           .agent(app)
-          .get(`/api/carts/${foundUser.id}`)
+          .get(`/api/users/carts/${foundUser.id}`)
 
         expect(body.products[0]).to.deep.include(products[0])
         expect(body.products[1]).to.deep.include(products[1])
@@ -88,7 +88,7 @@ describe('Carts routes', () => {
     })
   })
 
-  describe('PUT /api/carts/:userId', () => {
+  describe('PUT /api/users/carts/:userId', () => {
     it('allows admin users or current user to PUT/update a single cart item,', async () => {
       const updateInfo = {
         productId: 1,
@@ -98,7 +98,7 @@ describe('Carts routes', () => {
       try {
         await request
           .agent(app)
-          .put(`/api/carts/1`)
+          .put(`/api/users/carts/1`)
           .send(updateInfo)
 
         const foundUser = await User.findByPk(1, {
@@ -116,14 +116,14 @@ describe('Carts routes', () => {
     })
   })
 
-  describe('DELETE /api/carts/:userId', () => {
+  describe('DELETE /api/users/carts/:userId', () => {
     it('allows admin users or current user to DELETE/clear the entire cart,', async () => {
       try {
         const userBeforeCartDeleted = await User.findByPk(1, {
           include: {model: Order, include: {model: Product}}
         })
 
-        await request.agent(app).del(`/api/carts/1`)
+        await request.agent(app).del(`/api/users/carts/1`)
 
         const userAfterCartDeleted = await User.findByPk(1, {
           include: {model: Order, include: {model: Product}}

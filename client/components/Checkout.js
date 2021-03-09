@@ -3,11 +3,18 @@ import {connect} from 'react-redux'
 import Cart from './Cart'
 import ShippingData from './ShippingData'
 import stripePromise from '../store/checkoutOptions/stripe'
+import axios from 'axios'
+import {fetchLoadCart} from '../store/cart'
 
 class Checkout extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.user.id && this.props.user.id)
+      this.props.getCart(this.props.user.id)
   }
 
   async handleSubmit(e) {
@@ -46,7 +53,12 @@ class Checkout extends React.Component {
 }
 
 const mapState = state => ({
-  user: state.user
+  user: state.user,
+  cart: state.cart
 })
 
-export default connect(mapState)(Checkout)
+const mapDispatch = dispatch => ({
+  getCart: userId => dispatch(fetchLoadCart(userId))
+})
+
+export default connect(mapState, mapDispatch)(Checkout)
