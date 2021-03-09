@@ -1,5 +1,11 @@
+html {
+  touch-action: manipulation;
+}
+
 * {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.2em;
 }
 
 body {
@@ -11,13 +17,29 @@ a {
   color: black;
 }
 
+a:hover {
+  color: blue;
+}
+
+hr {
+  border: 1px solid transparent;
+  box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
+}
+
 label {
   display: block;
+}
+
+.nav-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 nav a {
   display: inline-block;
   margin: 1em;
+  font-size: 18px;
 }
 
 form div {
@@ -30,6 +52,10 @@ img {
   max-height: 100%;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* ---- NavBar ---- */
 
 .checkoutAndBadge {
@@ -37,6 +63,9 @@ img {
 }
 
 .totalBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: darkgrey;
   color: white;
   padding: 0.2em;
@@ -46,8 +75,17 @@ img {
   margin-left: 0.1em;
 }
 
+.totalBadge .material-icons {
+  margin-left: 0.5em;
+}
+
 .totalBadge.hidden {
   display: none;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* ---- AllProducts ---- */
@@ -144,6 +182,10 @@ img {
 
 .backToAllProducts {
   margin-bottom: 0.5em;
+}
+
+.backToAllProducts:hover {
+  color: blue;
 }
 
 .singleProductContainer {
