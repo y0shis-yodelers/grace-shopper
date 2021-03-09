@@ -22,7 +22,10 @@ class Cart extends React.Component {
     const stripe = await stripePromise
     const response = await axios.post('api/stripe/create-checkout-session', {
       cart: this.props.cart,
-      products: this.props.products
+      products: this.props.products.filter(
+        product => this.props.cart[product.id]
+      ),
+      user: this.props.user
     })
     const session = response.data
     const result = await stripe.redirectToCheckout({
