@@ -94,7 +94,7 @@ describe('Orders routes', () => {
     }
   })
 
-  describe.only('PUT /orders/:orderId', () => {
+  describe('PUT /orders/:orderId', () => {
     try {
       it('updates an existing order', async () => {
         const editedOrder = await request
