@@ -458,6 +458,21 @@ button:hover {
   margin-right: 0.5em;
 }
 
+.removeItemFromCart {
+  position: relative;
+  left: -0.5em;
+  top: -2.2em;
+  width: 0px;
+  height: auto;
+  color: #757575;
+  margin-bottom: 0.3em;
+}
+
+.removeItemFromCart:hover {
+  cursor: pointer;
+  color: black;
+}
+
 .cart-pc-inner-container {
   display: flex;
   justify-content: space-between;

@@ -5,9 +5,6 @@ const CartProductCard = ({product, quantity, handleQuantityChange}) => {
   return (
     <div className="cartProductContainer">
       <img src={product.imageUrl} />
-      <div className="removeItemFromCart">
-        <span className="material-icons">delete_forever</span>
-      </div>
       <div className="cart-pc-inner-container">
         <div className="nameAndPrice">
           <div className="productName">{product.name}</div>
@@ -41,6 +38,12 @@ const CartProductCard = ({product, quantity, handleQuantityChange}) => {
             +
           </button>
         </div>
+      </div>
+      <div
+        className="removeItemFromCart"
+        onClick={async () => handleQuantityChange(product.id, 0)}
+      >
+        <span className="material-icons">delete_forever</span>
       </div>
     </div>
   )
