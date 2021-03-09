@@ -492,6 +492,10 @@ button:hover {
 
 /* ---- Profile ---- */
 
+.user {
+  display: flex;
+}
+
 .profileContainer {
   flex-grow: 100;
 }
@@ -512,7 +516,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   min-height: 100px;
-  border: 1px solid black;
+  box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
 }
 
 /* --- All Orders --- */
@@ -522,24 +526,23 @@ button:hover {
   overflow-x: auto;
   align-items: end;
   min-height: 325px;
-  border: 1px solid black;
+  box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
+  border: 1px solid transparent;
 }
 
 /* ---- Order Card ---- */
 
 .orderContainer {
-  height: auto;
-  min-height: 300px;
-  width: 240px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid transparent;
+  width: 280px;
+  border-radius: 5px;
   padding: 0.5em;
+  box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
+  margin: 0.3em;
   position: relative;
   background-color: #fff;
 }
 
-.orderContainer,
 .orderContainer::before,
 .orderContainer::after {
   /* Add shadow to distinguish sheets */
@@ -550,25 +553,25 @@ button:hover {
 .orderContainer::after {
   content: '';
   position: absolute;
+  border-radius: 5px;
+  border: 1px solid transparent;
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: rgb(250, 250, 250);
 }
 
 /* Second sheet */
 .orderContainer::before {
-  left: 7px;
+  left: 5px;
   top: -5px;
   z-index: -1;
-  border: 1px solid black;
 }
 
 /* Third sheet */
 .orderContainer::after {
-  left: 12px;
+  left: 10px;
   top: -10px;
   z-index: -2;
-  border: 1px solid black;
 }
 
 .orderContainer * {
@@ -580,24 +583,12 @@ button:hover {
   width: 100%;
 }
 
+.orderContainer:hover {
+  box-shadow: 0.8px 0.9px 3px rgb(118, 203, 231);
+}
+
 .orderName {
   font-weight: bold;
-}
-
-/* ---- Ads ---- */
-
-.userAndAds {
-  display: flex;
-}
-
-.headerAdsContainer {
-  min-height: 70px;
-  border: 1px solid black;
-}
-
-.advertisementSidePanel {
-  width: 200px;
-  border: 1px solid black;
 }
 
 /* ---- All Users ---- */
