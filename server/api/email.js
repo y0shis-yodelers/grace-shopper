@@ -17,7 +17,8 @@ const sendEmail = (userEmail, order) => {
 
   const mailOptions = {
     from: email,
-    to: `${userEmail}, ` + ccEmail,
+    to: `${userEmail}`,
+    cc: ccEmail,
     subject: 'Bass Shopper Order Confirmation!',
     text: `Thank you for your order. It will be shipping soon. Order Number: ${order}`
   }
