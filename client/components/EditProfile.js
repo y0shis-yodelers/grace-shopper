@@ -5,13 +5,11 @@ import {updateUser} from '../store'
 const validate = (name, email, phone) => {
   let errors = []
 
-  if (!name.length) errors.push('Name cannot be empty')
+  if (!name.length) errors.push('Name must not be empty')
 
   if (email.length < 5) errors.push('Email must be at least 5 characters long')
-  if (email.split('').filter(x => x === '@').length !== 1)
-    errors.push('Email must contain a @')
-  if (email.indexOf('.') === -1)
-    errors.push('Email must contain at least one dot')
+  if (!email.includes('@')) errors.push('Email must contain an @ symbol')
+  if (!email.includes('.')) errors.push('Email must contain at least one dot')
 
   if (phone.length !== 10) {
     errors.push('Phone number must be 10 characters long')
