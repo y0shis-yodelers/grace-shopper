@@ -69,8 +69,9 @@ class SingleProduct extends React.Component {
         ) : (
           <div className="sp-view-container">
             <div className="singleProductContainer">
-              <Link to="/home">
-                <div className="backToAllProducts">Back to all products</div>
+              <Link to="/home" className="backToAllProducts">
+                <span className="material-icons">keyboard_arrow_left</span>
+                <span>Back to all products</span>
               </Link>
               <div className="imgAndDescription">
                 <img src={singleProduct.imageUrl} />
@@ -112,7 +113,9 @@ class SingleProduct extends React.Component {
                       name="addItem"
                       onClick={handleUpdateCart}
                     >
-                      Add To Cart
+                      {this.state.quantity === 0
+                        ? 'Remove From Cart'
+                        : 'Add To Cart'}
                     </button>
                   </div>
                 </div>
