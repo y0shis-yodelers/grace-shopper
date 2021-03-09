@@ -11,6 +11,7 @@ import {
   SingleOrder,
   Checkout,
   AllUsers,
+  EditProfile,
   OrderSuccess,
   OrderFailure,
   About
@@ -63,6 +64,7 @@ class Routes extends Component {
 
         <Route path="/products/:productId" component={SingleProduct} />
         <Route path="/users/:userId/orders/:orderId" component={SingleOrder} />
+        <Route path="/users/:userId/edit" component={EditProfile} />
         <Route path="/users/:userId" component={UserProfile} />
         <Route exact path="/users" component={AllUsers} />
 
