@@ -40,6 +40,7 @@ nav a {
   display: inline-block;
   margin: 1em;
   font-size: 18px;
+  margin-top: 3.6em;
 }
 
 form div {
@@ -58,7 +59,17 @@ button:hover {
 
 /* ---- NavBar ---- */
 
-.checkoutAndBadge {
+.logo {
+  height: 6em;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1em;
+  filter: grayscale();
+}
+
+.cartAndBadge {
   width: max-content;
 }
 
@@ -66,17 +77,17 @@ button:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: darkgrey;
+  background-color: #757575;
   color: white;
   padding: 0.2em;
   padding-right: 0.3em;
-  border: 1px solid darkgrey;
+  border: 1px solid #757575;
   border-radius: 5px;
   margin-left: 0.1em;
 }
 
 .totalBadge .material-icons {
-  margin-left: 0.5em;
+  margin-left: 0.2em;
 }
 
 .totalBadge.hidden {
@@ -86,6 +97,112 @@ button:hover {
 .navbar-container {
   display: flex;
   justify-content: flex-end;
+}
+
+/* ---- AuthForm ---- */
+
+.outer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: auto;
+  font-size: 1.6em;
+  padding: 2em 0;
+}
+
+.authForm-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: min-content;
+}
+
+.authForm-container * {
+  border-radius: 5px;
+}
+
+.authForm-container div {
+  width: 100%;
+  margin-top: 0;
+}
+
+.authForm-container form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #fff;
+  padding: 1em;
+  background: linear-gradient(#3981ef, #7dacf1);
+  color: #fff;
+  width: 380px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.authForm-container form div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.authForm-container label {
+  font-weight: normal;
+  letter-spacing: 0.8px;
+  align-self: flex-start;
+  margin-left: 0.8em;
+  margin-bottom: 0.3em;
+}
+
+.authForm-container label:nth-child(1) {
+  margin-top: 1em;
+}
+
+.authForm-container input[type='text'],
+.authForm-container input[name='password'],
+.authForm-container button {
+  height: 2.6em;
+  width: 90%;
+  padding: 0 1em;
+  font-size: 0.6em;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+
+.authForm-container button {
+  width: 90%;
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+
+.authForm-container a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 380px;
+  height: 3em;
+  border: 1px solid var(--blueAccent);
+  background-color: #fff;
+  margin-top: 0.6em;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.authForm-container a img {
+  height: 2.2em;
+  width: auto;
+}
+
+.authForm-container span {
+  margin-right: 1em;
+}
+
+.warning {
+  font-size: 0.6em;
 }
 
 /* ---- AllProducts ---- */
@@ -270,7 +387,7 @@ button:hover {
   justify-content: space-around;
 }
 
-.cartBtns button {
+button {
   padding: 0.5em 1em;
   font-size: 16px;
   border: 1px solid transparent;
@@ -279,7 +396,7 @@ button:hover {
   box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
 }
 
-.cartBtns button:hover {
+button:hover {
   cursor: pointer;
   box-shadow: 0.8px 0.9px 3px rgb(118, 203, 231);
 }
@@ -334,6 +451,20 @@ button:hover {
   width: 100px;
   align-items: center;
   justify-content: space-around;
+}
+
+.quantityAndBtns button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  padding: 0.2em;
+}
+
+.quantityAndBtns button:hover {
+  background-color: #757575;
+  color: white;
 }
 
 /* ---- Profile ---- */

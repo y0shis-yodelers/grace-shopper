@@ -10,7 +10,9 @@ const Navbar = ({isLoggedIn, cart}) => {
 
   return (
     <div>
-      <h1>Bass Shopper</h1>
+      <Link to="/home">
+        <img className="logo" src="https://i.imgur.com/wj50jx5.png" />
+      </Link>
       <nav>
         {isLoggedIn ? (
           <div className="nav-link-container">
@@ -34,7 +36,7 @@ const Navbar = ({isLoggedIn, cart}) => {
                 }
               >
                 <span>{totalItems === 0 ? '' : totalItems}</span>
-                <span className="material-icons">shopping_cart </span>
+                <span className="material-icons">shopping_cart</span>
               </div>
             </a>
           </div>
@@ -51,8 +53,8 @@ const Navbar = ({isLoggedIn, cart}) => {
                 }
               >
                 <span>{totalItems === 0 ? '' : totalItems}</span>
+                <span className="material-icons">shopping_cart</span>
               </span>
-              <span className="material-icons">shopping_cart </span>
             </a>
           </div>
         )}
