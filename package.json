@@ -68,7 +68,8 @@
     "redux-thunk": "^2.3.0",
     "sequelize": "^5.3.1",
     "socket.io": "^2.2.0",
-    "stripe": "^8.137.0"
+    "stripe": "^8.137.0",
+    "twilio": "^3.57.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

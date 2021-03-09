@@ -19,6 +19,9 @@ const Navbar = ({isLoggedIn, cart}) => {
           <div className="nav-link-container">
             {/* The navbar will show these links after you log in */}
             <Link to="/home">Home</Link>
+            <a href="https://github.com/y0shis-yodelers/grace-shopper">
+              About Us
+            </a>
             <a
               href="#"
               onClick={() => {
@@ -45,8 +48,10 @@ const Navbar = ({isLoggedIn, cart}) => {
           <div className="nav-link-container">
             {/* The navbar will show these links before you log in */}
             <Link to="/home">Home</Link>
+            <a href="https://github.com/y0shis-yodelers/grace-shopper">
+              About Us
+            </a>
             <Link to="/login">Login</Link>
-            <Link to="/about">About Us</Link>
             <Link to="/signup">Sign Up</Link>
             <a className="cartAndBadge" href="">
               <span

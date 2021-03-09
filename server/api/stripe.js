@@ -4,6 +4,7 @@ const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const router = require('express').Router()
 const {Order, Product} = require('../db/models')
 const sendEmail = require('./email')
+const sendSMS = require('./twilio')
 
 //generate stripe format for cart
 const generateStripeCart = (cart, products) => {
@@ -64,6 +65,7 @@ router.post('/success', async (req, res, next) => {
   //send email via nodemailer
   sendEmail(user.email, cartId)
   //send sms via twilio
+  sendSMS(user)
   //redirect to homepage
   res.send('Order Complete')
 })
