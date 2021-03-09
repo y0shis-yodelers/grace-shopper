@@ -41,50 +41,51 @@ class Cart extends React.Component {
     const {handleQuantityChange, handleCheckout} = this
 
     return (
-      <div className="cartContainer">
+      <div className="cartAndTotals">
+        <div className="cartTitle">My Cart:</div>
+        <div className="cartContainer">
+          <div className="cartBox">
+            {products.map(product => {
+              // if the cart doesn't hold this item
+              // jump out of map fn, so that we don't
+              // generate CartProductCards for items
+              // that aren't in our cart
+              if (!cart[product.id]) return
+              // if cart does hold this item
+              // extract its quantity and pass to CartProductCard
+              const quantity = cart[product.id]
+              return (
+                <div className="productCardOutline" key={product.id}>
+                  <CartProductCard
+                    product={product}
+                    quantity={quantity}
+                    handleQuantityChange={handleQuantityChange}
+                  />
+                </div>
+              )
+            })}
+          </div>
+          <div className="cartBtns">
+            <button
+              type="button"
+              className="checkoutBtn"
+              onClick={handleCheckout}
+            >
+              Checkout
+            </button>
+            <button
+              className="clearCart"
+              type="button"
+              onClick={() => {
+                localStorage.setItem('cart', JSON.stringify({}))
+                this.props.emptyCart(this.props.user.id)
+              }}
+            >
+              Clear Cart
+            </button>
+          </div>
+        </div>
         <Total products={products} cart={cart} />
-        <div className="cartBox">
-          {products.map(product => {
-            // if the cart doesn't hold this item
-            // jump out of map fn, so that we don't
-            // generate CartProductCards for items
-            // that aren't in our cart
-            if (!cart[product.id]) return
-
-            // if cart does hold this item
-            // extract its quantity and pass to CartProductCard
-            const quantity = cart[product.id]
-
-            return (
-              <div className="productCardOutline" key={product.id}>
-                <CartProductCard
-                  product={product}
-                  quantity={quantity}
-                  handleQuantityChange={handleQuantityChange}
-                />
-              </div>
-            )
-          })}
-        </div>
-        <div className="cartBtns">
-          <button
-            type="button"
-            className="checkoutBtn"
-            onClick={handleCheckout}
-          >
-            Checkout
-          </button>
-          <button
-            className="clearCart"
-            type="button"
-            onClick={() => {
-              localStorage.setItem('cart', JSON.stringify({}))
-              this.props.emptyCart(this.props.user.id)
-            }}
-          >
-            Clear Cart
-          </button>
-        </div>
       </div>
     )
   }
