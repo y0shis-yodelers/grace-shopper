@@ -79,6 +79,17 @@ button:hover {
   filter: grayscale();
 }
 
+.tagline {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 0.4em;
+  position: relative;
+  top: 7.2em;
+  color: #757575;
+  margin-left: 1.1em;
+}
+
 .cartAndBadge {
   width: max-content;
 }
@@ -93,7 +104,6 @@ button:hover {
   padding-right: 0.3em;
   border: 1px solid #757575;
   border-radius: 5px;
-  margin-left: 0.1em;
 }
 
 .totalBadge .material-icons {
@@ -425,8 +435,8 @@ button:hover {
 
 .cartBtns {
   display: flex;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: -6.6em;
   width: 100%;
   align-items: center;
   justify-content: space-around;
