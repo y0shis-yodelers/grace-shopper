@@ -81,8 +81,6 @@ router.post('/users/:userId', isAdminOrUser, async (req, res, next) => {
     })
     //newOrder.setUser(user)
     user.hasOrder(newOrder)
-    console.log('blue', newOrder)
-    console.log('red', user)
     res.status(201).json(newOrder)
     // res.send(await Order.create(req.body))
   } catch (error) {

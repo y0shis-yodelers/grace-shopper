@@ -56,7 +56,7 @@ router.post('/success', async (req, res, next) => {
 
   // update order to completed
   try {
-    await Order.update({isPaid: true}, {where: {id: cartId}})
+    await Order.update({isPaid: true, date: 'complete'}, {where: {id: cartId}})
   } catch (err) {
     console.log(err)
   }
