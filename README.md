@@ -46,6 +46,8 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
 
 ### Installation
 
+To install all dependencies: `npm run install`
+
 #### Store your private infromation in a new file secrets.js\* or global environmenal variables
 
 ```
