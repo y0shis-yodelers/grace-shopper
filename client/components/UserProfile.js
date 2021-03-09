@@ -6,7 +6,6 @@ import AllOrders from './AllOrders'
 
 class UserProfile extends React.Component {
   componentDidMount() {
-    // load user's order history here
     // load advertisements/items if we so choose
   }
 
