@@ -10,7 +10,7 @@ import {
   UserProfile,
   SingleOrder,
   FullPageCart,
-  AllUsers,
+  AllUsers
 } from './components'
 import {me} from './store'
 import {reduceOrderToGetPastCart} from './components/helperFunctions'

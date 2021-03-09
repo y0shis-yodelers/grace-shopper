@@ -1,10 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {logout} from '../store'
+import {logout} from '../store/user'
+import store from '../store'
+import {fetchClearCart} from '../store/cart'
 
-const Navbar = ({isLoggedIn, cart, logoutAndSetLocalStorageCart}) => (
+const Navbar = ({isLoggedIn}) => (
   <div>
     <h1>Guitar Picks Homepage</h1>
     <nav>
@@ -12,7 +13,13 @@ const Navbar = ({isLoggedIn, cart, logoutAndSetLocalStorageCart}) => (
         <div>
           {/* The navbar will show these links after you log in */}
           <Link to="/home">Home</Link>
-          <a href="#" onClick={() => logoutAndSetLocalStorageCart(cart)}>
+          <a
+            href="#"
+            onClick={() => {
+              store.dispatch(fetchClearCart())
+              store.dispatch(logout())
+            }}
+          >
             Logout
           </a>
           <Link to="/cart">Cart</Link>
@@ -41,25 +48,4 @@ const mapState = state => ({
   isLoggedIn: !!state.user.id
 })
 
-const mapDispatch = dispatch => ({
-  // here we define a logout procedure
-  // that also sets the localStorage cart instance
-  // to the redux store current state on logout
-  // allowing us to persist the user cart
-  // on logout on the same local machine
-
-  logoutAndSetLocalStorageCart: cartFromStore => {
-    localStorage.setItem('cart', JSON.stringify(cartFromStore))
-    dispatch(logout())
-  }
-})
-
-export default connect(mapState, mapDispatch)(Navbar)
-
-/**
- * PROP TYPES
- */
-Navbar.propTypes = {
-  logoutAndSetLocalStorageCart: PropTypes.func.isRequired,
-  isLoggedIn: PropTypes.bool.isRequired
-}
+export default connect(mapState)(Navbar)

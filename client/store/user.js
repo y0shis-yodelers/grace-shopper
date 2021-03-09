@@ -64,6 +64,7 @@ export default function(state = defaultUser, action) {
     case GET_USER:
       return action.user
     case REMOVE_USER:
+      localStorage.setItem('cart', JSON.stringify({}))
       return defaultUser
     default:
       return state
