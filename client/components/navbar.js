@@ -27,8 +27,13 @@ const Navbar = ({isLoggedIn, cart}) => {
             </a>
             <Link to="/checkout" className="checkoutAndBadge">
               <span>
-                <span>
-                  Checkout <span className="totalBadge">{totalItems}</span>
+                Checkout{' '}
+                <span
+                  className={
+                    totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'
+                  }
+                >
+                  {totalItems === 0 ? '' : totalItems}
                 </span>
               </span>
             </Link>
@@ -40,7 +45,18 @@ const Navbar = ({isLoggedIn, cart}) => {
             {/* The navbar will show these links before you log in */}
             <Link to="/home">Home</Link>
             <Link to="/login">Login</Link>
-            <Link to="/checkout">Checkout {totalItems}</Link>
+            <Link to="/checkout">
+              <span>
+                Checkout{' '}
+                <span
+                  className={
+                    totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'
+                  }
+                >
+                  {totalItems === 0 ? '' : totalItems}
+                </span>
+              </span>
+            </Link>
             <Link to="/signup">Sign Up</Link>
           </div>
         )}

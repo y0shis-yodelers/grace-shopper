@@ -44,6 +44,10 @@ img {
   border-radius: 5px;
 }
 
+.totalBadge.hidden {
+  display: none;
+}
+
 /* ---- AllProducts ---- */
 
 .productsAndCart {
