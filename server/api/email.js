@@ -1,5 +1,8 @@
 const nodemailer = require('nodemailer')
-const {email, pw} = require('../../secrets')
+
+const pw = process.env.EMAIL_PW || require('../../secrets')
+console.log(pw)
+const email = 'yoshis.yodelers@gmail.com'
 
 const sendEmail = (userEmail, order) => {
   const transporter = nodemailer.createTransport({
