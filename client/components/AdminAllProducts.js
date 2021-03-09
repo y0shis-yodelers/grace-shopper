@@ -2,7 +2,7 @@ import React, {useMemo, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useTable, useSortBy} from 'react-table'
 import {PRODUCT_COLUMNS} from './table_columns/product_columns'
-import {fetchAllProducts} from '../store/products'
+import {fetchAdminAllProducts} from '../store/products'
 
 export const AdminAllProducts = () => {
   // useDispatch gives us access to dispatch
@@ -16,7 +16,7 @@ export const AdminAllProducts = () => {
   // is a callback; the second arg is the dataType, which
   // in this case is an array
   useEffect(() => {
-    const getProducts = () => dispatch(fetchAllProducts())
+    const getProducts = () => dispatch(fetchAdminAllProducts())
     getProducts()
   }, [])
 
