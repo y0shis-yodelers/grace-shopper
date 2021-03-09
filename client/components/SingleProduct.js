@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
+import Loader from 'react-loader-spinner'
 import {formatPrice} from './helperFunctions'
 import {fetchUpdateCart} from '../store/cart'
 import {fetchAllProducts} from '../store/products'
@@ -67,7 +68,13 @@ class SingleProduct extends React.Component {
     return (
       <div>
         {singleProduct && !singleProduct.id ? (
-          <div>Loading ...</div>
+          <Loader
+            type="TailSpin"
+            color="#00BFFF"
+            height={100}
+            width={100}
+            timeout={3000} //3 secs
+          />
         ) : (
           <div className="sp-view-container">
             <div className="singleProductContainer">

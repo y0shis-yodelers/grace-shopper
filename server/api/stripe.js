@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const router = require('express').Router()
 
@@ -33,8 +35,8 @@ router.post('/create-checkout-session', async (req, res, next) => {
   res.json({id: session.id})
 })
 
-router.get('/sucess', async (req, res, next) => {
+/* router.get('/sucess', async (req, res, next) => {
   //remove from inventory
-})
+}) */
 
 module.exports = router
