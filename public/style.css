@@ -381,10 +381,7 @@ button:hover {
 }
 
 .cartContainer {
-  position: sticky;
-  top: 2em;
-  height: 70vh;
-  box-shadow: rgba(0, 0, 0, 0.15);
+  height: 372px;
 }
 
 .cartTitle {
@@ -393,12 +390,22 @@ button:hover {
 
 /* ---- Cart ---- */
 
+.cartAndTotals {
+  position: sticky;
+  top: 2em;
+  height: 70vh;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 .cartBox {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 86%;
+  height: 100%;
   width: 100%;
   padding: 0.3em;
   overflow-y: auto;
@@ -407,16 +414,22 @@ button:hover {
 .cartBtns {
   display: flex;
   position: absolute;
-  bottom: -3em;
+  bottom: 0;
   width: 100%;
   align-items: center;
   justify-content: space-around;
 }
 
-.totalContainer {
-  line-height: 1.4em;
+.totalsContainer {
   margin: 1em;
   margin-bottom: 0;
+}
+
+.totalsLineItem {
+  margin-bottom: 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* ---- CartProductCard ---- */
