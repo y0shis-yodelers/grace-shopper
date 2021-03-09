@@ -5,6 +5,11 @@ const UPDATE_CART = 'UPDATE_CART'
 const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
 const CLEAR_CART = 'CLEAR_CART'
 const CHECKOUT_CART = 'CHECKOUT_CART'
+const LOOK_INTO_4_CLEAR = 'LOOK_INTO_4_CLEAR'
+
+export const DOUBLE_CHECK = () => ({
+  type: LOOK_INTO_4_CLEAR
+})
 
 // action creators
 const updateCart = (productId, quantity) => {
@@ -69,6 +74,21 @@ export const fetchClearCart = userId => {
   }
 }
 
+//Successfull order thunk
+export const fetchCompleteOrder = userId => {
+  return async dispatch => {
+    try {
+      const cart = await axios.get(`api/carts/${userId}`)
+      console.log('CART!!! THIS IS WANT', cart)
+      //const {data} = await axios.post('/api/stripe/success', CART)
+
+      dispatch(DOUBLE_CHECK())
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
 // initial state of subreducer
 const initState = {}
 
@@ -112,6 +132,8 @@ export default (state = initState, action) => {
       localStorage.setItem('cart', JSON.stringify({}))
       return {}
     }
+    case LOOK_INTO_4_CLEAR:
+      return {}
     default:
       return state
   }
