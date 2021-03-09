@@ -65,7 +65,6 @@ class Cart extends React.Component {
             )
           })}
         </div>
-
         <div className="cartBtns">
           <button
             type="button"
