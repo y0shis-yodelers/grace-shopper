@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {ToastContainer, toast} from 'react-toastify'
 import {updateUser} from '../store'
+import {notify} from './helperFunctions'
 
 const validate = (name, email, phone) => {
   let errors = []
@@ -34,18 +34,6 @@ class EditProfile extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  notify() {
-    toast('Test note!', {
-      position: 'top-right',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined
-    })
-  }
-
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
@@ -55,13 +43,15 @@ class EditProfile extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
 
+    const {userId} = this.props.user
     const {name, email, phoneNumber} = this.state
     const errors = validate(name, email, phoneNumber)
 
     if (errors.length) this.setState({errors})
     else {
       this.props.updateUser(this.state)
-      this.notify()
+      this.props.history.push(`/users/${userId}/`)
+      notify('Updated profile information!', 'success')
     }
   }
 
@@ -121,8 +111,6 @@ class EditProfile extends React.Component {
 
           <input type="submit" value="Submit" />
         </form>
-
-        <ToastContainer />
       </div>
     ) : (
       <div>User auth failure!</div>
