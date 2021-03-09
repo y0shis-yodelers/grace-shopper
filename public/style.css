@@ -102,6 +102,7 @@ button:hover {
   color: white;
   padding: 0.2em;
   padding-right: 0.3em;
+  padding-left: 0.3em;
   border: 1px solid #757575;
   border-radius: 5px;
 }
