@@ -2,6 +2,24 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {updateUser} from '../store'
 
+const validate = (name, email, phone) => {
+  let errors = []
+
+  if (!name.length) errors.push('Name cannot be empty')
+
+  if (email.length < 5) errors.push('Email must be at least 5 characters long')
+  if (email.split('').filter(x => x === '@').length !== 1)
+    errors.push('Email must contain a @')
+  if (email.indexOf('.') === -1)
+    errors.push('Email must contain at least one dot')
+
+  if (phone.length !== 10) {
+    errors.push('Phone number must be 10 characters long')
+  }
+
+  return errors
+}
+
 class EditProfile extends React.Component {
   constructor(props) {
     super(props)
@@ -9,8 +27,9 @@ class EditProfile extends React.Component {
       id: this.props.user.id || '',
       name: this.props.user.name || '',
       email: this.props.user.email || '',
-      phoneNumber: this.props.user.phoneNumber || ''
+      phoneNumber: this.props.user.phoneNumber || '',
       // password: '',
+      errors: []
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -24,16 +43,23 @@ class EditProfile extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.updateUser(this.state)
+
+    const {name, email, phoneNumber} = this.state
+    const errors = validate(name, email, phoneNumber)
+
+    if (errors.length) this.setState({errors})
+    else this.props.updateUser(this.state)
   }
 
   render() {
     const {userId} = this.props.match.params
-    const {name, email, phoneNumber /* password */} = this.state
+    const {name, email, phoneNumber, /* password, */ errors} = this.state
     const {handleChange, handleSubmit} = this
 
     return this.props.user.id && this.props.user.id === +userId ? (
       <form className="shippingData" onSubmit={handleSubmit}>
+        {errors.map(error => <p key={error}>Error: {error}</p>)}
+
         <div className="formField">
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" onChange={handleChange} value={name} />
