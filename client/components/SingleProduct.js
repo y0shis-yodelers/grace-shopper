@@ -7,6 +7,7 @@ import {fetchLoadCart, fetchUpdateCart} from '../store/cart'
 import {fetchAllProducts} from '../store/products'
 import {fetchSingleProduct} from '../store/singleProduct'
 import Cart from './Cart'
+import QuantityInterface from './QuantityInterface'
 
 class SingleProduct extends React.Component {
   constructor(props) {
@@ -14,8 +15,8 @@ class SingleProduct extends React.Component {
     this.state = {
       quantity: 0
     }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleUpdateCart = this.handleUpdateCart.bind(this)
+    this.setQuantity = this.setQuantity.bind(this)
+    this.updateQuantity = this.updateQuantity.bind(this)
   }
 
   componentDidMount() {
@@ -33,6 +34,12 @@ class SingleProduct extends React.Component {
         )
       })
     }
+  }
+
+  setQuantity(newQuantity) {
+    this.setState({
+      quantity: newQuantity
+    })
   }
 
   handleChange(addOrSubtract, inventory) {
@@ -57,7 +64,7 @@ class SingleProduct extends React.Component {
     })
   }
 
-  handleUpdateCart() {
+  updateQuantity() {
     const userId = this.props.user.id || 0
     const productId = this.props.singleProduct.id
     this.props.updateCart(userId, productId, this.state.quantity)
@@ -65,7 +72,7 @@ class SingleProduct extends React.Component {
 
   render() {
     const {singleProduct} = this.props || {}
-    const {handleChange, handleUpdateCart} = this
+    const {setQuantity, updateQuantity} = this
 
     return (
       <div>
@@ -97,31 +104,18 @@ class SingleProduct extends React.Component {
                     Price: {formatPrice(singleProduct.price.toString())}
                   </div>
                   <div className="quantityContainer">
-                    <div className="quantityValueAndBtns">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          handleChange('subtract', singleProduct.inventory)
-                        }
-                      >
-                        -
-                      </button>
-                      <div className="currentQuantity">
-                        {this.state.quantity}
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() =>
-                          handleChange('add', singleProduct.inventory)
-                        }
-                      >
-                        +
-                      </button>
-                    </div>
+                    <QuantityInterface
+                      quantity={this.state.quantity}
+                      setQuantity={setQuantity}
+                      userId={this.props.user.id}
+                      productId={singleProduct.id}
+                      inventory={singleProduct.inventory}
+                      updateQuantity={updateQuantity}
+                    />
                     <button
                       type="submit"
                       name="addItem"
-                      onClick={handleUpdateCart}
+                      onClick={updateQuantity}
                     >
                       Add To Cart
                     </button>
