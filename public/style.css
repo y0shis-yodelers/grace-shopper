@@ -213,7 +213,7 @@ img {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 78%;
+  height: 86%;
   width: 100%;
   padding: 0.3em;
   overflow-y: auto;
@@ -229,14 +229,21 @@ img {
 }
 
 .cartBtns button {
-  background-color: lightgrey;
   padding: 0.5em 1em;
   font-size: 16px;
-  border: 1px solid lightgrey;
+  border: 1px solid transparent;
   border-radius: 5px;
+  transition: box-shadow 0.1s ease-in-out;
+  box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
+}
+
+.cartBtns button:hover {
+  cursor: pointer;
+  box-shadow: 0.8px 0.9px 3px rgb(118, 203, 231);
 }
 
 .totalContainer {
+  line-height: 1.4em;
   margin: 1em;
   margin-bottom: 0;
 }
