@@ -7,6 +7,7 @@ const CLEAR_CART = 'CLEAR_CART'
 const CHECKOUT_CART = 'CHECKOUT_CART'
 const LOOK_INTO_4_CLEAR = 'LOOK_INTO_4_CLEAR'
 
+//something to do with return {} from reducer
 export const DOUBLE_CHECK = () => ({
   type: LOOK_INTO_4_CLEAR
 })
@@ -79,8 +80,8 @@ export const fetchCompleteOrder = userId => {
   return async dispatch => {
     try {
       const cart = await axios.get(`api/carts/${userId}`)
-      console.log('CART!!! THIS IS WANT', cart)
-      //const {data} = await axios.post('/api/stripe/success', CART)
+      console.log('CART!!! THIS IS WANT', cart.data)
+      const worked = await axios.post('/api/stripe/success', cart.data)
 
       dispatch(DOUBLE_CHECK())
     } catch (error) {
@@ -133,7 +134,7 @@ export default (state = initState, action) => {
       return {}
     }
     case LOOK_INTO_4_CLEAR:
-      return {}
+      return state
     default:
       return state
   }

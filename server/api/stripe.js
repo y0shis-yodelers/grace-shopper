@@ -2,7 +2,7 @@
 
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const router = require('express').Router()
-const axios = require('axios')
+const {Order, Product} = require('../db/models')
 
 //generate stripe format for cart
 const generateStripeCart = (cart, products) => {
@@ -25,7 +25,6 @@ const generateStripeCart = (cart, products) => {
 router.post('/create-checkout-session', async (req, res, next) => {
   const stripeCart = generateStripeCart(req.body.cart, req.body.products)
 
-  console.log(stripeCart)
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: stripeCart,
@@ -38,9 +37,21 @@ router.post('/create-checkout-session', async (req, res, next) => {
 })
 
 router.post('/success', (req, res, next) => {
-  console.log('blue', req.body)
-  res.sendStatus(500)
+  console.log('blue', req.body.products)
+  const ordered = req.body.products
+
   //remove from inventory
+  ordered.forEach(async product => {
+    try {
+      await Product.update(
+        {inventory: product.inventory - product.ProductOrder.quantity},
+        {where: {id: product.id}, returning: true}
+      )
+    } catch (err) {
+      console.log(err)
+    }
+  })
+  res.sendStatus(500)
   // update order
   //5 seconds on confirmation page
   //send email via nodemailer

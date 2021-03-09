@@ -1,24 +1,15 @@
 import React from 'react'
-import axios from 'axios'
 import {connect} from 'react-redux'
-import {fetchClearCart, fetchCompleteOrder} from '../store/cart'
-import {fetchAllProducts} from '../store/products'
+import {fetchCompleteOrder} from '../store/cart'
 
 class OrderSuccess extends React.Component {
-  componentDidMount() {
-    this.props.getProducts()
+  componentDidUpdate() {
+    console.log('user from cdm', this.props.user)
+    this.props.completeOrder(this.props.user.id)
   }
 
   render() {
-    // let cartWithProduct = this.props.products.filter(
-    //   (product) => this.props.cart[product.id]
-    // )
-    // console.log(cartWithProduct)
-    console.log('products', this.props.products)
-    console.log('cart', this.props.cart)
     console.log('user', this.props.user)
-
-    this.props.completeOrder(this.props.user.id)
 
     return (
       <div>
@@ -33,16 +24,12 @@ class OrderSuccess extends React.Component {
 }
 const mapDispatch = dispatch => {
   return {
-    emptyCart: userId => dispatch(fetchClearCart(userId)),
-    completeOrder: userId => dispatch(fetchCompleteOrder(userId)),
-    getProducts: () => dispatch(fetchAllProducts())
+    completeOrder: userId => dispatch(fetchCompleteOrder(userId))
   }
 }
 
 const mapState = state => ({
-  user: state.user,
-  cart: state.cart,
-  products: state.products
+  user: state.user
 })
 
 export default connect(mapState, mapDispatch)(OrderSuccess)
