@@ -24,7 +24,7 @@ router.get('/', async (req, res, next) => {
 // GET all products route '/api/products' (admin sees all products)
 router.get('/admin', isAdmin, async (req, res, next) => {
   try {
-    const products = await Product.findAll()
+    const products = await Product.findAll({include: [{model: Order}]})
     res.json(products)
   } catch (err) {
     next(err)
@@ -38,7 +38,9 @@ router.get('/:productId', async (req, res, next) => {
 
     if (isNaN(productId)) res.status(400).send(productId + ' is not a number!')
     else {
-      const product = await Product.findByPk(productId)
+      const product = await Product.findByPk(productId, {
+        include: [{model: Order}]
+      })
       res.json(product)
     }
   } catch (err) {

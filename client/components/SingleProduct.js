@@ -2,35 +2,37 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
-import {formatPrice} from './helperFunctions'
-import {fetchUpdateCart} from '../store/cart'
+import {formatPrice, getQuantityFromCart} from './helperFunctions'
+import {fetchLoadCart, fetchUpdateCart} from '../store/cart'
 import {fetchAllProducts} from '../store/products'
 import {fetchSingleProduct} from '../store/singleProduct'
 import Cart from './Cart'
-
-// helper sets local state quantity field
-// by checking localStorage for current value of cart
-function getQuantityFromCart(productId) {
-  const cart = JSON.parse(localStorage.getItem('cart'))
-  if (!cart) return 0
-  if (cart && !cart[productId]) return 0
-  return cart[productId]
-}
 
 class SingleProduct extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      quantity: getQuantityFromCart(this.props.match.params.productId)
+      quantity: 0
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleUpdateCart = this.handleUpdateCart.bind(this)
   }
 
   componentDidMount() {
-    this.props.getProducts()
     const productId = this.props.match.params.productId
     this.props.getSingleProduct(productId)
+  }
+
+  async componentDidUpdate(prevProps) {
+    if (!prevProps.user.id && this.props.user.id) {
+      await this.props.loadCart(this.props.user.id)
+      this.setState({
+        quantity: getQuantityFromCart(
+          this.props.cart,
+          this.props.singleProduct.id
+        )
+      })
+    }
   }
 
   handleChange(addOrSubtract, inventory) {
@@ -137,12 +139,17 @@ class SingleProduct extends React.Component {
 
 const mapState = state => ({
   user: state.user,
+  cart: state.cart,
   singleProduct: state.singleProduct
 })
 
 const mapDispatch = dispatch => ({
   getProducts: () => dispatch(fetchAllProducts()),
+
   getSingleProduct: productId => dispatch(fetchSingleProduct(productId)),
+
+  loadCart: userId => dispatch(fetchLoadCart(userId)),
+
   updateCart: (userId, productId, quantity) =>
     dispatch(fetchUpdateCart(userId, productId, quantity))
 })

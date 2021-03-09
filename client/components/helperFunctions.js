@@ -9,3 +9,9 @@ export function formatPrice(price) {
   const formattedPrice = priceArray.join('')
   return `$${formattedPrice}`
 }
+
+export function getQuantityFromCart(cart, productId) {
+  const foundProduct = cart.filter(product => product.id === productId)[0]
+
+  return foundProduct.ProductOrder.quantity
+}

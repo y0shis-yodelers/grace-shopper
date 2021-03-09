@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import {formatPrice} from './helperFunctions'
 import QuantityInterface from './QuantityInterface'
@@ -46,7 +47,7 @@ class ProductCard extends React.Component {
             timeout={3000} //3 secs
           />
         ) : (
-          <div>
+          <Link to={`/products/${product.id}`}>
             <div className="productContainer">
               <img src={imageUrl} />
               <div className="nameAndPrice">
@@ -56,9 +57,7 @@ class ProductCard extends React.Component {
                 </div>
               </div>
               <div className="productInventory">
-                {inventory > 0
-                  ? `In-stock: ${inventory} items remaining`
-                  : 'Sold out'}
+                {inventory > 0 ? `In-stock:  items remaining` : 'Sold out'}
               </div>
             </div>
             <QuantityInterface
@@ -68,7 +67,7 @@ class ProductCard extends React.Component {
               productId={product.id}
               inventory={inventory}
             />
-          </div>
+          </Link>
         )}
       </div>
     )
