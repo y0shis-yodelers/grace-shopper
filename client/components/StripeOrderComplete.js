@@ -1,18 +1,15 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchCompleteOrder, fetchCompleteOrderClearCart} from '../store/cart'
+import {fetchCompleteOrder} from '../store/cart'
 
 class OrderSuccess extends React.Component {
   componentDidUpdate(prevProps) {
     if (!prevProps.user.id && this.props.user.id) {
       this.props.completeOrder(this.props.user)
-      //this.props.completeOrderClearCart()
     }
   }
 
   render() {
-    console.log('user', this.props.user)
-
     return (
       <div>
         <h4>Thanks {this.props.user.name}!</h4>
@@ -24,10 +21,10 @@ class OrderSuccess extends React.Component {
     )
   }
 }
+
 const mapDispatch = dispatch => {
   return {
-    completeOrder: userId => dispatch(fetchCompleteOrder(userId)),
-    completeOrderClearCart: () => dispatch(fetchCompleteOrderClearCart())
+    completeOrder: userId => dispatch(fetchCompleteOrder(userId))
   }
 }
 
