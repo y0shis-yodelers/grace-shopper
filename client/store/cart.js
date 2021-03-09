@@ -76,12 +76,15 @@ export const fetchClearCart = userId => {
 }
 
 //Successfull order thunk
-export const fetchCompleteOrder = userId => {
+export const fetchCompleteOrder = user => {
   return async dispatch => {
     try {
-      const cart = await axios.get(`api/carts/${userId}`)
+      const cart = await axios.get(`api/carts/${user.id}`)
       console.log('CART!!! THIS IS WANT', cart.data)
-      const worked = await axios.post('/api/stripe/success', cart.data)
+      const worked = await axios.post('/api/stripe/success', {
+        user,
+        cart: cart.data
+      })
 
       dispatch(DOUBLE_CHECK())
     } catch (error) {

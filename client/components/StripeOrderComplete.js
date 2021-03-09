@@ -4,8 +4,8 @@ import {fetchCompleteOrder} from '../store/cart'
 
 class OrderSuccess extends React.Component {
   componentDidUpdate() {
-    console.log('user from cdm', this.props.user)
-    this.props.completeOrder(this.props.user.id)
+    console.log('user', this.props.user)
+    this.props.completeOrder(this.props.user)
   }
 
   render() {
