@@ -91,6 +91,17 @@ img {
   width: auto;
 }
 
+.quant-view-prod-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+
+.quant-view-prod-container a:hover {
+  color: blue;
+}
+
 .productContainer .nameAndPrice {
   display: flex;
   flex-wrap: nowrap;
@@ -248,7 +259,7 @@ img {
   font-weight: normal;
 }
 
-.cartProductContainer .quantityAndBtns {
+.quantityAndBtns {
   display: flex;
   width: 100px;
   align-items: center;

@@ -28,12 +28,7 @@ class AllProducts extends React.Component {
           <div className="productsAndCart">
             <div className="allProductContainer">
               {products.map(product => (
-                <div key={product.id}>
-                  <ProductCard product={product} />
-                  <Link className="productLink" to={`/products/${product.id}`}>
-                    view product
-                  </Link>
-                </div>
+                <ProductCard key={product.id} product={product} />
               ))}
             </div>
             <Cart />

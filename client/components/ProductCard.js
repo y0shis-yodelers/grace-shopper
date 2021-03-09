@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Loader from 'react-loader-spinner'
+import {Link} from 'react-router-dom'
 import {formatPrice, getQuantityFromCart} from './helperFunctions'
 import {fetchUpdateCart, fetchMergePastAndGuestCarts} from '../store/cart'
 
@@ -84,33 +85,38 @@ class ProductCard extends React.Component {
                   : 'Sold out'}
               </div>
             </div>
-            <div className="quantityAndBtns">
-              <button
-                type="button"
-                onClick={async () => {
-                  // if quantity is 0, disallow further quantity decreases
-                  if (this.state.quantity === 0) return
-                  const newQuantity = --this.state.quantity
-                  await handleQuantityChange(product.id, newQuantity)
-                  await handleUpdateCart()
-                }}
-              >
-                -
-              </button>
-              <div className="productQuantity">{this.state.quantity}</div>
-              <button
-                type="button"
-                onClick={async () => {
-                  // if quantity requested exceeds inventory
-                  // disallow further quantity increases
-                  if (this.state.quantity === product.inventory) return
-                  const newQuantity = ++this.state.quantity
-                  await handleQuantityChange(product.id, newQuantity)
-                  await handleUpdateCart()
-                }}
-              >
-                +
-              </button>
+            <div className="quant-view-prod-container">
+              <div className="quantityAndBtns">
+                <button
+                  type="button"
+                  onClick={async () => {
+                    // if quantity is 0, disallow further quantity decreases
+                    if (this.state.quantity === 0) return
+                    const newQuantity = --this.state.quantity
+                    await handleQuantityChange(product.id, newQuantity)
+                    await handleUpdateCart()
+                  }}
+                >
+                  -
+                </button>
+                <div className="productQuantity">{this.state.quantity}</div>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    // if quantity requested exceeds inventory
+                    // disallow further quantity increases
+                    if (this.state.quantity === product.inventory) return
+                    const newQuantity = ++this.state.quantity
+                    await handleQuantityChange(product.id, newQuantity)
+                    await handleUpdateCart()
+                  }}
+                >
+                  +
+                </button>
+              </div>
+              <Link className="productLink" to={`/products/${product.id}`}>
+                view product
+              </Link>
             </div>
           </div>
         )}
