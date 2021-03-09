@@ -1,7 +1,7 @@
 import React, {useMemo, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useTable, useSortBy} from 'react-table'
-import {PRODUCT_COLUMNS} from './table_columns/user_columns'
+import {PRODUCT_COLUMNS} from './table_columns/product_columns'
 import {fetchAllProducts} from '../store/products'
 
 export const AdminAllProducts = () => {
