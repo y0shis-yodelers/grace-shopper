@@ -15,6 +15,7 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
   * Even though will complete the checkout, **you will not be charged**
 * Check your phone for a confirmation text and email!
 * Revisit your profile to see the completed order
+* Visit https://grace-shopper-yy.herokuapp.com/oops to visit our fun 404 error page!
 
 ## Technologies
 
