@@ -1,6 +1,6 @@
 import React, {useMemo, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {useTable, useSortBy} from 'react-table'
+import {useTable, useSortBy, usePagination} from 'react-table'
 import {PRODUCT_COLUMNS} from './table_columns/product_columns'
 import {fetchAdminAllProducts} from '../store/products'
 
@@ -31,58 +31,95 @@ export const AdminAllProducts = () => {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
+    page,
+    nextPage,
+    previousPage,
     prepareRow
   } = useTable(
     {
       columns,
       data: products
     },
-    useSortBy
+    useSortBy,
+    usePagination
   )
 
   return (
     <div>
       {isAdmin ? (
-        <table {...getTableProps()}>
-          <thead>
-            {headerGroups.map((headerGroup, headerIdx) => (
-              <tr {...headerGroup.getHeaderGroupProps()} key={headerIdx}>
-                {headerGroup.headers.map(column => (
-                  <th
-                    {...column.getHeaderProps(column.getSortByToggleProps())}
-                    key={column.id}
-                  >
-                    {column.render('Header')}
-                    <span>
-                      {column.isSorted
-                        ? column.isSortedDesc ? ' 🔽' : ' 🔼'
-                        : ''}
-                    </span>
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()}>
-            {rows.map(row => {
-              prepareRow(row)
-              return (
-                <tr {...row.getRowProps()} key={row.id}>
-                  {row.cells.map((cell, cellIdx) => {
-                    return (
-                      <td {...cell.getCellProps()} key={cellIdx}>
-                        {cell.render('Cell')}
-                      </td>
-                    )
-                  })}
+        <>
+          <table {...getTableProps()}>
+            <thead>
+              {headerGroups.map((headerGroup, headerIdx) => (
+                <tr {...headerGroup.getHeaderGroupProps()} key={headerIdx}>
+                  {headerGroup.headers.map(column => (
+                    <th
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                      key={column.id}
+                    >
+                      {column.render('Header')}
+                      <span>
+                        {column.isSorted
+                          ? column.isSortedDesc ? ' 🔽' : ' 🔼'
+                          : ''}
+                      </span>
+                    </th>
+                  ))}
                 </tr>
-              )
-            })}
-          </tbody>
-        </table>
+              ))}
+            </thead>
+            <tbody {...getTableBodyProps()}>
+              {page.map(row => {
+                prepareRow(row)
+                return (
+                  <tr {...row.getRowProps()} key={row.id}>
+                    {row.cells.map((cell, cellIdx) => {
+                      return (
+                        <td {...cell.getCellProps()} key={cellIdx}>
+                          {cell.render('Cell')}
+                        </td>
+                      )
+                    })}
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+          <div
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+          >
+            <button onClick={() => previousPage()}>Previous</button>
+            <button onClick={() => nextPage()}>Next</button>
+          </div>
+        </>
       ) : (
-        <h1>You are not allowed here</h1>
+        <div>
+          <div className="gandalf">
+            <div className="fireball" />
+            <div className="skirt" />
+            <div className="sleeves" />
+            <div className="shoulders">
+              <div className="hand left" />
+              <div className="hand right" />
+            </div>
+            <div className="head">
+              <div className="hair" />
+              <div className="beard" />
+            </div>
+          </div>
+          <div className="message">
+            <h1>403 - You Shall Not Pass</h1>
+            <p>
+              Uh oh, Gandalf is blocking the way!
+              <br />
+              Maybe you have a typo in the url? Or you meant to go to a
+              different location? Like...Hobbiton?
+            </p>
+          </div>
+        </div>
       )}
     </div>
   )
