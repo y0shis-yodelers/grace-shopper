@@ -10,7 +10,9 @@ const Navbar = ({isLoggedIn, cart}) => {
 
   return (
     <div>
-      <h1>Bass Shopper</h1>
+      <Link to="/home">
+        <img className="logo" src="https://i.imgur.com/wj50jx5.png" />
+      </Link>
       <nav>
         {isLoggedIn ? (
           <div className="nav-link-container">
