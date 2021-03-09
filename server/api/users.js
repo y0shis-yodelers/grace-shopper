@@ -44,12 +44,14 @@ router.post('/', async (req, res, next) => {
 // UPDATE single user
 router.put('/:userId', isAdminOrUser, async (req, res, next) => {
   try {
-    const data = req.body
+    const {id, name, email, phoneNumber} = req.body
     const {userId} = req.params
 
-    const updatedUser = await User.update({...data}, {where: {id: userId}})
+    //if (id !== userId) res.status(304).end()
 
-    res.status(204).send(updatedUser)
+    await User.update({name, email, phoneNumber}, {where: {id: userId}})
+
+    res.status(204).end()
   } catch (err) {
     next(err)
   }
