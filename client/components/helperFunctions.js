@@ -37,6 +37,7 @@ export function getQuantityFromCart(productId) {
   return cart[productId]
 }
 
+// helper computes totals for an order
 export function totals(products) {
   let totalQuantity = 0,
     totalPrice = 0
