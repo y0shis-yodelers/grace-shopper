@@ -1,22 +1,33 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import ProductCard from './ProductCard'
 import Total from './Total'
 
 const Cart = ({cart}) => {
+  console.log('cart is, ', cart)
+
   return (
     <div className="cartContainer">
-      <Total cart={cart} />
-      <div className="cartBox">
-        {cart.map(product => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            quantity={product.ProductOrder.quantity}
-          />
-        ))}
-      </div>
+      {!cart || (cart && !cart.length) ? (
+        <div>...Loading</div>
+      ) : (
+        /* <Total cart={cart} /> */
+        <div className="cartBox">
+          {cart.map(product => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              quantity={product.ProductOrder.quantity || 0}
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
 
-export default Cart
+const mapState = state => ({
+  cart: state.cart
+})
+
+export default connect(mapState)(Cart)

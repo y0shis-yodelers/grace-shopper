@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Loader from 'react-loader-spinner'
 import {formatPrice} from './helperFunctions'
-import {fetchUpdateCart} from '../store/cart'
+import QuantityInterface from './QuantityInterface'
 
 class ProductCard extends React.Component {
   constructor(props) {
@@ -10,17 +10,17 @@ class ProductCard extends React.Component {
     this.state = {
       quantity: this.props.quantity || 0
     }
-    this.handleQuantityChange = this.handleQuantityChange.bind(this)
+    this.setQuantity = this.setQuantity.bind(this)
   }
 
-  handleQuantityChange(newQuantity) {
+  setQuantity(newQuantity) {
     this.setState({
       quantity: newQuantity
     })
   }
 
   render() {
-    const {handleQuantityChange} = this
+    const {setQuantity} = this
     const {quantity} = this.state
     const {userId, product, updateQuantity} = this.props
     const {name, imageUrl, price, inventory} = product || {}
@@ -51,34 +51,13 @@ class ProductCard extends React.Component {
                   : 'Sold out'}
               </div>
             </div>
-            <div className="quantityAndBtns">
-              <button
-                type="button"
-                onClick={() => {
-                  // if quantity is 0, disallow further quantity decreases
-                  if (quantity === 0) return
-                  const newQuantity = quantity - 1
-                  handleQuantityChange(newQuantity)
-                  updateQuantity(userId, product.id, newQuantity)
-                }}
-              >
-                -
-              </button>
-              <div className="productQuantity">{quantity}</div>
-              <button
-                type="button"
-                onClick={() => {
-                  // if quantity requested exceeds inventory
-                  // disallow further quantity increases
-                  if (quantity === inventory) return
-                  const newQuantity = quantity + 1
-                  handleQuantityChange(newQuantity)
-                  updateQuantity(userId, product.id, newQuantity)
-                }}
-              >
-                +
-              </button>
-            </div>
+            <QuantityInterface
+              setQuantity={setQuantity}
+              quantity={quantity}
+              userId={userId}
+              productId={product.id}
+              inventory={inventory}
+            />
           </div>
         )}
       </div>
@@ -90,9 +69,4 @@ const mapState = state => ({
   userId: state.user.id
 })
 
-const mapDispatch = dispatch => ({
-  updateQuantity: (userId, productId, quantity) =>
-    dispatch(fetchUpdateCart(userId, productId, quantity))
-})
-
-export default connect(mapState, mapDispatch)(ProductCard)
+export default connect(mapState)(ProductCard)

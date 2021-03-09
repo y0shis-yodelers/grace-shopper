@@ -58,7 +58,7 @@ class AllProducts extends React.Component {
                 />
               ))}
             </div>
-            <Cart cart={cart} />
+            <Cart />
           </div>
         )}
       </div>

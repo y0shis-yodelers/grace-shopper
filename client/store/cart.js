@@ -10,10 +10,9 @@ const loadCart = cart => ({
   type: LOAD_CART,
   cart
 })
-const updateCart = (product, quantity) => ({
+const updateCart = cart => ({
   type: UPDATE_CART,
-  product,
-  quantity
+  cart
 })
 const clearCart = () => ({
   type: CLEAR_CART
@@ -38,13 +37,13 @@ export const fetchUpdateCart = (userId, productId, quantity) => {
         quantity
       }
 
-      console.log('updateInfo is, ', updateInfo, 'userId is, ', userId)
+      // update ProductOrder instance
+      await axios.put(`/api/carts/users/${userId}`, updateInfo)
 
-      const {data} = await axios.put(`/api/carts/users/${userId}`, updateInfo)
+      // get updatedCart
+      const {data} = await axios.get(`/api/carts/users/${userId}`)
 
-      console.log(data)
-
-      dispatch(updateCart(updatedProduct, quantity))
+      dispatch(updateCart(data))
     } catch (err) {
       console.error(err)
     }
@@ -71,15 +70,7 @@ export default (state = initState, action) => {
       return [...action.cart]
     }
     case UPDATE_CART: {
-      // if quantity === 0, return state without the corresponding product
-      if (action.quantity === 0)
-        return state.filter(product => product.id !== action.product.id)
-
-      // otherwise, replace the product on state
-      return [
-        ...state.filter(product => product.id !== action.product.id),
-        action.product
-      ]
+      return [...action.cart]
     }
     case CLEAR_CART: {
       localStorage.setItem('cart', JSON.stringify([]))

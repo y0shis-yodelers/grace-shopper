@@ -19,6 +19,7 @@ router.get('/users/:userId', isAdminOrUser, async (req, res, next) => {
   }
 })
 
+// PUT update ProductOrder instance
 router.put('/users/:userId', isAdminOrUser, async (req, res, next) => {
   try {
     // get cart
@@ -27,10 +28,8 @@ router.put('/users/:userId', isAdminOrUser, async (req, res, next) => {
         userId: req.params.userId,
         isPaid: false
       },
-      include: {model: Product, include: {model: ProductOrder}}
+      include: {model: Product}
     })
-
-    console.log('orderThatHoldsCart is, ', orderThatHoldsCart)
 
     // get productId, quantity
     const {productId, quantity} = req.body
@@ -53,16 +52,7 @@ router.put('/users/:userId', isAdminOrUser, async (req, res, next) => {
     if (!wasCreated) productOrderToBeUpdated.quantity = quantity
     await productOrderToBeUpdated.save()
 
-    // fetch the product that's been updated if quantity
-    // was NOT zero
-    let updatedProduct
-    if (quantity !== 0)
-      updatedProduct = await Product.findByPk(
-        productOrderToBeUpdated.productId,
-        {include: {model: ProductOrder}}
-      )
-
-    res.status(201).send(updatedProduct)
+    res.sendStatus(201)
   } catch (err) {
     next(err)
   }
