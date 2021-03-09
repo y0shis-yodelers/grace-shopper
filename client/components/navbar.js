@@ -10,10 +10,12 @@ const Navbar = ({isLoggedIn, cart}) => {
 
   return (
     <div>
-      <h1>Guitar Picks Homepage</h1>
+      <Link to="/home">
+        <img className="logo" src="https://i.imgur.com/wj50jx5.png" />
+      </Link>
       <nav>
         {isLoggedIn ? (
-          <div>
+          <div className="nav-link-container">
             {/* The navbar will show these links after you log in */}
             <Link to="/home">Home</Link>
             <a
@@ -25,39 +27,35 @@ const Navbar = ({isLoggedIn, cart}) => {
             >
               Logout
             </a>
-            <Link to="/checkout" className="checkoutAndBadge">
-              <span>
-                Checkout{' '}
-                <span
-                  className={
-                    totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'
-                  }
-                >
-                  {totalItems === 0 ? '' : totalItems}
-                </span>
-              </span>
-            </Link>
             <Link to="/users/:userId">Profile</Link>
             <Link to="/users">Users</Link>
+            <a className="cartAndBadge" href="">
+              <div
+                className={
+                  totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'
+                }
+              >
+                <span>{totalItems === 0 ? '' : totalItems}</span>
+                <span className="material-icons">shopping_cart</span>
+              </div>
+            </a>
           </div>
         ) : (
-          <div>
+          <div className="nav-link-container">
             {/* The navbar will show these links before you log in */}
             <Link to="/home">Home</Link>
             <Link to="/login">Login</Link>
-            <Link to="/checkout">
-              <span>
-                Checkout{' '}
-                <span
-                  className={
-                    totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'
-                  }
-                >
-                  {totalItems === 0 ? '' : totalItems}
-                </span>
-              </span>
-            </Link>
             <Link to="/signup">Sign Up</Link>
+            <a className="cartAndBadge" href="">
+              <span
+                className={
+                  totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'
+                }
+              >
+                <span>{totalItems === 0 ? '' : totalItems}</span>
+                <span className="material-icons">shopping_cart</span>
+              </span>
+            </a>
           </div>
         )}
       </nav>
