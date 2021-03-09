@@ -15,7 +15,7 @@ class UserProfile extends React.Component {
     const {history} = this.props
 
     return (
-      <div className="userAndAds">
+      <div className="user">
         <div className="profileContainer">
           {Object.keys(singleUser).length ? (
             <div className="singleUserContainer">
