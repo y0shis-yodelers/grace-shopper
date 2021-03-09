@@ -1,15 +1,32 @@
 import React from 'react'
+import {useEffect} from 'react'
+import axios from 'axios'
+import {connect} from 'react-redux'
 
-export const OrderSuccess = () => {
-  return (
-    <div>
-      <h4>Thank you for ordering at the Bass Shopper</h4>
-      <h6>
-        You should expect and email at test@test.com and SMS at (123)-456-7890
-      </h6>
-    </div>
-  )
+class OrderSuccess extends React.Component {
+  async componentDidMount() {
+    await axios.post('api/stripe/success', this.props.cart)
+  }
+  render() {
+    return (
+      <div>
+        <h4>
+          Thank you {this.props.user.name} for ordering at the Bass Shopper
+        </h4>
+        <h6>
+          You should expect an email at {this.props.user.email} and SMS at
+          {this.props.user.phoneNumber}
+        </h6>
+      </div>
+    )
+  }
 }
+
+const mapState = state => ({
+  user: state.user,
+  cart: state.cart
+})
+export default connect(mapState, null)(OrderSuccess)
 
 export const OrderFailure = () => {
   return (

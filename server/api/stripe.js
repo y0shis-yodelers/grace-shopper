@@ -2,6 +2,7 @@
 
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const router = require('express').Router()
+const {Product} = require('../db/models')
 
 //generate stripe format for cart
 const generateStripeCart = (cart, products) => {
@@ -30,14 +31,15 @@ router.post('/create-checkout-session', async (req, res, next) => {
     line_items: stripeCart,
     mode: 'payment',
     success_url: 'http://localhost:8080/success',
-    cancel_url: 'http://localhost:8080/cancel'
+    cancel_url: 'http://localhost:8080/failure'
   })
   res.json({id: session.id})
 })
 
-router.get('/success', async (req, res, next) => {
+router.get('/success', (req, res, next) => {
+  console.log('blue', req.body)
   //remove from inventory
-  // update inventory
+  // update order
   //5 seconds on confirmation page
   //send email via nodemailer
   //send sms via twilio
