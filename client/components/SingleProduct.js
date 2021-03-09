@@ -74,22 +74,27 @@ class SingleProduct extends React.Component {
                 <span>Back to all products</span>
               </Link>
               <div className="imgAndDescription">
-                <img src={singleProduct.imageUrl} />
+                <div className="sp-img-inventory-price">
+                  <img src={singleProduct.imageUrl} />
+                  <div className="inventoryAndPrice">
+                    <div className="productInventory">
+                      Available: {singleProduct.inventory}
+                    </div>
+                    <div className="productPrice">
+                      Price: {formatPrice(singleProduct.price.toString())}
+                    </div>
+                  </div>
+                </div>
                 <div className="descriptionSidePanel">
                   <div className="productName">{singleProduct.name}</div>
                   <p className="singleProductDescription">
                     {singleProduct.description}
                   </p>
-                  <div className="productInventory">
-                    Available: {singleProduct.inventory}
-                  </div>
-                  <div className="productPrice">
-                    Price: {formatPrice(singleProduct.price.toString())}
-                  </div>
                   <div className="quantityContainer">
                     <div className="quantityValueAndBtns">
                       <button
                         type="button"
+                        className="sp-quantity-btn"
                         onClick={() =>
                           handleChange('subtract', singleProduct.inventory)
                         }
@@ -111,6 +116,7 @@ class SingleProduct extends React.Component {
                     <button
                       type="submit"
                       name="addItem"
+                      className="sp-quantity-btn"
                       onClick={handleUpdateCart}
                     >
                       {this.state.quantity === 0
