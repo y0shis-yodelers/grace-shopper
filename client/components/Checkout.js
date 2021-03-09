@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Cart from './Cart'
 import ShippingData from './ShippingData'
+import stripePromise from '../store/checkoutOptions/stripe'
 
 class Checkout extends React.Component {
   constructor() {
@@ -9,9 +10,17 @@ class Checkout extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit(event) {
-    console.log('Submitted')
-    console.log(event.target.value)
+  async handleSubmit(e) {
+    e.preventDefault()
+    const stripe = await stripePromise
+    const response = await axios.post('api/stripe/create-checkout-session', {
+      cart: this.props.cart
+    })
+    const session = response.data
+    const result = await stripe.redirectToCheckout({
+      sessionId: session.id
+    })
+    if (result.error) console.log(result.error)
   }
 
   render() {

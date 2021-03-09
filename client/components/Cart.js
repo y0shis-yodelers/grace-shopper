@@ -11,15 +11,17 @@ const Cart = ({cart}) => {
       {!cart || (cart && !cart.length) ? (
         <div>...Loading</div>
       ) : (
-        /* <Total cart={cart} /> */
-        <div className="cartBox">
-          {cart.map(product => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              quantity={product.ProductOrder.quantity || 0}
-            />
-          ))}
+        <div>
+          <Total cart={cart} />
+          <div className="cartBox">
+            {cart.map(product => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                quantity={product.ProductOrder.quantity || 0}
+              />
+            ))}
+          </div>
         </div>
       )}
     </div>

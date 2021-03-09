@@ -4,9 +4,8 @@ const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const router = require('express').Router()
 
 //generate stripe format for cart
-const generateStripeCart = (cart, products) => {
-  let cartWithProduct = products.filter(product => cart[product.id])
-  return cartWithProduct.map(product => {
+const generateStripeCart = cart => {
+  return cart.map(product => {
     return {
       price_data: {
         currency: 'usd',
@@ -16,15 +15,16 @@ const generateStripeCart = (cart, products) => {
         },
         unit_amount: product.price
       },
-      quantity: cart[product.id]
+      quantity: product.ProductOrder.quantity
     }
   })
 }
 
 router.post('/create-checkout-session', async (req, res, next) => {
-  const stripeCart = generateStripeCart(req.body.cart, req.body.products)
+  const {cart} = req.body
 
-  console.log(stripeCart)
+  const stripeCart = generateStripeCart(cart)
+
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: stripeCart,
@@ -32,6 +32,7 @@ router.post('/create-checkout-session', async (req, res, next) => {
     success_url: 'http://localhost:8080/success',
     cancel_url: 'http://localhost:8080/cancel'
   })
+
   res.json({id: session.id})
 })
 

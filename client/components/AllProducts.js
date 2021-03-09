@@ -28,7 +28,6 @@ class AllProducts extends React.Component {
   }
 
   render() {
-    const userId = this.props.user.id || 0
     const products = this.props.products || []
 
     // absolutely necessary
