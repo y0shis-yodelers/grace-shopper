@@ -1,6 +1,6 @@
 import React, {useMemo, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {useTable} from 'react-table'
+import {useTable, useSortBy} from 'react-table'
 import {COLUMNS} from './columns'
 import {fetchAllUsers} from '../store/users'
 
@@ -25,11 +25,6 @@ export const AllUsers = () => {
   // and would reperform logic which would affect performance
   const columns = useMemo(() => COLUMNS, [])
 
-  const tableInstance = useTable({
-    columns,
-    data: users
-  })
-
   // Destructure functions/arrays from table instance
   const {
     getTableProps,
@@ -37,7 +32,13 @@ export const AllUsers = () => {
     headerGroups,
     rows,
     prepareRow
-  } = tableInstance
+  } = useTable(
+    {
+      columns,
+      data: users
+    },
+    useSortBy
+  )
 
   return (
     <table {...getTableProps()}>
@@ -45,8 +46,14 @@ export const AllUsers = () => {
         {headerGroups.map((headerGroup, headerIdx) => (
           <tr {...headerGroup.getHeaderGroupProps()} key={headerIdx}>
             {headerGroup.headers.map(column => (
-              <th {...column.getHeaderProps()} key={column.id}>
+              <th
+                {...column.getHeaderProps(column.getSortByToggleProps())}
+                key={column.id}
+              >
                 {column.render('Header')}
+                <span>
+                  {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+                </span>
               </th>
             ))}
           </tr>

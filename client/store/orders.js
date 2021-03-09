@@ -27,6 +27,8 @@ export const fetchAllOrders = userId => {
   }
 }
 
+//Successfull order THiunk
+
 // ---- REDUCER ----
 
 const initialOrders = []
