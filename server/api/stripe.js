@@ -42,13 +42,12 @@ router.post('/success', async (req, res, next) => {
   const user = req.body.user
 
   console.log('red', user)
-  console.log('blue', req.body.products)
   //remove from inventory
   ordered.forEach(async product => {
     try {
       await Product.update(
         {inventory: product.inventory - product.ProductOrder.quantity},
-        {where: {id: product.id}, returning: true}
+        {where: {id: product.id}}
       )
     } catch (err) {
       console.log(err)
@@ -57,7 +56,7 @@ router.post('/success', async (req, res, next) => {
 
   // update order to completed
   try {
-    await Order.update({isPaid: true}, {where: {id: cartId}})
+    await Order.update({isPaid: true, date: 'complete'}, {where: {id: cartId}})
   } catch (err) {
     console.log(err)
   }
@@ -66,7 +65,7 @@ router.post('/success', async (req, res, next) => {
   sendEmail(user.email, cartId)
   //send sms via twilio
   //redirect to homepage
-  res.sendStatus(500)
+  res.send('Order Complete')
 })
 
 module.exports = router
