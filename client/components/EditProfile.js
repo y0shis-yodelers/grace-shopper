@@ -9,8 +9,8 @@ class EditProfile extends React.Component {
       id: this.props.user.id || '',
       name: this.props.user.name || '',
       email: this.props.user.email || '',
-      password: '',
       phoneNumber: this.props.user.phoneNumber || ''
+      // password: '',
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -29,7 +29,7 @@ class EditProfile extends React.Component {
 
   render() {
     const {userId} = this.props.match.params
-    const {name, email, password, phoneNumber} = this.state
+    const {name, email, phoneNumber /* password */} = this.state
     const {handleChange, handleSubmit} = this
 
     return this.props.user.id && this.props.user.id === +userId ? (
@@ -50,16 +50,6 @@ class EditProfile extends React.Component {
         </div>
 
         <div className="formField">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            value={password}
-          />
-        </div>
-
-        <div className="formField">
           <label htmlFor="phoneNumber">Phone:</label>
           <input
             type="text"
@@ -68,6 +58,16 @@ class EditProfile extends React.Component {
             value={phoneNumber}
           />
         </div>
+
+        {/* <div className="formField">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            value={password}
+          />
+        </div> */}
 
         <input type="submit" value="Submit" />
       </form>
