@@ -36,3 +36,15 @@ export function getQuantityFromCart(productId) {
   if (cart && !cart[productId]) return 0
   return cart[productId]
 }
+
+export function totals(products) {
+  let totalQuantity = 0,
+    totalPrice = 0
+
+  products.forEach(product => {
+    totalQuantity += product.ProductOrder.quantity
+    totalPrice += product.ProductOrder.pricePaid
+  })
+
+  return {totalQuantity, totalPrice}
+}
