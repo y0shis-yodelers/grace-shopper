@@ -10,6 +10,7 @@ export const AdminAllProducts = () => {
 
   // useSelector is the equivalent of mapStateToProps
   const products = useSelector(state => state.products)
+  const isAdmin = useSelector(state => state.user.isAdmin)
 
   // useEffect asks us to define a side-effect fn
   // and invoke it immediately in the first arg, which
@@ -41,41 +42,49 @@ export const AdminAllProducts = () => {
   )
 
   return (
-    <table {...getTableProps()}>
-      <thead>
-        {headerGroups.map((headerGroup, headerIdx) => (
-          <tr {...headerGroup.getHeaderGroupProps()} key={headerIdx}>
-            {headerGroup.headers.map(column => (
-              <th
-                {...column.getHeaderProps(column.getSortByToggleProps())}
-                key={column.id}
-              >
-                {column.render('Header')}
-                <span>
-                  {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
-                </span>
-              </th>
+    <div>
+      {isAdmin ? (
+        <table {...getTableProps()}>
+          <thead>
+            {headerGroups.map((headerGroup, headerIdx) => (
+              <tr {...headerGroup.getHeaderGroupProps()} key={headerIdx}>
+                {headerGroup.headers.map(column => (
+                  <th
+                    {...column.getHeaderProps(column.getSortByToggleProps())}
+                    key={column.id}
+                  >
+                    {column.render('Header')}
+                    <span>
+                      {column.isSorted
+                        ? column.isSortedDesc ? ' 🔽' : ' 🔼'
+                        : ''}
+                    </span>
+                  </th>
+                ))}
+              </tr>
             ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody {...getTableBodyProps()}>
-        {rows.map(row => {
-          prepareRow(row)
-          return (
-            <tr {...row.getRowProps()} key={row.id}>
-              {row.cells.map((cell, cellIdx) => {
-                return (
-                  <td {...cell.getCellProps()} key={cellIdx}>
-                    {cell.render('Cell')}
-                  </td>
-                )
-              })}
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
+          </thead>
+          <tbody {...getTableBodyProps()}>
+            {rows.map(row => {
+              prepareRow(row)
+              return (
+                <tr {...row.getRowProps()} key={row.id}>
+                  {row.cells.map((cell, cellIdx) => {
+                    return (
+                      <td {...cell.getCellProps()} key={cellIdx}>
+                        {cell.render('Cell')}
+                      </td>
+                    )
+                  })}
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <h1>You are not allowed here</h1>
+      )}
+    </div>
   )
 }
 
