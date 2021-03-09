@@ -4,6 +4,7 @@ const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const router = require('express').Router()
 const {Order, Product} = require('../db/models')
 const sendEmail = require('./email')
+const sendSMS = require('./twilio')
 
 //generate stripe format for cart
 const generateStripeCart = (cart, products) => {
@@ -24,13 +25,13 @@ const generateStripeCart = (cart, products) => {
 
 router.post('/create-checkout-session', async (req, res, next) => {
   const stripeCart = generateStripeCart(req.body.cart, req.body.products)
-
+  const url = process.env.URL || 'http://localhost:8080'
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: stripeCart,
     mode: 'payment',
-    success_url: 'http://localhost:8080/success',
-    cancel_url: 'http://localhost:8080/failure'
+    success_url: `${url}/success`,
+    cancel_url: `${url}/failure`
   })
   //await axios.post('api/stripe/success', req.body.cart)
   res.json({id: session.id})
@@ -64,6 +65,7 @@ router.post('/success', async (req, res, next) => {
   //send email via nodemailer
   sendEmail(user.email, cartId)
   //send sms via twilio
+  sendSMS(user)
   //redirect to homepage
   res.send('Order Complete')
 })

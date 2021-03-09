@@ -15,16 +15,10 @@ class UserProfile extends React.Component {
     const {history} = this.props
 
     return (
-      <div className="userAndAds">
+      <div className="user">
         <div className="profileContainer">
-          <div className="headerAdsContainer">
-            header ads here {/* test purposes only */}
-          </div>
-
           {Object.keys(singleUser).length ? (
             <div className="singleUserContainer">
-              {/* OrderHistory and PaymentOptions components
-          to be created ... */}
               <div className="ordersLabel">Order History</div>
               <AllOrders user={singleUser} />
 
@@ -58,9 +52,6 @@ class UserProfile extends React.Component {
             />
           )}
         </div>
-        {/* <PaymentOptions /> */}
-
-        <div className="advertisementSidePanel">ads side panel</div>
       </div>
     )
   }
