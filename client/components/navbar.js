@@ -35,8 +35,8 @@ const Navbar = ({isLoggedIn, cart}) => {
                   totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'
                 }
               >
+                <span className="material-icons">shopping_cart</span>
                 <span>{totalItems === 0 ? '' : totalItems}</span>
-                <span className="material-icons">shopping_cart </span>
               </div>
             </a>
           </div>
@@ -53,8 +53,8 @@ const Navbar = ({isLoggedIn, cart}) => {
                 }
               >
                 <span>{totalItems === 0 ? '' : totalItems}</span>
+                <span className="material-icons">shopping_cart</span>
               </span>
-              <span className="material-icons">shopping_cart </span>
             </a>
           </div>
         )}
