@@ -28,7 +28,9 @@ class AllProducts extends React.Component {
           <div className="productsAndCart">
             <div className="allProductContainer">
               {products.map(product => (
-                <ProductCard key={product.id} product={product} />
+                <div className="productCardOutline" key={product.id}>
+                  <ProductCard product={product} />
+                </div>
               ))}
             </div>
             <Cart />

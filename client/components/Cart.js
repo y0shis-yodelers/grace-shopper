@@ -68,7 +68,7 @@ class Cart extends React.Component {
             const quantity = cart[product.id]
 
             return (
-              <div key={product.id}>
+              <div className="productCardOutline" key={product.id}>
                 <CartProductCard
                   product={product}
                   quantity={quantity}
