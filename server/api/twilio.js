@@ -18,7 +18,7 @@ const sendSMS = user => {
     .create({
       body: `Thanks for your order ${
         user.name
-      }. Expect to be rocking by ${delivery}`,
+      }! Expect to be rocking by ${delivery}!`,
       to: '+12243879750', // Text this number -> formatted
       from: phone // From a valid Twilio number
     })
