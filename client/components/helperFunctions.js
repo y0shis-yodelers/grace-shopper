@@ -1,3 +1,5 @@
+import {toast} from 'react-toastify'
+
 // convert price in pennies to formatted price in dollars, cents
 // ex., 780 -> $7.80 : 55 -> $0.55 : 9 -> $0.09
 export function formatPrice(price) {
@@ -37,6 +39,7 @@ export function getQuantityFromCart(productId) {
   return cart[productId]
 }
 
+// helper computes totals for an order
 export function totals(products) {
   let totalQuantity = 0,
     totalPrice = 0
@@ -47,4 +50,45 @@ export function totals(products) {
   })
 
   return {totalQuantity, totalPrice}
+}
+
+// helper sends a toast notification
+export function notify(text = 'I am a notification!', type) {
+  switch (type) {
+    case 'info':
+      toast.info(text, {
+        position: 'bottom-right'
+      })
+      break
+
+    case 'success':
+      toast.success(text, {
+        position: 'bottom-right'
+      })
+      break
+
+    case 'warning':
+      toast.warn(text, {
+        position: 'bottom-right'
+      })
+      break
+
+    case 'error':
+      toast.error(text, {
+        position: 'bottom-right'
+      })
+      break
+
+    case 'dark':
+      toast.dark(text, {
+        position: 'bottom-right'
+      })
+      break
+
+    default:
+      toast(text, {
+        position: 'bottom-right'
+      })
+      break
+  }
 }

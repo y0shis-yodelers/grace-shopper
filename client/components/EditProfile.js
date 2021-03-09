@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {updateUser} from '../store'
+import {notify} from './helperFunctions'
 
 const validate = (name, email, phone) => {
   let errors = []
@@ -42,11 +43,16 @@ class EditProfile extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
 
+    const {userId} = this.props.user
     const {name, email, phoneNumber} = this.state
     const errors = validate(name, email, phoneNumber)
 
     if (errors.length) this.setState({errors})
-    else this.props.updateUser(this.state)
+    else {
+      this.props.updateUser(this.state)
+      this.props.history.push(`/users/${userId}/`)
+      notify('Updated profile information!', 'success')
+    }
   }
 
   render() {
@@ -55,39 +61,45 @@ class EditProfile extends React.Component {
     const {handleChange, handleSubmit} = this
 
     return this.props.user.id && this.props.user.id === +userId ? (
-      <form className="shippingData" onSubmit={handleSubmit}>
-        {errors.map(error => (
-          <p key={error} className="formError">
-            Error: {error}
-          </p>
-        ))}
+      <div>
+        <form className="shippingData" onSubmit={handleSubmit}>
+          {errors.map(error => (
+            <p key={error} className="formError">
+              Error: {error}
+            </p>
+          ))}
 
-        <div className="formField">
-          <label htmlFor="name">Name:</label>
-          <input type="text" name="name" onChange={handleChange} value={name} />
-        </div>
+          <div className="formField">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              onChange={handleChange}
+              value={name}
+            />
+          </div>
 
-        <div className="formField">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            name="email"
-            onChange={handleChange}
-            value={email}
-          />
-        </div>
+          <div className="formField">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="text"
+              name="email"
+              onChange={handleChange}
+              value={email}
+            />
+          </div>
 
-        <div className="formField">
-          <label htmlFor="phoneNumber">Phone:</label>
-          <input
-            type="text"
-            name="phoneNumber"
-            onChange={handleChange}
-            value={phoneNumber}
-          />
-        </div>
+          <div className="formField">
+            <label htmlFor="phoneNumber">Phone:</label>
+            <input
+              type="text"
+              name="phoneNumber"
+              onChange={handleChange}
+              value={phoneNumber}
+            />
+          </div>
 
-        {/* <div className="formField">
+          {/* <div className="formField">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -97,8 +109,9 @@ class EditProfile extends React.Component {
           />
         </div> */}
 
-        <input type="submit" value="Submit" />
-      </form>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     ) : (
       <div>User auth failure!</div>
     )
