@@ -1,3 +1,5 @@
+import {format} from 'phone-fns'
+
 export const COLUMNS = [
   {
     Header: 'Id',
@@ -13,10 +15,9 @@ export const COLUMNS = [
   },
   {
     Header: 'Phone Number',
-    accessor: 'phoneNumber'
-  },
-  {
-    Header: 'Admin',
-    accessor: 'isAdmin'
+    accessor: 'phoneNumber',
+    Cell: ({value}) => {
+      return format('(NNN) NNN-NNNN', value)
+    }
   }
 ]
