@@ -17,7 +17,7 @@ const sendEmail = (userEmail, order) => {
     from: email,
     to: `${userEmail}, kushpatel21@gmail.com`,
     subject: 'Bass Shopper Order!',
-    text: `Thank you for your order. It will be shipping soon. ${order}`
+    text: `Thank you for your order. It will be shipping soon. Order Number: ${order}`
   }
 
   transporter.sendMail(mailOptions, function(error, info) {
