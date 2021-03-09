@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+import {format} from 'phone-fns'
 import AllOrders from './AllOrders'
 
 class UserProfile extends React.Component {
@@ -35,7 +36,7 @@ class UserProfile extends React.Component {
                     Email: {singleUser.email}
                   </div>
                   <div className="userProfilePhone">
-                    Phone: {singleUser.phoneNumber}
+                    Phone: {format('(NNN) NNN-NNNN', singleUser.phoneNumber)}
                   </div>
 
                   <button
