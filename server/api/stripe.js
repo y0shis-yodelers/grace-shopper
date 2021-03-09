@@ -36,9 +36,10 @@ router.post('/create-checkout-session', async (req, res, next) => {
   res.json({id: session.id})
 })
 
-router.post('/success', (req, res, next) => {
+router.post('/success', async (req, res, next) => {
   console.log('blue', req.body.products)
   const ordered = req.body.products
+  const cartId = req.body.id
 
   //remove from inventory
   ordered.forEach(async product => {
@@ -51,12 +52,18 @@ router.post('/success', (req, res, next) => {
       console.log(err)
     }
   })
-  res.sendStatus(500)
-  // update order
+
+  // update order to completed
+  try {
+    await Order.update({isPaid: true}, {where: {id: cartId}})
+  } catch (err) {
+    console.log(err)
+  }
   //5 seconds on confirmation page
   //send email via nodemailer
   //send sms via twilio
   //redirect to homepage
+  res.sendStatus(500)
 })
 
 module.exports = router
