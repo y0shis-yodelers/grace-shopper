@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import Loader from 'react-loader-spinner'
 import {OrderInfo} from '.'
 import {fetchOrder} from '../store/singleOrder'
 import {formatPrice} from './helperFunctions'
@@ -41,7 +42,13 @@ class SingleOrder extends React.Component {
             <OrderInfo products={products} />
           </div>
         ) : (
-          <div>Loading...</div>
+          <Loader
+            type="TailSpin"
+            color="#00BFFF"
+            height={100}
+            width={100}
+            timeout={3000} //3 secs
+          />
         )}
       </div>
     )

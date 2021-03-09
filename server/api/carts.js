@@ -27,8 +27,10 @@ router.put('/users/:userId', isAdminOrUser, async (req, res, next) => {
         userId: req.params.userId,
         isPaid: false
       },
-      include: {model: Product}
+      include: {model: Product, include: {model: ProductOrder}}
     })
+
+    console.log('orderThatHoldsCart is, ', orderThatHoldsCart)
 
     // get productId, quantity
     const {productId, quantity} = req.body
@@ -55,7 +57,10 @@ router.put('/users/:userId', isAdminOrUser, async (req, res, next) => {
     // was NOT zero
     let updatedProduct
     if (quantity !== 0)
-      updatedProduct = await Product.findByPk(productOrderToBeUpdated.productId)
+      updatedProduct = await Product.findByPk(
+        productOrderToBeUpdated.productId,
+        {include: {model: ProductOrder}}
+      )
 
     res.status(201).send(updatedProduct)
   } catch (err) {

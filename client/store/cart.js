@@ -37,10 +37,13 @@ export const fetchUpdateCart = (userId, productId, quantity) => {
         productId,
         quantity
       }
-      const updatedProduct = await axios.put(
-        `/api/carts/users/${userId}`,
-        updateInfo
-      )
+
+      console.log('updateInfo is, ', updateInfo, 'userId is, ', userId)
+
+      const {data} = await axios.put(`/api/carts/users/${userId}`, updateInfo)
+
+      console.log(data)
+
       dispatch(updateCart(updatedProduct, quantity))
     } catch (err) {
       console.error(err)

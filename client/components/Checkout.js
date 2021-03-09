@@ -1,5 +1,7 @@
 import React from 'react'
-import {Total, ShippingData} from '../components'
+import {connect} from 'react-redux'
+import Cart from './Cart'
+import ShippingData from './ShippingData'
 
 class Checkout extends React.Component {
   constructor() {
@@ -15,20 +17,27 @@ class Checkout extends React.Component {
   render() {
     const {handleSubmit} = this
     return (
-      <div className="checkoutContainer">
-        <div>This is the checkout sidebar</div>
-        <ShippingData />
-        <button
-          type="button"
-          className="checkoutBtn"
-          onClick={handleSubmit}
-          value={55}
-        >
-          Submit Order
-        </button>
+      <div className="checkout-view-container">
+        <Cart />
+        <div className="checkoutContainer">
+          <div>This is the checkout sidebar</div>
+          <ShippingData />
+          <button
+            type="button"
+            className="checkoutBtn"
+            onClick={handleSubmit}
+            value={55}
+          >
+            Submit Order
+          </button>
+        </div>
       </div>
     )
   }
 }
 
-export default Checkout
+const mapState = state => ({
+  user: state.user
+})
+
+export default connect(mapState)(Checkout)
