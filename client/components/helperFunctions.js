@@ -53,7 +53,7 @@ export function totals(products) {
 }
 
 // helper sends a toast notification
-export function notify(text = 'I am a notification!', type = 'default') {
+export function notify(text = 'I am a notification!', type) {
   switch (type) {
     case 'info':
       toast.info(text, {
