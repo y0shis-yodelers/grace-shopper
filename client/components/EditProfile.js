@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {updateUser} from '../store'
 import {notify} from './helperFunctions'
 
-const validate = (name, email, phone) => {
+const validate = (name, email, phone, password) => {
   let errors = []
 
   if (!name.length) errors.push('Name must not be empty!')
@@ -16,6 +16,10 @@ const validate = (name, email, phone) => {
     errors.push('Phone number must be 10 characters long!')
   }
 
+  if (!password.length) {
+    errors.push('Password must not be empty!')
+  }
+
   return errors
 }
 
@@ -26,8 +30,8 @@ class EditProfile extends React.Component {
       id: this.props.user.id || '',
       name: this.props.user.name || '',
       email: this.props.user.email || '',
-      phoneNumber: this.props.user.phoneNumber || ''
-      // password: '',
+      phoneNumber: this.props.user.phoneNumber || '',
+      password: ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -43,8 +47,8 @@ class EditProfile extends React.Component {
     event.preventDefault()
 
     const {userId} = this.props.user
-    const {name, email, phoneNumber} = this.state
-    const errors = validate(name, email, phoneNumber)
+    const {name, email, phoneNumber, password} = this.state
+    const errors = validate(name, email, phoneNumber, password)
 
     if (errors.length) errors.forEach(error => notify(error, 'error'))
     else {
@@ -56,20 +60,12 @@ class EditProfile extends React.Component {
 
   render() {
     const {userId} = this.props.match.params
-    const {name, email, phoneNumber /* password, */} = this.state
+    const {name, email, phoneNumber, password} = this.state
     const {handleChange, handleSubmit} = this
 
     return this.props.user.id && this.props.user.id === +userId ? (
       <div>
         <form className="shippingData" onSubmit={handleSubmit}>
-          {/* {errors.map(error => (
-            <p key={error} className="formError">
-              Error: {error}
-            </p>
-          ))} */}
-
-          {/* {errors.forEach((error) => notify(error, 'error'))} */}
-
           <div className="formField">
             <label htmlFor="name">Name:</label>
             <input
@@ -100,15 +96,15 @@ class EditProfile extends React.Component {
             />
           </div>
 
-          {/* <div className="formField">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            value={password}
-          />
-        </div> */}
+          <div className="formField">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              value={password}
+            />
+          </div>
 
           <input type="submit" value="Submit" />
         </form>
