@@ -1,6 +1,6 @@
 import {format} from 'phone-fns'
 
-export const COLUMNS = [
+export const USER_COLUMNS = [
   {
     Header: 'Id',
     accessor: 'id'

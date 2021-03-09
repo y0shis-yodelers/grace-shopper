@@ -1,7 +1,7 @@
 import React, {useMemo, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useTable, useSortBy} from 'react-table'
-import {COLUMNS} from './columns'
+import {USER_COLUMNS} from './table_columns/user_columns'
 import {fetchAllUsers} from '../store/users'
 
 export const AllUsers = () => {
@@ -23,7 +23,7 @@ export const AllUsers = () => {
   // Returns imported columns. Recommended practice by useTable hook
   // since this ensures that the data is not pulled on every render
   // and would reperform logic which would affect performance
-  const columns = useMemo(() => COLUMNS, [])
+  const columns = useMemo(() => USER_COLUMNS, [])
 
   // Destructure functions/arrays from table instance
   const {
