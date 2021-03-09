@@ -76,13 +76,21 @@ export const fetchCompleteOrder = user => {
   return async dispatch => {
     try {
       const cart = await axios.get(`api/carts/${user.id}`)
-      console.log('CART!!! THIS IS WANT', cart.data)
+      //console.log('CART!!! THIS IS WANT', cart.data)
       const worked = await axios.post('/api/stripe/success', {
         user,
         cart: cart.data
       })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
 
-      dispatch(DOUBLE_CHECK())
+export const fetchCompleteOrderClearCart = () => {
+  return dispatch => {
+    try {
+      dispatch(clearCart())
     } catch (error) {
       console.log(error)
     }
