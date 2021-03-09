@@ -252,7 +252,6 @@ button:hover {
 }
 
 .productCardOutline:hover {
-  cursor: pointer;
   box-shadow: 0.8px 0.9px 3px rgb(118, 203, 231);
 }
 
@@ -313,6 +312,16 @@ button:hover {
   height: 24px;
   width: 24px;
   padding: 0.2em;
+}
+
+.viewProductAndArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewProductAndArrow .material-icons {
+  margin-top: 0.1em;
 }
 
 /* ---- SingleProduct ---- */
