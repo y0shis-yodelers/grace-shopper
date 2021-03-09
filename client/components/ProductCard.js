@@ -8,9 +8,13 @@ class ProductCard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      quantity: this.props.quantity || 0
+      quantity: this.props.productOrder ? this.props.productOrder.quantity : 0
     }
     this.setQuantity = this.setQuantity.bind(this)
+  }
+
+  componentDidMount() {
+    this.setQuantity(this.props.quantity || 0)
   }
 
   setQuantity(newQuantity) {
@@ -21,8 +25,8 @@ class ProductCard extends React.Component {
 
   render() {
     const {setQuantity} = this
-    const {quantity} = this.state
-    const {userId, product, updateQuantity} = this.props
+    const {quantity} = this.state || 0
+    const {userId, product} = this.props
     const {name, imageUrl, price, inventory} = product || {}
 
     return (
@@ -66,7 +70,8 @@ class ProductCard extends React.Component {
 }
 
 const mapState = state => ({
-  userId: state.user.id
+  userId: state.user.id,
+  cart: state.cart
 })
 
 export default connect(mapState)(ProductCard)

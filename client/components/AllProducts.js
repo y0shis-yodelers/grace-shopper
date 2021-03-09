@@ -21,14 +21,25 @@ class AllProducts extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (!prevProps.user.id && this.props.user.id)
+    if (!prevProps.user.id && this.props.user.id) {
+      this.props.getProducts()
       this.props.getCart(this.props.user.id)
+    }
   }
 
   render() {
+    const userId = this.props.user.id || 0
     const products = this.props.products || []
-    const cart = this.props.cart || []
+
+    let userProductOrders
+    if (this.props.user.orders)
+      userProductOrders = this.props.user.orders
+        .filter(order => !order.date)[0]
+        .products.map(product => product.ProductOrder)
+
     const {updateQuantity} = this
+
+    console.log(userProductOrders)
 
     return (
       <div>
@@ -43,20 +54,26 @@ class AllProducts extends React.Component {
         ) : (
           <div className="productsAndCart">
             <div className="allProductContainer">
-              {products.map(product => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  // check if product is associated with
-                  // an order -- if not, display 0 quantity
-                  quantity={
-                    product && product.ProductOrder
-                      ? product.ProductOrder.quantity
-                      : 0
-                  }
-                  updateQuantity={updateQuantity}
-                />
-              ))}
+              {products.map(product => {
+                let PO
+                if (userProductOrders)
+                  PO = userProductOrders.filter(
+                    productOrder => productOrder.productId === product.id
+                  )[0]
+
+                let quantity = 0
+                if (PO) quantity = PO.quantity
+
+                return (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    productId={product.id}
+                    quantity={quantity}
+                    updateQuantity={updateQuantity}
+                  />
+                )
+              })}
             </div>
             <Cart />
           </div>

@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {Product} = require('../db/models')
+const {Product, Order} = require('../db/models')
 const {isAdmin} = require('./gatekeepingMiddleware')
 const {Op} = require('sequelize')
 module.exports = router
@@ -12,7 +12,8 @@ router.get('/', async (req, res, next) => {
         inventory: {
           [Op.gt]: 0
         }
-      }
+      },
+      include: [{model: Order}]
     })
     res.json(products)
   } catch (err) {
