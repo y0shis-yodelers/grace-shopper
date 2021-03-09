@@ -30,6 +30,20 @@ img {
   max-height: 100%;
 }
 
+/* ---- NavBar ---- */
+
+.checkoutAndBadge {
+  width: max-content;
+}
+
+.totalBadge {
+  background-color: darkgrey;
+  color: white;
+  padding: 0.2em;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+}
+
 /* ---- AllProducts ---- */
 
 .productsAndCart {
