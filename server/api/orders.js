@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {Order, Product} = require('../db/models')
+const {Order, Product, User} = require('../db/models')
 const {isAdmin, isAdminOrUser} = require('./gatekeepingMiddleware')
 
 // Gets all orders
@@ -64,6 +64,26 @@ router.post('/', isAdminOrUser, async (req, res, next) => {
     const data = req.body
     const {dataValues} = await Order.create(data)
     res.status(201).json(dataValues)
+    // res.send(await Order.create(req.body))
+  } catch (error) {
+    next(error)
+  }
+})
+
+//create a new cart when order is compelte
+router.post('/users/:userId', isAdminOrUser, async (req, res, next) => {
+  try {
+    const data = req.body
+    const user = await User.findByPk(req.params.userId)
+    const newOrder = await Order.create({
+      isPaid: false,
+      userId: req.params.userId
+    })
+    //newOrder.setUser(user)
+    user.hasOrder(newOrder)
+    console.log('blue', newOrder)
+    console.log('red', user)
+    res.status(201).json(newOrder)
     // res.send(await Order.create(req.body))
   } catch (error) {
     next(error)

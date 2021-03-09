@@ -81,6 +81,14 @@ export const fetchCompleteOrder = user => {
         user,
         cart: cart.data
       })
+
+      console.log('blue', user.id)
+      // create a new order axios post to orders
+      const newOrder = await axios.post(`/api/orders/users/${user.id}`)
+      // associate the new order to the user with userId
+
+      // after order is created
+      dispatch(clearCart())
     } catch (error) {
       console.log(error)
     }

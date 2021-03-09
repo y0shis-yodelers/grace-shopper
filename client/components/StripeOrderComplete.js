@@ -6,7 +6,7 @@ class OrderSuccess extends React.Component {
   componentDidUpdate(prevProps) {
     if (!prevProps.user.id && this.props.user.id) {
       this.props.completeOrder(this.props.user)
-      this.props.completeOrderClearCart()
+      //this.props.completeOrderClearCart()
     }
   }
 
@@ -32,7 +32,8 @@ const mapDispatch = dispatch => {
 }
 
 const mapState = state => ({
-  user: state.user
+  user: state.user,
+  cart: state.cart
 })
 
 export default connect(mapState, mapDispatch)(OrderSuccess)
