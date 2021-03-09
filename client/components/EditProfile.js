@@ -56,7 +56,11 @@ class EditProfile extends React.Component {
 
     return this.props.user.id && this.props.user.id === +userId ? (
       <form className="shippingData" onSubmit={handleSubmit}>
-        {errors.map(error => <p key={error}>Error: {error}</p>)}
+        {errors.map(error => (
+          <p key={error} className="formError">
+            Error: {error}
+          </p>
+        ))}
 
         <div className="formField">
           <label htmlFor="name">Name:</label>
