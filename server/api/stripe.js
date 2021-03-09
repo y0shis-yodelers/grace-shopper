@@ -25,7 +25,7 @@ const generateStripeCart = (cart, products) => {
 
 router.post('/create-checkout-session', async (req, res, next) => {
   const stripeCart = generateStripeCart(req.body.cart, req.body.products)
-  const link = process.env.DATABASE_URL || 'http://localhost:8080'
+  const link = process.env.URL || 'http://localhost:8080'
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: stripeCart,
