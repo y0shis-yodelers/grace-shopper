@@ -115,7 +115,10 @@ class ProductCard extends React.Component {
                 </button>
               </div>
               <Link className="productLink" to={`/products/${product.id}`}>
-                view product
+                <div className="viewProductAndArrow">
+                  <span>view product</span>
+                  <span className="material-icons">keyboard_arrow_right</span>
+                </div>
               </Link>
             </div>
           </div>

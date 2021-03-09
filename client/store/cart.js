@@ -76,13 +76,29 @@ export const fetchCompleteOrder = user => {
   return async dispatch => {
     try {
       const cart = await axios.get(`api/carts/${user.id}`)
-      console.log('CART!!! THIS IS WANT', cart.data)
+      //console.log('CART!!! THIS IS WANT', cart.data)
       const worked = await axios.post('/api/stripe/success', {
         user,
         cart: cart.data
       })
 
-      dispatch(DOUBLE_CHECK())
+      console.log('blue', user.id)
+      // create a new order axios post to orders
+      const newOrder = await axios.post(`/api/orders/users/${user.id}`)
+      // associate the new order to the user with userId
+
+      // after order is created
+      dispatch(clearCart())
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
+export const fetchCompleteOrderClearCart = () => {
+  return dispatch => {
+    try {
+      dispatch(clearCart())
     } catch (error) {
       console.log(error)
     }

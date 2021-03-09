@@ -13,7 +13,8 @@ import {
   AllUsers,
   EditProfile,
   OrderSuccess,
-  OrderFailure
+  OrderFailure,
+  About
 } from './components'
 import {me} from './store'
 import {reduceOrderToGetPastCart} from './components/helperFunctions'
@@ -59,6 +60,7 @@ class Routes extends Component {
         <Route path="/checkout" component={Checkout} />
         <Route path="/success" component={OrderSuccess} />
         <Route path="/failure" component={OrderFailure} />
+        <Route path="/about" component={About} />
 
         <Route path="/products/:productId" component={SingleProduct} />
         <Route path="/users/:userId/orders/:orderId" component={SingleOrder} />
