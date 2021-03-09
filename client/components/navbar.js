@@ -12,6 +12,7 @@ const Navbar = ({isLoggedIn, cart}) => {
     <div>
       <Link to="/home">
         <img className="logo" src="https://i.imgur.com/wj50jx5.png" />
+        <span className="tagline">Shred Like You Mean It</span>
       </Link>
       <nav>
         {isLoggedIn ? (

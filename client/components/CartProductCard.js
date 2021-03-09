@@ -39,6 +39,12 @@ const CartProductCard = ({product, quantity, handleQuantityChange}) => {
           </button>
         </div>
       </div>
+      <div
+        className="removeItemFromCart"
+        onClick={async () => handleQuantityChange(product.id, 0)}
+      >
+        <span className="material-icons">delete_forever</span>
+      </div>
     </div>
   )
 }

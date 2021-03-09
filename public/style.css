@@ -79,6 +79,17 @@ button:hover {
   filter: grayscale();
 }
 
+.tagline {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 0.4em;
+  position: relative;
+  top: 7.2em;
+  color: #757575;
+  margin-left: 1.1em;
+}
+
 .cartAndBadge {
   width: max-content;
 }
@@ -91,9 +102,9 @@ button:hover {
   color: white;
   padding: 0.2em;
   padding-right: 0.3em;
+  padding-left: 0.3em;
   border: 1px solid #757575;
   border-radius: 5px;
-  margin-left: 0.1em;
 }
 
 .totalBadge .material-icons {
@@ -333,6 +344,9 @@ button:hover {
 }
 
 .backToAllProducts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   margin-bottom: 0.5em;
 }
 
@@ -422,8 +436,8 @@ button:hover {
 
 .cartBtns {
   display: flex;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: -6.6em;
   width: 100%;
   align-items: center;
   justify-content: space-around;
@@ -456,6 +470,21 @@ button:hover {
   height: 60px;
   width: auto;
   margin-right: 0.5em;
+}
+
+.removeItemFromCart {
+  position: relative;
+  left: -0.5em;
+  top: -2.2em;
+  width: 0px;
+  height: auto;
+  color: #757575;
+  margin-bottom: 0.3em;
+}
+
+.removeItemFromCart:hover {
+  cursor: pointer;
+  color: black;
 }
 
 .cart-pc-inner-container {
