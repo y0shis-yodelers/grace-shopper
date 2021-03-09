@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {updateUser} from '../store'
 
 class EditProfile extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class EditProfile extends React.Component {
       phone: +this.props.user.phone || ''
     }
     this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(event) {
@@ -19,13 +21,18 @@ class EditProfile extends React.Component {
     })
   }
 
+  handleSubmit(event) {
+    event.preventDefault()
+    this.props.updateUser(this.state)
+  }
+
   render() {
     const {userId} = this.props.match.params
     const {name, email, password, phone} = this.state
-    const {handleChange} = this
+    const {handleChange, handleSubmit} = this
 
     return this.props.user.id && this.props.user.id === +userId ? (
-      <form className="shippingData">
+      <form className="shippingData" onSubmit={handleSubmit}>
         <div className="formField">
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" onChange={handleChange} value={name} />
@@ -75,4 +82,10 @@ const mapState = state => {
   }
 }
 
-export default connect(mapState)(EditProfile)
+const mapDispatch = dispatch => {
+  return {
+    updateUser: user => dispatch(updateUser(user))
+  }
+}
+
+export default connect(mapState, mapDispatch)(EditProfile)
