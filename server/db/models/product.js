@@ -23,10 +23,7 @@ const Product = db.define('product', {
   },
   inventory: {
     type: Sequelize.INTEGER,
-    allowNull: false,
-    validate: {
-      min: 0
-    }
+    allowNull: false
   },
   price: {
     type: Sequelize.INTEGER,

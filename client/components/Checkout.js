@@ -2,11 +2,25 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Cart from './Cart'
 import ShippingData from './ShippingData'
+import {fetchAllProducts} from '../store/products'
+import {fetchMergePastAndGuestCarts} from '../store/cart'
 
 class Checkout extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount() {
+    this.props.getProducts()
+    this.props.getCart()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.user.id && this.props.user.id) {
+      this.props.getProducts()
+      this.props.getCart()
+    }
   }
 
   handleSubmit(event) {
@@ -36,8 +50,18 @@ class Checkout extends React.Component {
   }
 }
 
-const mapState = (state) => ({
+const mapState = state => ({
   user: state.user,
+  cart: state.cart,
+  products: state.products
 })
 
-export default connect(mapState)(Checkout)
+const mapDispatch = dispatch => ({
+  getProducts: () => dispatch(fetchAllProducts()),
+  getCart: pastCart => {
+    const guestCart = JSON.parse(localStorage.getItem('cart'))
+    dispatch(fetchMergePastAndGuestCarts(pastCart, guestCart))
+  }
+})
+
+export default connect(mapState, mapDispatch)(Checkout)

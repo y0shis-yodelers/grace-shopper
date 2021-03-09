@@ -27,3 +27,12 @@ export const reduceOrderToGetPastCart = (order = {products: []}) => {
   })
   return res
 }
+
+// helper sets local state quantity field
+// by checking localStorage for current value of cart
+export function getQuantityFromCart(productId) {
+  const cart = JSON.parse(localStorage.getItem('cart'))
+  if (!cart) return 0
+  if (cart && !cart[productId]) return 0
+  return cart[productId]
+}

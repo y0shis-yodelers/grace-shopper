@@ -22,7 +22,10 @@ class Cart extends React.Component {
     const stripe = await stripePromise
     const response = await axios.post('api/stripe/create-checkout-session', {
       cart: this.props.cart,
-      products: this.props.products
+      products: this.props.products.filter(
+        product => this.props.cart[product.id]
+      ),
+      user: this.props.user
     })
     const session = response.data
     const result = await stripe.redirectToCheckout({
@@ -39,19 +42,6 @@ class Cart extends React.Component {
 
     return (
       <div className="cartContainer">
-        <div className="myCartAndClearCartBtn">
-          <div className="cartTitle">My Cart:</div>
-          <button
-            className="clearCart"
-            type="button"
-            onClick={() => {
-              localStorage.setItem('cart', JSON.stringify({}))
-              this.props.emptyCart(this.props.user.id)
-            }}
-          >
-            Clear Cart
-          </button>
-        </div>
         <Total products={products} cart={cart} />
         <div className="cartBox">
           {products.map(product => {
@@ -66,7 +56,7 @@ class Cart extends React.Component {
             const quantity = cart[product.id]
 
             return (
-              <div key={product.id}>
+              <div className="productCardOutline" key={product.id}>
                 <CartProductCard
                   product={product}
                   quantity={quantity}
@@ -76,10 +66,25 @@ class Cart extends React.Component {
             )
           })}
         </div>
-
-        <button type="button" className="checkoutBtn" onClick={handleCheckout}>
-          Checkout
-        </button>
+        <div className="cartBtns">
+          <button
+            type="button"
+            className="checkoutBtn"
+            onClick={handleCheckout}
+          >
+            Checkout
+          </button>
+          <button
+            className="clearCart"
+            type="button"
+            onClick={() => {
+              localStorage.setItem('cart', JSON.stringify({}))
+              this.props.emptyCart(this.props.user.id)
+            }}
+          >
+            Clear Cart
+          </button>
+        </div>
       </div>
     )
   }

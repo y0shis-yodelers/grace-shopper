@@ -5,6 +5,12 @@ const UPDATE_CART = 'UPDATE_CART'
 const MERGE_GUEST_AND_PAST_CARTS = 'MERGE_GUEST_AND_PAST_CARTS'
 const CLEAR_CART = 'CLEAR_CART'
 const CHECKOUT_CART = 'CHECKOUT_CART'
+const LOOK_INTO_4_CLEAR = 'LOOK_INTO_4_CLEAR'
+
+//something to do with return {} from reducer
+export const DOUBLE_CHECK = () => ({
+  type: LOOK_INTO_4_CLEAR
+})
 
 // action creators
 const updateCart = (productId, quantity) => {
@@ -23,10 +29,6 @@ const mergePastAndGuestCarts = (pastCart, cartFromLocalStorage) => {
 }
 export const clearCart = () => ({
   type: CLEAR_CART
-})
-export const checkoutCart = cart => ({
-  type: CHECKOUT_CART,
-  cart
 })
 
 // thunks
@@ -69,6 +71,24 @@ export const fetchClearCart = userId => {
   }
 }
 
+//Successfull order thunk
+export const fetchCompleteOrder = user => {
+  return async dispatch => {
+    try {
+      const cart = await axios.get(`api/carts/${user.id}`)
+      console.log('CART!!! THIS IS WANT', cart.data)
+      const worked = await axios.post('/api/stripe/success', {
+        user,
+        cart: cart.data
+      })
+
+      dispatch(DOUBLE_CHECK())
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
 // initial state of subreducer
 const initState = {}
 
@@ -91,15 +111,6 @@ export default (state = initState, action) => {
       return newCart
     }
     case MERGE_GUEST_AND_PAST_CARTS: {
-      // TODO
-      // here, we need to know whether user
-      // has logged in from a previous guestState
-      // where a guest cart has been created
-      // so we can reverse the order of the spreads
-      // and spread present cartFromLocalStorage
-      // OVER pastCart
-      // for now, this defaults to pastCart over localState
-      // so that db changes persist across browsers and devices
       const newCart = {
         ...state,
         ...action.cartFromLocalStorage,
@@ -112,6 +123,8 @@ export default (state = initState, action) => {
       localStorage.setItem('cart', JSON.stringify({}))
       return {}
     }
+    case LOOK_INTO_4_CLEAR:
+      return state
     default:
       return state
   }
