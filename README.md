@@ -18,7 +18,7 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
 
 ## Technologies
 
-* Front End
+* Front-End
   * React.js, Redux.js, HTML5, CSS3
 * Back-End
   * Node.js, Express.js, PostgreSQL, Sequelize
@@ -30,6 +30,8 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
   * React-Table & Phone-FNS: Great data formatting
 * Deployment
   * Heroku: Live website with public URL
+  * Mocha/Chai: Unit testing of 90% of modules for fast developement
+  * Travis: Continuous Integration and Continuous Deployment
 
 ## Future Roadmap
 
@@ -44,11 +46,16 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
 
 [Daniel Shapiro](https://www.linkedin.com/in/shapirodanieladam/) - [Kush Patel](https://www.linkedin.com/in/kushpatel21/) - [Zoran Bajic](https://www.linkedin.com/in/zoranbajic/) - [Gene Kaufman](https://github.com/TwelveEyes)
 
-### Installation
+## Installation
 
-To install all dependencies: `npm run install`
+* To install all dependencies: `npm run install`
+* To create database and seed: `createdb grace-shopper-yy && createdb grace-shopper-yy-test`
+* Seed Database with products and accounts: `npm run seed`
+* To Run App!: `npm run start-dev`
 
 #### Store your private infromation in a new file secrets.js\* or global environmenal variables
+
+###### sendSMS and sendEmail Functions may be commented out to prevent creation of secrets.js
 
 ```
 module.exports = {
@@ -59,5 +66,3 @@ module.exports = {
   phone: '+12345678901'  //Twilio phone number
 }
 ```
-
-\*sendSMS and sendEmail Functions may be commented out to prevent creation of secrets.js
