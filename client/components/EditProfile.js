@@ -6,10 +6,11 @@ class EditProfile extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      id: this.props.user.id || '',
       name: this.props.user.name || '',
       email: this.props.user.email || '',
       password: '',
-      phone: +this.props.user.phone || ''
+      phoneNumber: this.props.user.phoneNumber || ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -28,7 +29,7 @@ class EditProfile extends React.Component {
 
   render() {
     const {userId} = this.props.match.params
-    const {name, email, password, phone} = this.state
+    const {name, email, password, phoneNumber} = this.state
     const {handleChange, handleSubmit} = this
 
     return this.props.user.id && this.props.user.id === +userId ? (
@@ -59,12 +60,12 @@ class EditProfile extends React.Component {
         </div>
 
         <div className="formField">
-          <label htmlFor="phone">Phone:</label>
+          <label htmlFor="phoneNumber">Phone:</label>
           <input
             type="text"
-            name="phone"
+            name="phoneNumber"
             onChange={handleChange}
-            value={phone}
+            value={phoneNumber}
           />
         </div>
 
