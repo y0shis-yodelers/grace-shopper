@@ -8,13 +8,19 @@ class ProductCard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      quantity: this.props.productOrder ? this.props.productOrder.quantity : 0
+      quantity: this.props.quantity || 0
     }
     this.setQuantity = this.setQuantity.bind(this)
   }
 
   componentDidMount() {
     this.setQuantity(this.props.quantity || 0)
+  }
+
+  // absolutely necessary
+  componentDidUpdate(prevProps) {
+    if (!prevProps.quantity && this.props.quantity)
+      this.setQuantity(this.props.quantity || 0)
   }
 
   setQuantity(newQuantity) {

@@ -31,6 +31,7 @@ class AllProducts extends React.Component {
     const userId = this.props.user.id || 0
     const products = this.props.products || []
 
+    // absolutely necessary
     let userProductOrders
     if (this.props.user.orders)
       userProductOrders = this.props.user.orders
@@ -38,8 +39,6 @@ class AllProducts extends React.Component {
         .products.map(product => product.ProductOrder)
 
     const {updateQuantity} = this
-
-    console.log(userProductOrders)
 
     return (
       <div>
@@ -55,12 +54,12 @@ class AllProducts extends React.Component {
           <div className="productsAndCart">
             <div className="allProductContainer">
               {products.map(product => {
+                // absolutely necessary
                 let PO
                 if (userProductOrders)
                   PO = userProductOrders.filter(
                     productOrder => productOrder.productId === product.id
                   )[0]
-
                 let quantity = 0
                 if (PO) quantity = PO.quantity
 
