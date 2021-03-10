@@ -19,28 +19,33 @@ class UserProfile extends React.Component {
         <div className="profileContainer">
           {Object.keys(singleUser).length ? (
             <div className="singleUserContainer">
-              <div className="ordersLabel">Order History</div>
-              <AllOrders user={singleUser} />
-
               <div className="profileLabel">Profile Info</div>
-              <div className="userProfileContainer">
-                <div>
-                  <div className="userProfileName">Name: {singleUser.name}</div>
-                  <div className="userProfileEmail">
-                    Email: {singleUser.email}
+              <div className="profileAndBlank">
+                <div className="userProfileContainer">
+                  <div className="userProfileItem">
+                    <span>Name:</span>
+                    <span>{singleUser.name}</span>
                   </div>
-                  <div className="userProfilePhone">
-                    Phone: {format('(NNN) NNN-NNNN', singleUser.phoneNumber)}
+                  <div className="userProfileItem">
+                    <span>Email:</span>
+                    <span>{singleUser.email}</span>
                   </div>
-
+                  <div className="userProfileItem">
+                    <span>Phone:</span>
+                    <span>
+                      {format('(NNN) NNN-NNNN', singleUser.phoneNumber)}
+                    </span>
+                  </div>
                   <button
                     type="button"
                     onClick={() => history.push(`/users/${singleUser.id}/edit`)}
                   >
-                    Edit
+                    Edit My Profile
                   </button>
                 </div>
               </div>
+              <div className="ordersLabel">Order History</div>
+              <AllOrders user={singleUser} />
             </div>
           ) : (
             <Loader

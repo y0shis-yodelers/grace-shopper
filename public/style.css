@@ -547,13 +547,16 @@ button:hover {
   color: white;
 }
 
-.sp-quantity-btn {
-}
-
 /* ---- Profile ---- */
 
 .user {
   display: flex;
+}
+
+.profileAndBlank {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .profileContainer {
@@ -561,15 +564,10 @@ button:hover {
   margin: 0 auto;
 }
 
-.ordersLabel {
-  margin-top: 1em;
-}
-
-.singleUserContainer {
-}
-
+.ordersLabel,
 .profileLabel {
-  margin-top: 1em;
+  margin: 1em 0;
+  font-size: 18px;
 }
 
 .userProfileContainer {
@@ -578,6 +576,26 @@ button:hover {
   justify-content: center;
   min-height: 100px;
   box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
+  padding: 1em;
+}
+
+.userProfileItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  width: 300px;
+}
+
+.userProfileContainer button {
+  width: 200px;
+  align-self: center;
+  margin-top: 1em;
+}
+
+.userProfileContainer button:hover {
+  background-color: #757575;
+  color: white;
 }
 
 /* --- All Orders --- */
@@ -589,6 +607,7 @@ button:hover {
   min-height: 325px;
   box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
   border: 1px solid transparent;
+  padding: 1em;
 }
 
 /* ---- Order Card ---- */
@@ -650,6 +669,10 @@ button:hover {
 
 .orderName {
   font-weight: bold;
+}
+
+.orderLink * {
+  color: black;
 }
 
 /* ---- All Users ---- */

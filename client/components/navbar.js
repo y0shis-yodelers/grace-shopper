@@ -5,7 +5,7 @@ import {logout} from '../store/user'
 import store from '../store'
 import {fetchClearCart} from '../store/cart'
 
-const Navbar = ({isLoggedIn, cart}) => {
+const Navbar = ({user, isLoggedIn, cart}) => {
   const totalItems = Object.values(cart).reduce((a, b) => a + b, 0)
 
   return (
@@ -32,7 +32,7 @@ const Navbar = ({isLoggedIn, cart}) => {
               Logout
             </a>
             <Link to="/users/profile">Profile</Link>
-            <Link to="/users">Users</Link>
+            {user.isAdmin && <Link to="/users">Users</Link>}
             <a className="cartAndBadge" href="">
               <div
                 className={
@@ -76,6 +76,7 @@ const Navbar = ({isLoggedIn, cart}) => {
  */
 const mapState = state => ({
   cart: state.cart,
+  user: state.user,
   isLoggedIn: !!state.user.id
 })
 
