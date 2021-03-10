@@ -31,7 +31,7 @@ const Navbar = ({isLoggedIn, cart}) => {
             >
               Logout
             </a>
-            <Link to="/users/:userId">Profile</Link>
+            <Link to="/users/profile">Profile</Link>
             <Link to="/users">Users</Link>
             <a className="cartAndBadge" href="">
               <div
