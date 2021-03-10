@@ -14,7 +14,8 @@ import {
   EditProfile,
   OrderSuccess,
   OrderFailure,
-  About
+  About,
+  NotFound
 } from './components'
 import {me} from './store'
 import {reduceOrderToGetPastCart} from './components/helperFunctions'
@@ -68,7 +69,7 @@ class Routes extends Component {
         <Route path="/users/:userId" component={UserProfile} />
         <Route exact path="/users" component={AllUsers} />
 
-        <Route component={AllProducts} />
+        <Route component={NotFound} />
       </Switch>
     )
   }

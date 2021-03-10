@@ -10,6 +10,8 @@ html {
 
 body {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -806,4 +808,49 @@ table th {
 .shippingData button:hover {
   background-color: #757575;
   color: white;
+}
+
+/* ---- NotFound ---- */
+
+.notFoundPage {
+  background-image: url('https://i.imgur.com/eymSP8O.jpg?1');
+  background-size: auto;
+  height: 100vh;
+  width: auto;
+}
+
+.transparencyMask {
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 0, 0, 0),
+    rgb(255, 255, 255)
+  );
+  z-index: 1;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.notFoundPage h1 {
+  font-size: 6em;
+}
+
+.notFoundPage h2 {
+  font-size: 2em;
+}
+
+.material-icons.quarter-turn {
+  font-size: 4em;
+  transform: rotate(90deg);
+  margin-top: 0.5em;
+}
+
+.nf-iconContainer a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
