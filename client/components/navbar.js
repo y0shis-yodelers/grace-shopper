@@ -33,7 +33,7 @@ const Navbar = ({user, isLoggedIn, cart}) => {
             </a>
             <Link to="/users/profile">Profile</Link>
             {user.isAdmin && <Link to="/users">Users</Link>}
-            <a className="cartAndBadge" href="">
+            <a className="cartAndBadge" href="#">
               <div
                 className={
                   totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'
