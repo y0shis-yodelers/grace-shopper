@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store/user'
 import store from '../store'
-import {fetchClearCart} from '../store/cart'
+import {fetchSaveCartOnLogout, fetchClearCart} from '../store/cart'
 
 const Navbar = ({user, isLoggedIn, cart}) => {
   const totalItems = Object.values(cart).reduce((a, b) => a + b, 0)
@@ -25,7 +25,8 @@ const Navbar = ({user, isLoggedIn, cart}) => {
             </a>
             <a
               href="#"
-              onClick={() => {
+              onClick={async () => {
+                await fetchSaveCartOnLogout(user.id, cart)
                 store.dispatch(fetchClearCart())
                 store.dispatch(logout())
               }}
