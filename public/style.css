@@ -557,7 +557,8 @@ button:hover {
 }
 
 .profileContainer {
-  flex-grow: 100;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .ordersLabel {
