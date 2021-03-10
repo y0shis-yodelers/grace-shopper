@@ -35,6 +35,12 @@ router.get('/:userId', isAdminOrUser, async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     const user = await User.Create(req.body)
+    const newOrder = await Order.create({
+      isPaid: false,
+      userId: user.id
+    })
+    user.hasOrder(newOrder)
+    console.log('red', 'blue')
     res.json(user)
   } catch (err) {
     next(err)

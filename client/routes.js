@@ -58,10 +58,8 @@ class Routes extends Component {
         <Route path="/home" component={AllProducts} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route path="/checkout" component={Checkout} />
         <Route path="/success" component={OrderSuccess} />
         <Route path="/failure" component={OrderFailure} />
-        <Route path="/about" component={About} />
 
         <Route path="/products/:productId" component={SingleProduct} />
         <Route path="/users/:userId/orders/:orderId" component={SingleOrder} />
