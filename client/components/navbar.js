@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
@@ -31,9 +32,11 @@ const Navbar = ({user, isLoggedIn, cart}) => {
             >
               Logout
             </a>
-            <Link to="/users/profile">Profile</Link>
-            {user.isAdmin && <Link to="/users">Users</Link>}
-            <a className="cartAndBadge" href="#">
+            <Link to="/users/:userId">Profile</Link>
+            {!user.isAdmin && <Link to="/users">Users</Link>}
+            {user.isAdmin && <Link to="/admin/users">Users</Link>}
+            {user.isAdmin && <Link to="/admin/products">Products</Link>}
+            <a className="cartAndBadge" href="">
               <div
                 className={
                   totalItems === 0 ? 'totalBadge hidden' : 'totalBadge'

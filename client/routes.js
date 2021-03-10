@@ -14,8 +14,9 @@ import {
   EditProfile,
   OrderSuccess,
   OrderFailure,
-  About,
-  NotFound
+  NotFound,
+  AdminAllProducts,
+  About
 } from './components'
 import {me} from './store'
 import {reduceOrderToGetPastCart} from './components/helperFunctions'
@@ -67,7 +68,8 @@ class Routes extends Component {
         <Route path="/users/:userId/orders/:orderId" component={SingleOrder} />
         <Route path="/users/:userId/edit" component={EditProfile} />
         <Route path="/users/:userId" component={UserProfile} />
-        <Route exact path="/users" component={AllUsers} />
+        <Route exact path="/admin/users" component={AllUsers} />
+        <Route exact path="/admin/products" component={AdminAllProducts} />
 
         <Route component={NotFound} />
       </Switch>

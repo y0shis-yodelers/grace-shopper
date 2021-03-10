@@ -1,15 +1,15 @@
 import React, {useMemo, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useTable, useSortBy, usePagination} from 'react-table'
-import {USER_COLUMNS} from './table_columns/user_columns'
-import {fetchAllUsers} from '../store/users'
+import {PRODUCT_COLUMNS} from './table_columns/product_columns'
+import {fetchAdminAllProducts} from '../store/products'
 
-export const AllUsers = () => {
+export const AdminAllProducts = () => {
   // useDispatch gives us access to dispatch
   const dispatch = useDispatch()
 
   // useSelector is the equivalent of mapStateToProps
-  const users = useSelector(state => state.users)
+  const products = useSelector(state => state.products)
   const isAdmin = useSelector(state => state.user.isAdmin)
 
   // useEffect asks us to define a side-effect fn
@@ -17,14 +17,14 @@ export const AllUsers = () => {
   // is a callback; the second arg is the dataType, which
   // in this case is an array
   useEffect(() => {
-    const getUsers = () => dispatch(fetchAllUsers())
-    getUsers()
+    const getProducts = () => dispatch(fetchAdminAllProducts())
+    getProducts()
   }, [])
 
   // Returns imported columns. Recommended practice by useTable hook
   // since this ensures that the data is not pulled on every render
   // and would reperform logic which would affect performance
-  const columns = useMemo(() => USER_COLUMNS, [])
+  const columns = useMemo(() => PRODUCT_COLUMNS, [])
 
   // Destructure functions/arrays from table instance
   const {
@@ -42,7 +42,7 @@ export const AllUsers = () => {
   } = useTable(
     {
       columns,
-      data: users
+      data: products
     },
     useSortBy,
     usePagination
@@ -136,4 +136,4 @@ export const AllUsers = () => {
   )
 }
 
-export default AllUsers
+export default AdminAllProducts

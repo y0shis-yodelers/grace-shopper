@@ -18,6 +18,17 @@ export const fetchAllProducts = () => {
   }
 }
 
+export const fetchAdminAllProducts = () => {
+  return async dispatch => {
+    try {
+      const {data} = await axios.get('/api/admin/products')
+      dispatch(getAllProducts(data))
+    } catch (err) {
+      console.error(err)
+    }
+  }
+}
+
 const initState = []
 
 export default (state = initState, action) => {
