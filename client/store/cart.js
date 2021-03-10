@@ -118,7 +118,7 @@ export const fetchSaveCartOnLogout = (userId, cart) => {
 
         await axios.put(`/api/carts/${userId}`, updateInfo)
 
-        dispatch(updateCart(userId, item[0], item[1]))
+        dispatch(updateCart(item[0], item[1]))
       })
 
       // dispatch the clearCart action creator
