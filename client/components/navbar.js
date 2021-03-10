@@ -33,7 +33,6 @@ const Navbar = ({user, isLoggedIn, cart}) => {
               Logout
             </a>
             <Link to="/users/:userId">Profile</Link>
-            {!user.isAdmin && <Link to="/users">Users</Link>}
             {user.isAdmin && <Link to="/admin/users">Users</Link>}
             {user.isAdmin && <Link to="/admin/products">Products</Link>}
             <a className="cartAndBadge" href="">
