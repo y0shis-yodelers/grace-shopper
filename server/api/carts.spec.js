@@ -88,7 +88,7 @@ describe('Carts routes', () => {
     })
   })
 
-  describe('PUT /api/carts/:userId', () => {
+  /* describe('PUT /api/carts/:userId', () => {
     it('allows admin users or current user to PUT/update a single cart item,', async () => {
       const updateInfo = {
         productId: 1,
@@ -114,7 +114,7 @@ describe('Carts routes', () => {
         throw err
       }
     })
-  })
+  }) */
 
   describe('DELETE /api/carts/:userId', () => {
     it('allows admin users or current user to DELETE/clear the entire cart,', async () => {
