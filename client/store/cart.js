@@ -106,24 +106,28 @@ export const fetchCompleteOrderClearCart = () => {
 }
 
 export const fetchSaveCartOnLogout = (userId, cart) => {
-  try {
-    // get an array of cart items structured:
-    // [{ productId, quantity }, ...]
-    const cartList = Object.entries(cart).map(entry => {
-      return {
-        [entry[0]]: entry[1]
-      }
-    })
+  return async dispatch => {
+    try {
+      // get an array of cart items structured:
+      // [{ productId, quantity }, ...]
+      const cartList = Object.entries(cart).map(entry => {
+        return {
+          [entry[0]]: entry[1]
+        }
+      })
 
-    // PUT each item in the db
-    cartList.forEach(async item => {
-      await axios.put(`/api/carts/${userId}`, item)
-    })
+      // PUT each item in the db
+      cartList.forEach(async item => {
+        await axios.put(`/api/carts/${userId}`, item)
+      })
 
-    // step 3 ... ?
-    // step 4: profit
-  } catch (err) {
-    console.error(err)
+      // dispatch the clearCart action creator
+      // which will reset local storage
+      // but NOT the db, convenient!
+      dispatch(clearCart())
+    } catch (err) {
+      console.error(err)
+    }
   }
 }
 
