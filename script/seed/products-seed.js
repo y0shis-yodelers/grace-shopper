@@ -3,2400 +3,2400 @@ module.exports = [
     name: 'Ableton',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 3,
-    price: 765
+    imageUrl: 'https://imgur.com/kkawlXP.jpg',
+    inventory: 34,
+    price: 110
   },
   {
     name: 'AC Noises',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 53,
-    price: 334
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/VvXGwGp.jpg',
+    inventory: 98,
+    price: 813
   },
   {
     name: 'Aclam Guitars',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 80,
-    price: 33
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/Gsg0Pdg.jpg',
+    inventory: 19,
+    price: 173
   },
   {
     name: 'Adam',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 58,
-    price: 160
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/mtetGaj.jpg',
+    inventory: 16,
+    price: 283
   },
   {
     name: 'Adam Black',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/R0es16f.jpg',
-    inventory: 42,
-    price: 840
+    imageUrl: 'https://imgur.com/yG89Vwp.jpg',
+    inventory: 80,
+    price: 63
   },
   {
     name: 'AER',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 3,
-    price: 716
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/GnM4Yqn.jpg',
+    inventory: 55,
+    price: 456
   },
   {
     name: 'Akai',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 88,
-    price: 62
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/SnhKiPf.jpg',
+    inventory: 94,
+    price: 654
   },
   {
     name: 'AKG',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 55,
-    price: 602
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/PahLGCf.jpg',
+    inventory: 34,
+    price: 948
   },
   {
     name: 'Alesis',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 0,
-    price: 758
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/uNBav71.jpg',
+    inventory: 39,
+    price: 233
   },
   {
     name: 'Allen & Heath',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 66,
-    price: 54
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/UMYvQMz.jpg',
+    inventory: 73,
+    price: 683
   },
   {
     name: 'Almansa',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 6,
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/VKvRrbK.jpg',
+    inventory: 39,
     price: 722
   },
   {
     name: 'Alto',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 55,
-    price: 58
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/wEfstmA.jpg',
+    inventory: 97,
+    price: 581
   },
   {
     name: 'Alvarez',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 68,
-    price: 791
+    imageUrl: 'https://imgur.com/YKmazzg.jpg',
+    inventory: 70,
+    price: 236
   },
   {
     name: 'Ampeg',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 67,
-    price: 737
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/fD6pMbM.jpg',
+    inventory: 64,
+    price: 812
   },
   {
     name: 'Apogee',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 69,
-    price: 532
+    imageUrl: 'https://imgur.com/gic3yha.jpg',
+    inventory: 73,
+    price: 990
   },
   {
     name: 'Art',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 49,
-    price: 458
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/kKw9wNI.jpg',
+    inventory: 68,
+    price: 80
   },
   {
     name: 'Art & Lutherie',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 90,
-    price: 869
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/Mk2uMRz.jpg',
+    inventory: 9,
+    price: 515
   },
   {
     name: 'Arturia',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 54,
-    price: 803
+    imageUrl: 'https://imgur.com/DOHef1x.jpg',
+    inventory: 75,
+    price: 912
   },
   {
     name: 'Ashdown',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 84,
-    price: 139
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/GHs2YJx.jpg',
+    inventory: 79,
+    price: 285
   },
   {
     name: 'Aston',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 17,
-    price: 337
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/Os6IVz6.jpg',
+    inventory: 57,
+    price: 90
   },
   {
     name: 'Atkin',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 67,
-    price: 572
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/8E5gM3f.jpg',
+    inventory: 93,
+    price: 110
   },
   {
     name: 'Auden',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 28,
-    price: 707
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/SmKBcMY.jpg',
+    inventory: 97,
+    price: 644
   },
   {
     name: 'Audient',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 11,
-    price: 373
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/uNBav71.jpg',
+    inventory: 82,
+    price: 388
   },
   {
     name: 'Audio Technica',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 44,
-    price: 233
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/jQ2TEBK.jpg',
+    inventory: 13,
+    price: 559
   },
   {
     name: 'Austrian Audio',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 22,
-    price: 729
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/Jeu5E5C.jpg',
+    inventory: 8,
+    price: 516
   },
   {
     name: 'B&G',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 98,
-    price: 892
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/ONhLuG3.jpg',
+    inventory: 22,
+    price: 498
   },
   {
     name: 'Balaguer',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/2rjFQzW.jpg',
-    inventory: 17,
-    price: 10
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/Mk2uMRz.jpg',
+    inventory: 55,
+    price: 684
   },
   {
     name: 'BandLab',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 52,
-    price: 502
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/wRO9ltp.jpg',
+    inventory: 30,
+    price: 59
   },
   {
     name: 'Bare Knuckle',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 69,
-    price: 217
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/8E5gM3f.jpg',
+    inventory: 45,
+    price: 445
   },
   {
     name: 'Barnes & Mullins',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/R0es16f.jpg',
-    inventory: 95,
-    price: 33
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/w1ouaLF.jpg',
+    inventory: 10,
+    price: 830
   },
   {
     name: 'BC Rich',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 18,
-    price: 971
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/rQuLLk7.jpg',
+    inventory: 89,
+    price: 278
   },
   {
     name: 'Behringer',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 24,
-    price: 37
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/SmKBcMY.jpg',
+    inventory: 83,
+    price: 871
   },
   {
     name: 'Beyer',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 30,
-    price: 767
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/caK28JN.jpg',
+    inventory: 64,
+    price: 530
   },
   {
     name: 'Bigsby',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 47,
-    price: 30
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/ZdNm71Z.jpg',
+    inventory: 9,
+    price: 98
   },
   {
     name: 'Blackstar',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 40,
-    price: 808
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/bPGHzu9.jpg',
+    inventory: 75,
+    price: 382
   },
   {
     name: 'Blade',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 91,
-    price: 927
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/TNOIneh.jpg',
+    inventory: 69,
+    price: 353
   },
   {
     name: 'Bogner',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/2rjFQzW.jpg',
-    inventory: 87,
-    price: 876
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/auME7u8.jpg',
+    inventory: 21,
+    price: 960
   },
   {
     name: 'Bose',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 79,
-    price: 413
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/EaFTv60.jpg',
+    inventory: 20,
+    price: 533
   },
   {
     name: 'BOSS',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 82,
-    price: 277
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/54edJLq.jpg',
+    inventory: 79,
+    price: 638
   },
   {
     name: 'Boston',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 83,
-    price: 361
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/xwpgg96.jpg',
+    inventory: 20,
+    price: 516
   },
   {
     name: 'Breedlove',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 9,
-    price: 246
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/Cv0e5pT.jpg',
+    inventory: 46,
+    price: 393
   },
   {
     name: 'Brian May',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/zFep5xB.jpg',
-    inventory: 20,
-    price: 686
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/Sf9JkaJ.jpg',
+    inventory: 59,
+    price: 867
   },
   {
     name: 'Brunswick',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/2rjFQzW.jpg',
-    inventory: 96,
-    price: 372
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/hW11rl4.jpg',
+    inventory: 60,
+    price: 195
   },
   {
     name: 'Carlsbro',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 46,
-    price: 640
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/JnPRCAu.jpg',
+    inventory: 96,
+    price: 769
   },
   {
     name: 'Casio',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/R0es16f.jpg',
-    inventory: 0,
-    price: 372
+    imageUrl: 'https://imgur.com/C5Kkyar.jpg',
+    inventory: 92,
+    price: 255
   },
   {
     name: 'Catalinbread',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 52,
-    price: 319
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/A6UnaU8.jpg',
+    inventory: 9,
+    price: 7
   },
   {
     name: 'Chapman',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 17,
-    price: 616
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/gNoLmR2.jpg',
+    inventory: 59,
+    price: 727
   },
   {
     name: 'Charvel',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 7,
-    price: 467
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/oM7SfZ1.jpg',
+    inventory: 13,
+    price: 569
   },
   {
     name: 'Chauvet DJ',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 2,
-    price: 161
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/mtetGaj.jpg',
+    inventory: 20,
+    price: 292
   },
   {
     name: 'Chord',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 48,
-    price: 227
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/ONCwxjx.jpg',
+    inventory: 49,
+    price: 183
   },
   {
     name: 'Cioks',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 58,
-    price: 903
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/Mk2uMRz.jpg',
+    inventory: 1,
+    price: 92
   },
   {
     name: 'CNB',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 15,
-    price: 832
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/BLp0Zgo.jpg',
+    inventory: 98,
+    price: 167
   },
   {
     name: 'Cole Clark',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 53,
-    price: 339
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/RRpxBj0.jpg',
+    inventory: 68,
+    price: 661
   },
   {
     name: 'Collings',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/2rjFQzW.jpg',
-    inventory: 64,
-    price: 938
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/T30XzvY.jpg',
+    inventory: 72,
+    price: 554
   },
   {
     name: 'Cooperstand',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 92,
-    price: 794
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/6BJz5c3.jpg',
+    inventory: 28,
+    price: 586
   },
   {
     name: 'Cordoba',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 34,
-    price: 961
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/rJbq6Ql.jpg',
+    inventory: 66,
+    price: 34
   },
   {
     name: 'Cornell',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 2,
-    price: 655
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/wyLLDNm.jpg',
+    inventory: 34,
+    price: 544
   },
   {
     name: 'Cornerstone',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 64,
-    price: 799
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/tvGZcYE.jpg',
+    inventory: 36,
+    price: 294
   },
   {
     name: 'Cort',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 23,
-    price: 262
+    imageUrl: 'https://imgur.com/SnhKiPf.jpg',
+    inventory: 9,
+    price: 311
   },
   {
     name: 'Curt Mangan',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 68,
-    price: 936
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/8E5gM3f.jpg',
+    inventory: 38,
+    price: 485
   },
   {
     name: 'Daredevil',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 9,
-    price: 274
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/bPGHzu9.jpg',
+    inventory: 67,
+    price: 698
   },
   {
     name: 'Darkglass',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 82,
-    price: 648
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/iX9Jj7A.jpg',
+    inventory: 83,
+    price: 325
   },
   {
     name: 'Deering',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 6,
-    price: 453
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/VvXGwGp.jpg',
+    inventory: 14,
+    price: 974
   },
   {
     name: 'Diago',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 13,
-    price: 333
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/KgA3mdT.jpg',
+    inventory: 8,
+    price: 989
   },
   {
     name: 'Digitech',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 17,
-    price: 412
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/HnZHMuz.jpg',
+    inventory: 21,
+    price: 958
   },
   {
     name: 'DiMarzio',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 15,
-    price: 82
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/N4mPlou.jpg',
+    inventory: 11,
+    price: 262
   },
   {
     name: 'Dingwall',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 38,
-    price: 171
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/MNKxpFt.jpg',
+    inventory: 79,
+    price: 138
   },
   {
     name: 'Dod',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 58,
-    price: 51
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/rJbq6Ql.jpg',
+    inventory: 6,
+    price: 810
   },
   {
     name: 'DSL',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 54,
-    price: 945
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/xHryn8p.jpg',
+    inventory: 94,
+    price: 737
   },
   {
     name: 'Dunlop',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 16,
-    price: 178
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/Orum7WS.jpg',
+    inventory: 5,
+    price: 365
   },
   {
     name: 'DV Mark',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
+    imageUrl: 'https://imgur.com/GFhfum4.jpg',
     inventory: 18,
-    price: 395
+    price: 943
   },
   {
     name: 'EastCoast',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/2rjFQzW.jpg',
-    inventory: 45,
-    price: 360
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/9UrOgtF.jpg',
+    inventory: 85,
+    price: 937
   },
   {
     name: 'Eastman',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 7,
-    price: 316
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/kkawlXP.jpg',
+    inventory: 76,
+    price: 916
   },
   {
     name: 'Ebow',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 40,
-    price: 776
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/xHryn8p.jpg',
+    inventory: 4,
+    price: 357
   },
   {
     name: 'Electro Harmonix',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 87,
-    price: 602
+    imageUrl: 'https://imgur.com/5W2Ez4o.jpg',
+    inventory: 98,
+    price: 597
   },
   {
     name: 'Electro Voice',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 90,
-    price: 695
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/Gsg0Pdg.jpg',
+    inventory: 41,
+    price: 352
   },
   {
     name: 'Elixir',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 9,
-    price: 188
+    imageUrl: 'https://imgur.com/Mk2uMRz.jpg',
+    inventory: 83,
+    price: 687
   },
   {
     name: 'EMG',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/K4aociq.jpg',
-    inventory: 77,
-    price: 772
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/LHt3zGe.jpg',
+    inventory: 7,
+    price: 385
   },
   {
     name: 'Empress Effects',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 39,
-    price: 921
+    imageUrl: 'https://imgur.com/mf4OrAO.jpg',
+    inventory: 33,
+    price: 119
   },
   {
     name: 'Encore',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 38,
-    price: 980
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/kOktUh3.jpg',
+    inventory: 98,
+    price: 779
   },
   {
     name: 'Epiphone',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 23,
-    price: 812
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/SnhKiPf.jpg',
+    inventory: 100,
+    price: 844
   },
   {
     name: 'Ernie Ball',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 69,
-    price: 784
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/Cv0e5pT.jpg',
+    inventory: 60,
+    price: 324
   },
   {
     name: 'ESP',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 97,
-    price: 428
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/VKvRrbK.jpg',
+    inventory: 29,
+    price: 307
   },
   {
     name: 'Eventide',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 37,
-    price: 602
+    imageUrl: 'https://imgur.com/jQ2TEBK.jpg',
+    inventory: 48,
+    price: 37
   },
   {
     name: 'EVH',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 60,
-    price: 121
+    imageUrl: 'https://imgur.com/lYLWeAy.jpg',
+    inventory: 51,
+    price: 950
   },
   {
     name: 'Faith',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 75,
-    price: 692
+    imageUrl: 'https://imgur.com/fwRQ6pf.jpg',
+    inventory: 58,
+    price: 187
   },
   {
     name: 'Fender',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 72,
-    price: 162
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/lYLWeAy.jpg',
+    inventory: 92,
+    price: 754
   },
   {
     name: 'Finlayson',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 34,
-    price: 301
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/YwNacTJ.jpg',
+    inventory: 3,
+    price: 337
   },
   {
     name: 'Fishman',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/zFep5xB.jpg',
-    inventory: 55,
-    price: 897
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/kkawlXP.jpg',
+    inventory: 69,
+    price: 385
   },
   {
     name: 'Focal',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 53,
-    price: 838
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/2UQzJxw.jpg',
+    inventory: 46,
+    price: 563
   },
   {
     name: 'Focusrite',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 1,
-    price: 877
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/RKlyvWx.jpg',
+    inventory: 17,
+    price: 940
   },
   {
     name: 'Freshman',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 98,
-    price: 917
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/yanvcKY.jpg',
+    inventory: 93,
+    price: 275
   },
   {
     name: 'Friedman',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/2rjFQzW.jpg',
-    inventory: 36,
-    price: 153
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/JnPRCAu.jpg',
+    inventory: 37,
+    price: 569
   },
   {
     name: 'Fryette',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 51,
-    price: 55
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/Os6IVz6.jpg',
+    inventory: 26,
+    price: 693
   },
   {
     name: 'Fulltone',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 89,
-    price: 462
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/X5QPpM7.jpg',
+    inventory: 2,
+    price: 241
   },
   {
     name: 'G&L',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 12,
-    price: 578
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/Os6IVz6.jpg',
+    inventory: 98,
+    price: 170
   },
   {
     name: 'G7TH',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 48,
-    price: 445
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/LHt3zGe.jpg',
+    inventory: 60,
+    price: 402
   },
   {
     name: 'Gallien Krueger',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 16,
-    price: 656
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/DgLPzVK.jpg',
+    inventory: 7,
+    price: 644
   },
   {
     name: 'Gator',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 95,
-    price: 739
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/54edJLq.jpg',
+    inventory: 11,
+    price: 747
   },
   {
     name: 'Gaucho',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 69,
-    price: 423
+    imageUrl: 'https://imgur.com/s3JsbqO.jpg',
+    inventory: 56,
+    price: 832
   },
   {
     name: 'Genelec',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 43,
-    price: 761
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/PWdZb8N.jpg',
+    inventory: 20,
+    price: 392
   },
   {
     name: 'GHS',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/K4aociq.jpg',
-    inventory: 94,
-    price: 706
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/x0JqHN1.jpg',
+    inventory: 56,
+    price: 819
   },
   {
     name: 'Gibson',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 52,
-    price: 603
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/A6UnaU8.jpg',
+    inventory: 13,
+    price: 571
   },
   {
     name: 'Godin',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/R0es16f.jpg',
-    inventory: 60,
-    price: 414
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/e4Vfolf.jpg',
+    inventory: 38,
+    price: 558
   },
   {
     name: 'Grafton',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 0,
-    price: 690
+    imageUrl: 'https://imgur.com/7jMchUR.jpg',
+    inventory: 35,
+    price: 797
   },
   {
     name: 'Gravity',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 28,
-    price: 825
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/6BJz5c3.jpg',
+    inventory: 19,
+    price: 217
   },
   {
     name: 'Gretsch',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 59,
-    price: 128
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/oCkgSNq.jpg',
+    inventory: 35,
+    price: 527
   },
   {
     name: 'Groove Tube',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 30,
-    price: 286
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/YKmazzg.jpg',
+    inventory: 70,
+    price: 389
   },
   {
     name: 'Grover',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 48,
-    price: 896
+    imageUrl: 'https://imgur.com/Sf9JkaJ.jpg',
+    inventory: 45,
+    price: 204
   },
   {
     name: 'Gruv Gear',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 83,
-    price: 960
+    imageUrl: 'https://imgur.com/mf4OrAO.jpg',
+    inventory: 53,
+    price: 183
   },
   {
     name: 'Guild',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 92,
-    price: 139
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/fsQMkZf.jpg',
+    inventory: 11,
+    price: 784
   },
   {
     name: 'Hagstrom',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 28,
-    price: 161
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/A6UnaU8.jpg',
+    inventory: 18,
+    price: 801
   },
   {
     name: 'HeadRush',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 1,
-    price: 459
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/iDjnetY.jpg',
+    inventory: 38,
+    price: 594
   },
   {
     name: 'Hercules',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 8,
-    price: 819
+    imageUrl: 'https://imgur.com/2UQzJxw.jpg',
+    inventory: 7,
+    price: 865
   },
   {
     name: 'Hiscox',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 58,
-    price: 34
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/VvXGwGp.jpg',
+    inventory: 18,
+    price: 312
   },
   {
     name: 'Hiwatt',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 37,
-    price: 542
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/rQuLLk7.jpg',
+    inventory: 7,
+    price: 622
   },
   {
     name: 'Hohner',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 35,
-    price: 677
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/nqWkef1.jpg',
+    inventory: 21,
+    price: 171
   },
   {
     name: 'Hughes & Kettner',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 2,
-    price: 339
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/54edJLq.jpg',
+    inventory: 89,
+    price: 100
   },
   {
     name: 'Ibanez',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 81,
-    price: 456
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/88BHiqL.jpg',
+    inventory: 13,
+    price: 821
   },
   {
     name: 'Icon',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 6,
-    price: 12
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/PahLGCf.jpg',
+    inventory: 96,
+    price: 589
   },
   {
     name: 'IK Multimedia',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 39,
-    price: 770
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/rJbq6Ql.jpg',
+    inventory: 1,
+    price: 583
   },
   {
     name: 'Iso Acoustics',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 18,
-    price: 4
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/Mk2uMRz.jpg',
+    inventory: 77,
+    price: 443
   },
   {
     name: 'ISP',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 82,
-    price: 44
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/ojpzr6w.jpg',
+    inventory: 83,
+    price: 423
   },
   {
     name: 'J.Rockett Audio',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 70,
-    price: 54
+    imageUrl: 'https://imgur.com/HnZHMuz.jpg',
+    inventory: 11,
+    price: 464
   },
   {
     name: 'Jackson',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 90,
-    price: 887
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/PWdZb8N.jpg',
+    inventory: 57,
+    price: 203
   },
   {
     name: 'Jackson Audio',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 92,
-    price: 686
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/jCt8UnX.jpg',
+    inventory: 65,
+    price: 862
   },
   {
     name: 'Jam Pedals',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 29,
-    price: 106
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/lYLWeAy.jpg',
+    inventory: 95,
+    price: 916
   },
   {
     name: 'JHS Pedals',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 47,
-    price: 742
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/VKvRrbK.jpg',
+    inventory: 74,
+    price: 47
   },
   {
     name: 'Jose ferrer',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 16,
-    price: 55
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/s3JsbqO.jpg',
+    inventory: 3,
+    price: 88
   },
   {
     name: 'Jose Ramirez',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/K4aociq.jpg',
-    inventory: 44,
-    price: 934
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/Jeu5E5C.jpg',
+    inventory: 48,
+    price: 224
   },
   {
     name: 'Kali Audio',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/K4aociq.jpg',
-    inventory: 99,
-    price: 474
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/Jeu5E5C.jpg',
+    inventory: 13,
+    price: 255
   },
   {
     name: 'Kam',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 3,
-    price: 741
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/vjeg5wk.jpg',
+    inventory: 37,
+    price: 487
   },
   {
     name: 'Kauer Guitars',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 71,
-    price: 125
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/hW11rl4.jpg',
+    inventory: 52,
+    price: 796
   },
   {
     name: 'Keeley',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 47,
-    price: 950
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/6o1C9ow.jpg',
+    inventory: 35,
+    price: 914
   },
   {
     name: 'Kemper Digital',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 15,
-    price: 899
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/fD6pMbM.jpg',
+    inventory: 12,
+    price: 969
   },
   {
     name: 'Kinsman',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 13,
-    price: 706
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/T30XzvY.jpg',
+    inventory: 79,
+    price: 417
   },
   {
     name: 'Klark Teknik',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 18,
-    price: 217
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/jQ2TEBK.jpg',
+    inventory: 10,
+    price: 705
   },
   {
     name: 'Klotz',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 53,
-    price: 873
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/kdqwWhF.jpg',
+    inventory: 58,
+    price: 153
   },
   {
     name: 'Korg',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 31,
-    price: 567
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/hW11rl4.jpg',
+    inventory: 39,
+    price: 697
   },
   {
     name: 'Kramer',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 86,
-    price: 135
+    imageUrl: 'https://imgur.com/iDjnetY.jpg',
+    inventory: 70,
+    price: 617
   },
   {
     name: 'KrK',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 69,
-    price: 126
+    imageUrl: 'https://imgur.com/7jMchUR.jpg',
+    inventory: 20,
+    price: 318
   },
   {
     name: 'Lakland',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 40,
-    price: 392
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/SnhKiPf.jpg',
+    inventory: 75,
+    price: 801
   },
   {
     name: 'Landlord FX',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 69,
-    price: 36
+    imageUrl: 'https://imgur.com/3ubpGOb.jpg',
+    inventory: 51,
+    price: 291
   },
   {
     name: 'Laney',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 95,
-    price: 884
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/ynf4lco.jpg',
+    inventory: 22,
+    price: 72
   },
   {
     name: 'Larrivee',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 59,
-    price: 938
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/4ym6gyL.jpg',
+    inventory: 28,
+    price: 446
   },
   {
     name: 'LD Systems',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 58,
-    price: 562
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/ynf4lco.jpg',
+    inventory: 48,
+    price: 261
   },
   {
     name: 'Leathergraft',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 93,
-    price: 173
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/jCt8UnX.jpg',
+    inventory: 16,
+    price: 148
   },
   {
     name: 'Line 6',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 64,
-    price: 810
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/saknv02.jpg',
+    inventory: 42,
+    price: 363
   },
   {
     name: 'Lowden',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 24,
-    price: 666
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/EaFTv60.jpg',
+    inventory: 54,
+    price: 890
   },
   {
     name: 'LR Baggs',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 11,
-    price: 778
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/fD6pMbM.jpg',
+    inventory: 20,
+    price: 121
   },
   {
     name: 'LSL Instruments',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 50,
-    price: 705
+    imageUrl: 'https://imgur.com/SmKBcMY.jpg',
+    inventory: 36,
+    price: 202
   },
   {
     name: 'Mackie',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 86,
-    price: 876
+    imageUrl: 'https://imgur.com/iQSf10J.jpg',
+    inventory: 23,
+    price: 762
   },
   {
     name: 'Mad Professor',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 61,
-    price: 29
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/9lFzUfp.jpg',
+    inventory: 4,
+    price: 843
   },
   {
     name: 'Mahalo',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 35,
-    price: 139
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/9UrOgtF.jpg',
+    inventory: 3,
+    price: 650
   },
   {
     name: 'Manson',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 0,
-    price: 380
+    imageUrl: 'https://imgur.com/RKlyvWx.jpg',
+    inventory: 16,
+    price: 898
   },
   {
     name: 'Maono',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 85,
-    price: 179
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/aKXT7Nw.jpg',
+    inventory: 72,
+    price: 393
   },
   {
     name: 'Mapex',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 31,
-    price: 379
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/3utV8ES.jpg',
+    inventory: 88,
+    price: 927
   },
   {
     name: 'Marantz',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 57,
-    price: 228
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/wYzfC0B.jpg',
+    inventory: 91,
+    price: 730
   },
   {
     name: 'Mark Bass',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 58,
-    price: 489
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/3utV8ES.jpg',
+    inventory: 71,
+    price: 697
   },
   {
     name: 'Marshall',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 32,
-    price: 483
+    imageUrl: 'https://imgur.com/YKmazzg.jpg',
+    inventory: 96,
+    price: 862
   },
   {
     name: 'Martin',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 48,
-    price: 525
+    imageUrl: 'https://imgur.com/jQ2TEBK.jpg',
+    inventory: 88,
+    price: 843
   },
   {
     name: 'Maton',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 21,
-    price: 764
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/Sf9JkaJ.jpg',
+    inventory: 76,
+    price: 31
   },
   {
     name: 'Matthews Effects',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 77,
-    price: 746
+    imageUrl: 'https://imgur.com/aKXT7Nw.jpg',
+    inventory: 36,
+    price: 420
   },
   {
     name: 'M-Audio',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 69,
-    price: 936
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/5S0CFKf.jpg',
+    inventory: 100,
+    price: 293
   },
   {
     name: 'Maxon',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 66,
-    price: 499
+    imageUrl: 'https://imgur.com/v3WfPoz.jpg',
+    inventory: 93,
+    price: 912
   },
   {
     name: 'Mayones',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 73,
-    price: 684
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/Cv0e5pT.jpg',
+    inventory: 13,
+    price: 547
   },
   {
     name: 'Meris',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 27,
-    price: 250
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/C5Kkyar.jpg',
+    inventory: 84,
+    price: 198
   },
   {
     name: 'Mesa Boogie',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 42,
-    price: 978
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/Ilt12Oz.jpg',
+    inventory: 16,
+    price: 443
   },
   {
     name: 'Mono',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 43,
-    price: 637
+    imageUrl: 'https://imgur.com/VvXGwGp.jpg',
+    inventory: 68,
+    price: 655
   },
   {
     name: 'Mooer',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 71,
-    price: 677
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/SnhKiPf.jpg',
+    inventory: 52,
+    price: 82
   },
   {
     name: 'Moog',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 27,
-    price: 270
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/DOHef1x.jpg',
+    inventory: 56,
+    price: 880
   },
   {
     name: 'Morley',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/zFep5xB.jpg',
-    inventory: 41,
-    price: 153
+    imageUrl: 'https://imgur.com/ojpzr6w.jpg',
+    inventory: 47,
+    price: 200
   },
   {
     name: 'Mother Mary',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 73,
-    price: 311
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/tqvkjw2.jpg',
+    inventory: 45,
+    price: 452
   },
   {
     name: 'Music Man',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 14,
-    price: 84
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/T30XzvY.jpg',
+    inventory: 51,
+    price: 67
   },
   {
     name: 'MXR',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 22,
-    price: 666
+    imageUrl: 'https://imgur.com/jCt8UnX.jpg',
+    inventory: 38,
+    price: 931
   },
   {
     name: 'Natal',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 28,
-    price: 800
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/Cv0e5pT.jpg',
+    inventory: 52,
+    price: 665
   },
   {
     name: 'National',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 25,
-    price: 368
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/SmKBcMY.jpg',
+    inventory: 28,
+    price: 838
   },
   {
     name: 'Native Instruments',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 18,
-    price: 380
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/ONCwxjx.jpg',
+    inventory: 43,
+    price: 900
   },
   {
     name: 'Nektar',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 96,
-    price: 968
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/xHryn8p.jpg',
+    inventory: 89,
+    price: 851
   },
   {
     name: 'Neumann',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 0,
-    price: 827
+    imageUrl: 'https://imgur.com/iDjnetY.jpg',
+    inventory: 13,
+    price: 265
   },
   {
     name: 'Neural DSP',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 45,
-    price: 550
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/3utV8ES.jpg',
+    inventory: 53,
+    price: 920
   },
   {
     name: 'Nexi Industries',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 26,
-    price: 611
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/x0JqHN1.jpg',
+    inventory: 79,
+    price: 986
   },
   {
     name: 'Nik Huber',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 92,
-    price: 504
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/uPSrMYz.jpg',
+    inventory: 89,
+    price: 920
   },
   {
     name: 'Nobels',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 61,
-    price: 579
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/6BJz5c3.jpg',
+    inventory: 80,
+    price: 779
   },
   {
     name: 'Nord',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 48,
-    price: 769
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/ZnVM8ed.jpg',
+    inventory: 15,
+    price: 607
   },
   {
     name: 'Novation',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 46,
-    price: 304
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/LqghLJX.jpg',
+    inventory: 27,
+    price: 606
   },
   {
     name: 'Numark',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 76,
-    price: 774
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/SpR28Sb.jpg',
+    inventory: 98,
+    price: 852
   },
   {
     name: 'NUX',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 79,
-    price: 342
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/rQuLLk7.jpg',
+    inventory: 88,
+    price: 450
   },
   {
     name: 'On Stage',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 96,
-    price: 823
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/rGfc0Wg.jpg',
+    inventory: 6,
+    price: 48
   },
   {
     name: 'Orange',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/kywOQ1s.jpg',
-    inventory: 18,
-    price: 57
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/4JSZTT9.jpg',
+    inventory: 77,
+    price: 212
   },
   {
     name: 'Ormsby',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 71,
-    price: 51
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/s3JsbqO.jpg',
+    inventory: 23,
+    price: 426
   },
   {
     name: 'Ovation',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 9,
-    price: 511
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/dKE53QS.jpg',
+    inventory: 56,
+    price: 292
   },
   {
     name: 'Ozark',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 21,
-    price: 32
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/mf4OrAO.jpg',
+    inventory: 59,
+    price: 551
   },
   {
     name: 'Palmer',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 65,
-    price: 474
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/UMYvQMz.jpg',
+    inventory: 58,
+    price: 555
   },
   {
     name: 'Paoletti',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 86,
-    price: 267
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/kKw9wNI.jpg',
+    inventory: 68,
+    price: 602
   },
   {
     name: 'Peavey',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 53,
-    price: 276
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/fD6pMbM.jpg',
+    inventory: 75,
+    price: 261
   },
   {
     name: 'Pedaltrain',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 91,
-    price: 908
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/8UvbRDY.jpg',
+    inventory: 9,
+    price: 890
   },
   {
     name: 'Pensa Guitars',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/GnM4Yqn.jpg',
     inventory: 67,
-    price: 76
+    price: 89
   },
   {
     name: 'Percussion Plus',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 85,
-    price: 982
+    imageUrl: 'https://imgur.com/rJbq6Ql.jpg',
+    inventory: 3,
+    price: 326
   },
   {
     name: 'Peterson',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 1,
-    price: 797
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/Ilt12Oz.jpg',
+    inventory: 84,
+    price: 604
   },
   {
     name: 'Pigtronix',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 8,
-    price: 905
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/oCkgSNq.jpg',
+    inventory: 69,
+    price: 891
   },
   {
     name: 'Pioneer',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 11,
-    price: 813
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/Ilt12Oz.jpg',
+    inventory: 52,
+    price: 874
   },
   {
     name: 'Planet Waves',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 87,
-    price: 427
+    imageUrl: 'https://imgur.com/kKw9wNI.jpg',
+    inventory: 67,
+    price: 622
   },
   {
     name: 'PM Components',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/K4aociq.jpg',
-    inventory: 43,
-    price: 401
+    imageUrl: 'https://imgur.com/2UQzJxw.jpg',
+    inventory: 97,
+    price: 556
   },
   {
     name: 'Polyend',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 34,
-    price: 598
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/tvGZcYE.jpg',
+    inventory: 95,
+    price: 951
   },
   {
     name: 'Positive Grid',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 16,
-    price: 701
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/tvGZcYE.jpg',
+    inventory: 64,
+    price: 349
   },
   {
     name: 'Presonus',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 93,
-    price: 416
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/rQuLLk7.jpg',
+    inventory: 20,
+    price: 641
   },
   {
     name: 'Pro Co',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 34,
-    price: 831
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/YwNacTJ.jpg',
+    inventory: 72,
+    price: 98
   },
   {
     name: 'Pro Guard',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 72,
-    price: 896
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/DqwrIl6.jpg',
+    inventory: 88,
+    price: 877
   },
   {
     name: 'Pro mark',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/zFep5xB.jpg',
-    inventory: 44,
-    price: 114
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/vjeg5wk.jpg',
+    inventory: 84,
+    price: 15
   },
   {
     name: 'Providence',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 44,
-    price: 530
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/8UvbRDY.jpg',
+    inventory: 68,
+    price: 874
   },
   {
     name: 'PRS',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 18,
-    price: 630
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/yG89Vwp.jpg',
+    inventory: 75,
+    price: 663
   },
   {
     name: 'QSC',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 75,
-    price: 302
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/4QAlMw6.jpg',
+    inventory: 5,
+    price: 971
   },
   {
     name: 'Qwik Tune',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 68,
-    price: 93
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/TNOIneh.jpg',
+    inventory: 31,
+    price: 553
   },
   {
     name: 'Radial',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 42,
-    price: 868
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/Cv0e5pT.jpg',
+    inventory: 22,
+    price: 479
   },
   {
     name: 'Randall',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 65,
-    price: 112
+    imageUrl: 'https://imgur.com/iQSf10J.jpg',
+    inventory: 93,
+    price: 68
   },
   {
     name: 'RCF',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/qcN9X8V.jpg',
-    inventory: 29,
-    price: 604
+    imageUrl: 'https://imgur.com/GnM4Yqn.jpg',
+    inventory: 12,
+    price: 16
   },
   {
     name: 'Recording King',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/zFep5xB.jpg',
-    inventory: 4,
-    price: 398
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/uPSrMYz.jpg',
+    inventory: 46,
+    price: 366
   },
   {
     name: 'Reverend',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 62,
-    price: 445
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/Orum7WS.jpg',
+    inventory: 94,
+    price: 472
   },
   {
     name: 'Revv',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 64,
-    price: 897
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/GFhfum4.jpg',
+    inventory: 85,
+    price: 75
   },
   {
     name: 'Rickenbacker',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 10,
-    price: 640
+    imageUrl: 'https://imgur.com/PWdZb8N.jpg',
+    inventory: 88,
+    price: 460
   },
   {
     name: 'RMC',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/2rjFQzW.jpg',
-    inventory: 24,
-    price: 710
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/wYzfC0B.jpg',
+    inventory: 3,
+    price: 614
   },
   {
     name: 'RME',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 45,
-    price: 687
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/Sf9JkaJ.jpg',
+    inventory: 51,
+    price: 801
   },
   {
     name: 'Rode',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 10,
-    price: 305
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/rGfc0Wg.jpg',
+    inventory: 80,
+    price: 713
   },
   {
     name: 'Roland',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/K4aociq.jpg',
-    inventory: 25,
-    price: 373
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/T30XzvY.jpg',
+    inventory: 63,
+    price: 784
   },
   {
     name: 'Rotosound',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 84,
-    price: 938
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/4u2iHmV.jpg',
+    inventory: 69,
+    price: 760
   },
   {
     name: 'Sadowsky',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 98,
-    price: 636
+    imageUrl: 'https://imgur.com/RRpxBj0.jpg',
+    inventory: 53,
+    price: 834
   },
   {
     name: 'Sandberg',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 9,
-    price: 552
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/X5QPpM7.jpg',
+    inventory: 18,
+    price: 481
   },
   {
     name: 'Santa Cruz',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/R0es16f.jpg',
-    inventory: 30,
-    price: 362
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/2UQzJxw.jpg',
+    inventory: 85,
+    price: 169
   },
   {
     name: 'Schaller',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 43,
-    price: 809
+    imageUrl: 'https://imgur.com/54edJLq.jpg',
+    inventory: 14,
+    price: 385
   },
   {
     name: 'Schecter',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 18,
-    price: 74
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/PWdZb8N.jpg',
+    inventory: 42,
+    price: 980
   },
   {
     name: 'Schertler',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 6,
-    price: 545
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/dNZiCKP.jpg',
+    inventory: 73,
+    price: 844
   },
   {
     name: 'Seagull',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 46,
-    price: 79
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/CgBlsWu.jpg',
+    inventory: 80,
+    price: 917
   },
   {
     name: 'Sennheiser',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/zFep5xB.jpg',
-    inventory: 77,
-    price: 939
+    imageUrl: 'https://imgur.com/MNKxpFt.jpg',
+    inventory: 62,
+    price: 133
   },
   {
     name: 'Seymour Duncan',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 87,
-    price: 540
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/GGZp5CJ.jpg',
+    inventory: 63,
+    price: 88
   },
   {
     name: 'Shubb',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 97,
-    price: 77
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/kKw9wNI.jpg',
+    inventory: 24,
+    price: 489
   },
   {
     name: 'Shure',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 16,
-    price: 548
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/4ZoA33u.jpg',
+    inventory: 68,
+    price: 280
   },
   {
     name: 'Sigma',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 95,
-    price: 562
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/wRO9ltp.jpg',
+    inventory: 9,
+    price: 512
   },
   {
     name: 'Solar Guitars',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 78,
-    price: 129
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/TNOIneh.jpg',
+    inventory: 88,
+    price: 106
   },
   {
     name: 'Soldano',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 16,
-    price: 649
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/YVYFYS0.jpg',
+    inventory: 12,
+    price: 670
   },
   {
     name: 'Sontronics',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 23,
-    price: 846
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/3utV8ES.jpg',
+    inventory: 7,
+    price: 126
   },
   {
     name: 'Soundcraft',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/zFep5xB.jpg',
-    inventory: 5,
-    price: 9
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/EaFTv60.jpg',
+    inventory: 6,
+    price: 203
   },
   {
     name: 'Source Audio',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 20,
-    price: 583
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/IvXxmXv.jpg',
+    inventory: 4,
+    price: 114
   },
   {
     name: 'Spector',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 10,
-    price: 454
+    imageUrl: 'https://imgur.com/Ni4WngP.jpg',
+    inventory: 74,
+    price: 560
   },
   {
     name: 'Spire',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 55,
-    price: 699
+    imageUrl: 'https://imgur.com/ojpzr6w.jpg',
+    inventory: 16,
+    price: 429
   },
   {
     name: 'Squier',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 10,
-    price: 105
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/SpR28Sb.jpg',
+    inventory: 6,
+    price: 155
   },
   {
     name: 'SSL',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 27,
-    price: 267
+    imageUrl: 'https://imgur.com/LqghLJX.jpg',
+    inventory: 35,
+    price: 745
   },
   {
     name: 'Stagg',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 25,
-    price: 856
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/Orum7WS.jpg',
+    inventory: 55,
+    price: 457
   },
   {
     name: 'Steinberger',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 28,
-    price: 269
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/x0JqHN1.jpg',
+    inventory: 24,
+    price: 958
   },
   {
     name: 'Strandberg',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 39,
-    price: 858
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/mf4OrAO.jpg',
+    inventory: 59,
+    price: 118
   },
   {
     name: 'Strymon',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 52,
-    price: 938
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/BLp0Zgo.jpg',
+    inventory: 59,
+    price: 199
   },
   {
     name: 'Studiomaster',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/dD98UxJ.jpg',
-    inventory: 54,
-    price: 363
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/3ubpGOb.jpg',
+    inventory: 23,
+    price: 82
   },
   {
     name: 'Suhr',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 86,
-    price: 181
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/YKmazzg.jpg',
+    inventory: 92,
+    price: 599
   },
   {
     name: 'Supro',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/jEMFIfp.jpg',
-    inventory: 82,
-    price: 408
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/Cv0e5pT.jpg',
+    inventory: 71,
+    price: 309
   },
   {
     name: 'Synergy Amps',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/K4aociq.jpg',
-    inventory: 14,
-    price: 133
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/za0Bkwn.jpg',
+    inventory: 74,
+    price: 514
   },
   {
     name: 'Takamine',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 39,
-    price: 959
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/VvXGwGp.jpg',
+    inventory: 71,
+    price: 671
   },
   {
     name: 'Tama',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 62,
-    price: 658
+    imageUrl: 'https://imgur.com/nqWkef1.jpg',
+    inventory: 84,
+    price: 466
   },
   {
     name: 'Tascam',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 9,
-    price: 991
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/lYLWeAy.jpg',
+    inventory: 41,
+    price: 657
   },
   {
     name: 'Taylor',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 96,
-    price: 937
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/5W2Ez4o.jpg',
+    inventory: 63,
+    price: 104
   },
   {
     name: 'TC Electronic',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 5,
-    price: 353
+    imageUrl: 'https://imgur.com/GGZp5CJ.jpg',
+    inventory: 28,
+    price: 137
   },
   {
     name: 'Tech 21',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 89,
-    price: 752
+    imageUrl: 'https://imgur.com/FtRqucv.jpg',
+    inventory: 65,
+    price: 18
   },
   {
     name: 'TGI',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/zFep5xB.jpg',
-    inventory: 66,
-    price: 610
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/fwRQ6pf.jpg',
+    inventory: 28,
+    price: 430
   },
   {
     name: 'The Loar',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 10,
-    price: 529
+    imageUrl: 'https://imgur.com/LqghLJX.jpg',
+    inventory: 58,
+    price: 515
   },
   {
     name: 'Tone King',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/RSJYKkU.jpg',
-    inventory: 81,
-    price: 477
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/DOHef1x.jpg',
+    inventory: 22,
+    price: 283
   },
   {
     name: 'TOURTECH',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 26,
-    price: 796
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/x0JqHN1.jpg',
+    inventory: 12,
+    price: 928
   },
   {
     name: 'Trace Elliot',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 86,
-    price: 491
+    imageUrl: 'https://imgur.com/54edJLq.jpg',
+    inventory: 51,
+    price: 328
   },
   {
     name: 'T-Rex',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 51,
-    price: 331
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/wEfstmA.jpg',
+    inventory: 74,
+    price: 828
   },
   {
     name: 'Truetone',
     description:
       'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 24,
-    price: 853
+    imageUrl: 'https://imgur.com/LqghLJX.jpg',
+    inventory: 54,
+    price: 340
   },
   {
     name: 'Twisted Electrons',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 19,
-    price: 600
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/lYLWeAy.jpg',
+    inventory: 29,
+    price: 784
   },
   {
     name: 'Two Notes',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 77,
-    price: 118
+    imageUrl: 'https://imgur.com/5S0CFKf.jpg',
+    inventory: 19,
+    price: 108
   },
   {
     name: 'Tyler',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 18,
-    price: 36
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/A6UnaU8.jpg',
+    inventory: 72,
+    price: 300
   },
   {
     name: 'Universal Audio',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/bkMqn0q.jpg',
-    inventory: 7,
-    price: 827
+    imageUrl: 'https://imgur.com/7oPVYYx.jpg',
+    inventory: 80,
+    price: 775
   },
   {
     name: 'Valencia',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/bSldLGC.jpg',
-    inventory: 43,
-    price: 355
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/7jMchUR.jpg',
+    inventory: 31,
+    price: 601
   },
   {
     name: 'Vertex',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 92,
-    price: 127
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/TUBGxp6.jpg',
+    inventory: 77,
+    price: 36
   },
   {
     name: 'Vic Firth',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 80,
-    price: 760
+    imageUrl: 'https://imgur.com/hPmi6fu.jpg',
+    inventory: 65,
+    price: 529
   },
   {
     name: 'Victory Amps',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 48,
-    price: 811
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/SmKBcMY.jpg',
+    inventory: 52,
+    price: 24
   },
   {
     name: 'Voodoo Lab',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 17,
-    price: 599
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/xwpgg96.jpg',
+    inventory: 87,
+    price: 466
   },
   {
     name: 'Vox',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 73,
-    price: 872
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/za0Bkwn.jpg',
+    inventory: 90,
+    price: 583
   },
   {
     name: 'Waldorf',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 79,
-    price: 155
+    imageUrl: 'https://imgur.com/6o1C9ow.jpg',
+    inventory: 31,
+    price: 935
   },
   {
     name: 'Walrus Audio',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/zNwEcoz.jpg',
-    inventory: 42,
-    price: 847
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/auME7u8.jpg',
+    inventory: 75,
+    price: 520
   },
   {
     name: 'Wampler',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/8MbJwJU.jpg',
-    inventory: 81,
-    price: 765
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/6o1C9ow.jpg',
+    inventory: 13,
+    price: 62
   },
   {
     name: 'Warm Audio',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 85,
-    price: 850
+    imageUrl: 'https://imgur.com/CgBlsWu.jpg',
+    inventory: 38,
+    price: 353
   },
   {
     name: 'Waterloo',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/BcXqhYJ.jpg',
-    inventory: 4,
-    price: 682
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/9UrOgtF.jpg',
+    inventory: 44,
+    price: 475
   },
   {
     name: 'Way Huge',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 97,
-    price: 263
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/FtRqucv.jpg',
+    inventory: 88,
+    price: 207
   },
   {
     name: 'Westone',
     description:
       'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/d1bKrKl.jpg',
-    inventory: 29,
-    price: 322
+    imageUrl: 'https://imgur.com/2UQzJxw.jpg',
+    inventory: 63,
+    price: 692
   },
   {
     name: 'Xotic',
     description:
       'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/vMp567e.jpg',
-    inventory: 72,
-    price: 903
+    imageUrl: 'https://imgur.com/gic3yha.jpg',
+    inventory: 17,
+    price: 909
   },
   {
     name: 'XVive',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 28,
-    price: 760
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/6o1C9ow.jpg',
+    inventory: 53,
+    price: 738
   },
   {
     name: 'Yamaha',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/BcRJTDC.jpg',
-    inventory: 97,
-    price: 467
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/xHryn8p.jpg',
+    inventory: 33,
+    price: 342
   },
   {
     name: 'Zither',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/qHp9pGM.jpg',
-    inventory: 44,
-    price: 487
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/wEfstmA.jpg',
+    inventory: 45,
+    price: 11
   },
   {
     name: 'Zoom',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 55,
-    price: 594
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/Gmgt339.jpg',
+    inventory: 65,
+    price: 411
   },
   {
     name: 'ZVEX',
     description:
-      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
-    imageUrl: 'https://imgur.com/BBpnehF.jpg',
-    inventory: 35,
-    price: 38
+      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
+    imageUrl: 'https://imgur.com/EaFTv60.jpg',
+    inventory: 72,
+    price: 441
   },
   {
     name: 'Baby Taylor',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/K4aociq.jpg',
-    inventory: 83,
-    price: 90
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/6BJz5c3.jpg',
+    inventory: 95,
+    price: 9
   },
   {
     name: 'Taylor 214ce',
     description:
-      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
-    imageUrl: 'https://imgur.com/IPqMPS2.jpg',
-    inventory: 77,
-    price: 119
+      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
+    imageUrl: 'https://imgur.com/kaTUtgR.jpg',
+    inventory: 89,
+    price: 260
   },
   {
     name: 'Taylor GS Mini',
     description:
-      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/lLRA4PS.jpg',
-    inventory: 69,
-    price: 662
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/9lFzUfp.jpg',
+    inventory: 89,
+    price: 569
   },
   {
     name: 'Yamaha APX',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/DqsCTxx.jpg',
-    inventory: 42,
-    price: 280
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/YSLcOZu.jpg',
+    inventory: 52,
+    price: 180
   },
   {
     name: 'Yamaha FG',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/HSoWZKP.jpg',
-    inventory: 50,
-    price: 320
+      'Once in a generation, a guitar pick comes along that rewrites the playbook. We always looked forward to the day when we could be in charge of shredding like Megadeath. With adulthood upon us, now is our time -- and this is our pick.',
+    imageUrl: 'https://imgur.com/SnhKiPf.jpg',
+    inventory: 0,
+    price: 290
   },
   {
     name: 'Ibanez BTB',
     description:
       'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 93,
-    price: 886
+    imageUrl: 'https://imgur.com/LjZAbom.jpg',
+    inventory: 0,
+    price: 604
   },
   {
     name: 'Ibanez SR',
     description:
-      'Rock out in eye-popping style with these killer picks! Each pick is made of abalone and unicorn dreams: their comfortable, wide-body design is as perfect for beginners as it is well-suited to Lenny Kravitz.',
-    imageUrl: 'https://imgur.com/2Lmtth8.jpg',
-    inventory: 92,
-    price: 560
+      'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
+    imageUrl: 'https://imgur.com/GFhfum4.jpg',
+    inventory: 0,
+    price: 862
   },
   {
     name: 'Serenity',
     description:
       'Open your door to the world of guitar picks with this sleek model. This all-purpose pick is built to last, and packed with features such as the powerful notch groove, reversible design, and convenient wide body for maximum grip. Welcome to guitar heaven!',
-    imageUrl: 'https://imgur.com/AZykHw6.jpg',
-    inventory: 61,
-    price: 284
+    imageUrl: 'https://imgur.com/vjeg5wk.jpg',
+    inventory: 0,
+    price: 343
   },
   {
     name: 'Earl Skuggs',
     description:
-      'The right guitar pick can make you sound like Pearl Jam any day of the week! This silver plated drop guitar pick with a pearl setting brings a hint of luxury to your gig and draws attention with every flick of your wrist.',
-    imageUrl: 'https://imgur.com/2rjFQzW.jpg',
-    inventory: 20,
-    price: 820
+      'Sometimes the glimmer of a brand-new guitar pick is all we need to rouse our musical spirits. Available in an array of festive colors, this hand-carved pick will leave your fingers free to do their magic! It really is the most wonderful time of the year.',
+    imageUrl: 'https://imgur.com/vjeg5wk.jpg',
+    inventory: 0,
+    price: 672
   }
 ]

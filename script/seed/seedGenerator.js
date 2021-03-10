@@ -326,31 +326,158 @@ const productDescriptions = [
 ]
 
 const imageUrls = [
-  'https://imgur.com/zNwEcoz.jpg',
-  'https://imgur.com/HSoWZKP.jpg',
-  'https://imgur.com/2rjFQzW.jpg',
-  'https://imgur.com/qHp9pGM.jpg',
-  'https://imgur.com/IPqMPS2.jpg',
-  'https://imgur.com/R0es16f.jpg',
-  'https://imgur.com/lLRA4PS.jpg',
-  'https://imgur.com/dD98UxJ.jpg',
-  'https://imgur.com/RSJYKkU.jpg',
-  'https://imgur.com/zFep5xB.jpg',
-  'https://imgur.com/2Lmtth8.jpg',
-  'https://imgur.com/jEMFIfp.jpg',
-  'https://imgur.com/BcRJTDC.jpg',
-  'https://imgur.com/AZykHw6.jpg',
-  'https://imgur.com/d1bKrKl.jpg',
-  'https://imgur.com/BcXqhYJ.jpg',
-  'https://imgur.com/K4aociq.jpg',
-  'https://imgur.com/DqsCTxx.jpg',
-  'https://imgur.com/BBpnehF.jpg',
-  'https://imgur.com/bkMqn0q.jpg',
-  'https://imgur.com/8MbJwJU.jpg',
-  'https://imgur.com/bSldLGC.jpg',
-  'https://imgur.com/qcN9X8V.jpg',
-  'https://imgur.com/kywOQ1s.jpg',
-  'https://imgur.com/vMp567e.jpg'
+  'https://imgur.com/oM7SfZ1.jpg',
+  'https://imgur.com/s3JsbqO.jpg',
+  'https://imgur.com/DgLPzVK.jpg',
+  'https://imgur.com/kkawlXP.jpg',
+  'https://imgur.com/uNBav71.jpg',
+  'https://imgur.com/gic3yha.jpg',
+  'https://imgur.com/tqvkjw2.jpg',
+  'https://imgur.com/8UvbRDY.jpg',
+  'https://imgur.com/Sf9JkaJ.jpg',
+  'https://imgur.com/Gmgt339.jpg',
+  'https://imgur.com/rGfc0Wg.jpg',
+  'https://imgur.com/LqghLJX.jpg',
+  'https://imgur.com/bPGHzu9.jpg',
+  'https://imgur.com/e4Vfolf.jpg',
+  'https://imgur.com/gNoLmR2.jpg',
+  'https://imgur.com/GGZp5CJ.jpg',
+  'https://imgur.com/BLp0Zgo.jpg',
+  'https://imgur.com/A6UnaU8.jpg',
+  'https://imgur.com/ONhLuG3.jpg',
+  'https://imgur.com/wRO9ltp.jpg',
+  'https://imgur.com/wYzfC0B.jpg',
+  'https://imgur.com/w1ouaLF.jpg',
+  'https://imgur.com/nqWkef1.jpg',
+  'https://imgur.com/3ubpGOb.jpg',
+  'https://imgur.com/7oPVYYx.jpg',
+  'https://imgur.com/YwNacTJ.jpg',
+  'https://imgur.com/2wB7xFG.jpg',
+  'https://imgur.com/Orum7WS.jpg',
+  'https://imgur.com/xwpgg96.jpg',
+  'https://imgur.com/tvGZcYE.jpg',
+  'https://imgur.com/kKw9wNI.jpg',
+  'https://imgur.com/fwRQ6pf.jpg',
+  'https://imgur.com/PWdZb8N.jpg',
+  'https://imgur.com/CgBlsWu.jpg',
+  'https://imgur.com/saknv02.jpg',
+  'https://imgur.com/Mk2uMRz.jpg',
+  'https://imgur.com/YVYFYS0.jpg',
+  'https://imgur.com/RRpxBj0.jpg',
+  'https://imgur.com/Gsg0Pdg.jpg',
+  'https://imgur.com/UaZGLVB.jpg',
+  'https://imgur.com/KgA3mdT.jpg',
+  'https://imgur.com/lYLWeAy.jpg',
+  'https://imgur.com/Ilt12Oz.jpg',
+  'https://imgur.com/Jeu5E5C.jpg',
+  'https://imgur.com/bKoDVCF.jpg',
+  'https://imgur.com/PahLGCf.jpg',
+  'https://imgur.com/nKGXlZa.jpg',
+  'https://imgur.com/ZdNm71Z.jpg',
+  'https://imgur.com/oCkgSNq.jpg',
+  'https://imgur.com/FtRqucv.jpg',
+  'https://imgur.com/jQ2TEBK.jpg',
+  'https://imgur.com/YSLcOZu.jpg',
+  'https://imgur.com/rQuLLk7.jpg',
+  'https://imgur.com/ONCwxjx.jpg',
+  'https://imgur.com/8E5gM3f.jpg',
+  'https://imgur.com/mf4OrAO.jpg',
+  'https://imgur.com/C5Kkyar.jpg',
+  'https://imgur.com/JNgbl3N.jpg',
+  'https://imgur.com/jaPPlji.jpg',
+  'https://imgur.com/5S0CFKf.jpg',
+  'https://imgur.com/ojpzr6w.jpg',
+  'https://imgur.com/VvXGwGp.jpg',
+  'https://imgur.com/JnPRCAu.jpg',
+  'https://imgur.com/hW11rl4.jpg',
+  'https://imgur.com/jCt8UnX.jpg',
+  'https://imgur.com/N4mPlou.jpg',
+  'https://imgur.com/9lFzUfp.jpg',
+  'https://imgur.com/ynf4lco.jpg',
+  'https://imgur.com/9UrOgtF.jpg',
+  'https://imgur.com/vjeg5wk.jpg',
+  'https://imgur.com/UMYvQMz.jpg',
+  'https://imgur.com/za0Bkwn.jpg',
+  'https://imgur.com/YIOfq6L.jpg',
+  'https://imgur.com/X5QPpM7.jpg',
+  'https://imgur.com/dNZiCKP.jpg',
+  'https://imgur.com/4u2iHmV.jpg',
+  'https://imgur.com/4QAlMw6.jpg',
+  'https://imgur.com/kOktUh3.jpg',
+  'https://imgur.com/iQSf10J.jpg',
+  'https://imgur.com/7bX0E6M.jpg',
+  'https://imgur.com/4ym6gyL.jpg',
+  'https://imgur.com/fD6pMbM.jpg',
+  'https://imgur.com/64WVwlI.jpg',
+  'https://imgur.com/EaFTv60.jpg',
+  'https://imgur.com/DqwrIl6.jpg',
+  'https://imgur.com/VKvRrbK.jpg',
+  'https://imgur.com/VMrIo0A.jpg',
+  'https://imgur.com/HnZHMuz.jpg',
+  'https://imgur.com/LjZAbom.jpg',
+  'https://imgur.com/x0JqHN1.jpg',
+  'https://imgur.com/aKXT7Nw.jpg',
+  'https://imgur.com/SpR28Sb.jpg',
+  'https://imgur.com/Ni4WngP.jpg',
+  'https://imgur.com/hPmi6fu.jpg',
+  'https://imgur.com/wEfstmA.jpg',
+  'https://imgur.com/caK28JN.jpg',
+  'https://imgur.com/TUBGxp6.jpg',
+  'https://imgur.com/4ZoA33u.jpg',
+  'https://imgur.com/YKmazzg.jpg',
+  'https://imgur.com/RKlyvWx.jpg',
+  'https://imgur.com/yanvcKY.jpg',
+  'https://imgur.com/7jMchUR.jpg',
+  'https://imgur.com/LHt3zGe.jpg',
+  'https://imgur.com/Cv0e5pT.jpg',
+  'https://imgur.com/UCgcmLZ.jpg',
+  'https://imgur.com/MNKxpFt.jpg',
+  'https://imgur.com/GFhfum4.jpg',
+  'https://imgur.com/4JSZTT9.jpg',
+  'https://imgur.com/54edJLq.jpg',
+  'https://imgur.com/7z8BEPb.jpg',
+  'https://imgur.com/m6iVWhG.jpg',
+  'https://imgur.com/qZKNSob.jpg',
+  'https://imgur.com/8x9YMDM.jpg',
+  'https://imgur.com/2UQzJxw.jpg',
+  'https://imgur.com/kaTUtgR.jpg',
+  'https://imgur.com/dKE53QS.jpg',
+  'https://imgur.com/YTsOqdQ.jpg',
+  'https://imgur.com/iX9Jj7A.jpg',
+  'https://imgur.com/IvXxmXv.jpg',
+  'https://imgur.com/6BJz5c3.jpg',
+  'https://imgur.com/v3WfPoz.jpg',
+  'https://imgur.com/wyLLDNm.jpg',
+  'https://imgur.com/kdqwWhF.jpg',
+  'https://imgur.com/DOHef1x.jpg',
+  'https://imgur.com/mtetGaj.jpg',
+  'https://imgur.com/IOBbrpY.jpg',
+  'https://imgur.com/78xLOIf.jpg',
+  'https://imgur.com/Os6IVz6.jpg',
+  'https://imgur.com/xHryn8p.jpg',
+  'https://imgur.com/B6enGlB.jpg',
+  'https://imgur.com/KSYbKLx.jpg',
+  'https://imgur.com/6o1C9ow.jpg',
+  'https://imgur.com/GHs2YJx.jpg',
+  'https://imgur.com/ZnVM8ed.jpg',
+  'https://imgur.com/TNOIneh.jpg',
+  'https://imgur.com/3utV8ES.jpg',
+  'https://imgur.com/bcm3xNY.jpg',
+  'https://imgur.com/SnhKiPf.jpg',
+  'https://imgur.com/rJbq6Ql.jpg',
+  'https://imgur.com/SmKBcMY.jpg',
+  'https://imgur.com/yG89Vwp.jpg',
+  'https://imgur.com/bVzC2T7.jpg',
+  'https://imgur.com/T30XzvY.jpg',
+  'https://imgur.com/auME7u8.jpg',
+  'https://imgur.com/GnM4Yqn.jpg',
+  'https://imgur.com/iDjnetY.jpg',
+  'https://imgur.com/uPSrMYz.jpg',
+  'https://imgur.com/88BHiqL.jpg',
+  'https://imgur.com/crhRWzs.jpg',
+  'https://imgur.com/fsQMkZf.jpg',
+  'https://imgur.com/5W2Ez4o.jpg',
+  'https://imgur.com/guu0Hxi.jpg'
 ]
 
 const getDescription = () =>
@@ -359,7 +486,7 @@ const getDescription = () =>
 const getImageUrl = () =>
   imageUrls[Math.floor(Math.random() * imageUrls.length)]
 
-const getInventory = () => Math.floor(Math.random() * 100)
+const getInventory = () => Math.ceil(Math.random() * 100)
 
 const getPrice = () => {
   const min = Math.ceil(1)
@@ -381,9 +508,9 @@ const getAllProducts = () => {
   return res
 }
 
-// const allProducts = getAllProducts()
+const allProducts = getAllProducts()
 
-// writeToTextFile('allProductsSeed', JSON.stringify(allProducts))
+writeToTextFile('allProductsSeed', JSON.stringify(allProducts))
 
 /*
  * ADDRESSES
@@ -803,11 +930,11 @@ const buildProductOrder = productId => {
   }
 }
 
-const allProductOrders = new Array(200)
-  .fill(null)
-  .map((empty, idx) => buildProductOrder(++idx))
+// const allProductOrders = new Array(200)
+//   .fill(null)
+//   .map((empty, idx) => buildProductOrder(++idx))
 
-writeToTextFile('allProductOrdersSeed', JSON.stringify(allProductOrders))
+// writeToTextFile('allProductOrdersSeed', JSON.stringify(allProductOrders))
 
 /* USERADDRESS THROUGH TABLE */
 
