@@ -16,7 +16,8 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
   * Even though you will checkout, **you will not be charged**
 * Check your phone for a confirmation text and email!
 * Revisit your profile to see all completed order
-* Visit https://grace-shopper-yy.herokuapp.com/oops and https://grace-shopper-yy.herokuapp.com/api/admin to visit our fun 404 error pages!
+* Visit https://grace-shopper-yy.herokuapp.com/oops to visit our fun 404 not found page!
+* Are you trying to hack us? Gandalf says no if you are not an admin! https://grace-shopper-yy.herokuapp.com/admin/users
 * Read **even more** about the technical features in our Detailed_Features.md!
 
 ## Technologies
