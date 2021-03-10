@@ -9,14 +9,12 @@ import {
   SingleProduct,
   UserProfile,
   SingleOrder,
-  Checkout,
   AllUsers,
   EditProfile,
   OrderSuccess,
   OrderFailure,
   NotFound,
-  AdminAllProducts,
-  About
+  AdminAllProducts
 } from './components'
 import {me} from './store'
 import {reduceOrderToGetPastCart} from './components/helperFunctions'
