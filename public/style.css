@@ -757,15 +757,31 @@ table th {
 
 /* ---- ShippingData ---- */
 
+.editProfileData {
+  padding-top: 2em;
+}
+
 .shippingData {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 600px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2em;
+  width: 300px;
+}
+
+.shippingData label {
+  margin-bottom: 0.2em;
 }
 
 .shippingData * {
   margin-top: 0;
+}
+
+.shippingData button {
+  margin-top: 1em;
 }
 
 .shippingData textarea {
@@ -780,8 +796,14 @@ table th {
   width: 300px;
 }
 
-.formField input[type='text'] {
+.formField input[type='text'],
+.formField input[type='password'] {
   height: 2em;
   font-size: 18px;
   padding: 0 1em;
+}
+
+.shippingData button:hover {
+  background-color: #757575;
+  color: white;
 }
