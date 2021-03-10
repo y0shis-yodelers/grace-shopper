@@ -67,7 +67,7 @@ class Routes extends Component {
         <Route exact path="/admin/users" component={AllUsers} />
         <Route exact path="/admin/products" component={AdminAllProducts} />
 
-        <Route component={NotFound} />
+        <Route path="*" component={NotFound} />
       </Switch>
     )
   }
