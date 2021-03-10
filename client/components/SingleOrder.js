@@ -31,15 +31,21 @@ class SingleOrder extends React.Component {
                   <div className="productContainer">
                     <img src={product.imageUrl} />
                     <div className="orderName">{product.name}</div>
-                    <div>Quantity: {product.ProductOrder.quantity}</div>
-                    <div>
-                      Cost: {formatPrice(product.ProductOrder.pricePaid)}
+                    <div className="orderQuantityCost">
+                      <span>Quantity: {product.ProductOrder.quantity}</span>
+                      <span>
+                        Cost: {formatPrice(product.ProductOrder.pricePaid)}
+                      </span>
                     </div>
                   </div>
                 </Link>
               ))}
             </div>
-            <OrderInfo products={products} />
+            <OrderInfo
+              products={products}
+              orderDate={order.updatedAt}
+              orderId={order.id}
+            />
           </div>
         ) : (
           <Loader

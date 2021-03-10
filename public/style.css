@@ -279,6 +279,7 @@ button:hover {
 
 .productContainer * {
   margin: 0.3em 0;
+  color: black;
 }
 
 .productContainer img {
@@ -656,6 +657,7 @@ button:hover {
 
 .orderContainer * {
   margin: 0.3em 0;
+  color: black;
 }
 
 .orderContainer img {
@@ -673,6 +675,38 @@ button:hover {
 
 .orderLink * {
   color: black;
+}
+
+.orderQuantityCost {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderInfoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.orderInfoLineItem {
+  margin: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.singleOrderContainer {
+  min-width: 300px;
+  margin: 0.3em;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
+  padding: 1em;
 }
 
 /* ---- All Users ---- */
