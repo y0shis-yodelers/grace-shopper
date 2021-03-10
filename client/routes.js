@@ -54,6 +54,8 @@ class Routes extends Component {
   render() {
     return (
       <Switch>
+        <Route exact path="/" component={AllProducts} />
+
         <Route path="/home" component={AllProducts} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
@@ -67,7 +69,7 @@ class Routes extends Component {
         <Route exact path="/admin/users" component={AllUsers} />
         <Route exact path="/admin/products" component={AdminAllProducts} />
 
-        <Route component={NotFound} />
+        <Route path="*" component={NotFound} />
       </Switch>
     )
   }

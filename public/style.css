@@ -43,6 +43,7 @@ nav a {
   margin: 1em;
   font-size: 18px;
   margin-top: 3.6em;
+  margin-bottom: 2em;
 }
 
 form div {
@@ -86,8 +87,9 @@ button:hover {
   margin: 0;
   padding: 0;
   line-height: 0.4em;
-  position: relative;
-  top: 7.2em;
+  position: absolute;
+  top: 8.2em;
+  left: 0.5em;
   color: #757575;
   margin-left: 1.1em;
 }
