@@ -8,13 +8,14 @@ https://grace-shopper-yy.herokuapp.com
 
 Go ahead and play with our store! **Payments is sandboxed/test environment, so there will be no real charges made**
 
-* Sign up using either Google or a normal login, be sure to add your phone number for later :)
-* Add multiple Products to your cart and watch it follow you across the site
+* Sign up using either Google or local login
+* Add multiple products to your cart and watch it follow you across the site
 * Clear your cart to remove all your items in an instance
-* Checkout using Safari (on Mac or iPhones) or Chrome to use Apple Pay/Google Pay
-  * Even though will complete the checkout, **you will not be charged**
+* Update your profile with your phone, name and email before the next step!
+* Checkout using Safari (Mac/iPhones) or Chrome to use Apple Pay or Google Pay
+  * Even though you will checkout, **you will not be charged**
 * Check your phone for a confirmation text and email!
-* Revisit your profile to see the completed order
+* Revisit your profile to see all completed order
 * Visit https://grace-shopper-yy.herokuapp.com/oops to visit our fun 404 error page!
 * Read **even more** about the technical features in our Detailed_Features.md!
 
@@ -25,11 +26,10 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
 * Back-End
   * Node.js, Express.js, PostgreSQL, Sequelize
 * External API/Libraries
-  * Stripe/Apple Pay/Google Pay: Payment Processing Providers
+  * Stripe/Apple Pay/Google Pay: Payment Processing
   * Twilio & Nodemailer: SMS and Email order notifications
   * Google Authentication: Login security provider
-  * React-Toastify: In App Notifications
-  * React-Table & Phone-FNS: Great data formatting
+  * React-Toastify: In-App Notifications
 * Deployment
   * Heroku: Live website with public URL
   * Mocha/Chai: Unit testing of 90% of modules for faster developement
@@ -38,7 +38,7 @@ Go ahead and play with our store! **Payments is sandboxed/test environment, so t
 ## Future Roadmap
 
 * White Labeling/Multitendancy for scaling ability to sell software
-* Greater Accessibility for visually impaired customers
+* Greater Accessibility for visually impaired customers (A11Y)
 * Admin Dashboard to view sales and other key performance indicators
   * Visual.js for graphing of sales
 * Social Media Integration and Top Sellers Recommendation

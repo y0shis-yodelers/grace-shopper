@@ -70,10 +70,9 @@ router.post('/', isAdminOrUser, async (req, res, next) => {
   }
 })
 
-//create a new cart when order is compelte
+//create a new cart when order is compelte or new user signs up
 router.post('/users/:userId', isAdminOrUser, async (req, res, next) => {
   try {
-    const data = req.body
     const user = await User.findByPk(req.params.userId)
     const newOrder = await Order.create({
       isPaid: false,
