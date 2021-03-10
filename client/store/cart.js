@@ -119,6 +119,7 @@ export const fetchSaveCartOnLogout = (userId, cart) => {
       // PUT each item in the db
       cartList.forEach(async item => {
         await axios.put(`/api/carts/${userId}`, item)
+        dispatch(updateCart(...item))
       })
 
       // dispatch the clearCart action creator
