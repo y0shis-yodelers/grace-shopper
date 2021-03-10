@@ -29,9 +29,12 @@ router.post('/signup', async (req, res, next) => {
       isPaid: false,
       userId: user.id
     })
-
     user.hasOrder(newOrder)
-    req.login(user, err => (err ? next(err) : res.json(user)))
+    await user.save()
+    const foundUser = await User.findByPk(user.id, {
+      include: [{model: Order, include: {model: Product}}, {model: Address}]
+    })
+    req.login(foundUser, err => (err ? next(err) : res.json(foundUser)))
   } catch (err) {
     if (err.name === 'SequelizeUniqueConstraintError') {
       res.status(401).send('User already exists')
