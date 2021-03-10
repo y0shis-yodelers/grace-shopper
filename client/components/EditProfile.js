@@ -106,7 +106,7 @@ class EditProfile extends React.Component {
             />
           </div>
 
-          <input type="submit" value="Submit" />
+          <button type="submit">Update My Profile Info</button>
         </form>
       </div>
     ) : (

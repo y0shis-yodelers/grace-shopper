@@ -10,6 +10,8 @@ html {
 
 body {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -279,6 +281,7 @@ button:hover {
 
 .productContainer * {
   margin: 0.3em 0;
+  color: black;
 }
 
 .productContainer img {
@@ -547,28 +550,27 @@ button:hover {
   color: white;
 }
 
-.sp-quantity-btn {
-}
-
 /* ---- Profile ---- */
 
 .user {
   display: flex;
 }
 
+.profileAndBlank {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .profileContainer {
-  flex-grow: 100;
+  width: 1000px;
+  margin: 0 auto;
 }
 
-.ordersLabel {
-  margin-top: 1em;
-}
-
-.singleUserContainer {
-}
-
+.ordersLabel,
 .profileLabel {
-  margin-top: 1em;
+  margin: 1em 0;
+  font-size: 18px;
 }
 
 .userProfileContainer {
@@ -577,6 +579,26 @@ button:hover {
   justify-content: center;
   min-height: 100px;
   box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
+  padding: 1em;
+}
+
+.userProfileItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  width: 300px;
+}
+
+.userProfileContainer button {
+  width: 200px;
+  align-self: center;
+  margin-top: 1em;
+}
+
+.userProfileContainer button:hover {
+  background-color: #757575;
+  color: white;
 }
 
 /* --- All Orders --- */
@@ -588,6 +610,7 @@ button:hover {
   min-height: 325px;
   box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
   border: 1px solid transparent;
+  padding: 1em;
 }
 
 /* ---- Order Card ---- */
@@ -636,6 +659,7 @@ button:hover {
 
 .orderContainer * {
   margin: 0.3em 0;
+  color: black;
 }
 
 .orderContainer img {
@@ -649,6 +673,42 @@ button:hover {
 
 .orderName {
   font-weight: bold;
+}
+
+.orderLink * {
+  color: black;
+}
+
+.orderQuantityCost {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderInfoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.orderInfoLineItem {
+  margin: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.singleOrderContainer {
+  min-width: 300px;
+  margin: 0.3em;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0.8px 0.9px 3px rgb(187, 187, 187);
+  padding: 1em;
 }
 
 /* ---- All Users ---- */
@@ -699,15 +759,31 @@ table th {
 
 /* ---- ShippingData ---- */
 
+.editProfileData {
+  padding-top: 2em;
+}
+
 .shippingData {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 600px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2em;
+  width: 300px;
+}
+
+.shippingData label {
+  margin-bottom: 0.2em;
 }
 
 .shippingData * {
   margin-top: 0;
+}
+
+.shippingData button {
+  margin-top: 1em;
 }
 
 .shippingData textarea {
@@ -722,10 +798,61 @@ table th {
   width: 300px;
 }
 
-.formField input[type='text'] {
+.formField input[type='text'],
+.formField input[type='password'] {
   height: 2em;
   font-size: 18px;
   padding: 0 1em;
+}
+
+.shippingData button:hover {
+  background-color: #757575;
+  color: white;
+}
+
+/* ---- NotFound ---- */
+
+.notFoundPage {
+  background-image: url('https://i.imgur.com/eymSP8O.jpg?1');
+  background-size: auto;
+  height: 100vh;
+  width: auto;
+}
+
+.transparencyMask {
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 0, 0, 0),
+    rgb(255, 255, 255)
+  );
+  z-index: 1;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.notFoundPage h1 {
+  font-size: 6em;
+}
+
+.notFoundPage h2 {
+  font-size: 2em;
+}
+
+.material-icons.quarter-turn {
+  font-size: 4em;
+  transform: rotate(90deg);
+  margin-top: 0.5em;
+}
+
+.nf-iconContainer a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 /* ---- Gandalf 403 ---- */

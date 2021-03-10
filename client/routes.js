@@ -14,6 +14,7 @@ import {
   EditProfile,
   OrderSuccess,
   OrderFailure,
+  NotFound,
   AdminAllProducts,
   About
 } from './components'
@@ -68,7 +69,7 @@ class Routes extends Component {
         <Route exact path="/admin/users" component={AllUsers} />
         <Route exact path="/admin/products" component={AdminAllProducts} />
 
-        <Route component={AllProducts} />
+        <Route component={NotFound} />
       </Switch>
     )
   }
