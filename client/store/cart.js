@@ -110,17 +110,15 @@ export const fetchSaveCartOnLogout = (userId, cart) => {
     try {
       // get an array of cart items structured:
       // [{ productId, quantity }, ...]
-      const cartList = Object.entries(cart).map(entry => {
-        return {
-          [entry[0]]: entry[1]
-        }
-      })
+      const cartList = Object.entries(cart)
 
       // PUT each item in the db
       cartList.forEach(async item => {
-        await axios.put(`/api/carts/${userId}`, item)
-        const {productId, quantity} = item
-        dispatch(updateCart(userId, productId, quantity))
+        const updateInfo = {[item[0]]: item[1]}
+
+        await axios.put(`/api/carts/${userId}`, updateInfo)
+
+        dispatch(updateCart(userId, item[0], item[1]))
       })
 
       // dispatch the clearCart action creator
