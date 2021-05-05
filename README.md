@@ -1,4 +1,6 @@
-# Bass Shopper - an eCommerce application built using React
+# Bass Shopper 
+
+_an eCommerce application built using React_
 
 ## Visit
 
